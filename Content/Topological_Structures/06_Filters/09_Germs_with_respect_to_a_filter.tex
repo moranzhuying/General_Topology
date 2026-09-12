@@ -1,0 +1,83 @@
+\section{相对某个滤子的芽}
+
+记号约定:$X,Y,Z$是集合,$\mathfrak{F}$是$X$上的滤子.
+
+\begin{definition}{子集的芽}{}
+	定义$\mathcal{P}\left(X\right)$的等价关系$\sim$为$M\cap N\iff\exists V\in\mathfrak{F}\left(M\cap V=N\cap V\right)$.
+	\begin{enumerate}
+		\item 对每个$M\subseteq X$,称$\left[M\right]_{\sim}$为$M$沿$\mathfrak{F}$的芽.
+		\item 称$\mathcal{P}\left(X\right)/\sim$为$X$的子集沿$\mathfrak{F}$的芽的集合.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{沿滤子的芽的集合构成分配格}{}
+	\begin{enumerate}
+		\item 定义$\mathcal{P}\left(X\right)/\sim$上的运算$\bar{\cap}$和$\bar{\cup}$分别为$\left(\left[M\right]_{\sim},\left[N\right]_{\sim}\right)\mapsto\left[M\cap N\right]_{\sim}$和$\left(\left[M\right]_{\sim},\left[N\right]_{\sim}\right)\mapsto\left[M\cup N\right]_{\sim}$,那么这两个运算满足幂等率,交换律,结合律和彼此之间的分配律.
+		\item 定义$\mathcal{P}\left(X\right)/\sim$上的关系$\leq$为
+		\begin{align*}
+			\left[M\right]_{\sim}\leq\left[N\right]_{\sim}\iff\left[M\right]_{\sim}=\left[M\cap N\right]_{\sim},
+		\end{align*}
+		则$\mathcal{P}\left(X\right)/\sim$是分配格,最小元为$\left[\emptyset\right]_{\sim}$,最大元为$\left[X\right]_{\sim}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{映射的芽}{}
+	设$\Phi=\left\{f\in\Hom\left(F,Y\right)\middle|F\subseteq\mathfrak{F}\right\}$.定义$\Phi$上的等价关系$\sim$为
+	\begin{align*}
+		f\sim g\iff\exists V\in\mathfrak{F}\left(V\subseteq\dom\left(f\right)\cap\dom\left(g\right)\wedge f|_{V}=g|_{V}\right).
+	\end{align*}
+	\begin{enumerate}
+		\item 对每个$f\in\Phi$,称$\tilde{f}\coloneq\left[f\right]_{\sim}$是$f$沿$\mathfrak{F}$的芽.
+		\item $\tilde{\Phi}\coloneq\Phi/\sim$称为从$X$到$Y$的映射沿$\mathfrak{F}$的芽的集合.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 对$M\subseteq X,f\in\Hom_{\mathsf{Set}}\left(M,Y\right)$和$f_{1}\in\Hom_{\mathsf{Set}}\left(X,Y\right)$,如果$f_{1}$和$f$在$X\setminus M$上一致且为常值映射,那么$f\sim f_{1}$.
+		\item 对$M,N\subseteq X$,二者拥有相同的芽$\iff$ $\chi_{M}$和$\chi_{N}$沿$\Phi$有相同的芽.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{复合映射的芽}{}
+	记$\tilde{\Phi}$和$\tilde{\Phi}^{\prime}$分别是从$X$到$Y$和从$X$到$Z$的映射沿$\mathfrak{F}$的芽的集合,$\varphi\in\Hom_{\mathsf{Set}}\left(Y,Z\right)$,则$\varphi$诱导典范映射
+	\begin{align*}
+		\tilde{\Phi}\to\tilde{\Phi}^{\prime},\tilde{f}\mapsto\widetilde{\varphi\circ f}.
+	\end{align*}
+\end{definition}
+
+\begin{proposition}{有限个映射芽的乘积}{}
+	设$\left(X_{i}^{\prime}\right)_{i=1}^{n}$是集合族,$Y=\prod\limits_{i=1}^{n}X_{i}^{\prime}$,$\Phi=\left\{f\in\Hom\left(M,Y\right)\middle|M\subseteq\mathfrak{F}\right\}$,对每个$1\leq i\leq n$,
+	\begin{align*}
+		\Phi_{i}=\left\{f_{i}\in\Hom_{\mathsf{Set}}\left(M_{i},X_{i}^{\prime}\right)\middle|M_{i}\in\mathfrak{F}_{i}\right\}.
+	\end{align*}
+	\begin{enumerate}
+		\item 若对每个$1\leq i\leq n$有$f_{i}\in\Phi_{i}$,则映射$\bigcap\limits_{i=1}^{n}\dom\left(f_{i}\right)\to Y,t\mapsto\left(f_{i}\left(t\right)\right)_{i=1}^{n}$属于$\Phi$,滥用术语将其记作$\left(f_{1},\ldots,f_{n}\right)$.
+		\item 若对每个$1\leq i\leq n$,$f_{i},g_{i}\in\Phi_{i}$且相对$\mathfrak{F}$有相同的芽,则$\left(f_{1},\ldots,f_{n}\right)$和$\left(g_{1},\ldots,g_{n}\right)$相对$\mathfrak{F}$有相同的芽.
+		\item $\Gamma:\prod\limits_{i=1}^{n}\tilde{\Phi}_{i}\to\tilde{\Phi},\left(\tilde{f}_{1},\ldots,\tilde{f}_{n}\right)\mapsto\widetilde{\left(f_{1},\ldots,f_{n}\right)}$是双射.
+		\item 对每个$\psi\in\Hom_{\mathsf{Set}}\left(Y,Z\right)$,(3)中的映射$\Gamma$诱导映射$\prod\limits_{i=1}^{n}\tilde{\Phi}_{i}\to\tilde{\Phi}^{\prime},\left(\tilde{f}_{1},\ldots,\tilde{f}_{n}\right)\mapsto\psi\left(\tilde{f}_{1},\ldots,\tilde{f}_{n}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{芽对代数结构的转移}{}
+	考虑$n=2$且$X_{1}^{\prime}=X_{2}^{\prime}=Z=X^{\prime}$的情形,那么$\psi$在$\tilde{\Phi}$上唯一地诱导了运算$\tilde{\Phi}\times\tilde{\Phi}\to\tilde{\Phi},\left(\tilde{f},\tilde{g}\right)\mapsto\psi\left(\tilde{f},\tilde{g}\right)$.
+	\begin{enumerate}
+		\item 若$\psi$满足交换律(相对的,结合律),则上述诱导运算也满足交换律(相对的,结合律).
+		\item 若$\psi$有单位元$e^{\prime}$,则常值映射$x\mapsto e^{\prime}$的芽是该诱导运算的单位元.进一步,$f\in\Phi$的芽$\tilde{f}$可逆的充要条件是:
+		\begin{center}
+			存在$V\in\mathfrak{F}$且$V\subseteq\dom\left(f\right)$,对每个$t\in V$,$f\left(t\right)$在$X^{\prime}$中可逆.
+		\end{center}
+		该条件成立时,若$g\in\Phi$满足``对每个$t\in V$,$g\left(t\right)$是$f\left(t\right)$的逆元'',那么$\tilde{g}$是$\tilde{f}$的逆元.
+		\item 一般的,如果$X^{\prime}$是群(相对的,环,环$A$上的代数),则$\tilde{\Phi}$关于诱导运算是群(相对的,环,环$A$上的代数).
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+\chapter{一致连续函数}
+
+\section{一致连续函数}
+
+记号约定:$X,Y,Z$是一致空间,各自配备的一致结构是$\mathfrak{U}_{1},\mathfrak{U}_{2},\mathfrak{U}_{3}$,与之相应的拓扑分别是$\tau_{1},\tau_{2},\tau_{3}$.
+
+\begin{definition}{一致连续函数}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(X,Y\right),g=f\times f$.若$\forall V^{\prime}\in\mathfrak{U}_{2}\left(g^{-1}\left(V^{\prime}\right)\in\mathfrak{U}_{1}\right)$,则称$f$是一致连续映射.记
+	\begin{gather*}
+		\Hom_{\mathsf{Uni}}\left(X,Y\right)=\left\{f\in\Hom_{\mathsf{Set}}\left(X,Y\right)\middle|f\text{一致连续}\right\},\Isom_{\mathsf{Uni}}\left(X,Y\right)=\left\{f\in\Isom_{\mathsf{Set}}\left(X,Y\right)\middle|f\text{是一致同构}\right\},\\
+		\End_{\mathsf{Uni}}\left(X\right)=\Hom_{\mathsf{Uni}}\left(X,X\right),\Aut_{\mathsf{Uni}}\left(X\right)=\Isom_{\mathsf{Uni}}\left(X,X\right).
+	\end{gather*}
+\end{definition}
+
+\begin{remark}{}{}
+	这相当于说:对$X$中任意两点$x,y$,当$x$和$y$充分接近时,$f\left(x\right)$和$f\left(y\right)$也充分接近.
+\end{remark}
+
+\begin{example}{一致连续映射的例子}{}
+	\begin{enumerate}
+		\item $\id_{X}$是$X$上的一致连续映射.
+		\item 从$X$到$Y$的每个常值映射都一致连续.
+		\item 若$X$是离散一致空间,则从$X$到$Y$的每个映射都一致连续.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{}{}
+	$\Hom_{\mathsf{Uni}}\left(X,Y\right)\subseteq\Hom_{\mathsf{Top}}\left(X,Y\right)$.
+\end{proposition}
+
+\begin{remark}{}{}
+	从$X$到$Y$的连续映射不一定是一致连续的.例如,映射$\R\to\R,x\mapsto x^{3}$连续,但它相对$\R$的加法一致结构不是一致连续的.
+\end{remark}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 若$f\in\Hom_{\mathsf{Uni}}\left(X,Y\right),g\in\Hom_{\mathsf{Uni}}\left(Y,Z\right)$,则$g\circ f\in\Hom_{\mathsf{Uni}}\left(X,Z\right)$.
+		\item 设$f\in\Isom_{\mathsf{Set}}\left(X,Y\right)$,则$f\in\Isom_{\mathsf{Uni}}\left(X,Y\right)\iff\left(f\in\Hom_{\mathsf{Uni}}\left(X,Y\right)\wedge f^{-1}\in\Hom_{\mathsf{Uni}}\left(Y,X\right)\right)$.
+	\end{enumerate}
+\end{proposition}

@@ -1,0 +1,19 @@
+\section{乘积的闭包}
+
+记号约定:$\left(X_{i}\right)_{i\in I}$是拓扑空间族.
+
+\begin{proposition}{闭包和乘积可交换}{}
+	设一族集合$\left(A_{i}\right)_{i\in I}$满足$\forall i\in I\left(A_{i}\subseteq X_{i}\right)$,则$\prod\limits_{i\in I}A_{i}$在$\prod\limits_{i\in I}X_{i}$中的闭包是$\prod\limits_{i\in I}\closure_{X_{i}}\left(A_{i}\right)$.
+\end{proposition}
+
+\begin{proposition}{积空间的闭子空间判定}{}
+	设一族非空集合$\left(A_{i}\right)_{i\in I}$满足$\forall i\in I\left(A_{i}\subseteq X_{i}\right)$,则$\prod\limits_{i\in I}A_{i}$是$\prod\limits_{i\in I}X_{i}$的闭集$\iff$对每个$i\in I$,集合$A_{i}$是$X_{i}$的闭集.
+\end{proposition}
+
+\begin{remark}{}{}
+	如果$I$是有限集,对每个$i\in I$,集合$A_{i}$是$X_{i}$的开集,那么$\prod\limits_{i\in I}A_{i}$是$\prod\limits_{i\in I}X_{i}$的开集.但是,当$I$是无限集时这个结论一般不成立.
+\end{remark}
+
+\begin{proposition}{积空间的稠密集}{}
+	设$\left(a_{i}\right)_{i\in I}\in\prod\limits_{i\in I}X_{i}$,$D=\left\{\left(x_{i}\right)_{i\in I}\in\prod\limits_{i\in I}X_{i}\middle|\left\{i\in I\middle|x_{i}\neq a_{i}\right\}\text{是有限集}\right\}$,则$D$在$\prod\limits_{i\in I}X_{i}$中稠密.
+\end{proposition}

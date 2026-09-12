@@ -1,0 +1,45 @@
+\section{积空间和商空间中的极限}
+
+记号约定:$\left(X_{i}\right)_{i\in I}$是拓扑空间族,$X$是集合.
+
+\begin{proposition}{始拓扑下的收敛判定准则}{}
+	设$\mathfrak{F}$是$X$上的滤子,$a\in X$.对每个$i\in I$有$f_{i}\in\Hom_{\mathsf{Set}}\left(X,X_{i}\right)$.为$X$配备$\left(f_{i}\right)_{i\in I}$的始拓扑,则下列陈述等价:
+	\begin{enumerate}
+		\item $\mathfrak{F}$的极限点是$a$.
+		\item 对每个$i\in I$,滤子基$\mathfrak{F}$在$f_{i}$下的提升收敛到$f_{i}\left(a\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{积空间中滤子的收敛性}{}
+	设$X=\prod\limits_{i\in I}X_{i},a\in X$,$\mathfrak{F}$是$X$上的滤子,则下列陈述等价:
+	\begin{enumerate}
+		\item $\mathfrak{F}$的极限点是$a$.
+		\item 对每个$i\in I$,滤子基$\mathfrak{F}$在$\pr_{i}$下的提升收敛到$\pr_{i}\left(a\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{向积空间入射的映射的极限判定}{}
+	设对每个$i\in I$有$f_{i}\in\Hom_{\mathsf{Set}}\left(X,X_{i}\right)$,$a\in\prod\limits_{i\in I}X_{i}$,$\mathfrak{F}$是$X$上的滤子,$f:X\to\prod\limits_{i\in I}X_{i},x\mapsto\left(f_{i}\left(x\right)\right)_{i\in I}$,则下列命题等价:
+	\begin{enumerate}
+		\item $f$沿$\mathfrak{F}$收敛到$a$.
+		\item 对每个$i\in I$,映射$f_{i}$沿$\mathfrak{F}$收敛到$\pr_{i}\left(a\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{开等价关系下滤子基在典范满射下的提升}{}
+	设$R$是$X$上的开等价关系,$\varphi:X\to X/R$是典范满射,则对每个$x\in X$,对于$X/R$上每个收敛到$\varphi\left(x\right)$的滤子基$\mathcal{B}^{\prime}$,在$X$上有一个收敛于$x$的滤子基$\mathcal{B}$满足$\langle\varphi_{\ast}\left(\mathcal{B}\right)\rangle=\langle\mathcal{B}^{\prime}\rangle$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+\section{一致连续函数的延拓}
+
+\begin{proposition}{拓扑空间上连续延拓的等价条件}{}
+	设$X$是拓扑空间,$A$是$X$的稠密子空间,$Y$是Hausdorff完备空间,$f\in\Hom_{\mathsf{Set}}\left(A,Y\right)$.下列陈述等价:
+	\begin{enumerate}
+		\item 存在$\bar{f}\in\Hom_{\mathsf{Top}}\left(X,Y\right)$使得$\bar{f}|_{A}=f$.
+		\item 对$X$中每一点$x$,滤子$\mathfrak{B}_{A}\left(x\right)$在$f$下的提升是$Y$的Cauchy滤子基.
+	\end{enumerate}
+\end{proposition}
+
+\begin{theorem}{一致连续映射的延拓定理}{}
+	设$X$是一致空间,$A$是$X$的稠密子空间,$Y$是Hausdorff一致空间,则
+	\begin{align*}
+		\forall f\in\Hom_{\mathsf{Uni}}\left(A,Y\right)\exists!\bar{f}\in\Hom_{\mathsf{Uni}}\left(X,Y\right)\left(\bar{f}|_{A}=f\right)
+	\end{align*}
+\end{theorem}
+
+\begin{corollary}{}{}
+	设$X_{1},X_{2}$是Hausdorff完备空间,$Y_{1},Y_{2}$分别是$X_{1},X_{2}$d的稠密子空间,则
+	\begin{align*}
+		\forall f\in\Isom_{\mathsf{Uni}}\left(Y_{1},Y_{2}\right)\exists!\bar{f}\in\Isom_{\mathsf{Uni}}\left(X_{1},X_{2}\right)\forall x\in X_{1}\left(\bar{f}\left(x\right)=f\left(x\right)\right).
+	\end{align*}
+\end{corollary}
+
+\begin{remark}{}{}
+	如果$f$只是一致连续的双射,那么$\bar{f}$不一定是单射,也不一定是满射.
+\end{remark}

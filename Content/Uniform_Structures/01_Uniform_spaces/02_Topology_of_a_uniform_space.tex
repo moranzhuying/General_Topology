@@ -1,0 +1,76 @@
+\section{一致空间上的拓扑}
+
+记号约定:$X$是一致空间,其一致结构为$\mathfrak{U}$,集合$\mathfrak{S}$由$X$中所有对称邻里组成.
+
+\begin{proposition}{一致空间诱导拓扑的存在性}{topology-induced-over-a-uniform-space}
+	对每个$x\in X$和$V\in\mathfrak{U}$,记$V\left(x\right)=\left\{y\in X\middle|\left(x,y\right)\in V\right\}$.对每个$x\in X$,记$\mathfrak{B}\left(x\right)=\left\{V\left(x\right)\middle|V\in\mathfrak{U}\right\}$.那么,$X$上存在唯一的拓扑$\mathcal{T}_{\mathfrak{U}}$,在该拓扑下,$X$中每一点$x$的邻域滤子就是$\mathfrak{B}\left(x\right)$.
+\end{proposition}
+
+\begin{definition}{一致空间上的诱导拓扑}{}
+	沿用命题(\ref{prop:topology-induced-over-a-uniform-space})的记号.我们称拓扑$\mathcal{T}_{\mathfrak{U}}$是$\mathfrak{U}$诱导的拓扑,如此得到的拓扑空间称为一致空间$X$的底拓扑空间.
+\end{definition}
+
+\begin{remark}{}{}
+	今后,当我们讨论一致空间$X$上的拓扑时,在没有强调的情况下,总是默认在$X$配备上述拓扑的语境下进行.例如,当我们说$X$是Hausdorff空间,或者是紧空间,局部紧空间时,我们是指配备$\mathcal{T}_{\mathfrak{U}}$的$X$是Hausdorff空间,或者紧空间,局部紧空间.
+\end{remark}
+
+\begin{example}{配备一致结构诱导的拓扑的拓扑空间}{}
+	\begin{enumerate}
+		\item $\R$上的拓扑由实直线$\R$的加法一致结构诱导.类似的,$\Q$上的拓扑由有理直线$\Q$的加法一致结构诱导.
+		\item $X$上的离散一致结构诱导离散拓扑.
+	\end{enumerate}
+\end{example}
+
+\begin{remark}{}{}
+	设$X^{\prime}$是一致空间.如果$f:X\to X^{\prime}$是一致同构,那么$f$是同胚.但是,从$X$到$X^{\prime}$的同胚不一定是一致同构.换言之,同一个集合上的不同一致结构有可能诱导相同的拓扑.例如,$\R_{>0}$上的加法一致结构和乘法一致结构不相同,但二者诱导相同的拓扑.
+\end{remark}
+
+\begin{proposition}{}{}
+	对$X$中的每个对称邻里$V$和$X\times X$的每个子集$M$,集合$M$在$X\times X$中的邻域是$V\circ M\circ V$,在$X\times X$中的闭包是
+	\begin{align*}
+		\bigcap\limits_{W\in\mathfrak{S}}\left(W\circ M\circ W\right).
+	\end{align*}
+\end{proposition}
+
+\begin{definition}{$V$-邻里}{}
+	设$V\in\mathfrak{U},A\subseteq X$.我们称$V\left(A\right)\coloneq\left\{y\in X\middle|\exists x\in A\left(\left(x,y\right)\in V\right)\right\}$称为$A$在$X$中的$V$-邻域.
+\end{definition}
+
+\begin{remark}{}{}
+	可以验证,$V\left(A\right)$确实是$A$在$X$中的邻域.
+\end{remark}
+
+\begin{proposition}{}{}
+	对$X$的每个子集$A$有$\closure\left(A\right)=\bigcap\limits_{V\in\mathfrak{S}}V\left(A\right)=\bigcap\limits_{V\in\mathfrak{U}}V\left(A\right)$.
+\end{proposition}
+
+\begin{remark}{}{}
+	固定$X$的子集$A$.
+	\begin{enumerate}
+		\item 如果邻里$V$是$X\times X$的开集,那么$V\left(A\right)$是$X$的开集.但是,当邻里$V$是$X\times X$的闭集时,$V\left(A\right)$不一定是闭集.
+		\item $\left\{V\left(A\right)\middle|V\in\mathfrak{U}\right\}$不一定是$A$在$X$中的邻域基.
+	\end{enumerate}
+\end{remark}
+
+\begin{corollary}{}{}
+	$\left\{\interior\left(V\right)\middle|V\in\mathfrak{U}\right\}$和$\left\{\closure\left(V\right)\middle|V\in\mathfrak{U}\right\}$都是$\mathfrak{U}$的邻里基.
+\end{corollary}
+
+\begin{corollary}{}{}
+	每个一致空间都满足条件($\mathrm{O}_{3}$).
+\end{corollary}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 一致空间$X$是Hausdorff空间$\iff$ $\bigcap\limits_{V\in\mathfrak{U}}V=\Delta_{X}$.
+		\item 每个是Hausdorff一致空间都是正则空间.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{Hausdorff一致结构}{}
+	如果一致空间$X$是Hausdorff空间,则称$\mathfrak{U}$是Hausdorff一致结构.
+\end{definition}
+
+\begin{remark}{}{}
+	若$\mathfrak{B}$是$\mathfrak{U}$的邻里基,那么$X$是Hausdorff空间$\iff$ $\bigcap\limits_{B\in\mathfrak{B}}B=\Delta_{X}$.
+\end{remark}

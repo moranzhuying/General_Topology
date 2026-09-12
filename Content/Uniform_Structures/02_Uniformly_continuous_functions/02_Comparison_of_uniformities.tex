@@ -1,0 +1,28 @@
+\section{一致结构的比较}
+
+记号约定:$X$是一致空间,配备一致结构$\mathfrak{U}_{1},\mathfrak{U}_{2}$,各自诱导的拓扑分别是$\tau_{1},\tau_{2}$,$X$相对$\mathfrak{U}_{1},\mathfrak{U}_{2}$构成一致空间$X_{1},X_{2}$.
+
+\begin{definition}{一致结构的粗细比较}{}
+	\begin{enumerate}
+		\item 若从$X_{1}$到$X_{2}$的恒等映射一致连续,则称$\mathfrak{U}_{1}$比$\mathfrak{U}_{2}$细,$\mathfrak{U}_{2}$比$\mathfrak{U}_{1}$粗.
+		\item 若$\mathfrak{U}_{1}$比$\mathfrak{U}_{2}$细,$\mathfrak{U}_{1}\neq\mathfrak{U}_{2}$,则称$\mathfrak{U}_{1}$比$\mathfrak{U}_{2}$严格细,$\mathfrak{U}_{2}$比$\mathfrak{U}_{1}$严格粗.
+		\item 若$\mathfrak{U}_{1}$和$\mathfrak{U}_{2}$中有一者比另一者细,则称$\mathfrak{U}_{1}$和$\mathfrak{U}_{2}$可比较.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{一致结构粗细比较的等价条件}{}
+	$\mathfrak{U}_{1}$比$\mathfrak{U}_{2}$细$\iff$ $\mathfrak{U}_{1}\subseteq\mathfrak{U}_{2}$ $\iff$ $\tau_{1}\subseteq\tau_{2}$.
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 有可能出现这样的情况:$\mathfrak{U}_{1}\neq\mathfrak{U}_{2}$但$\tau_{1}=\tau_{2}$.下面是一个例子.
+		
+		设$X$是非空集合.对$X$的每个有限划分$\mathfrak{m}=\left(A_{i}\right)_{i=1}^{n}$,记$V_{\mathfrak{m}}=\bigcup\limits_{i=1}^{n}\left(A_{i}\times A_{i}\right)$,则
+		\begin{align*}
+			\left\{V_{\mathfrak{m}}\middle|\mathfrak{m}\text{是}X\text{的有限划分}\right\}
+		\end{align*}
+		是$X$的邻里基.我们称该邻里基诱导的一致结构为$X$上的有限划分一致结构.有限划分一致结构在$X$上诱导离散拓扑.进一步,当$X$是无限集时,有限划分一致结构比离散一致结构严格粗.
+		\item 设$Y$是一致空间,$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$一致连续.如果把$X$上现有的一致结构换为更细的一致结构,把$Y$上现有的一致结构换为更粗的一致结构,那么相对这两个新的一致结构而言,$f$仍然一致连续.换言之:$X$的一致结构越细,$Y$的一致结构越粗,从$X$到$Y$的一致连续映射就越多.
+	\end{enumerate}
+\end{remark}

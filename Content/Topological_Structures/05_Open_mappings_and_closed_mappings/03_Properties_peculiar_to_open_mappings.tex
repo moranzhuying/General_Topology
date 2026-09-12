@@ -1,0 +1,59 @@
+\section{开映射的特有性质}
+
+记号约定:
+\begin{itemize}
+	\item $X$和$Y$是拓扑空间,$R$和$S$分别是$X$和$Y$上的等价关系.
+	\item $\left(X_{i}\right)_{i\in I}$和$\left(Y_{i}\right)_{i\in I}$是拓扑空间族,对每个$i\in I$,$R_{i}$是$X_{i}$上的等价关系,$\varphi_{i}:X_{i}\to X_{i}/R_{i}$是典范满射
+\end{itemize}
+
+\begin{proposition}{开映射的拓扑基判定}{}
+	设$\mathcal{B}$是$X$的拓扑基,$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$,则下列陈述等价:
+	\begin{enumerate}
+		\item $f$是开映射.
+		\item $\mathcal{B}$中每个元素在$f$下的像是$Y$的开集.
+		\item $X$中每一点$x$在$X$中的每个邻域$V$都满足$f\left(V\right)$是$f\left(x\right)$在$Y$中的邻域.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{开等价关系的饱和特征}{}
+	下列陈述等价:
+	\begin{enumerate}
+		\item $R$是开等价关系.
+		\item $X$中每个关于$R$饱和的子集在$X$中的内部仍然关于$R$饱和.
+		\item $X$中每个关于$R$饱和的子集在$X$中的闭包仍然关于$R$饱和.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{开等价关系下的典范满射保持内部和闭包}{}
+	设$R$是开等价关系,$\varphi:X\to X/R$是典范满射,则对$X$中每个关于$R$饱和的子集$A$都有
+	\begin{align*}
+		\closure\left(\varphi\left(A\right)\right)=\varphi\left(\closure\left(A\right)\right),\interior\left(\varphi\left(A\right)\right)=\varphi\left(\interior\left(A\right)\right).
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{积映射的开性判定}{}
+	设对每个$i\in I$,映射$f_{i}\in\Hom_{\mathsf{Set}}\left(X_{i},Y_{i}\right)$是开映射,集合$\left\{i\in I\middle|f_{i}\text{不是满射}\right\}$有限,则$\prod\limits_{i\in I}f_{i}$是开映射.
+\end{proposition}
+
+\begin{corollary}{积空间的等价关系和商空间的同胚}{}
+	设$X=\prod\limits_{i\in I}X_{i}$,等价关系$R$满足$\left(x_{i}\right)_{i\in I}R\left(y_{i}\right)_{i\in I}\iff\forall i\in I\left(x_{i}R_{i}y_{i}\right)$.如果$\left(R_{i}\right)_{i\in I}$是开等价关系族,则
+	\begin{enumerate}
+		\item $R$是开等价关系.
+		\item 典范双射$X/R\to\prod\limits_{i\in I}\left(X_{i}/R_{i}\right)$是同胚.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{有限乘积的商空间的同胚}{}
+	若$R$和$S$都是开等价关系,则典范双射$\left(X\times Y\right)/\left(R\times S\right)\to\left(X/R\right)\times\left(Y/S\right)$是同胚.
+\end{corollary}
+
+\begin{remark}{}{}
+	如果$R$和$S$都不是开等价关系,那么上述典范双射仍然连续,但不一定是同胚,即便$R$和$S$中有有一个是相等关系.
+\end{remark}
+
+
+
+
+
+
+

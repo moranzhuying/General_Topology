@@ -1,0 +1,84 @@
+\chapter{一致空间}
+
+\section{一致结构的定义}
+
+记号约定:$X$是集合.
+
+\begin{definition}{一致结构,一致空间}{}
+	设$\mathfrak{U}\subseteq\mathcal{P}\left(X\times X\right)$且满足($\mathrm{F}_{1}$)和($\mathrm{F}_{2}$).若$\mathfrak{U}$满足下列条件:
+	\begin{itemize}
+		\item ($\mathrm{U}_{1}$)$\forall V\in\mathfrak{U}\left(\Delta_{X}\subseteq V\right)$.
+		\item ($\mathrm{U}_{2}$)$\forall V\in\mathfrak{U}\left(V^{-1}\in\mathfrak{U}\right)$.
+		\item ($\mathrm{U}_{3}$)$\forall V\in\mathfrak{U}\exists W\in\mathfrak{U}\left(W\circ W\subseteq V\right)$.
+	\end{itemize}
+	则称$\mathfrak{U}$为$X$上的一致结构,配备$\mathfrak{U}$的$X$称为一致空间,$\mathfrak{U}$的元素称为邻里.
+\end{definition}
+
+\begin{definition}{$V$-接近}{}
+	设$\mathfrak{U}$是$X$的一致结构,$V\in\mathfrak{U},\left(x,y\right)\in X\times X$.若$\left(x,y\right)\in V$,则称$x$和$y$是$V$-接近的.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 为了简化表述,有时候我们会用类似``$x$充分接近$y$''或``$x$和$y$如我们所希望的那样接近''的表述.比如,我们说``公式$R\left\{x,y\right\}$在$x$和$y$充分接近时成立'',意思是,存在邻里$V$使得$\left(x,y\right)\in V$蕴含$R\left\{x,y\right\}$.
+		\item 当我们默认一致结构的其他公理成立时,($\mathrm{U}_{2}$)和($\mathrm{U}_{3}$)的合取等价于下列条件:
+		\begin{center}
+			($\mathrm{U}_{a}$)$\forall V\in\mathfrak{U}\exists W\in\mathfrak{U}\left(W\circ W^{-1}\subseteq V\right)$.
+		\end{center}
+		在第二部分中,我们把$V\circ V$写作$V^{2}$.一般地,对每个$n\geq 2$和$X\times X$的每个子集$V$,有$V^{n}=V^{n-1}\circ V=V\circ V^{n-1}$.
+		\item 如果$X\neq\emptyset$,那么($\mathrm{U}_{1}$)表明$\mathfrak{U}$不包含空集,从而$\mathfrak{U}$是$X\times X$上的滤子.因此,$\emptyset$上唯一的一致结构就是$\left\{\emptyset\right\}$.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{邻里基}{}
+	设$\mathfrak{U}$是$X$上的一致结构,$\mathfrak{B}\subseteq\mathfrak{U}$.若$\forall V\in\mathfrak{U}\exists B\in\mathfrak{B}\left(B\subseteq V\right)$,则称$\mathcal{B}$是$\mathfrak{U}$的邻里基.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 条件($\mathrm{U}_{3}$)表明$\left\{V^{n}\middle|n\in\N,V\in\mathfrak{U}\right\}$是$\mathfrak{U}$的邻里基.
+		\item $\mathfrak{B}$是$\mathfrak{U}$的邻里基当且仅当$\mathfrak{B}$满足($\mathrm{B}_{1}$)和如下条件:
+		\begin{itemize}
+			\item ($\mathrm{U}_{1}^{\prime}$)$\forall V\in\mathfrak{B}\left(\Delta_{X}\subseteq V\right)$.
+			\item ($\mathrm{U}_{2}^{\prime}$)$\forall V\in\mathfrak{B}\exists W\in\mathfrak{B}\left(W\subseteq V^{-1}\right)$.
+			\item ($\mathrm{U}_{3}^{\prime}$)$\forall V\in\mathfrak{B}\exists W\in\mathfrak{B}\left(W^{2}\subseteq V\right)$.
+		\end{itemize}
+		\item 当$X\neq\emptyset$时,$\mathfrak{U}$的邻里基是$\mathfrak{U}$作为滤子的基.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{对称邻里}{}
+	设$\mathfrak{U}$是$X$上的一致结构,$V\in\mathfrak{U}$.若$V=V^{-1}$,则称$V$是对称邻里.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 若$V$是对称邻里,则$V\cap V^{-1}$和$V\cup V^{-1}$都是对称邻里.
+		\item $X$中的对称邻里构成$\mathfrak{U}$的邻里基.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{一致结构的例子}{}
+	\begin{enumerate}
+		\item $\R$上的一致结构(称为$\R$上的加法一致结构)定义如下:对每个$\alpha\in\R_{>0}$,记
+		\begin{align*}
+			V_{\alpha}=\left\{\left(x,y\right)\in\R\times\R\middle|\left|x-y\right|<\alpha\right\},
+		\end{align*}
+		则$\left\{V_{\alpha}\middle|\alpha\in\R_{>0}\right\}$是一个邻里基,$\R$的加法一致结构由该邻里基生成.
+		
+		类似的,我们可以在$\Q$上定义一个一致结构(称为$\Q$上的加法一致结构).我们在第三部分和第四部分会分别处理群上的一致结构和$\Q$上的一致结构.
+		\item 设$R$是$X$上的等价关系,$C$是相对$R$的二元关系,则$\left\{C\right\}$是$X$上的邻里基,从而生成$X$上的一个一致结构.
+		
+		特别地,当$R$是相等关系时,$C=\Delta_{X}$,此时我们称该一致结构为离散一致结构(因为每个邻里都是$X\times X$的一个包含$\Delta_{X}$的子集),配备该一致结构的$X$称为离散一致空间.
+		\item 固定$p\in\mathbb{P}$.对每个$n\in\Z_{>0}$,定义
+		\begin{align*}
+			W_{n}=\left\{\left(x,y\right)\in\Z\times\Z\middle|x\equiv y\pmod{p^{n}}\right\},
+		\end{align*}
+		则$\left\{W_{n}\middle|n\in\Z_{>0}\right\}$是$\Z$上的一致基,它生成的一致结构称为$\Z$上的$p$进一致结构.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{一致同构}{}
+	设集合$X^{\prime}$配备一致结构$\mathfrak{U}^{\prime}$.若存在$f\in\Isom_{\mathsf{Set}}\left(X,X^{\prime}\right)$使得$\mathfrak{U}$在$f\times f$下的像为$\mathfrak{U}^{\prime}$,则称$X$和$X^{\prime}$(相对所给的一致结构)一致同构,满足该条件的双射称为一致同构.
+\end{definition}
+

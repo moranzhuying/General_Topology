@@ -1,0 +1,39 @@
+\section{一致空间的Hausdorff化}
+
+记号约定:$X$是一致空间,$i:X\to\hat{X}$是典范映射,$i^{\circ}:X\to\im\left(i\right),x\mapsto i\left(x\right)$.
+
+\begin{proposition}{一致空间的Hausdorff化的泛性质}{}
+	对每个Hausdorff一致空间$Y$和$f\in\Hom_{\mathsf{Uni}}\left(\im\left(i\right),Y\right)$,存在唯一的$g\in\Hom_{\mathsf{Uni}}\left(\im\left(i\right),Y\right)$使$f=h\circ i^{\circ}$.
+\end{proposition}
+
+\begin{definition}{一致空间的Hausdorff反射}{}
+	我们称$\im\left(i\right)$是$X$的Hausdorff反射(或与$X$关联的Hausdorff空间).
+\end{definition}
+
+\begin{corollary}{Hausdorff反射的函子性}{}
+	设$Y$是一致空间,$i_{1}:Y\to\hat{Y}$是典范映射,$f\in\Hom_{\mathsf{Uni}}\left(X,Y\right)$,则存在唯一的$\bar{f}\in\Hom_{\mathsf{Uni}}\left(\im\left(i\right),\im\left(i_{1}\right)\right)$使$\bar{f}\circ i^{\circ}=i_{1}^{\circ}\circ f$.
+\end{corollary}
+
+\begin{proposition}{Hausdorff反射的拉回一致结构刻画}{}
+	设$Y$是Hausdorff一致空间,$f\in\Hom_{\mathsf{Uni}}\left(X,Y\right)$,为$X$配备$Y$的一致结构在$f$下的拉回,则
+	\begin{align*}
+		\forall g\in\Hom_{\mathsf{Uni}}\left(\im\left(i\right),Y\right)\left(f=g\circ i\implies g\in\Isom_{\mathsf{Uni}}\left(\im\left(i\right),Y\right)\right).
+	\end{align*}
+\end{proposition}
+
+\begin{remark}{}{}
+	设$R$是$i$在$X$上诱导的等价关系(称为$i$诱导的不可区分关系),则
+	\begin{enumerate}
+		\item $X$的每个开集和闭集关于$R$都是饱和的.
+		\item $i$诱导的双射$X/R\to\im\left(i\right)$是同胚.
+		\item $i^{\circ}$是既开又闭的泛闭映射.
+	\end{enumerate}
+\end{remark}
+
+\begin{remark}{}{}
+	设$Y$是一致空间,$j:Y\to\hat{Y}$是典范映射,$R$和$R^{\prime}$分别是$i$和$j$诱导的不可区分关系,$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$,则
+	\begin{enumerate}
+		\item $f$和$R,R^{\prime}$都相容,
+		\item $f$诱导连续映射$\bar{f}:X/R\to Y/R^{\prime}$.
+	\end{enumerate}
+\end{remark}

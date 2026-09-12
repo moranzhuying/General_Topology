@@ -1,0 +1,51 @@
+\section{连通分支}
+
+记号约定:$X$是拓扑空间.
+
+\begin{lemma}{点的连通分支的良定义性}{}
+	对$X$中每一点$a$,在$X$中所有包含$a$的连通集的并仍然是$X$的连通集,进一步是包含$a$的最大连通子集.
+\end{lemma}
+
+\begin{definition}{点和子集的连通分支}{}
+	\begin{enumerate}
+		\item 设$a\in X$.我们把$X$中包含$a$的最大连通子集称为$a$在$X$中的连通分支,记作$\Comp\left(a\right)$.
+		\item 设$A\subseteq X$.拓扑空间$A$中每一点的连通分支都称为$A$在$X$中的连通分支.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 一个拓扑空间连通$\iff$这个拓扑空间等于其中每一点的连通分支.
+		\item 对一个固定的拓扑空间,如果其中任意两点都被该空间中的一个连通集包含,那么该拓扑空间是连通的.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{完全不连通空间,完全不连通集}{}
+	\begin{enumerate}
+		\item 若$X$中每一点的连通分支都是该点构成的连通集,则称$X$是完全不连通空间.
+		\item 设$A\subseteq X$.若$A$是完全不连通空间,则称$A$是$X$的完全不连通集.
+	\end{enumerate}
+\end{definition}
+
+\begin{example}{完全不连通空间的例子}{}
+	\begin{enumerate}
+		\item 每个离散空间都是完全不连通空间.
+		\item 有理直线$\Q$配备实直线$\R$诱导的子空间拓扑后不是离散空间,但它是完全不连通空间.
+	\end{enumerate}
+\end{example}
+
+\begin{remark}{}{}
+	对固定的$a\in X$,集合$X$中所有包含$a$的开闭集的交称为$a$在$X$中的拟连通分支.$X$中每一点的连通分支都包含在该点的拟连通分支中,但是该点的连通分支和拟连通分支在$X$不一定相等.
+\end{remark}
+
+\begin{proposition}{连通分支的拓扑性质与商空间}{}
+	\begin{enumerate}
+		\item $X$中每一点的连通分支都是$X$的闭集.
+		\item 定义$X$上的公式$R\left\{x,y\right\}$为``$y\in\Comp\left(x\right)$'',那么$R$是等价关系,$X$中各点的$R$-等价类是该点在$X$中的连通分支.
+		\item 在(2)的设定下,$X/R$是完全不连通空间.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{积空间的连通分支}{}
+	设$\left(X_{i}\right)_{i\in I}$是拓扑空间族,$X=\prod\limits_{i\in I}X_{i}$,则对每个$\left(x_{i}\right)_{i\in I}\in X$有$\Comp\left(\left(x_{i}\right)_{i\in I}\right)=\prod\limits_{i\in I}\Comp\left(x_{i}\right)$.
+\end{proposition}

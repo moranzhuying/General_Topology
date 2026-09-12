@@ -1,0 +1,23 @@
+\section{初等滤子}
+
+记号约定:$X$是集合,$\left(x_{n}\right)_{n=0}^{\infty}$是$X$中的序列.
+
+\begin{definition}{与序列关联的初等滤子}{}
+	$\N$上的Fr\'{e}net滤子在$f:\N\to X,n\mapsto x_{n}$下的提升所生成的滤子称为$\left(x_{n}\right)_{n=0}^{\infty}$的初等滤子.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 等价地,$\left(x_{n}\right)_{n=0}^{\infty}$的初等滤子是$\left\{M\subseteq X\middle|\left\{n\in\N\middle|x_{n}\notin M\right\}\text{有限}\right\}$.
+		\item 对每个$n\in\N$,记$S_{n}=\left\{x_{p}\middle|p\geq n\right\}$,则$\mathfrak{B}\coloneq\left\{S_{n}\middle|n\in\N\right\}$是$\left(x_{n}\right)_{n=0}^{\infty}$初等滤子的一个滤子基.
+		\item 根据定义,$\left(x_{n}\right)_{n=0}^{\infty}$的子序列$\left(x_{k_{n}}\right)_{n=0}^{\infty}$的初等滤子比$\left(x_{n}\right)_{n=0}^{\infty}$的初等滤子更细.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{可数基滤子的初等滤子分解}{}
+	若$X$上的滤子$\mathcal{F}$有一个可数的滤子基,则$\mathcal{F}$是$X$上所有比$\mathfrak{F}$细的初等滤子的交.
+\end{proposition}
+
+\begin{remark}{可数滤子基不具备遗传性}{}
+	比具有可数滤子基的滤子更细的滤子不一定具有可数滤子基.例如,当$X$是不可数集时,$X$上的余有限滤子没有可数滤子基.但是,对$X$中各项互异的无限序列,它的初等滤子比余有限滤子更细.
+\end{remark}

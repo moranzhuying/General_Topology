@@ -1,0 +1,99 @@
+\section{集合的内部,闭包和边界·稠密集}
+
+记号约定:$X$是拓扑空间,$A,B\subseteq X$.
+
+\begin{definition}{集合的内点}{}
+	设$x\in X$.若$A$是$x$的邻域,则称$x$是$A$(在$X$中)的内点.
+\end{definition}
+
+\begin{definition}{集合的内部}{}
+	$A$在$X$中的内点组成的集合记作$\interior_{X}\left(A\right)$($\interior\left(A\right)$),称为$A$(在$X$中)的内部.
+\end{definition}
+
+\begin{proposition}{集合的内部的性质}{}
+	\begin{enumerate}
+		\item $A$是$X$中的开集$\iff$对每个$x\in A$,存在$X$中的开集$U$使得$\left\{x\right\}\subseteq U\subseteq A$.
+		\item $\interior\left(A\right)$是$X$中包含$X$的开集的并,从而是$X$中包含$A$的最大开集.
+		\item 若$B\subseteq A$,则$\interior\left(B\right)\subseteq\interior\left(A\right)$.
+		\item $A$是$B$的邻域$\iff$ $\interior\left(B\right)\subseteq\interior\left(A\right)$.
+		\item $\interior\left(A\cap B\right)=\interior\left(A\right)\cap\interior\left(B\right)$.
+		\item $A$是$X$中的开集$\iff$ $A=\interior\left(A\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{集合的外点和外部}{}
+	把$\interior_{X}\left(X\setminus A\right)$记作$\exterior_{X}\left(A\right)$($\exterior\left(A\right)$),称为$A$(在$X$中)的外部,其元素称为$A$(在$X$中)的外点.
+\end{definition}
+
+\begin{definition}{触点}{}
+	设$x\in X$.若$x$在$X$中的各邻域$V$都和$A$相交,则称$x$是$A$(在$X$中)的触点.
+\end{definition}
+
+\begin{definition}{集合的闭包}{}
+	$A$在$X$中的触点组成的集合记作$\closure_{X}\left(A\right)$($\closure\left(A\right)$),称为$A$(在$X$中)的闭包.
+\end{definition}
+
+\begin{proposition}{闭包和内部的对偶性}{}
+	$\closure\left(A\right)=X\setminus\interior\left(X\setminus A\right),\interior\left(A\right)=X\setminus\closure\left(X\setminus A\right)$.
+\end{proposition}
+
+\begin{proposition}{集合的闭包的性质}{}
+	\begin{enumerate}
+		\item $\closure\left(A\right)$是$X$中所有包含于$A$的闭集的交,从而是$X$中包含于$A$的最大闭集.
+		\item $\closure\left(A\cup B\right)=\closure\left(A\right)\cup\closure\left(B\right)$;
+		\item 若$A\subseteq B$,则$\closure\left(A\right)\supseteq\closure\left(B\right)$.
+		\item $A$是闭集$\iff$ $A=\closure\left(A\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{开集与闭包的交集包含关系}{}
+	若$A$是$X$中的开集,则对$X$的每个子集$B$都有$A\cap\closure\left(B\right)\subseteq\closure\left(A\cap B\right)$.
+\end{proposition}
+
+\begin{proposition}{集合的闭包点总与其与去心邻域相交}{}
+	设$x\in\closure\left(A\right)$.若$x\notin A$,则对$x$在$X$中的每个邻域$V$都满足$V\cap\left(A\setminus\left\{x\right\}\right)\neq\emptyset$.
+\end{proposition}
+
+\begin{definition}{集合的孤立点}{}
+	设$x\in\closure\left(A\right)$.若$x\in A$且$x$在$V$中有一个邻域$V$满足$V\cap\left(A\setminus\left\{x\right\}\right)=\emptyset$,则称$x$是$A$在$x$中的孤立点.
+\end{definition}
+
+\begin{remark}{孤立点的另一种表述}{}
+	等价地,$x$是$A$在$X$中的孤立点$\iff$ $\left\{x\right\}$是$A$中的开集.
+\end{remark}
+
+\begin{definition}{完美集}{}
+	$X$的没有孤立点的闭集称为$X$中的完美集.
+\end{definition}
+
+\begin{definition}{边界点,集合的边界}{}
+	我们把$\closure_{X}\left(A\right)\cap\closure_{X}\left(X\setminus A\right)$记作$\boundary_{X}\left(A\right)$($\boundary\left(A\right),\partial_{X}A,\partial A$),称之为$A$在$X$中的内部,其元素称为$A$在$X$中的边界点.
+\end{definition}
+
+\begin{proposition}{集合的边界的性质}{}
+	\begin{enumerate}
+		\item $\partial A$是$X$中的闭集.
+		\item $\partial A=\partial\left(X\setminus A\right)$.
+		\item $X=\interior\left(A\right)\sqcup\exterior\left(A\right)\sqcup\partial A$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{稠密集}{}
+	若$\closure_{X}\left(A\right)=X$,则称$A$在$X$中稠密($A$是$X$的稠密集).
+\end{definition}
+
+\begin{remark}{稠密集的另一种表述}{}
+	等价地,$A$在$X$中稠密$\iff$ $X$中每个非空开集都和$A$相交.
+\end{remark}
+
+\begin{example}{稠密集的例子}{}
+	\begin{enumerate}
+		\item (在典范嵌入的意义下)$\Q$和$\R\setminus\Q$在$\R$中都是稠密的.
+		\item 如果$X$是离散空间,则$X$中的稠密集只有自己.
+		\item 如果$X$是平庸空间,那么$X$的每个非空自己都是$X$中的稠密集,因为$X$中的开集只有$\emptyset$和$X$.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{拓扑基的基数$\leq$某个稠密子集的基数}{}
+	若$\mathcal{B}$是$X$的拓扑基,则$X$中有一个稠密集$D$满足$\left|D\right|\leq\left|\mathcal{B}\right|$.
+\end{proposition}

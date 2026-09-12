@@ -1,0 +1,39 @@
+\section{拓扑群的乘积}
+
+记号约定:$\left(G_{i}\right)_{i\in I}$是一族拓扑群(乘法记号),$\left(E_{i}\right)_{i\in I}$是一族拓扑空间.
+
+\begin{proposition}{拓扑群的乘积构成典范的拓扑群}{}
+	$\prod\limits_{i\in I}G_{i}$配备了$\left(G_{i}\right)_{i\in I}$的乘积拓扑后是拓扑群.
+\end{proposition}
+
+\begin{convention}{}{}
+	未加说明时,默认$\prod\limits_{i\in I}G_{i}$装备乘积拓扑.
+\end{convention}
+
+\begin{proposition}{拓扑群乘积的结合约束}{}
+	设$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的划分,那么$\prod\limits_{i\in I}G_{i}$和$\prod\limits_{\lambda\in\Lambda}\prod\limits_{i\in I_{\lambda}}G_{i}$作为拓扑群同构.
+\end{proposition}
+
+\begin{proposition}{拓扑群乘积的基本性质}{}
+	\begin{enumerate}
+		\item 设对每个$i\in I$有$H_{i}\in\Sub\left(G_{i}\right)$,则拓扑群$\prod\limits_{i\in I}H_{i}$和拓扑群$\prod\limits_{i\in I}G_{i}$的子群$\prod\limits_{i\in I}H_{i}$同构.
+		\item 设$J\subseteq I,J^{\prime}=I\setminus J$.令$G_{J}=\prod\limits_{j\in J}G_{j},G_{J^{\prime}}=\prod\limits_{j^{\prime}\in J^{\prime}}G_{j^{\prime}},G_{J}^{\prime}=G_{J}\times\prod\limits_{j^{\prime}\in J^{\prime}}\left\{e_{G_{i}}\right\}$.
+		\begin{itemize}
+			\item $\pr_{J}:G\to G_{J}$是严格拓扑群同态.
+			\item 典范映射$G_{J}\to G_{J}^{\prime},G/G_{J}^{\prime}\to G_{J^{\prime}},G\to G_{J}^{\prime}\left(G/G_{J}^{\prime}\right)$是拓扑群同构.
+		\end{itemize}
+		\item $G$中的有限支撑族构成的子群是$G$的稠密正规子群.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$G=\prod\limits_{i\in I}G_{i},E=\prod\limits_{i\in I}E_{i}$,对每个$i\in I$,$G_{i}$连续地作用于$E_{i}$.
+	\begin{enumerate}
+		\item $G$连续地作用于$E$.
+		\item 典范映射$E/G\to\prod\limits_{i\in I}\left(E_{i}/G_{i}\right)$是拓扑群同构.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$G=\prod\limits_{i\in I}G_{i}$,对每个$i\in I$有$H_{i}\unlhd G_{i}$,$H=\prod\limits_{i\in I}H_{i}$,则典范映射$G/H\to\prod\limits_{i\in I}\left(G_{i}/H_{i}\right)$是拓扑群同构.
+\end{proposition}

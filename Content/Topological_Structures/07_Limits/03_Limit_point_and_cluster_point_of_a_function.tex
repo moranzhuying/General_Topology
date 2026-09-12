@@ -1,0 +1,55 @@
+\section{映射的极限点和聚点}
+
+记号约定:$X$是集合,$Y$是拓扑空间,装备的拓扑为$\tau$,$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.
+
+\begin{definition}{映射的极限点和聚点}{}
+	设$\mathfrak{F}$是$X$上的滤子,$b\in Y$.
+	\begin{enumerate}
+		\item 若$f_{\ast}\left(\mathfrak{F}\right)$在$Y$中收敛到$b$,则称$b$是$f$沿$\mathfrak{F}$的极限点.把``$b$是$f$沿$\mathfrak{F}$的极限点''记作
+		\begin{center}
+			$\limit_{\mathfrak{F}}f=b$或$\limit_{x,\mathfrak{F}}f\left(x\right)=b$或$\limit_{\mathfrak{F}}f\left(x\right)=b$.
+		\end{center}
+		\item 若$b$是$f_{\ast}\left(\mathfrak{F}\right)$在$Y$中的聚点,则称$b$是$f$沿$\mathfrak{F}$的聚点.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{映射聚点和极限点的滤子判别准则}{}
+	设$\mathfrak{F}$是$X$上的滤子,$b\in Y$.
+	\begin{enumerate}
+		\item $b$是$f$沿$\mathfrak{F}$的极限点$\iff$对$b$在$Y$中的每个邻域$V$都有$f^{-1}\left(V\right)\in\mathfrak{F}$.
+		\item $b$是$f$沿$\mathfrak{F}$的聚点$\iff$对$b$在$Y$中的每个邻域$V$和每个$M\in\mathfrak{F}$都有$f\left(M\right)\cap V\neq\emptyset$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{用滤子刻画序列和网各自的极限点和聚点}{}
+	\begin{enumerate}
+		\item 设$\left(x_{n}\right)_{n=0}^{\infty}$是$X$中的序列,初等滤子为$\mathfrak{F}$.若$b$是$\mathfrak{F}$的极限点,则称$a$是$\left(x_{n}\right)_{n=0}^{\infty}$在$n$趋向正无穷时的极限点.同样的,我们把``$b$是$\left(x_{n}\right)_{n=0}^{\infty}$在$n\to+\infty$时的极限点''记作$\limit_{n\to+\infty}x_{n}=b$.沿用上述判别准则:
+		\begin{itemize}
+			\item $b$是$\left(x_{n}\right)_{n=0}^{\infty}$的极限点$\iff$对$b$在$Y$中的每个邻域$V$,存在$n_{0}\in\N$,对每个$\geq n_{0}$的$n\in\N$有$x_{n}\in V$.
+			\item $b$是$\left(x_{n}\right)_{n=0}^{\infty}$的聚点$\iff$对$b$在$Y$中的每个邻域$V$,对每个$n\in\N$,存在$\geq n_{0}$的$n\in\N$使得$x_{n}\in V$.
+		\end{itemize}
+		\item 设$I$是一个上定向集,映射$g\in\Hom_{\mathsf{Set}}\left(I,X\right)$的截面滤子是$\mathfrak{F}$.若$b$是$\mathfrak{F}$的极限点(相对的,聚点),则称$a$是$f$相对$I$的极限点(相对的,聚点),记作$\limit_{x\in I}f\left(x\right)=b$.
+	\end{enumerate}
+\end{example}
+
+\begin{remark}{映射的极限点和聚点与拓扑粗细的关系}{}
+	设$\mathfrak{F}$是$X$上的滤子.
+	\begin{enumerate}
+		\item 若$b$是$f$沿$\mathfrak{F}$的极限点(相对的,聚点),则把$\tau$换为更粗的拓扑,在新拓扑下$b$还是$f$沿$\mathfrak{F}$的极限点(相对的,聚点).
+		\item 若$b$是$f$沿$\mathfrak{F}$的极限点(相对的,聚点),则对$X$上每个比$\mathfrak{F}$更细的滤子(相对的,更粗的滤子)$\mathfrak{G}$,$b$是$f$沿$\mathfrak{G}$的极限点(相对的,聚点).
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{聚点的加细滤子判别准则}{}
+	$b$是$f$沿$\mathfrak{F}$的聚点$\iff$在$X$上存在比$\mathfrak{F}$更细的滤子$\mathfrak{G}$,使得$b$是$f$沿$\mathfrak{G}$的极限点.
+\end{proposition}
+
+\begin{remark}{映射芽的极限点和聚点}{}
+	设$\mathfrak{F}$是$X$上的滤子.若$b$是$f$沿$\mathfrak{F}$的极限点(相对的,聚点),则对每个与$f$沿$\mathfrak{F}$有相同芽的映射$g\in\Hom_{\mathsf{Set}}\left(X,Y\right)$,它沿$\mathfrak{G}$的极限点(相对的,聚点)也是$b$.因此,$f$的芽沿$\mathfrak{F}$的极限点和聚点良好定义.我们称$b$为$f$的芽沿$\mathfrak{F}$的极限点(相对的,聚点).
+\end{remark}
+
+
+
+
+
+

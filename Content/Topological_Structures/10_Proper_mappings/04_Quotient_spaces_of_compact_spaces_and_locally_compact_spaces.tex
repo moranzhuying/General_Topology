@@ -1,0 +1,51 @@
+\section{紧空间和局部紧空间的商空间}
+
+记号约定:
+
+\begin{itemize}
+	\item $X$是拓扑空间,$R$是$X$上的等价关系,$C$是相对$R$的二元关系,$\varphi:X\to X/R$是典范满射.
+	\item $X^{\prime}$是$X$的单点紧化,无穷远点是$\omega$,$R^{\prime}$是$X^{\prime}$上的等价关系,$C^{\prime}=C\cup\left\{\left(\omega,\omega\right)\right\}$.
+\end{itemize}
+
+\begin{proposition}{紧空间的商空间的Hausdorff性}{}
+	设$X$是紧空间,则下列陈述等价,并且其中一者成立时$X/R$是紧空间:
+	\begin{enumerate}
+		\item $C$是$X\times X$的闭集.
+		\item $\varphi$是闭映射.
+		\item $\varphi$是泛闭映射.
+		\item $X/R$是Hausdorff空间.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$X$是局部紧空间,则下列陈述等价,并且其中一者成立时$X/R$是局部紧空间:
+	\begin{enumerate}
+		\item $f$是泛闭映射.
+		\item $X$中每个紧集的饱和化都是$X$的紧集.
+		\item $C^{\prime}$是$X^{\prime}\times X^{\prime}$的闭集.
+		\item $\pr_{2}|_{C}$是泛闭映射.
+		\item $\varphi$是闭映射,并且对每个$x\in X$,它的$R$-等价类是$X$的紧集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{泛闭映射的像的紧性(局部紧性)判定}{}
+	设$Y$是拓扑空间,$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$泛闭.
+	\begin{enumerate}
+		\item $X$是紧空间(相对的,局部紧空间)$\iff$ $\im\left(f\right)$是紧空间(嫌贵的,局部紧空间).
+		\item 若$Y$是紧空间(相对的,局部紧空间),则$\im\left(f\right)$是紧空间(相对的,局部紧空间).
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$X$是局部紧空间,$\varphi$是开等价关系,$X/R$是Hausdorff空间.
+	\begin{enumerate}
+		\item $X/R$是局部紧空间.
+		\item $X/R$中的每个紧集都是$X$中某个紧集在$f$下的像.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	如果$X$局部紧但不紧,当$R$是闭等价关系时,$X/R$也可能不是Hausdorff的.即便$X/R$是Hausdorff的,它也不一定局部紧.
+\end{remark}
+
+

@@ -1,0 +1,51 @@
+\section{一致空间的紧性}
+
+记号约定:$X$是一致空间.
+
+\begin{definition}{预紧空间,预紧子集}{}
+	\begin{enumerate}
+		\item 若$X$的完备化是紧空间,则称一致空间$X$是预紧空间.
+		\item 设$A\subseteq X$.若$A$作为一致空间为预紧空间,则称$A$是$X$的预紧集.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	记$i:X\to\hat{X}$是典范映射,则$A\subseteq X$预紧$\iff$ $i\left(A\right)$在$\hat{X}$中的闭包是紧集.
+\end{remark}
+
+\begin{example}{Cauchy序列的像是预紧的}{}
+	对$X$中的每个Cauchy列$\left(x_{n}\right)_{n=0}^{\infty}$,集合$\left\{x_{n}\middle|n\in\N\right\}$是预紧集.
+\end{example}
+
+\begin{theorem}{预紧性的有限覆盖判定}{}
+	$X$是预紧空间$\iff$ $X$中的每个邻里$V$都有一个由$X$中的$V$-小集构成的有限覆盖.
+\end{theorem}
+
+\begin{remark}{}{}
+	非Hausdorff的拟紧空间不一定可一致化.
+\end{remark}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item $X$中每个预紧集的任何子集都是$X$的预紧集.
+		\item $X$中有限个预紧集的并还是$X$的预紧集.
+		\item $X$中每个预紧集的闭包都是$X$的预紧集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	一致空间中的每个相对紧集都是紧集,但一致空间的预紧集不一定是相对紧集(即便该一致空间Hausdorff).
+\end{remark}
+
+\begin{proposition}{预紧性被一致连续映射保持}{}
+	设$U,V$是一致空间,$f\in\Hom_{\mathsf{Uni}}\left(U,V\right)$,则$U$中每个预紧集在$f$下的像都是$Y$的预紧集.
+\end{proposition}
+
+\begin{proposition}{始一致结构下的预紧性}{}
+	设$X$是集合,$\left(Y_{i}\right)_{i\in I}$是一致空间族,对每个$i\in I$有$f_{i}\in\Hom_{\mathsf{Set}}\left(X,Y_{i}\right)$,为$X$配备$\left(f_{i}\right)_{i\in I}$的始一致结构.若$A\subseteq X$,则
+	\begin{center}
+		$A$是预紧集$\iff$对每个$i\in I$,$f_{i}\left(A\right)$是$Y_{i}$的预紧集.
+	\end{center}
+\end{proposition}
+
+

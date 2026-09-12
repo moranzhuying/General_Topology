@@ -1,0 +1,35 @@
+\section{紧空间在连续映射下的像}
+
+记号约定:$X$是拓扑空间.
+
+\begin{theorem}{拟紧空间在连续映射下的像是拟紧集}{}
+	若$X$是拟紧空间,$Y$是拓扑空间,$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$,则$\im\left(f\right)$是$Y$的紧集.
+\end{theorem}
+
+\begin{corollary}{连续映射保持拟紧集和紧集}{}
+	设$Y$是Hausdorff空间,$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$.
+	\begin{enumerate}
+		\item $X$中每个拟紧集在$f$下的像是$Y$中的紧集.
+		\item $X$中每个相对拟紧集在$f$下的像是$Y$中的相对紧集.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{拟紧空间到Hausdorff空间的映射是闭映射}{}
+	设$X$是拟紧空间,$Y$是Hausdorff空间,$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.
+	\begin{enumerate}
+		\item 若$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$,则$f$是闭映射.
+		\item 若$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)\cap\Isom_{\mathsf{Set}}\left(X,Y\right)$,则$f\in\Isom_{\mathsf{Top}}\left(X,Y\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{Hausdorff拓扑的极小性}{}
+	$X$上每个比拟紧拓扑粗的Hausdorff拓扑都和该拟紧拓扑相同.
+\end{corollary}
+
+\begin{corollary}{Hausdorff商空间的紧性和连续截面}{}
+	设$R$是$X$上的等价关系,$X/R$是Hausdorff空间,$\varphi:X\to X/R$是典范满射.
+	\begin{enumerate}
+		\item 若$X$中有一个拟紧集$K$使得$\varphi|_{K}$是满射,则$X/R$是紧空间,典范双射$K/R_{K}\to X/R$是同胚.
+		\item 在(1)的设定下,若对每个$x\in X$都有$\left|\left[x\right]_{R}\cap K\right|=1$,则$\varphi|_{K}$是同胚.
+	\end{enumerate}
+\end{corollary}

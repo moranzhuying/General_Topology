@@ -1,0 +1,58 @@
+\section{泛闭映射的紧性特征刻画}
+
+记号约定:$X,Y,P$是拓扑空间,$\left|P\right|=1$,$\left(X_{i}\right)_{i\in I},\left(Y_{i}\right)_{i\in I}$是拓扑空间族.
+
+\begin{lemma}{常值映射是泛闭映射的结论}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(X,P\right)$.若$f$是泛闭映射,则$X$是拟紧空间.
+\end{lemma}
+
+\begin{lemma}{}{}
+	设$X=\prod\limits_{i\in I}X_{i},Y=\prod\limits_{i\in I}Y_{i},y=\left(y_{i}\right)_{i\in I}\in Y$,对每个$i\in I$有$f_{i}\in\Hom_{\mathsf{Top}}\left(X_{i},Y_{i}\right)$,$f=\prod\limits_{i\in I}f_{i}$,$\mathfrak{U}$是$X$上的超滤子.若该滤子基在映射$f$下的拉回以$y$为极限点,则$\mathfrak{U}$在$x$中有一个极限点$x$满足$f\left(x\right)=y$.
+\end{lemma}
+
+\begin{theorem}{泛闭映射的等价刻画}{}
+	设$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$,则下列陈述等价:
+	\begin{enumerate}
+		\item $f$是泛闭映射.
+		\item $f$是闭映射,并且对每个$y\in Y$,集合$f^{-1}\left(\left\{y\right\}\right)$是$X$的拟紧集.
+		\item 若$\mathfrak{F}$是$X$上的滤子,$f_{\ast}\left(\mathcal{F}\right)$的聚点是$y$,则$\mathfrak{F}$有一个聚点$x$满足$f\left(x\right)=y$.
+		\item 若$\mathfrak{U}$是$X$上的超滤子,$f\left(\mathfrak{U}\right)$的极限点是$y$,则$\mathfrak{U}$有一个极限点$x$满足$f\left(x\right)=y$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{remark}{}{}
+	当$Y$是Hausdorff空间时,(4)等价于``若$\mathfrak{U}$是$X$上的超滤子,$f\left(\mathfrak{U}\right)$是收敛的滤子基,则$\mathfrak{U}$收敛''.
+\end{remark}
+
+\begin{corollary}{拟紧性的泛闭映射判定}{}
+	$X$是拟紧空间$\iff$ $\Hom_{\mathsf{Set}}\left(X,P\right)$的元素都是泛闭映射.
+\end{corollary}
+
+\begin{corollary}{拟紧空间到Hausdorff空间的映射}{}
+	若$X$是拟紧空间,$Y$是Hausdorff空间,则每个$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$都是泛闭映射.
+\end{corollary}
+
+\begin{corollary}{泛闭映射的直积}{}
+	若对每个$i\in I$,映射$f_{i}\in\Hom_{\mathsf{Set}}\left(X_{i},Y_{i}\right)$泛闭,则$\prod\limits_{i\in I}f_{i}$泛闭.
+\end{corollary}
+
+\begin{corollary}{对角映射的泛闭性}{}
+	设$X$是Hausdorff空间,对每个$i\in I$,映射$f_{i}\in\Hom_{\mathsf{Set}}\left(X,Y_{i}\right)$泛闭,则$X\to\prod\limits_{i\in I}X_{i},x\mapsto\left(f_{i}\left(x\right)\right)_{i\in I}$泛闭.
+\end{corollary}
+
+\begin{corollary}{第二分量的投影是泛闭映射}{}
+	若$X$是拟紧空间,则$\pr_{2}:X\times Y\to Y$是泛闭映射.
+\end{corollary}
+
+\begin{remark}{}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$是满射.给$X$配备$Y$上的拓扑在$f$下的拉回,则$f$是泛闭映射.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$泛闭,$K$是$Y$的拟紧集,则$f^{-1}\left(K\right)$是$X$的拟紧集.
+\end{proposition}
+
+
+
+
+

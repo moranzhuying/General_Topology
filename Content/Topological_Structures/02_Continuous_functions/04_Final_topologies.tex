@@ -1,0 +1,86 @@
+\section{终拓扑}
+
+\begin{proposition}{终拓扑的构造和泛性质}{construction-and-universal-property-of-final-topology}
+	设$X$是集合,$\left(Y_{i}\right)_{i\in I}$是拓扑空间族,对每个$i\in I$有$f_{i}\in\Hom_{\mathsf{Set}}\left(Y_{i},X\right)$.令
+	\begin{align*}
+		\mathcal{D}=\left\{U\subseteq X\middle|\forall i\in I\left(f_{i}^{-1}\text{是}Y_{i}\text{的开集}\right)\right\}.
+	\end{align*}
+	\begin{enumerate}
+		\item $X$上存在唯一的拓扑$\tau$,其所有开集组成的集合为$\mathcal{D}$,并且$\tau$是$X$上使$\left(f_{i}\right)_{i\in I}$是连续映射族的最细拓扑.
+		\item 对任意拓扑空间$Z$和$f\in\Hom_{\mathsf{Set}}\left(X,Z\right)$,映射$g$连续$\iff$ $\left(g\circ f_{i}\right)_{i\in I}$是连续映射族.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{终拓扑下的闭集}{}
+	记号和假设同命题(\ref{prop:construction-and-universal-property-of-final-topology}).对$X$的每个子集$A$,它是闭集$\iff$对每个$i\in I$,集合$f_{i}^{-1}\left(A\right)$是$Y_{i}$的闭集.
+\end{proposition}
+
+\begin{definition}{终拓扑}{}
+	记号和假设同命题(\ref{prop:construction-and-universal-property-of-final-topology}).我们称$\tau$是$\left(f_{i}\right)_{i\in I}$的终拓扑.
+\end{definition}
+
+\begin{proposition}{终拓扑的传递性}{}
+	设$X$是集合,$\left(Z_{i}\right)_{i\in I}$是拓扑空间族,$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的划分,$\left(Y_{\lambda}\right)_{\lambda\in\Lambda}$是集合族,对任意$\lambda\in\Lambda$和$i\in J_{\lambda}$有
+	\begin{align*}
+		h_{\lambda}\in\Hom_{\mathsf{Set}}\left(Y_{\lambda},X\right),g_{i,\lambda}\in\Hom_{\mathsf{Set}}\left(Z_{i},Y_{\lambda}\right),f_{i}=h_{\lambda}\circ g_{i,\lambda}.
+	\end{align*}
+	若对每个$\lambda\in\Lambda$,$Y_{\lambda}$配备$\left(g_{i,\lambda}\right)_{i\in I_{\lambda}}$的中拓扑,则$\left(f_{i}\right)_{i\in I}$的终拓扑和$\left(h_{\lambda}\right)_{\lambda\in\Lambda}$的终拓扑相同.
+\end{proposition}
+
+\begin{definition}{商拓扑}{}
+	设$X$是拓扑空间,$R$是$X$上的等价关系,$\varphi:X\twoheadrightarrow X/R$是典范满射.称$\left(\varphi\right)_{i\in\left\{1\right\}}$的终拓扑为$X$上的拓扑关于$R$的商拓扑.
+\end{definition}
+
+\begin{proposition}{拓扑族的下确界的构造}{}
+	设$\left(\tau_{i}\right)_{i\in I}$是$X$上的拓扑族,对任意$i\in I$,集合$X$配备$\tau_{i}$构成的拓扑空间记作$X_{i}$,映射$j_{i}:X_{i}\to X$是恒等映射,则$\left(j_{i}\right)_{i\in I}$的终拓扑等于$\inf\limits_{i\in I}\tau_{i}$.
+\end{proposition}
+
+\begin{definition}{和拓扑}{}
+	设$\left(X_{i}\right)_{i\in I}$是拓扑空间族,对每个$i\in I$,集合$X_{i}$配备拓扑$\tau_{i}$.我们称$\coprod\limits_{i\in I}X_{i}$的嵌入映射族$\left(\iota_{i}\right)_{i\in I}$的终拓扑为$\left(\tau_{i}\right)_{i\in I}$的和.
+\end{definition}
+
+\begin{remark}{}{}
+	给定$A\subseteq\coprod\limits_{i\in I}X_{i}$.它是开集(相对的,闭集)$\iff$对每个$i\in I$,集合$A\cap\im\left(\iota_{i}\right)$是$\im\left(\iota_{i}\right)$的开集(相对的,闭集).
+	
+	特别地,$\left(\im\left(\iota_{i}\right)\right)_{i\in I}$是$\coprod\limits_{i\in I}X_{i}$的一族开闭集.
+\end{remark}
+
+\begin{proposition}{局部拓扑的粘贴和拼接}{}
+	设$X$是集合,$\left(X_{\lambda}\right)_{\lambda\in\Lambda}$是$X$的子集族,对每个$\lambda\in\Lambda$,集合$X_{\lambda}$配备拓扑$\tau_{\lambda}$,$j_{\lambda}:X_{\lambda}\to X$是典范单射.假设对任意$\left(\lambda,\mu\right)\in\Lambda\times\Lambda$,下列条件成立:
+	\begin{enumerate}
+		\item $X_{\lambda}\cap X_{\mu}$是$X_{\lambda}$和$X_{\mu}$的开集(相对的,闭集).
+		\item $\tau_{\lambda}$和$\tau_{\mu}$在$X_{\lambda}\cap X_{\mu}$上诱导的子空间拓扑相同.
+	\end{enumerate}
+	设$\tau$是$\left(j_{\lambda}\right)_{\lambda\in\Lambda}$的终拓扑,则
+	\begin{enumerate}
+		\item $\left(X_{\lambda}\right)_{\lambda\in\Lambda}$是$X$的开集族(相对的,闭集族).
+		\item 对每个$\lambda\in\Lambda$,拓扑$\tau$在$X_{\lambda}$上诱导的子空间拓扑就是$\tau_{\lambda}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{未覆盖区域的离散型}{}
+	在上述条件下,若$X\neq\bigcup\limits_{\lambda\in\Lambda}X_{\lambda}$,则$\tau$在$X\setminus\bigcup\limits_{\lambda\in\Lambda}X_{\lambda}$上诱导的子空间拓扑是离散拓扑.这是因为,对诸$x\in X\setminus\bigcup\limits_{\lambda\in\Lambda}X_{\lambda}$和$\mu\in\Lambda$,有$\left\{x\right\}\cap X_{\mu}=\emptyset$,因此$\left\{x\right\}$是$X$的开集.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+\section{子空间中的极限}
+
+记号约定:
+\begin{itemize}
+	\item $X,Y$是拓扑空间,$A\subseteq X$,$a\in\closure_{X}\left(A\right),b\in Y$.
+	\item 对每个$x\in X$,记$\mathfrak{B}\left(x\right)_{A}$为$\mathfrak{B}_{A}\left(x\right)$.
+\end{itemize}
+
+\begin{definition}{映射在子空间中的极限点和聚点}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(A,Y\right)$.
+	\begin{enumerate}
+		\item 若$f$沿$\mathfrak{B}_{A}\left(a\right)$的极限点为$b$,则称$f$在$a$处相对$A$的极限是$b$(或$x$在$A$中趋于$a$时$f\left(x\right)$趋于$b$),记作$\limit_{\substack{x\to a\\x\in A}}f\left(x\right)=b$.
+		\item 若$f$沿$\mathfrak{B}_{A}\left(a\right)$的聚点为$b$,则称$f$在$a$处相对$A$的聚点是$b$.
+	\end{enumerate}
+	特别地,当$A=X\setminus\left\{a\right\}$且$a$不是$X$的孤立点时,把$\limit_{\substack{x\to a\\x\in A}}f\left(x\right)=b$写作$\limit_{\substack{x\to a\\x\neq a}}f\left(x\right)=b$.
+\end{definition}
+
+\begin{definition}{限制映射的相对极限}{}
+	设$g\in\Hom_{\mathsf{Set}}\left(X,Y\right),f=g|_{A},a\in\closure\left(A\right)$.
+	\begin{enumerate}
+		\item 若$f$在$a$处相对$A$的极限为$b$,则称$g$在$a$处相对$A$的极限是$b$.
+		\item 若$f$在$a$处相对$A$的聚点为$b$,则称$g$在$a$处相对$A$的聚点是$b$.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{相对极限的子空间性质和局部化性质}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(A,Y\right)$.
+	\begin{enumerate}
+		\item 设$B\subseteq A,a\in\closure_{X}\left(B\right)$.若$f$在$a$处相对$A$的极限为$b$,则$f$在$a$处相对$B$的极限也为$b$.
+		\item 若$V$是$a$在$X$中的邻域,$f$在$a$处相对$V\cap A$的极限为$b$,则$f$在$a$处相对$A$的极限为$b$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{非孤立点连续性的极限刻画}{}
+	设$a$不是$X$的孤立点,$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$,则$f$在$a$处连续$\iff$ $\limit_{\substack{x\to a\\x\neq a}}f\left(x\right)=f\left(a\right)$.
+\end{proposition}

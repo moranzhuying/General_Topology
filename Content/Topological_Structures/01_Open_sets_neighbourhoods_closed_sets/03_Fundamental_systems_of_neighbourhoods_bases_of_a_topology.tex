@@ -1,0 +1,50 @@
+\section{邻域基·拓扑基}
+
+记号约定:$X$是拓扑空间,$A\subseteq X$.
+
+\begin{definition}{集合的邻域基}{}
+	设$\mathcal{B}\left(A\right)$是$A$的邻域所组成的集合的子集.若对$A$的每个邻域$V$,都存在$W\in\mathcal{B}\left(A\right)$使得$W\subseteq V$,则称$\mathcal{B}\left(A\right)$是$V$的邻域基.
+	
+	进一步,如果$A=\left\{x\right\}$,则将$\mathcal{B}\left(A\right)$记作$\mathcal{B}\left(x\right)$,称之为$x$的邻域基.
+\end{definition}
+
+\begin{proposition}{邻域基的有限交性质}{}
+	对任意$\mathfrak{S}\in\fin\left(\mathcal{B}\left(A\right)\right)$,存在$\tilde{A}\in\mathcal{B}\left(A\right)$使得$\tilde{A}\subseteq\bigcap\limits_{S\in\mathfrak{S}}S$.
+\end{proposition}
+
+\begin{example}{邻域基的例子}{}
+	\begin{enumerate}
+		\item 设$X$是离散空间,则对每个$x\in X$,集合$\left\{\left\{x\right\}\right\}$是$x$的邻域基.
+		\item 设$\mathbb{F}\in\left\{\Q,\R\right\}$.对每个$x\in\mathbb{F}$,下列集合族都能给出$x$的一个邻域基:
+		\begin{itemize}
+			\item $\mathbb{F}$中包含$x$的开区间构成的集合族.
+			\item $\left(\left(x-\frac{1}{n},x+\frac{1}{n}\right)\right)_{n\in\Z_{>0}}$.
+			\item $\left(\left[x-\frac{1}{n},x+\frac{1}{n}\right]\right)_{n\in\Z_{>0}}$.
+		\end{itemize}
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{}{}
+	下列等价命题之一成立时,称$\mathcal{B}$是$\tau$的拓扑基.
+	\begin{enumerate}
+		\item 对任一$U\in\tau$,存在$\mathcal{B}$的元素族$\left(B_{i}\right)_{i\in I}$使得$U=\bigcup\limits_{i\in I}B_{i}$.
+		\item 对任一$U\in\tau$和$y\in U$,存在$B\in\mathcal{B}$使得$\left\{y\right\}\subseteq B\subseteq U$.
+		\item 对任一$y\in X$,集合$\mathcal{B}\left(y\right)$是$x$的邻域基.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{拓扑基}{}
+	设$\mathcal{B}$是$X$的一些开集组成的集合.若对$X$的每个开集$U$都存在$\mathfrak{B}\subseteq\mathcal{B}$使$U=\bigcup\limits_{B\in\mathfrak{B}}B$,则称$\mathcal{B}$是$X$上的拓扑的(拓扑)基.
+\end{definition}
+
+\begin{proposition}{拓扑基的邻域刻画}{}
+	设$\mathcal{B}$是$X$的一些开集组成的集合,则$\mathcal{B}$是$X$的拓扑基$\iff$对每个$x\in X$,集合$\left\{V\in\mathcal{B}\middle|x\in V\right\}$是$x$的邻域基.
+\end{proposition}
+
+\begin{example}{拓扑基的例子}{}
+	\begin{enumerate}
+		\item 设$X$是离散空间,则$\left\{\left\{x\right\}\middle|x\in X\right\}$是$X$的拓扑基.
+		\item 设$\mathbb{F}\in\left\{\Q,\R\right\}$,则$\mathbb{F}$中的有界开区间组成的集合是$\mathbb{F}$上的拓扑的基.
+	\end{enumerate}
+\end{example}
+

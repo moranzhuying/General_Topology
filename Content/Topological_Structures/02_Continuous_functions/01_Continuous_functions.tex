@@ -1,0 +1,92 @@
+\chapter{连续映射}
+
+\section{映射在某点和整个空间上的连续性}
+
+记号约定:$X,Y,Z$是拓扑空间.
+
+\begin{definition}{映射在某一点连续}{}
+	设$x_{0}\in X,f\in\Hom_{\mathsf{Set}}\left(E,F\right)$.若对$f\left(x_{0}\right)$的每个邻域$W$,存在$x_{0}$的邻域$V$使$f\left(V\right)\subseteq W$,则称$f$在$x_{0}$处连续.
+\end{definition}
+
+\begin{remark}{}{}
+	直观地说,当$x$充分接近$x_{0}$时,$f\left(x\right)$可任意接近$f\left(x_{0}\right)$,则$f$在$x_{0}$处连续.由于``$f\left(V\right)\subseteq W$''和``$V\subseteq f^{-1}\left(W\right)$''等价,因此我们可以给出下面的等价表述:对$f\left(x_{0}\right)$的每个邻域$W$,集合$f^{-1}\left(W\right)$是$x_{0}$的邻域.此外,为了说明$f$在$x_{0}$处连续,只需要证明:对$f\left(x_{0}\right)$的某个邻域基中的邻域$W$,集合$f^{-1}\left(W\right)$是$x_{0}$的邻域.
+\end{remark}
+
+\begin{proposition}{点连续性和闭包}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(X,Y\right),a\in X,A\subseteq X$.若$f$在$a$处连续,$a\in\closure\left(A\right)$,则$f\left(x\right)\in\closure\left(f\left(A\right)\right)$.
+\end{proposition}
+
+\begin{proposition}{点连续性的复合}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(X,Y\right),g\in\Hom_{\mathsf{Set}}\left(Y,Z\right),a\in X$.若$f$在$a$处连续,$g$在$f\left(a\right)$处连续,则$g\circ f$在$a$处连续.
+\end{proposition}
+
+\begin{definition}{映射在空间上的连续性}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.若对每个$x\in X$,映射$f$在$x$处连续,则称$f$是连续映射($f$连续).
+\end{definition}
+
+\begin{example}{连续映射的简单例子}{}
+	\begin{enumerate}
+		\item $\id_{X}$是连续映射.
+		\item 若$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$是常值映射,则$f$是连续映射.
+		\item 若$X$是离散空间,则每个$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$都是连续映射.
+	\end{enumerate}
+\end{example}
+
+\begin{theorem}{连续映射的等价刻画}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.下列命题等价:
+	\begin{enumerate}
+		\item $f$是连续映射.
+		\item 对每个$A\subseteq X$都有$f\left(\closure\left(A\right)\right)\subseteq\closure\left(f\left(A\right)\right)$.
+		\item $Y$中每一个闭集在$f$下的原像都是$X$中的闭集.
+		\item $Y$中每一个开集在$f$下的原像都是$X$中的开集.
+	\end{enumerate}
+\end{theorem}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$\mathcal{B}$是$Y$的拓扑基,则$f$是连续映射$\iff$ $\mathcal{B}$中每个元素在$f$下的原像是$X$的开集.例如,对每个$a\in\Q$,
+		\begin{gather*}
+			\Q\to\Q,x\mapsto x+a\\
+			\Q\to\Q,x\mapsto ax
+		\end{gather*}
+		都是连续映映射.
+		\item 如果$f$是连续映射,那么$X$中的开集(或闭集)在$f$下的像不一定是开集(相对的,闭集).例如,
+		\begin{align*}
+			f:\R\to\R,x\mapsto\frac{1}{x^{2}+1}
+		\end{align*}
+		连续,但$\im\left(f\right)=\left(0,1\right]$,它既非开集也非闭集.
+	\end{enumerate}
+\end{remark}
+
+\begin{theorem}{连续映射的复合,同胚的等价刻画}{}
+	\begin{enumerate}
+		\item 若$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$和$g\in\Hom_{\mathsf{Set}}\left(Y,Z\right)$都连续,则$g\circ f$连续.
+		\item 若$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$是双射,则$f$是同胚$\iff$ $f$和$f^{-1}$都连续.
+	\end{enumerate}
+\end{theorem}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 连续的双射不一定是同胚.例如,$X$是配备离散拓扑的$\Q$,而$Y$是典范拓扑的$\Q$,那么$\id_{\Q}$不是同胚.
+		\item 如果$f\in\Isom_{\mathsf{Set}}\left(X,Y\right)$,要断言$f$是同胚,只需验证:对每个$x\in X$和$x$的每个邻域$V$,集合$f\left(V\right)$是$f\left(x\right)$的邻域.
+		\item 设$x_{0}\in X$.对任意$x\in X$,记$\mathcal{V}\left(x\right)$是$x$的邻域组成的集合,定义$\mathcal{V}_{0}\left(x\right)$如下:
+		\begin{itemize}
+			\item 当$x=x_{0}$时,$\mathcal{V}_{0}\left(x\right)=\mathcal{V}\left(x_{0}\right)$.
+			\item 当$x\neq x_{0}$时,$\mathcal{V}_{0}\left(x\right)$是$X$中包含$x$的子集组成的集合.
+		\end{itemize}
+		$\left(\mathcal{V}_{0}\left(x\right)\right)_{x\in X}$是$X$中各点的邻域组成的集合所构成的的族.记配备这个集合族诱导的拓扑的$X$为$X_{0}$,而$j:X_{0}\to X$是恒等映射,他是连续映射但一般来说不是同胚.不难验证:$f$在$x_{0}$处连续$\iff$ $f\circ j$在$x_{0}$处连续.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+\section{滤子基}
+
+记号约定:$X$是集合.
+
+\begin{definition}{滤子基}{}
+	设$\mathfrak{B}\subseteq\mathcal{P}\left(X\right)$.当如下条件成立时,称$\mathfrak{B}$是$X$上的滤子基.
+	\begin{enumerate}
+		\item ($\mathrm{B}_{1}$)$\forall B_{1},B_{2}\in\mathcal{B}\exists B_{3}\in\mathfrak{B}\left(B_{3}\subseteq\mathcal{B}_{1}\cap\mathcal{B}_{2}\right)$.
+		\item ($\mathrm{B}_{2}$)$\mathfrak{B}\neq\emptyset\wedge\emptyset\notin\mathfrak{B}$.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{滤子基的判定}{}
+	设$\mathfrak{B}\subseteq\mathcal{P}\left(X\right)$,则$\left\{A\subseteq X\middle|\exists B\in\mathcal{B}\left(B\subseteq A\right)\right\}$是$X$上的滤子$\iff$ $\mathfrak{B}$是$X$上的滤子基.
+\end{proposition}
+
+\begin{definition}{滤子基生成的滤子,滤子的等价性}{}
+	\begin{enumerate}
+		\item 设$\mathfrak{B}$是$X$上的滤子基.我们称$\langle\mathfrak{B}\rangle\coloneq\left\{A\subseteq X\middle|\exists B\in\mathfrak{B}\left(B\subseteq A\right)\right\}$是$\mathfrak{B}$在$X$上生成的滤子,称$\mathfrak{B}$为该滤子的基.
+		\item 设$\mathfrak{B}_{1},\mathfrak{B}_{2}$是$X$上的滤子基.若$\langle\mathfrak{B}_{1}\rangle=\langle\mathfrak{B}_{2}\rangle$,则称$\mathfrak{B}_{1}$和$\mathfrak{B}_{2}$等价.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	如果$\mathfrak{F}$是$X$上的滤子,其子基为$\mathfrak{S}$,则$\left\{\bigcap\limits_{S\in\mathcal{S}}S\middle|\mathcal{S}\in\fin\left(\mathfrak{S}\right)\right\}$是$\mathfrak{F}$的基.
+\end{remark}
+
+\begin{proposition}{滤子基的特征}{}
+	设$\mathfrak{F}$是$X$上的滤子,$\mathfrak{B}\subseteq\mathfrak{F}$,则$\mathfrak{B}$是$\mathfrak{F}$的滤子基$\iff$ $\forall F\in\mathfrak{F}\exists B\in\mathfrak{B}\left(F\supseteq B\right)$.
+\end{proposition}
+
+\begin{proposition}{滤子粗细的基判别准则}{}
+	设$\mathfrak{F}_{1}$和$\mathfrak{F}_{2}$是$X$的滤子,各自的基是$\mathfrak{B}_{1}$和$\mathfrak{B}_{2}$,则$\mathfrak{F}_{1}\subseteq\mathfrak{F}_{2}\iff\forall B_{1}\in\mathfrak{B}_{1}\exists B_{2}\in\mathfrak{B}_{2}\left(B_{1}\supseteq B_{2}\right)$.
+\end{proposition}
+
+\begin{corollary}{滤子基等价的判定准则}{}
+	设$\mathfrak{B}_{1}$和$\mathfrak{B}_{2}$是$X$上的滤子基,则$\langle\mathfrak{B}_{1}\rangle=\langle\mathfrak{B}_{2}\rangle\iff\forall B_{1}\in\mathfrak{B}_{1}\exists B_{2}\in\mathfrak{B}_{2}\left(B_{1}\supseteq B_{2}\right)\wedge\forall B_{2}^{\prime}\in\mathfrak{B}_{2}\exists B_{1}^{\prime}\in\mathfrak{B}_{1}\left(B_{2}^{\prime}\supseteq B_{1}^{\prime}\right)$.
+\end{corollary}
+
+\begin{example}{滤子基的例子}{}
+	\begin{enumerate}
+		\item 设$X$是拓扑空间,则对每个$x\in X$,它在$x$处的邻域滤子的基就是$x$在$X$中的邻域基.
+		\item 设集合$X$非空,按预序$\leq$向上定向.对每个$a\in X$,记$S_{a}=\left\{x\in X\middle|a\leq x\right\}$,则$\mathfrak{S}\coloneq\left\{S_{a}\middle|a\in X\right\}$是$X$的滤子基.称$\mathfrak{S}$生成的滤子为$X$上的截面滤子.特别地,当$X=\N$且$\leq$是标准全序时$\langle\mathfrak{S}\rangle$就是Fren\'{e}t滤子.
+		\item 设$\mathfrak{F}$是$X$上的滤子.对每个$A\in\mathfrak{F}$,定义$S_{A}=\left\{M\in\mathcal{F}\middle|M\subseteq A\right\}$,则$\mathfrak{S}\coloneq\left\{S\left(A\right)\middle|A\in\mathcal{F}\right\}$是$X$上的滤子基.称$\mathfrak{S}$生成的滤子为$\mathfrak{F}$的截面滤子.
+	\end{enumerate}
+\end{example}

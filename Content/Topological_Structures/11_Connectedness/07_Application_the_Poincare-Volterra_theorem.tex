@@ -1,0 +1,43 @@
+\section{Poincar\'{e}-Volterra定理}
+
+\begin{definition}{第一可数空间,第二可数空间,可分空间}{}
+	设$X$是拓扑空间.
+	\begin{enumerate}
+		\item 如果$X$中每一点都有一个可数的邻域基,则称$X$是第一可数空间.
+		\item 如果$X$有一个可数的拓扑基,则称$X$是第二可数空间.
+		\item 如果$X$中有一个可数的稠密集,则称$X$是可分空间.
+	\end{enumerate}
+\end{definition}
+
+记号约定:$X,Y$是拓扑空间,$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$.
+
+\begin{theorem}{}{}
+	设$X$连通,局部连通,满足条件($\mathrm{O_{3}}$),$Y$第二可数,$Y$中各点在$f$下的原像是$X$的离散子空间,$\mathfrak{B}\subseteq\mathcal{P}\left(X\right)$,满足下列条件:
+	\begin{itemize}
+		\item $\mathfrak{B}$中的每个元素$V$的内部都包含$X$.
+		\item 对每个$V\in\mathcal{B}$,映射$f|_{V}$是闭映射.
+		\item 每个$V\in\mathfrak{B}$都是可分空间.
+	\end{itemize}
+	那么,$X$可以表示成一族可数开集的并,其中每个开集都包含于$\mathfrak{B}$中的某个集合.
+\end{theorem}
+
+\begin{corollary}{}{}
+	设$X$连通,局部连通,$Y$第二可数且正则,$f$满足下列条件:
+	\begin{center}
+		对每个$x\in X$,它在$X$中有一个闭邻域$V$使得$f|_{V}$的余限制是同胚.
+	\end{center}
+	那么$X$第二可数且正则.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$X$局部紧,连通,局部连通,$X$中各点都有一个第二可数的邻域,$Y$第二可数且Hausdorff,$Y$中各点在$f$下的原像是$X$的离散子空间,则$X$第二可数.
+\end{corollary}
+
+\begin{corollary}{Poincar\'{e}-Volterra定理}{}
+	设$X$连通,Hausdorff,$Y$局部紧,局部连通,第二可数,$f$满足下列条件:
+	\begin{center}
+		对每个$x\in X$,它在$X$中有一个开邻域$V$使得$f|_{V}$的余限制是同胚.
+	\end{center}
+	那么$X$局部紧,局部连通且第二可数.
+\end{corollary}
+

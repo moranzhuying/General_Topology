@@ -1,0 +1,105 @@
+\chapter{群上的拓扑}
+
+没有额外说明时,本章考虑的群都不一定交换.采用乘法记号时,群的单位元记作$e$.对于交换群,一般采用加法记号.
+
+\section{拓扑群}
+
+记号约定:$G$是群(乘法记号),$X$是拓扑空间.
+
+\begin{definition}{拓扑群}{}
+	设$\mathscr{T}$是$G$上的拓扑.如果
+	\begin{enumerate}
+		\item ($\mathrm{GT}_{1}$)群$G$的乘法$\cdot:G\times G\to G,\left(x,y\right)\mapsto xy$连续,
+		\item ($\mathrm{GT}_{2}$)映射$G\to G,x\mapsto x^{-1}$连续,
+	\end{enumerate}
+	则称$\left(G,\cdot,\mathscr{T}\right)$是拓扑群.
+\end{definition}
+
+\begin{remark}{}{}
+	$\left(G,\cdot,\mathscr{T}\right)$是拓扑群$\iff$($\mathrm{GT}^{\prime}$)映射$G\times G\to G,\left(x,y\right)\mapsto xy^{-1}$连续.
+\end{remark}
+
+\begin{convention}{}{}
+	设$I$是集合.对每个$f,g\in\Hom_{\mathsf{Set}}\left(I,G\right)$,记
+	\begin{gather*}
+		\frac{1}{f}:G\to G,i\mapsto\left(f\left(i\right)\right)^{-1},\\
+		fg:G\to G,i\mapsto f\left(i\right)g\left(i\right).
+	\end{gather*}
+\end{convention}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 给$G$装备离散拓扑,那么$G$构成拓扑群.我们称装备了离散拓扑的群是离散群.
+		\item 给$G$装备平凡拓扑,那么$G$构成拓扑群.我们称装备了平凡拓扑的群是平凡拓扑群.
+		\item $\Q$的加法群和$\R$的加法群在各自的标准拓扑下构成拓扑群.
+		\item 设$\left(G,\cdot,\mathscr{F}\right)$是拓扑群,那么$\left(G^{\op},\cdot^{\op},\mathscr{T}\right)$也是拓扑群,称为$G$的相反拓扑群.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{拓扑群中由平移衍生出来的同胚}{}
+	设$G$是拓扑群.
+	\begin{enumerate}
+		\item 对每个$a\in G$,它在$G$上诱导的左平移$\mathcal{L}_{a}$和右平移$\mathcal{R}_{a}$都是同胚.
+		\item $\Aut_{\mathsf{Top}}\left(G\right)=\left\{\mathcal{L}_{a}\circ\mathcal{R}_{b}\in\Aut_{\mathsf{Grp}}\left(G\right)\middle|a,b\in G\right\}$.
+		\item $\left\{\Ad_{a}\in\Aut_{\mathsf{Grp}}\left(G\right)\middle|a\in G\right\},\left\{\mathcal{L}_{a}\in\Aut_{\mathsf{Grp}}\left(G\right)\middle|a\in G\right\},\left\{\mathcal{R}_{a}\in\Aut_{\mathsf{Grp}}\left(G\right)\middle|a\in G\right\}$是$\Aut_{\mathsf{Top}}\left(G\right)$的子群.
+		\item $G\to G,x\mapsto x^{-1}$是同胚.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{拓扑群中开集,闭集和邻域的运算}{}
+	设$G$是拓扑群,$A,B\subseteq G$.
+	\begin{enumerate}
+		\item 若$A$是$G$中的开集(相对的,闭集),则
+		\begin{itemize}
+			\item $A^{-1}$是开集(相对的,闭集).
+			\item 对每个$x\in G$,集合$xA,Ax$是开集(相对的,闭集).
+		\end{itemize}
+		\item 若$A$是$G$中的开集,则$AB$和$BA$是开集.
+		\item 若$V\in\mathcal{N}\left(e\right),A\neq\emptyset$,则$VA,AV\in\mathcal{N}\left(a\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	即便$A,B$都是$G$的闭集,$AB$也不一定是$G$的闭集.
+\end{remark}
+
+\begin{proposition}{拓扑空间到拓扑群的连续映射构成群}{}
+	设$X$是拓扑空间.
+	\begin{enumerate}
+		\item 设$x_{0}\in X,f,g\in\Hom_{\mathsf{Set}}\left(X,G\right)$.若$f,g$在$x_{0}$处连续,则$\frac{1}{f},fg$在$x_{0}$处连续.
+		\item $\Hom_{\mathsf{Top}}\left(X,G\right)$是$\Hom_{\mathsf{Set}}\left(X,G\right)$的子群.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$X$是装备了滤子$\mathfrak{F}$的集合,$G$是Hausdorff拓扑群,$f,g\in\Hom_{\mathsf{Set}}\left(X,G\right)$.若$f,g$沿$\mathfrak{F}$有极限,则$\frac{1}{f},fg$亦然,并且
+	\begin{align*}
+		\limit_{\mathfrak{F}}\frac{1}{f}=\left(\limit_{\mathfrak{F}}f\right)^{-1},\limit_{\mathfrak{F}}\left(fg\right)=\left(\limit_{\mathfrak{F}}f\right)\left(\limit_{\mathfrak{F}}g\right).
+	\end{align*}
+\end{proposition}
+
+\begin{remark}{}{}
+	当$G$是交换拓扑群,并且采用加法记号时,只需要把$x^{-1}$换成$-x$,把$xy$换成$x+y$,把$xy^{-1}$换成$x-y$.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

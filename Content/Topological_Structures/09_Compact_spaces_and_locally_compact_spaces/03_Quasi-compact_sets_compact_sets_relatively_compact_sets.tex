@@ -1,0 +1,66 @@
+\section{拟紧集,紧集,相对紧集}
+
+记号约定:$X$是拓扑空间.
+
+\begin{definition}{拟紧集,紧集}{}
+	设$A\subseteq X$.若$A$作为拓扑空间是拟紧空间(相对的,紧空间),则称$A$是$X$的拟紧集(相对的,紧集).
+\end{definition}
+
+\begin{remark}{}{}
+	$A$是$X$的拟紧集$\iff$ $A$在$X$中的每个开覆盖都有一个有限覆盖.
+\end{remark}
+
+\begin{remark}{}{}
+	如果$X$是Hausdorff空间,那么``拟紧''和``紧''是同一个概念..
+\end{remark}
+
+\begin{example}{拟紧集,紧集的例子}{}
+	\begin{enumerate}
+		\item $X$的每个有限子集都是$X$中的紧集.
+		\item 设$\left(x_{n}\right)_{n=0}^{\infty}$是$X$中收敛到$a$的序列,那么$\left\{x_{n}\middle|n\in\N\right\}\cup\left\{a\right\}$是$X$中的拟紧集.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{闭子集遗传拟紧性和紧性}{}
+	若$X$是拟紧空间(相对的,紧空间),则$X$的每个闭集都是$X$中的拟紧集(相对的,紧集).
+\end{proposition}
+
+\begin{proposition}{Hausdorff空间的紧集都是闭集}{}
+	若$X$是Hausdorff空间,则$X$中的每个紧集都是$X$的闭集.
+\end{proposition}
+
+\begin{corollary}{紧空间中紧集=闭集}{}
+	设$X$是紧空间,$A\subseteq X$,则$A$是$X$的紧集$\iff$ $A$是$X$的闭集.
+\end{corollary}
+
+\begin{proposition}{拟紧集构成的有限族的并依然拟紧}{}
+	若$\left(A_{i}\right)_{i\in I}$是$X$中的拟紧集构成的有限族,则$\bigcup\limits_{i\in I}A_{i}$是$X$的拟紧集.
+\end{proposition}
+
+\begin{definition}{相对拟紧集,相对紧集}{}
+	设$A\subseteq X$.
+	\begin{enumerate}
+		\item 若$A$被$X$中的一个拟紧集包含,则称$A$是$X$中的相对拟紧集.
+		\item 若$A$被$X$中的一个紧集包含,则称$A$是$X$中的相对紧集.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	与之前类似,当$X$是Hausdorff空间时,``相对拟紧''和``相对紧''是同一个概念.
+\end{remark}
+
+\begin{proposition}{Hausdorff空间中相对紧集的刻画}{}
+	设$X$是Hausdorff空间,$A\subseteq X$,则$A$是$X$的相对紧集$\iff$ $\closure\left(A\right)$是$X$的紧集.
+\end{proposition}
+
+\begin{proposition}{相对拟紧集上的滤子基在全空间中有聚点}{}
+	若$A$是$X$的相对拟紧集,则$A$上的每个滤子基在$X$上都有聚点.
+\end{proposition}
+
+\begin{remark}{}{}
+	注意,这个命题的逆在$X$没有施加约束时不一定成立.
+\end{remark}
+
+\begin{remark}{}{}
+	在非Hausdorff空间中:紧集不一定是闭集,紧集的闭包不一定拟紧;两个紧集的交不一定拟紧;两个紧集的并不一定紧.
+\end{remark}

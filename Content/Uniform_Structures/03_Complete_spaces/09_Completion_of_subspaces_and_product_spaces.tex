@@ -1,0 +1,17 @@
+\section{子空间和乘积空间的完备化}
+
+\begin{proposition}{始一致结构下的完备化}{}
+	设$X$是集合,$\left(Y_{i}\right)_{i\in I}$是一致空间族,对每个$i\in I$,$f_{i}\in\Hom_{\mathsf{Set}}\left(X,Y\right)$,为$X$配备$\left(f_{i}\right)_{i\in I}$的始一致结构.
+	\begin{enumerate}
+		\item $\left(\hat{f}_{i}\right)_{i\in I}$的始一致结构和$\hat{X}$的一致结构相同.
+		\item 设对每个$i\in I$,$\iota_{i}:Y_{i}\to\hat{Y}_{i}$是典范映射.令$g:X\to\prod\limits_{i\in I}\hat{Y}_{i},x\mapsto\left(\iota_{i}\left(f_{i}\left(x\right)\right)\right)_{i\in I}$,则$\hat{X}$和$\im\left(g\right)$的闭包一致同构.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{子空间的完备化}{}
+	设$X$是一致空间,$i:X\to\hat{X}$是典范映射,$A\subseteq X$,$j:A\to X$是典范映射,则$\hat{j}$诱导$\hat{A}$到$\im\left(i\right)$在$\hat{X}$中的闭包的一致同构.
+\end{corollary}
+
+\begin{corollary}{积一致空间的完备化}{}
+	设$\left(X_{i}\right)_{i\in I}$是一致空间族,则$\prod\limits_{i\in I}X_{i}$的完备化典范地一致同构于$\prod\limits_{i\in I}\hat{X}_{i}$.
+\end{corollary}

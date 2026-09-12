@@ -1,0 +1,42 @@
+\section{Hausdorff空间的子空间和乘积}
+
+记号约定:$X$是拓扑空间.
+
+\begin{proposition}{Hausdorff空间的子空间}{}
+	\begin{enumerate}
+		\item 如果$X$是Hausdorff空间,则$X$的每个子空间都是Hausdorff空间.
+		\item 如果$X$中每一点都有一个Hausdorff的局部闭邻域,则$X$是Hausdorff空间.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	每一点都有一个Hausdorff的邻域,但不是Hausdorff空间的拓扑空间存在.
+\end{remark}
+
+\begin{proposition}{积空间的Hausdorff性}{}
+	设$\left(X_{i}\right)_{i\in I}$是拓扑空间族.
+	\begin{enumerate}
+		\item 若$\left(X_{i}\right)_{i\in I}$是一族Hausdorff空间,则$\prod\limits_{i\in I}X_{i}$是Hausdorff空间.
+		\item 若$\prod\limits_{i\in I}X_{i}\neq\emptyset$且为Hausdorff空间,则$\left(X_{i}\right)_{i\in I}$是一族Hausdorff空间.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{始拓扑下Hausdorff性的判定}{}
+	设$I$是集合,$\left(X_{i}\right)_{i\in I}$是Hausdorff空间族,对每个$i\in I$有$f_{i}\in\Hom_{\mathsf{Set}}\left(I,X_{i}\right)$.为$X$配备$\left(f_{i}\right)_{i\in I}$的始拓扑,则x下列陈述等价:
+	\begin{enumerate}
+		\item $X$是Hausdorff空间.
+		\item $\left(f_{i}\right)_{i\in I}$是区分点的.即,对$X$中任意两个不同的点$x,y$,存在$i\in I$使得$f_{i}\left(x\right)\neq f_{i}\left(y\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{逆向极限的Hausdorff性}{}
+	若$\left(\left(X_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是Hausdorff空间的逆向系统,则$\varprojlim X_{\alpha}$是Hausdorff空间和$\prod\limits_{\alpha\in I}X_{\alpha}$的闭子空间.
+\end{corollary}
+
+\begin{remark}{}{}
+	特别地,如果$\left(X_{\alpha}\right)_{\alpha\in I}$是Hausdorff空间族,则$\coprod\limits_{\alpha\in I}X_{\alpha}$是Hausdorff空间.
+\end{remark}
+
+
+
+

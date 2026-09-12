@@ -1,0 +1,65 @@
+\chapter{Hausdorff空间和正则空间}
+
+\section{Hausdorff空间}
+
+记号约定:$X$是拓扑空间.
+
+\begin{proposition}{Hausdorff空间的等价定义}{equivalent-definition-of-hausdorff-space}
+	如下陈述等价.其中,条件($\mathrm{H}$)称为Hausdorff公理.
+	\begin{enumerate}
+		\item ($\mathrm{H}$)对$X$中的任意不相等的两点$x,y$,二者在$X$中分别有一个邻域$U$和$V$满足$U\cap V=\emptyset$.
+		\item ($\mathrm{H}_{1}$)对每个$x\in X$,拓扑空间$X$中包含$x$的所有闭邻域的交是$\left\{x\right\}$.
+		\item ($\mathrm{H}_{2}$)拓扑空间$X\times X$的对角线是$X\times X$的闭集.
+		\item ($\mathrm{H}_{3}$)对每个集合$I$,拓扑空间$\Hom_{\mathsf{Set}}\left(I,X\right)$的对角线是$\Hom_{\mathsf{Set}}\left(I,X\right)$的闭集.
+		\item ($\mathrm{H}_{4}$)$X$上的每个滤子至多有一个极限点.
+		\item ($\mathrm{H}_{5}$)对$X$中每一点$x$和$X$上每个收敛到$x$的滤子$\mathfrak{F}$,该滤子在$X$中的聚点只有$x$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{Hausdorff空间}{}
+	如果$X$满足命题(\ref{prop:equivalent-definition-of-hausdorff-space})的陈述之一,则称$X$是Hausdorff空间,$X$上装备的拓扑称为Hausdorff拓扑.
+\end{definition}
+
+\begin{remark}{}{}
+	设$I$是集合,$f\in\Hom_{\mathsf{Set}}\left(I,X\right)$,$\mathfrak{F}$是$X$上的滤子,则$f$沿$\mathfrak{F}$的极限点至多有一个.如果$f$有极限点,那么该极限点也是$f$沿$\mathfrak{F}$的唯一聚点.
+\end{remark}
+
+\begin{example}{Hausdorff空间的例子}{}
+	\begin{enumerate}
+		\item 每个离散空间都是Hausdorff空间.
+		\item 有理直线$\Q$是Hausdorff空间.
+		\item 包含至少两个点的平庸空间不是Hausdorff空间.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{等化子是闭集,唯一延拓定理}{}
+	设$Y$是Hausdorff空间,$f,g\in\Hom_{\mathsf{Top}}\left(X,Y\right)$.
+	\begin{enumerate}
+		\item $\left\{x\in X\middle|f\left(x\right)=g\left(x\right)\right\}$是$X$中的闭集.
+		\item (唯一延拓定理)若存在$X$的稠密集$D$使得$f|_{D}=g|_{D}$,则$f=g$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{连续映射的闭图像定理}{}
+	设$Y$是Hausdorff空间,$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$,则$\Gr\left(f\right)$是$X\times Y$的闭集.
+\end{corollary}
+
+\begin{proposition}{有限个显著点的邻域分离性}{}
+	设$\left(x_{i}\right)_{i=1}^{n}$是Hausdorff空间$X$中各项互异的序列,则对每个$1\leq i\leq n$,在$X$中$x_{i}$有一个邻域$V_{i}$,使得$\left(V_{i}\right)_{i=1}^{n}$两两无交.
+\end{proposition}
+
+\begin{corollary}{有限Hausdorff空间的离散性}{}
+	每个有限Hausdorff空间都是离散空间.
+\end{corollary}
+
+\begin{proposition}{Hausdorff空间的有限集的闭性}{}
+	如果$X$是Hausdorff空间,那么$X$的每个有限集都是$X$中的闭集.
+\end{proposition}
+
+\begin{proposition}{用连续映射判定Hausdorff空间}{}
+	若对$X$中任意不同的两点$x,y$,存在Hausdorff空间$Y$和$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$使$f\left(x\right)\neq f\left(y\right)$,则$X$是Hausdorff空间.
+\end{proposition}
+
+\begin{corollary}{强拓扑的Hausdorff性}{}
+	若$\tau$是$X$上的Hausdorff拓扑,则$X$上每个比$\tau$细的拓扑都是Hausdorff拓扑.
+\end{corollary}
