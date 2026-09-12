@@ -1,0 +1,82 @@
+\section{拓扑空间的逆向极限}
+
+\begin{definition}{拓扑空间的逆向系统和逆向极限}{inverse-limit-of-topological-spaces}
+	设$I$是预序集,$\left(\left(X_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是集合的逆向系统,$\left(f_{\alpha}\right)_{\alpha\in I}$是典范满射族.如果:
+	\begin{enumerate}
+		\item $\left(X_{\alpha}\right)_{\alpha\in I}$是拓扑空间族,
+		\item $\forall\alpha,\beta\in I\left(\alpha\leq\beta\implies f_{\alpha\beta}\in\Hom_{\mathsf{Top}}\left(X_{\beta},X_{\alpha}\right)\right)$,
+	\end{enumerate}
+	则称$\left(\left(X_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是拓扑空间的逆向系统,$\left(f_{\alpha}\right)_{\alpha\in I}$的始拓扑称为该逆系统的逆向极限拓扑,配备了该拓扑的集合$\varprojlim X_{\alpha}$称为$\left(\left(X_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$的逆向极限.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\varprojlim X_{\alpha}$典范等同于$\left\{x\in\prod\limits_{\alpha\in I}X_{\alpha}\middle|\forall\alpha,\beta\in I\left(x_{\alpha}=f_{\alpha\beta}\left(\pr_{\beta}\left(x\right)\right)\right)\right\}$.在等同意义下,$\varprojlim X_{\alpha}$上的拓扑与后者配备的子空间拓扑相同.
+		\item 设对每个$\alpha\in I$,集合$Y_{\alpha}$是$X_{\alpha}$的子空间,$\left(\left(Y_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}|_{Y_{\beta}}\right)_{\alpha,\beta\in I}\right)$是逆向系统,则$\varprojlim Y_{\alpha}$是$\varprojlim X_{\alpha}$的子空间.
+		\item 设$\left(\left(Y_{\alpha}\right)_{\alpha\in I},\left(g_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是拓扑空间的逆系统,并且
+		\begin{align*}
+			\forall\alpha\in I\exists u_{\alpha}\in\Hom_{\mathsf{Top}}\left(X_{\alpha},Y_{\alpha}\right)\forall\beta\in I\left(\alpha\leq\beta\implies u_{\alpha}\circ f_{\alpha\beta}=g_{\alpha\beta}\circ u_{\beta}\right),
+		\end{align*}
+		则$\varprojlim u_{\alpha}\in\Hom_{\mathsf{Top}}\left(\varprojlim X_{\alpha},\varprojlim Y_{\alpha}\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{共尾子系统的同胚性}{}
+	设定同定义(\ref{def:inverse-limit-of-topological-spaces}).若$I$是上定向集,$J$是$I$的共尾子集,则典范双射$\varprojlim\limits_{I}X_{\alpha}\to\varprojlim\limits_{J}X_{j}$是同胚.
+\end{proposition}
+
+\begin{proposition}{逆极限拓扑的拓扑基}{}
+	设定同定义(\ref{def:inverse-limit-of-topological-spaces}).若$I$是上定向集,$J$是$I$的共尾子集,对每个$\alpha\in J$,集合$\mathcal{B}_{\alpha}$是$X_{\alpha}$的拓扑基,则
+	\begin{align*}
+		\left\{f_{\alpha}^{-1}\left(U_{\alpha}\right)\middle|\alpha\in J,U_{\alpha}\in\mathcal{B}_{\alpha}\right\}
+	\end{align*}
+	是$\varprojlim X_{\alpha}$的拓扑基.
+\end{proposition}
+
+\begin{corollary}{逆极限下的闭包和闭子空间}{}
+	设定同定义(\ref{def:inverse-limit-of-topological-spaces}).若$A\subseteq\varprojlim X_{\alpha}$,对每个$\alpha\in I$有$A_{\alpha}=f_{\alpha}\left(A\right)$,则
+	\begin{enumerate}
+		\item 对每个$\alpha\in I$,集合$A_{\alpha}$(相对的,$\closure\left(A_{\alpha}\right)$)在$X_{\alpha}$中构成子集逆向系统,并且
+		\begin{align*}
+			\closure\left(A\right)=\bigcap\limits_{\alpha\in I}f_{\alpha}^{-1}\left(\closure\left(A_{\alpha}\right)\right)=\varprojlim\closure\left(A_{\alpha}\right).
+		\end{align*}
+		\item 若$A$是$\varprojlim X_{\alpha}$的闭集,则$A=\varprojlim A_{\alpha}=\varprojlim\closure\left(A_{\alpha}\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{example}{嵌套字空间的交的拓扑刻画}{}
+	设$I$是上定向集,$\left(X_{\alpha}\right)_{\alpha\in I}$是集合$Y$的子集族,并且$\forall\alpha,\beta\in I\left(\alpha\leq\beta\implies X_{\alpha}\supseteq X_{\beta}\right)$.设对每个$\alpha\in I$,$\tau_{\alpha}$是$X_{\alpha}$的拓扑,并且$\forall\alpha,\beta\in I\left(\alpha\leq\beta\implies \tau_{\beta}\text{比}X_{\beta}\text{诱导的子空间拓扑细}\right)$.如果
+	\begin{align*}
+		\forall\alpha,\beta\in I\left(\alpha\leq\beta\implies f_{\alpha\beta}\in\Hom_{\mathsf{Set}}\left(X_{\beta},X_{\alpha}\right)\text{是典范单射}\right),
+	\end{align*}
+	则$\varprojlim X_{\alpha}$可典范等同于$\bigcap\limits_{\alpha\in I}X_{\alpha}$,后者配备的拓扑为$\left(\tau_{\alpha}\right)_{\alpha\in I}$的上确界拓扑.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

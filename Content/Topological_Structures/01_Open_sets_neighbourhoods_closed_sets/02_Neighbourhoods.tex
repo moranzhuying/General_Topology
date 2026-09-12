@@ -1,0 +1,48 @@
+\section{邻域}
+
+记号约定:$X$是拓扑空间,$A,V\subseteq X$.
+
+\begin{definition}{集合的邻域,点的邻域}{}
+	若存在$U\in\tau$使得$A\subseteq U\subseteq V$,则称$V$是$A$(在$X$中)的邻域.进一步,若$A=\left\{x\right\}$,则称$V$是$x$(在$X$中)的邻域.
+\end{definition}
+
+\begin{proposition}{邻域的性质}{}
+	\begin{enumerate}
+		\item 若$V$是$A$的邻域,$B\subseteq A$,则$V$是$B$的邻域.特别地,$V$是$A$中每个元素的邻域.
+		\item 若$V$是$A$中每个点的邻域,则$V$是$A$的邻域.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{开集的邻域刻画}{}
+	$V$是$X$中的开集$\iff$ $V$是$V$的每个元素的邻域.
+\end{proposition}
+
+\begin{remark}{``充分接近''的严格描述}{}
+	在直觉上,若某一性质在点$x$的某个邻域内的所有点上都成立,则称该性质对与$x$充分接近的所有点均成立.例如,上述命题可以按下列方式表述:$A$是$X$中的开集$\iff$对每个$x\in A$,所有与$x$充分接近的点都属于$A$.
+\end{remark}
+
+\begin{proposition}{邻域公理}{}
+	设$x\in X$的邻域组成的集合为$\mathcal{V}\left(x\right)$,该集合满足下列条件:
+	\begin{enumerate}
+		\item ($\mathrm{N}_{1}$)$\forall V\in\mathcal{B}\left(x\right)\forall W\subseteq X\left(V\subseteq W\implies W\in\mathcal{V}\left(x\right)\right)$.
+		\item ($\mathrm{N}_{2}$)$\forall V_{1},V_{2}\in\mathcal{B}\left(x\right)\left(V_{1}\cap V_{2}\in\mathcal{B}\left(x\right)\right)$.
+		\item ($\mathrm{N}_{3}$)$\forall V\in\mathcal{B}\left(x\right)\left(x\in V\right)$.
+		\item ($\mathrm{N}_{4}$)$\forall V\in\mathcal{B}\left(x\right)\exists W\in\mathcal{B}\left(x\right)\left(W\subseteq V\wedge\forall y\in W\left(V\in\mathcal{V}\left(y\right)\right)\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{邻域公理定义的拓扑}{}
+	忘记$X$上的拓扑.若对任意$x\in X$,集合$V_{x}\subseteq X$满足条件($\mathrm{N}_{1}$)到($\mathrm{N}_{4}$),则
+	\begin{enumerate}
+		\item $X$上存在唯一的拓扑$\tau$,对任意$x\in X$,集合$V_{x}$是$x$在该拓扑下的邻域组成的集合.
+		\item 具体而论,(1)中的拓扑$\tau$是$\left\{U\subseteq X\middle|\forall x\in U\left(U\subseteq V_{x}\right)\right\}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{有理直线,实直线}{}
+	在$\Q$上可以定义一个拓扑,该拓扑的所有成员由$\Q$中所有有界开区间的任意并构成.等价的,对任意$x\in\Q$,定义该点的邻域组成的集合$\mathcal{V}\left(x\right)$由$\Q$中某个包含$x$的开区间的子集组成,那么由$\left(\mathcal{V}_{x}\right)_{x\in X}$确定的拓扑与先前提到的拓扑相同.我们称配备了该拓扑的$\Q$是有理直线.我们可以用同样的方式在$\R$上定义一个拓扑,配备该拓扑的$\R$称为实直线.
+\end{example}
+
+
+
+

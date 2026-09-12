@@ -1,0 +1,29 @@
+\section{始一致结构}
+
+\begin{proposition}{始一致结构的构造和泛性质}{construction-and-universal-property-of-initial-uniformity}
+	设$X$是集合,$\left(Y_{i}\right)_{i\in I}$是一致空间族,对每个$i\in I$有$f_{i}\in\Hom_{\mathsf{Set}}\left(X,Y_{i}\right),g_{i}=f_{i}\times f_{i}$.令
+	\begin{align*}
+		\mathfrak{S}=\left\{g_{i}^{-1}\left(V_{i}\right)\middle|V_{i}\text{是}X_{i}\text{的邻里}\right\},\mathfrak{B}=\left\{\bigcap\limits_{B\in\mathcal{B}}B\middle|\mathcal{B}\in\fin\left(\mathfrak{B}\right)\right\}.
+	\end{align*}
+	\begin{enumerate}
+		\item $\mathfrak{B}$是$X$上的邻里基,它生成的一致结构$\mathfrak{U}$是使$\left(f_{i}\right)_{i\in I}$为一致连续映射族的最细一致结构.
+		\item 设$Z$是一致空间,$h\in\Hom_{\mathsf{Set}}\left(Z,X\right)$,为$X$装备$\mathfrak{U}$,则$h$一致连续$\iff$ $\left(f_{i}\circ h\right)_{i\in I}$是一致连续映射族.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{始一致结构}{}
+	沿用命题(\ref{prop:construction-and-universal-property-of-initial-uniformity})的记号.称$\mathfrak{U}$是$\left(f_{i}\right)_{i\in I}$的始一致结构.
+\end{definition}
+
+\begin{corollary}{始一致结构诱导始拓扑}{}
+	沿用命题(\ref{prop:construction-and-universal-property-of-initial-uniformity})的记号,则$\mathfrak{U}$诱导的拓扑为$\left(f_{i}\right)_{i\in I}$的始拓扑.
+\end{corollary}
+
+\begin{proposition}{始一致结构的传递性}{}
+	设$X$是集合,$\left(Z_{i}\right)_{i\in I}$是一致空间族,$\left(Y_{\lambda}\right)_{\lambda\in\Lambda}$是集合族,$\left(J_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的划分.对每个$\lambda\in\Lambda$和$i\in J_{\lambda}$,
+	\begin{align*}
+		h_{\lambda}\in\Hom_{\mathsf{Set}}\left(X,Y_{\lambda}\right),g_{i\lambda}\in\Hom_{\mathsf{Set}}\left(Y_{\lambda},Z_{\lambda}\right),f_{i}=g_{i\lambda}\circ h_{\lambda}.
+	\end{align*}
+	若对每个$\lambda\in\Lambda$,集合$Y_{\lambda}$配备$\left(g_{i\lambda}\right)_{i\in J_{\lambda}}$的始一致结构,则$\left(f_{i}\right)_{i\in I}$的始一致结构和$\left(h_{\lambda}\right)_{\lambda\in\Lambda}$的始一致结构相同.
+\end{proposition}
+

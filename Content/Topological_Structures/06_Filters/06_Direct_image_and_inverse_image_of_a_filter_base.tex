@@ -1,0 +1,38 @@
+\section{滤子基的拉回和提升}
+
+记号约定:$X$和$Y$是集合,$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.
+
+\begin{definition}{滤子基的前推(或提升)}{}
+	设$\mathfrak{B}$是$X$的滤子基.我们称$f^{\ast}\left(\mathfrak{B}\right)\coloneq\left\{f\left(B\right)\middle|B\in\mathfrak{B}\right\}$是$\mathfrak{B}$在$f$下的前推(或提升).
+\end{definition}
+
+\begin{proposition}{滤子基的提升性质}{}
+	\begin{enumerate}
+		\item 若$\mathfrak{B}$是$X$的滤子基,则$f^{\ast}\left(\mathfrak{B}\right)$是$Y$的滤子基.
+		\item 若$\mathfrak{B}_{1},\mathfrak{B}_{2}$是$X$的滤子基,$\langle\mathfrak{B}_{1}\rangle\subseteq\langle\mathfrak{B}_{2}\rangle$,则$\langle f\left(\mathfrak{B}_{1}\right)\rangle\subseteq\langle f\left(\mathfrak{B}_{2}\right)\rangle$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{超滤子基的提升}{}
+	若$\mathfrak{B}$是$X$的超滤子基,则$f^{\ast}\left(B\right)$是$Y$的超滤子基.
+\end{proposition}
+
+\begin{remark}{典范嵌入的情形}{}
+	当$X\subseteq Y$且$f$是典范单射时,$Y$上由$f^{\ast}\left(\mathfrak{B}\right)$生成的拓扑称为$X$上的滤子基$\mathfrak{B}$在$Y$上生成的拓扑.
+\end{remark}
+
+\begin{proposition}{滤子基的拉回存在的条件}{}
+	设$\mathfrak{B}$是$Y$的滤子基,则$\left\{f^{-1}\left(B\right)\middle|B\in\mathfrak{B}\right\}$是$X$的滤子基$\iff$ $\forall M\in\mathfrak{B}\left(f^{-1}\left(M\right)\neq\emptyset\right)$.
+\end{proposition}
+
+\begin{definition}{滤子基的拉回}{}
+	设$\mathfrak{B}$是$Y$的滤子基,并且$\forall M\in\mathfrak{B}\left(f^{-1}\left(M\right)\neq\emptyset\right)$.称$f_{\ast}\left(\mathfrak{B}\right)\coloneq\left\{f^{-1}\left(B\right)\middle|B\in\mathfrak{B}\right\}$是$\mathfrak{B}$在$f$下的拉回.
+\end{definition}
+
+\begin{proposition}{滤子基的提升与拉回的复合}{}
+	设$\mathfrak{B}$是$X$的滤子基,则$f_{\ast}\left(f^{\ast}\left(\mathfrak{B}\right)\right)$是$X$的滤子基,并且$\langle\mathfrak{B}\rangle\subseteq\langle f_{\ast}\left(f^{\ast}\left(\mathfrak{B}\right)\right)\rangle$.
+\end{proposition}
+
+\begin{remark}{典范嵌入的情形}{}
+	当$X\subseteq Y$,并且$f$是典范单射时,如果$\mathfrak{B}$是$Y$的滤子基,那么$f_{\ast}\left(\mathfrak{B}\right)=\mathfrak{B}_{X}$.因此,我们再一次得到了诱导滤子的判别准则.
+\end{remark}

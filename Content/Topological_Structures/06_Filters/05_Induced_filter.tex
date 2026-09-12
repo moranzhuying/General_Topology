@@ -1,0 +1,32 @@
+\section{诱导滤子}
+
+记号约定:$X$是集合.对每个$\mathfrak{F}\subseteq\mathcal{P}\left(X\right)$和$A\subseteq X$,记$\mathfrak{F}_{A}\coloneq\left\{F\cap A\middle|F\in\mathfrak{F}\right\}$.
+
+\begin{proposition}{滤子在子集的迹是滤子的等价条件}{}
+	设$\mathfrak{F}$是$X$上的滤子,$A\subseteq X$,则$\mathfrak{F}_{A}$是$A$的滤子$\iff$ $\forall F\in\mathfrak{F}\left(F\cap A\neq\emptyset\right)$.
+\end{proposition}
+
+\begin{definition}{诱导滤子}{}
+	设$\mathfrak{F}$是$X$上的滤子,$A\subseteq X$.当$\mathfrak{F}_{A}$是滤子时,称$\mathfrak{F}_{A}$为$\mathfrak{F}$在$A$上诱导的滤子.
+\end{definition}
+
+\begin{remark}{}{}
+	如果$\mathfrak{S}$是$\mathfrak{F}$的子基,那么$\mathfrak{S}_{A}$是$\mathfrak{F}_{A}$的子基.
+\end{remark}
+
+\begin{example}{一个特殊的例子}{}
+	设$X$是拓扑空间,$A\subseteq X,x\in X$,记$\mathcal{B}$为$x$在$X$中的邻域滤子,则$\mathfrak{B}_{A}$是$A$上的滤子$\iff$ $x\in\closure_{X}\left(A\right)$.该例非常有趣:
+	\begin{itemize}
+		\item 其一,在第七节讨论极限时我们会用到上述的事实.
+		\item 其二,\underline{每一个滤子都可以用这样的方式定义}.
+	\end{itemize}
+	具体而言,设$\mathfrak{F}$是集合$X$上的滤子,集合$X^{\prime}$由$X$并接一个元素$\omega$得到,$\mathfrak{F}^{\prime}$是$X^{\prime}$的滤子,具体写作
+	\begin{align*}
+		\left\{M\cup\left\{\omega\right\}\middle|M\in\mathfrak{F}\right\}.
+	\end{align*}
+	对每个$x\in X$,定义$\mathfrak{B}\left(x\right)$为$X^{\prime}$中包含$x$的子集组成的集合,并令$\mathfrak{B}\left(\omega\right)=\mathfrak{F}^{\prime}$.可以验证$\left\{\mathfrak{B}\left(x\right)\middle|x\in X^{\prime}\right\}$满足邻域公理,如此便在$X^{\prime}$上确定了一个拓扑.在此拓扑下$\omega$是$X$的聚点,并且$\mathfrak{F}$是$\omega$的邻域滤子$\mathfrak{F}^{\prime}$在$X$上诱导的滤子.如此定义的拓扑称为与$\mathfrak{F}$关联的拓扑,得到的拓扑空间$X^{\prime}$称为与$\mathfrak{F}$关联的拓扑空间.
+\end{example}
+
+\begin{proposition}{超滤子的诱导}{}
+	设$\mathfrak{U}$是$X$上的超滤子,$A\subseteq X$,则$\mathfrak{U}_{A}$是$A$上的滤子$\iff$ $A\in\mathfrak{U}$.两条件之一成立时$\mathfrak{U}_{A}$是$A$上的超滤子.
+\end{proposition}

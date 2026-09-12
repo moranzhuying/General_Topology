@@ -1,0 +1,60 @@
+\section{连续映射的典范分解}
+
+记号约定:
+\begin{itemize}
+	\item $X$和$Y$是拓扑空间,$R$是$X$上的等价关系,$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$.
+	\item $f$的有典范分解$f=\iota\circ\bar{f}\circ p$,具体表作如下交换图:
+	\begin{center}
+		\begin{tikzcd}
+			X \arrow[d, "\varphi"', two heads] \arrow[r, "f"] & Y                                           \\
+			X/\mathcal{R} \arrow[r, "\bar{f}"']         & \im\left(f\right) \arrow[u, "\iota"', hook]
+		\end{tikzcd}
+	\end{center}
+\end{itemize}
+
+\begin{proposition}{诱导映射是同胚的等价条件}{}
+	下列三个陈述等价:
+	\begin{enumerate}
+		\item $\bar{f}$是同胚.
+		\item 对$X$中每个关于$\mathcal{R}$饱和的开集$U$,集合$f\left(U\right)$是$\im\left(f\right)$的开集.
+		\item 对$X$中每个关于$\mathcal{R}$饱和的闭集$V$,集合$f\left(V\right)$是$\im\left(f\right)$的闭集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{覆盖的粘贴拓扑}{}
+	设$\left(X_{i}\right)_{i\in I}$是$X$的覆盖,$Y=\coprod\limits_{i\in I}X_{i}$,则$Y$中有一族两两无交的开闭集$\left(Y_{i}\right)_{i\in I}$满足$\forall i\in I\left(\Isom_{\mathsf{Top}}\left(X_{i},Y_{i}\right)\right)$.设
+	\begin{align*}
+		\forall i\in I\left(f_{i}\in\Isom_{\mathsf{Top}}\left(X_{i},Y_{i}\right)\wedge f|_{X_{i}}=f_{i}\right),
+	\end{align*}
+	并且$R$是$f$诱导的等价关系,那么$\bar{f}$不一定是同胚.例如,$\left(X_{i}\right)_{i\in I}$是一族单点集且$X$不是离散空间时$\bar{f}$只是连续的双射.如果下列条件之一成立,那么$\bar{f}$是同胚:
+	\begin{itemize}
+		\item $\bigcup\limits_{i\in I}\interior_{X}\left(X_{i}\right)=X$;
+		\item $\left(X_{i}\right)_{i\in I}$是$X$的局部有限的闭覆盖.
+	\end{itemize}
+\end{example}
+
+\begin{proposition}{利用连续截面构造同胚}{}
+	设$f$是满射,$s\in\Hom_{\mathsf{Top}}\left(Y,X\right)$且是$f$的左逆,则$\bar{f}\in\Isom_{\mathsf{Top}}\left(X/R,Y\right)$,映射$s$诱导同胚$Y\to\im\left(s\right)$.
+\end{proposition}
+
+\begin{definition}{连续截面}{}
+	我们称$p$的左逆$s$是$X$相对$R$的连续截面.当$\im\left(s\right)$确定时$s$唯一,因此我们也会滥用术语说$s$是$X$相对$R$的一个连续截面.
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

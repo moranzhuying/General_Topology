@@ -1,0 +1,61 @@
+\section{一致空间的完备化}
+
+记号约定:$X$是一致空间,其一致结构为$\mathfrak{U}$.
+
+\begin{theorem}{Hausdorff完备化的构造和泛性质}{construction-and-universal-property-of-completion-of-uniform-space}
+	满足如下性质的Hausdorff完备空间$\hat{X}$和$i\in\Hom_{\mathsf{Uni}}\left(X,\hat{X}\right)$存在:
+	\begin{enumerate}
+		\item $\left(X,i\right)$满足条件($\mathrm{P}$):对每个Hausdorff空间$Y$和$f\in\Hom_{\mathsf{Uni}}\left(X,Y\right)$,存在唯一的$g\in\Hom_{\mathsf{Uni}}\left(\hat{X},Y\right)$使得$f=g\circ i$.
+		\item 对满足($\mathrm{P}$)的每个$\left(X_{1},i_{1}\right)$,存在唯一的$\varphi\in\Isom_{\mathsf{Uni}}\left(\hat{X},X_{1}\right)$使$i_{1}=\varphi\circ i$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}{一致空间的完备化}{}
+	沿用定理(\ref{thm:construction-and-universal-property-of-completion-of-uniform-space})的记号.我们称$\hat{X}$是一致空间$X$的Hausdorff完备化,称$i$为典范映射.
+\end{definition}
+
+\begin{proposition}{Hausdorff完备化的性质}{}
+	设$\hat{X}$是$X$的Hausdorff完备化,其一致结构为$\hat{\mathfrak{U}}$,$i:X\to\hat{X}$是典范映射.
+	\begin{enumerate}
+		\item $\im\left(i\right)$是$\hat{X}$的稠密子空间.
+		\item 设$i$确定的等价关系为$R$,则相对$R$的二元关系是$\bigcap\limits_{V\in\mathfrak{U}}V$.
+		\item $\mathfrak{U}$是$\hat{\mathfrak{U}}$在$i$下的拉回.
+		\item 记$\tilde{i}=i\times i$,则$\im\left(i\right)$的邻里基为$\left\{\tilde{i}\left(V\right)\middle|V\in\mathfrak{U}\right\}$,并且$\left\{\closure\left(V\right)\middle|V\text{是}\im\left(i\right)\text{的邻里}\right\}$是$\hat{\mathfrak{U}}$的邻里基.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$X$是Hausdorff一致空间,其Hausdorff完备化是$\widehat{X}$,则典范映射$\iota:X\to\widehat{X}$诱导一致同构$X\to\im\left(i\right)$.
+\end{corollary}
+
+\begin{remark}{}{}
+	当$X$是Hausdorff一致空间时,我们通常把$\im\left(i\right)$视为$X$的完备化.
+\end{remark}
+
+\begin{proposition}{通过稠密子空间判定完备化}{}
+	设$Y$是Hausdorff完备空间,$X$是$Y$的稠密子空间,$\iota:X\to Y$是典范单射,则$\exists!\bar{\iota}\in\Isom_{\mathsf{Uni}}\left(\hat{X},Y\right)\forall x\in\hat{X}\left(\bar{\iota}\left(x\right)=\iota\left(x\right)\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$X$相对$\mathfrak{U}$是Hausdorff完备空间,$Z$是$X$的稠密子空间,$\mathfrak{U}^{\prime}$是$X$上的一致结构,满足如下条件:
+	\begin{enumerate}
+		\item $\mathfrak{U}^{\prime}\subseteq\mathfrak{U}$,
+		\item $\mathfrak{U}^{\prime}$在$Z$上诱导的一致结构和$\mathfrak{U}$在$Z$上诱导的一致结构相同,
+	\end{enumerate}
+	则$\mathfrak{U}=\mathfrak{U}^{\prime}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$Y$是一致空间,$i:X\to\hat{X}$和$i^{\prime}:Y\to\hat{Y}$是典范映射,则$\forall f\in\Hom_{\mathsf{Uni}}\left(X,Y\right)\exists\hat{f}\in\Hom_{\mathsf{Uni}}\left(\hat{X},\hat{Y}\right)\left(\hat{f}\circ i=i^{\prime}\circ f\right)$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$Y,Z$是一致空间,$i_{1}:X\to\hat{X},i_{2}:Y\to\hat{Y},i_{3}:Z\to\hat{Z}$是典范映射.若
+	\begin{gather*}
+		f\in\Hom_{\mathsf{Uni}}\left(X,Y\right),g\in\Hom_{\mathsf{Uni}}\left(Y,Z\right),h=g\circ f,\\
+		\hat{f}\in\Hom_{\mathsf{Uni}}\left(\hat{X},\hat{Y}\right),\hat{g}\in\Hom_{\mathsf{Uni}}\left(Y,Z\right),\hat{h}\in\Hom_{\mathsf{Uni}}\left(\hat{X},\hat{Z}\right),\\
+		\hat{f}\circ i_{1}=i_{2}\circ f,\hat{g}\circ i_{2}=i_{3}\circ g,
+	\end{gather*}
+	那么$\hat{h}=\hat{g}\circ\hat{f}$.
+\end{corollary}
+

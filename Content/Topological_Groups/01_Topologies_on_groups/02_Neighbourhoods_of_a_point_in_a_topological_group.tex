@@ -1,0 +1,136 @@
+\section{拓扑群中某一点的邻域}
+
+记号约定:$G$是群.
+
+\begin{proposition}{拓扑群中每一点的邻域都由原点的邻域得到}{}
+	设$G$是拓扑群,则对每个$a\in G$有$\mathcal{N}\left(a\right)=a\mathcal{N}\left(e\right)=\left\{aV\middle|V\in\mathcal{N}\left(e\right)\right\}=\left\{Va\middle|V\in\mathcal{N}\left(e\right)\right\}=\mathcal{N}\left(e\right)a$.
+\end{proposition}
+
+\begin{proposition}{原点处的邻域滤子满足的公理}{}
+	设$G$是拓扑群,$\mathfrak{B}=\mathcal{N}\left(e\right)$,则
+	\begin{enumerate}
+		\item ($\mathrm{GV}_{1}$)$\forall U\in\mathfrak{B}\exists V\in\mathfrak{B}\left(VV\subseteq U\right)$.
+		\item ($\mathrm{GV}_{2}$)$\forall U\in\mathfrak{B}\left(U^{-1}\in\mathfrak{B}\right)$.
+		\item ($\mathrm{GV}_{3}$)$\forall a\in G\forall V\in\mathfrak{B}\left(\ad_{a}\left(V\right)\in\mathfrak{B}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	($\mathrm{GV}_{1}$)$\wedge$($\mathrm{GV}_{2}$)$\iff$($\mathrm{GV}_{a}$)$\forall U\in\mathfrak{B}\exists V\in\mathfrak{B}\left(VV^{-1}\subseteq U\right)$.
+\end{remark}
+
+\begin{proposition}{通过滤子确定的拓扑群}{}
+	设$\mathfrak{B}$是$G$的滤子.如果$\mathfrak{B}$满足($\mathrm{GV}_{1}$)$\sim$($\mathrm{GV}_{3}$),则$G$上存在唯一的拓扑$\mathscr{T}$,使得
+	\begin{enumerate}
+		\item $\left(G,\cdot,\mathscr{F}\right)$是拓扑群,
+		\item 在拓扑$\mathscr{T}$下$\mathfrak{B}$是$e$的邻域滤子.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{通过滤子基确定的拓扑群}{}
+	设$\mathfrak{B}$是$G$上的滤子基.如果
+	\begin{enumerate}
+		\item ($\mathrm{GV}_{1}^{\prime}$)$\forall U\in\mathfrak{B}\exists V\in\mathfrak{B}\left(VV\subseteq U\right)$,
+		\item ($\mathrm{GV}_{2}^{\prime}$)$\forall U\in\mathfrak{B}\exists V\in\mathfrak{B}\left(V\subseteq U^{-1}\right)$.
+		\item ($\mathrm{GV}_{3}^{\prime}$)$\forall a\in G\forall U\in\mathfrak{B}\exists V\in\mathfrak{B}\left(V\subseteq\ad_{a}\left(U\right)\right)$,
+	\end{enumerate}
+	那么$\langle\mathfrak{B}\rangle$满足($\mathrm{GV}_{1}$)$\sim$($\mathrm{GV}_{3}$).
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$G$是交换群时,
+	\begin{itemize}
+		\item 对$G$的滤子而言,我们只需要验证($\mathrm{GV}_{1}$)和($\mathrm{GV}_{2}$)就能断定$G$能否成为拓扑群;
+		\item 对$G$的滤子基而言,($\mathrm{GV}_{1}^{\prime}$)和($\mathrm{GV}_{2}^{\prime}$)就能断定$G$能否成为拓扑群.
+	\end{itemize}
+	当$G$不是交换群时,($\mathrm{GV}_{3}$)并不能由($\mathrm{GV}_{1}$)和($\mathrm{GV}_{2}$)得到.
+		\item 当$G$是交换群,并且采用加法记号时,相应地把($\mathrm{GV}_{1}$)和($\mathrm{GV}_{2}$)替换为如下条件:
+	\begin{itemize}
+		\item ($\mathrm{GA}_{1}$)$\forall U\in\mathfrak{B}\exists V\in\mathfrak{B}\left(V+V\subseteq U\right)$;
+		\item ($\mathrm{GA}_{2}$)$\forall U\in\mathfrak{B}\left(-U\in\mathfrak{B}\right)$.
+	\end{itemize}
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{拓扑群的对称邻域}{}
+	设$\left(G,\cdot,\mathscr{F}\right)$是拓扑群,$V\in\mathcal{N}\left(e\right)$.若$V=V^{-1}$,则称$V$是$G$的对称邻域.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$V$是$e$的对称邻域,那么$V\cup V^{-1},V\cap V^{-1},VV^{-1}$都是$e$的对称邻域.
+		\item $G$中的对称邻域组成的集合构成$e$的邻域基.对每个$n\geq 1$,集合$\left\{V^{n}\middle|V\text{是}G\text{的对称邻域}\right\}$是$e$的邻域基.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{拓扑群Hausdorff的等价条件}{}
+	设$\left(G,\cdot,\mathscr{T}\right)$是拓扑群,则$G$是Hausdorff的$\iff$ $\left\{e\right\}$是$G$的闭集$\iff$ $\bigcap\limits_{V\in\mathcal{N}\left(e\right)}V=\left\{e\right\}$.
+\end{proposition}
+
+\begin{example}{由子群族定义的拓扑}{}
+	设$\mathfrak{B}$是$G$的滤子基,其中各项是$G$的子群,那么它满足($\mathrm{GV}_{1}^{\prime}$)和($\mathrm{GV}_{2}^{\prime}$).因此,$G$上存在拓扑$\mathscr{T}$使$\left(G,\cdot,\mathscr{T}\right)$是拓扑群,并且$\mathfrak{B}=\mathcal{N}\left(e\right)$,从而$\mathfrak{B}$满足($\mathrm{GV}_{3}$).特别地,当$\mathfrak{B}$中各项都是正规子群(例如$G$是交换群)时,它自动满足($\mathrm{GV}_{3}$).根据上述命题,$\mathscr{T}$是Hausdorff的$\iff$ $\bigcap\limits_{H\in\mathfrak{B}}H=\left\{e\right\}$.有意思的是,如果$\left\{e\right\}\notin\mathfrak{B}$,那么
+	\begin{center}
+		$\mathscr{T}$是Hausdorff的$\iff$ $\mathfrak{B}$是无限集.
+	\end{center}
+	我们可以从$G$的子群格$\Sub\left(G\right)$的任意子集$\mathfrak{F}$出发,构造$G$上的拓扑并使$G$在此拓扑下构成拓扑群:令
+	\begin{align*}
+		\mathfrak{G}=\left\{\ad_{a}\left(H\right)\middle|a\in G,H\in\Sub\left(G\right)\right\},\mathfrak{B}=\left\{\bigcap\limits_{K\in\mathfrak{J}}K\middle|\mathfrak{J}\in\fin\left(\mathfrak{G}\right)\right\},
+	\end{align*}
+	那么$\mathfrak{B}$是满足($\mathrm{GV}_{3}^{\prime}$)的滤子基.
+	
+	考虑环$A$的加法群,$\Idl\left(A\right)$的每个子集$\mathfrak{F}$都在$A$上定义了拓扑,并使之成为拓扑群.
+	\begin{itemize}
+		\item $\mathfrak{F}$定义的拓扑是Hausdorff的$\iff$ $\bigcap\limits_{I\in\mathfrak{F}}I=\left\{0\right\}$;
+		\item $\mathfrak{F}$定义的拓扑不是离散的$\iff$ $\forall\mathfrak{J}\in\fin\left(\mathfrak{F}\right)\left(\bigcap\limits_{J\in\mathfrak{J}}J\neq\left\{0\right\}\right)$.
+	\end{itemize}
+	在环上如此定义的拓扑在数论中发挥着重要的作用.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

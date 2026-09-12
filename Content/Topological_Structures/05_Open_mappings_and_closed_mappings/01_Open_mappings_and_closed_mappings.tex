@@ -1,0 +1,61 @@
+\chapter{开映射和闭映射}
+
+\section{开映射和闭映射}
+
+记号约定:$X,Y$是拓扑空间
+
+\begin{definition}{开映射,闭映射}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.
+	\begin{enumerate}
+		\item 若$X$中每个开集$U$在$f$下的像都是$Y$中的开集,则称$f$是开映射.
+		\item 若$X$中每个闭集$U$在$f$下的像都是$Y$中的闭集,则称$f$是闭映射.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	显然,若$f$是开映射(相对的,闭映射),那么$\im\left(f\right)$是$Y$的开集(相对的,闭集).
+\end{remark}
+
+\begin{example}{开映射和闭映射的例子}{}
+	\begin{enumerate}
+		\item 设$A$是$X$的拓扑子空间,$j:A\to X$是典范单射,则$j$是开映射(相对的,闭映射)$\iff$ $A$是$X$的开集(相对的,闭集).
+		\item 设$f\in\Isom_{\mathsf{Set}}\left(X,Y\right)$,则$f\in\Isom_{\mathsf{Top}}\left(X,Y\right)$ $\iff$ $f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$且为开映射$\iff$ $f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$且为闭映射.
+		\item 设$\left(X_{i}\right)_{i\in I}$是拓扑空间族,则$\left(\pr_{i}\right)_{i\in I}$是连续的开映射族,但不一定是闭映射族.
+		\item 设$A$是$\C$中的开集,则每个全纯函数$f:A\to\C$都是开映射.
+		\item 设$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)\cap\Isom_{\mathsf{Set}}\left(X,Y\right)$不是同胚,则$f^{-1}\notin\Hom_{\mathsf{Top}}\left(X,Y\right)$,但它既是开映射又是闭映射.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{开映射(闭映射)的复合与分解}{}
+	设$Z$是拓扑空间,$f\in\Hom_{\mathsf{Set}}\left(X,Y\right),g\in\Hom_{\mathsf{Set}}\left(Y,Z\right)$.
+	\begin{enumerate}
+		\item 若$f$和$g$都是开映射(相对的,闭映射),则$g\circ f$是开映射(相对的,闭映射).
+		\item 若$g\circ f$是开映射(相对的,闭映射),$f$是连续的满射,则$g$是开映射(相对的,闭映射).
+		\item 若$g\circ f$是开映射(相对的,闭映射),$g$是连续的单射,则$f$是开映射(相对的,闭映射).
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{映射的局部限制与局部开(闭)性}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.对每个$T\subseteq Y$,记$f_{T}:f^{-1}\left(T\right)\to T,x\mapsto f\left(x\right)$.
+	\begin{enumerate}
+		\item 若$f$是开映射(相对的,闭映射),则对每个$T\subseteq Y$映射$f_{T}$是开映射(相对的,闭映射).
+		\item 设$\left(T_{i}\right)_{i\in I}$是$Y$的子集族,并且满足如下条件之一:
+		\begin{itemize}
+			\item $X=\bigcup\limits_{i\in I}\interior_{X}\left(T_{i}\right)$.
+			\item $\left(T_{i}\right)_{i\in I}$是$X$的局部有限闭覆盖.
+		\end{itemize}
+		如果$\left(f_{T_{i}}\right)_{i\in I}$是一族开映射(相对的,闭映射),则$f$是开映射(相对的,闭映射).
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{同胚的局部判定}{}
+	设$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$,对每个$T\subseteq Y$记$f_{T}:f^{-1}\left(T\right)\to T,x\mapsto f\left(x\right)$,$\left(T_{i}\right)_{i\in I}$是$Y$的子集族,并且满足如下条件之一:
+	\begin{itemize}
+		\item $X=\bigcup\limits_{i\in I}\interior_{X}\left(T_{i}\right)$.
+		\item $\left(T_{i}\right)_{i\in I}$是$X$的局部有限闭覆盖.
+	\end{itemize}
+	若$\left(f_{T_{i}}\right)_{i\in I}$是同胚族,则$f\in\Isom_{\mathsf{Top}}\left(X,Y\right)$.
+\end{corollary}
+
+
+

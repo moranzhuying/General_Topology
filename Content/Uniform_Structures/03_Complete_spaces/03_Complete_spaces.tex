@@ -1,0 +1,35 @@
+\section{完备空间}
+
+\begin{definition}{完备空间}{}
+	设$X$是一致空间.若$X$上的每个Cauchy滤子都收敛,则称$X$是完备空间,其一致结构称为完备一致结构.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 完备空间中的每个Cauchy序列都收敛.
+		\item 离散一致空间是完备空间,因为其上的Cauchy滤子都是平凡超滤子.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{不是完备空间的例子}{}
+	\begin{enumerate}
+		\item 给$\Q$配备加法一致结构,则$\left(\sum\limits_{p=0}^{n}2^{-\frac{p\left(p+1\right)}{2}}\right)_{n\in\N}$是$\Q$的Cauchy列,但它不收敛.
+		\item 设$X$是无限集,配备有限划分一致结构,则$X$上的每个超滤子都是Cauchy滤子,但$X$不是离散空间.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{极限存在的Cauchy收敛准则}{}
+	设$X$是集合,$Y$是完备空间,$\mathfrak{F}$是$X$上的滤子,$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$,则$f$沿$\mathfrak{F}$收敛$\iff$ $f^{\ast}\left(\mathfrak{F}\right)$是$Y$的Cauchy滤子基.
+\end{proposition}
+
+\begin{remark}{}{}
+	上述准则表明:对于在完备空间中取值的映射,我们可以\underline{判断其极限的存在性而不需要预先知道该映射的极限}.但是,比完备一致结构细的一致结构不一定是完备一致结构.
+\end{remark}
+
+\begin{proposition}{通过比较一致结构判断滤子的收敛性}{}
+	设$\mathcal{U}_{1},\mathfrak{U}_{2}$是$X$上的一致结构,各自诱导的拓扑为$\tau_{1},\tau_{2}$,$\mathfrak{U}_{1}\subseteq\mathfrak{U}_{2}$,并且$\mathfrak{U}_{1}$有一个邻里基,其每个邻里在$\tau_{2}\times\tau_{2}$下都是闭集.
+	\begin{enumerate}
+		\item 若$\mathfrak{F}$是$X$的滤子,则$\mathfrak{F}$收敛$\iff$ $\mathfrak{F}$关于$\mathfrak{U}_{1}$是Cauchy滤子,按$\tau_{2}$收敛.
+		\item 若$\mathfrak{U}_{1}$是完备一致结构,则$\mathfrak{U}_{2}$也是完备一致结构.
+	\end{enumerate}
+\end{proposition}

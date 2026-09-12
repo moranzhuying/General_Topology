@@ -1,0 +1,58 @@
+\chapter{积拓扑空间}
+
+\section{积空间}
+
+记号约定:$\left(X_{i}\right)_{i\in I}$是拓扑空间族.
+
+\begin{definition}{积拓扑空间}{}
+	配备乘积拓扑的$\prod\limits_{i\in I}X_{i}$称为$\left(X_{i}\right)_{i\in I}$的(乘)积拓扑空间,$\left(X_{i}\right)_{i\in I}$的每一项称为$\prod\limits_{i\in I}X_{i}$的一个因子.
+\end{definition}
+
+\begin{definition}{基本开集}{}
+	设对任意$i\in I$,集合$U_{i}$是$X_{i}$的开集.若$\left\{i\in I\middle|U_{i}\neq X_{i}\right\}$是有限集,则称$\prod\limits_{i\in I}U_{i}$是$\prod\limits_{i\in I}X_{i}$的基本开集.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 在没有特别说明的情况下,默认$\prod\limits_{i\in I}X_{i}$配备乘积拓扑.
+		\item $\prod\limits_{i\in I}X_{i}$的基本开集组成的集合是$\prod\limits_{i\in I}X_{i}$的拓扑基.
+		\item 若对每个$i\in I$,集合$\mathcal{B}_{i}$是$X_{i}$的拓扑基,则如下集合$\mathcal{B}$是$\prod\limits_{i\in I}X_{i}$的拓扑基:
+		\begin{align*}
+			\left\{\prod\limits_{i\in I}U_{i}\in \prod\limits_{i\in I}X_{i}\middle|\prod\limits_{i\in I}X_{i}\text{是基本开集},\forall i\in I\left(U_{i}\neq X_{i}\implies U_{i}\in\mathcal{B}_{i}\right)\right\}
+		\end{align*}
+		此外,对每个$x\in X$,包含$x$且形如$\mathcal{B}$中元素的基本开集构成$\prod\limits_{i\in I}X_{i}$的邻域基.
+		\item 当$I$是有限集时,$\prod\limits_{i\in I}X_{i}$的一个拓扑基是$\left\{\prod\limits_{i\in I}A_{i}\middle|\forall i\in I\left(A_{i}\text{是}X_{i}\text{的开集}\right)\right\}$.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{$\R^{n}$和$\Q^{n}$中的邻域基}{}
+	我们称$\R^{n}$是$n$为实数空间,称$\R^{2}$为是平面.类似的,从$\Q$出发可以定义$n$维有理数空间$\Q^{n}$(当$n=2$时称之为有理平面).拓扑空间$\R^{n}$的一个拓扑基由$n$个开区间的乘积构成,称这些开区间的乘积为$n$为开矩形.类似地,称$\R^{n}$中$n$个闭区间的乘积为闭矩形.对给定的$x\in\R^{n}$,在$\R^{n}$中包含$x$的开矩形(或闭矩形)构成$x$的邻域基.类似的结论对$\Q^{n}$同样成立.
+\end{example}
+
+\begin{proposition}{乘积拓扑的泛性质}{}
+	设$Y$是拓扑空间,$X=\prod\limits_{i\in I}X_{i},f\in\Hom_{\mathsf{Set}}\left(Y,X\right),a\in Y$,则$f$在$a$处连续$\iff$对每个$i\in I$,映射$\pr_{i}\circ f$在$a$处连续.
+\end{proposition}
+
+\begin{corollary}{乘积拓扑的泛性质}{}
+	设$\left(Y_{i}\right)_{i\in I}$是拓扑空间族,$\left(a_{i}\right)_{i\in I}\in X$,对每个$i\in I$有$f_{i}\in\Hom_{\mathsf{Set}}\left(X_{i},Y_{i}\right)$,则$\prod\limits_{i\in I}f_{i}$在$\left(a_{i}\right)_{i\in I}$处连续$\iff$对每个$i\in I$,映射$f_{i}$在$a_{i}$处连续.
+\end{corollary}
+
+\begin{corollary}{映射的连续性和图的同胚性}{}
+	设$X,Y$是拓扑空间,$f\in\Hom_{\mathsf{Set}}\left(X,Y\right),g:X\to\Gr\left(f\right),x\mapsto\left(x,f\left(x\right)\right)$,则$f$连续$\iff$ $g$是同胚.
+\end{corollary}
+
+\begin{proposition}{积空间的结合同构}{}
+	设$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的划分,则典范双射$\prod\limits_{i\in I}X_{i}\to\prod\limits_{\lambda\in\Lambda}\prod\limits_{i\in I_{\lambda}}X_{\lambda}$是同胚.
+\end{proposition}
+
+\begin{corollary}{积空间的交换同构}{}
+	设$\sigma\in\mathfrak{S}_{I}$,则$\prod\limits_{i\in I}X_{i}\to\prod\limits_{i\in I}X_{\sigma\left(i\right)},\left(x_{i}\right)_{i\in I}\mapsto\left(x_{\sigma\left(i\right)}\right)_{i\in I}$是同胚.
+\end{corollary}
+
+\begin{proposition}{映射族的扩张拉回的拓扑和映射族的始拓扑相同}{}
+	设$X$是集合,对每个$i\in I$有$f_{i}\in\Hom_{\mathsf{Set}}\left(X,X_{i}\right)$.令$f:X\to\prod\limits_{i\in I}X_{i},x\mapsto\left(f_{i}\left(x\right)\right)_{i\in I}$,则$\im\left(f\right)$的子空间拓扑在$f$下的拉回和$\left(f_{i}\right)_{i\in I}$的始拓扑相同.
+\end{proposition}
+
+\begin{corollary}{子空间拓扑和积空间拓扑相等}{}
+	设对每个$i\in I$,集合$A_{i}$是$X_{i}$的拓扑子空间,则$\prod\limits_{i\in I}A_{i}$上的乘积拓扑和$\prod\limits_{i\in I}X_{i}$在$\prod\limits_{i\in I}A_{i}$上诱导的子空间拓扑相同.
+\end{corollary}

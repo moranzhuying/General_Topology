@@ -1,0 +1,47 @@
+\section{一致空间的乘积}
+
+记号约定:$X,Y$是一致空间.
+
+\begin{definition}{乘积一致结构}{}
+	设$\left(X_{i}\right)_{i\in I}$是一致空间族.我们称$\left(\pr_{i}\right)_{i\in I}$的始一致结构为$\prod\limits_{i\in I}X_{i}$的乘积一致结构.
+\end{definition}
+
+\begin{remark}{}{}
+	根据定义,乘积一致结构诱导的拓扑是乘积拓扑.
+\end{remark}
+
+\begin{proposition}{乘积一致结构的泛性质}{}
+	设$\left(X_{i}\right)_{i\in I}$是一致空间族,$f\in\Hom_{\mathsf{Set}}\left(X,\prod\limits_{i\in I}X_{i}\right)$,则$f$一致连续$\iff$ $\left(\pr_{i}\circ f\right)_{i\in I}$是一致连续映射族.
+\end{proposition}
+
+\begin{corollary}{乘积一致结构的函子性}{}
+	设$\left(X_{i}\right)_{i\in I},\left(Y_{i}\right)_{i\in I}$是一致空间族,对每个$i\in I$有$f_{i}\in\Hom_{\mathsf{Set}}\left(X_{i},Y_{i}\right)$.
+	\begin{enumerate}
+		\item 若$\left(f_{i}\right)_{i\in I}$是一致连续映射族,则$\prod\limits_{i\in I}f_{i}$一致连续.
+		\item 若$\left(X_{i}\right)_{i\in I}$是一族非空一致空间,$\prod\limits_{i\in I}X_{i}$一致连续,则$\left(f_{i}\right)_{i\in I}$是一致连续映射族.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\left(X_{i}\right)_{i\in I}$是一致空间族,对每个$i\in I$有$f_{i}\in\Hom_{\mathsf{Set}}\left(X,X_{i}\right)$.为$X$配备$\left(f_{i}\right)_{i\in I}$的始一致结构,记
+	\begin{align*}
+		f:X\to\prod\limits_{i\in I}X_{i},x\mapsto\left(f_{i}\left(x\right)\right)_{i\in I},
+	\end{align*}
+	则$\im\left(f\right)$的一致结构在$f$下的拉回等于$\left(f_{i}\right)_{i\in I}$的始一致结构.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\left(X_{i}\right)_{i\in I}$是一致空间族,对每个$i\in I$,集合$A_{i}$是$X_{i}$的一致子空间,则$\prod\limits_{i\in I}X_{i}$在$\prod\limits_{i\in I}X_{i}$上诱导的一致结构和$\prod\limits_{i\in I}A_{i}$的积一致结构相同.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$a\in X$,则$Y\to\left\{a\right\}\times Y,y\mapsto\left(a,y\right)$是一致同构.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$Z$是一致空间,$f\in\Hom_{\mathsf{Uni}}\left(X\times Y,Z\right)$,则对每个$x\in X$,映射$f\left(x,-\right)$一致连续.
+\end{proposition}
+
+\begin{remark}{}{}
+	这个命题的逆不一定成立.
+\end{remark}

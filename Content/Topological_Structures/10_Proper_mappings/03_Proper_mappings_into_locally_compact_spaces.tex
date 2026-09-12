@@ -1,0 +1,23 @@
+\section{入射到局部紧空间的泛闭映射}
+
+记号约定:$X,Y$是拓扑空间,各自的单点紧化是$X^{\prime}\coloneq X\sqcup\left\{\omega\right\}$和$Y^{\prime}\coloneq Y\sqcup\left\{\omega^{\prime}\right\}$.
+
+\begin{proposition}{}{}
+	设$X$是Hausdorff空间,$Y$是局部紧空间,$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$.
+		\begin{enumerate}
+			\item $f$是泛闭映射$\iff$ $Y$中每个紧集在$f$下的原像都是$X$的紧集.
+			\item 若$f$是泛闭映射,则$X$是局部紧空间.
+		\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$X,Y$是局部紧空间,$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$连续.定义
+	\begin{align*}
+		\bar{f}:X^{\prime}\to Y^{\prime},x\mapsto
+		\begin{cases}
+			f\left(x\right),&x\in X,\\
+			\omega^{\prime},&x=\omega,
+		\end{cases}
+	\end{align*}
+	则$f$是泛闭映射$\iff$ $\bar{f}$在$\omega$处连续.
+\end{corollary}

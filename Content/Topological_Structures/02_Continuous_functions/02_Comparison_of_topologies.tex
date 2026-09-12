@@ -1,0 +1,30 @@
+\section{拓扑的比较}
+
+记号约定:$X$是集合,配备拓扑$\tau_{1}$和$\tau_{2}$,如此得到的拓扑空间分别记作$X_{1}$和$X_{2}$.
+
+\begin{definition}{拓扑的粗细和可比较性}{}
+	给若恒等映射$X_{1}\to X_{2}$连续,则称$\tau_{1}$比$\tau_{2}$细($\tau_{2}$比$\tau_{1}$粗).进一步,若$\tau_{1}\neq\tau_{2}$,则称$\tau_{1}$比$\tau_{2}$严格细($\tau_{2}$比$\tau_{1}$严格粗).若这两个拓扑中一定有一者比另一者细,则称$\tau_{1}$和$\tau_{2}$可比较.
+\end{definition}
+
+\begin{proposition}{拓扑粗细的等价判定}{}
+	下列陈述等价:
+	\begin{enumerate}
+		\item $\tau_{1}$比$\tau_{2}$细.
+		\item 对每个$x\in X$,它在$X_{2}$中的每个邻域都是$x$在$X_{1}$的邻域.
+		\item 对每个$A\subseteq X$有$\closure_{X_{1}}\left(A\right)\subseteq\closure_{X_{2}}\left(A\right)$.
+		\item $X_{2}$的每个闭集都是$X_{1}$的闭集.
+		\item $X_{2}$的每个开集都是$X_{1}$的开集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{$\ell^{2}$空间上的强拓扑和弱拓扑}{}
+	对$\R$中所有在$2$-范数意义下满足$\sum\limits_{n=0}^{\infty}x_{n}^{2}<+\infty$的序列$\left(x_{n}\right)_{n=0}^{\infty}$组成的Hillbert空间$H$,它上面的强拓扑严格细于弱拓扑.
+\end{example}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $X$上的所有拓扑按照包含偏序构成偏序集,最大元是离散拓扑,最小元是平庸拓扑.
+		\item $X$上的拓扑越细,$X$中相对该拓扑的开集,闭集和邻域就越多,$X$中每个给定子集的闭包越小,内部越大,$X$中相对该拓扑的稠密集越少.
+		\item 设$Y$是拓扑空间,$f:X\to Y$连续.若把$X$上现有的拓扑换为一个更细的拓扑,$Y$上现有的拓扑换为一个更粗的拓扑,那么$f$仍然连续.换言之,从$X$到$Y$的连续映射增多.
+	\end{enumerate}
+\end{remark}

@@ -1,0 +1,54 @@
+\chapter{紧空间和局部紧空间}
+
+\section{拟紧空间和紧空间}
+
+记号约定:$X$是拓扑空间.
+
+\begin{proposition}{拟紧空间的等价定义}{equivalent-definition-of-quasi-compact-space}
+	下列陈述等价.其中,条件($\mathrm{C}_{4}$)称为Borel-Lesbegue公理.
+	\begin{enumerate}
+		\item ($\mathrm{C}_{1}$)$X$上的每个滤子都有一个聚点.
+		\item ($\mathrm{C}_{2}$)$X$上的每个超滤子都有一个极限点.
+		\item ($\mathrm{C}_{3}$)$X$的每个交集非空的闭集族都有一个交集为空的子族.
+		\item ($\mathrm{C}_{4}$)$X$在$X$中的每个开覆盖都有一个有限的子覆盖.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{拟紧空间,紧空间}{}
+	\begin{enumerate}
+		\item 若$X$满足命题(\ref{prop:equivalent-definition-of-quasi-compact-space})的条件之一,则称$X$是拟紧空间,配备的拓扑称为拟紧拓扑.
+		\item 若$X$是拟紧的Hausdorff空间,则称$X$是紧空间,配备的拓扑称为紧拓扑.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 设$I$是集合,$X$是拟紧空间,$f\in\Hom_{\mathsf{Set}}\left(I,X\right)$,$\mathfrak{F}$是$I$上的滤子,则$f$沿$\mathfrak{F}$至少有一个聚点.特别地,$X$上的每个序列至少有一个聚点(但是,这个条件并不蕴含$X$是紧空间).
+		\item 设$I$是集合,$X$是拟紧空间,$f\in\Hom_{\mathsf{Set}}\left(I,X\right)$,$\mathfrak{U}$是$I$上的超滤子,则$f$沿$\mathfrak{U}$至少有一个极限点.
+		\item 若$X$是拟紧空间,则$X$上每个局部有限的覆盖都是有限覆盖.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{拟紧空间和紧空间的例子}{}
+	\begin{enumerate}
+		\item 每个有限拓扑空间都是拟紧空间.更一般的,每一个只有有限个开集的拓扑空间是拟紧空间.一个有限拓扑空间是紧空间$\iff$它是离散空间.每个离散的紧空间都是有限拓扑空间.
+		\item 给$X$配备有限补拓扑(这个拓扑的定义方式如下:$X$中的非空闭集为所有有限子集),则$X$是拟紧空间.若$X$无限,那么它一定不是紧空间,因为$X$不是Hausdorff空间.
+	\end{enumerate}
+\end{example}
+
+\begin{remark}{}{}
+	非Hausdorff的拟紧空间在代数几何中非常有用.但在数学的其他分支中,起主导作用的通常是紧空间.
+\end{remark}
+
+\begin{theorem}{聚点邻域的包含性}{}
+	设$X$是拟紧空间,$\mathfrak{F}$是$X$上的滤子,$A$是$\mathfrak{F}$的聚点组成的集合,则$A$的每个邻域都属于$\mathfrak{F}$.
+\end{theorem}
+
+\begin{corollary}{紧空间中滤子收敛的充要条件}{}
+	设$X$是紧空间,$\mathfrak{F}$是$X$上的滤子,则$\mathfrak{F}$收敛$\iff$ $\mathfrak{F}$只有一个聚点.
+\end{corollary}
+
+
+
+
+

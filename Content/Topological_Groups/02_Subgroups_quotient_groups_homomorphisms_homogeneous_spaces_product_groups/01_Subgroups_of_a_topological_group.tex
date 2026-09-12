@@ -1,0 +1,72 @@
+\chapter{子群,商群,群同态,齐性空间,乘积群}
+
+\section{拓扑群的子群}
+
+未加声明时,$G$是拓扑群(乘法记号),$H\in\Sub\left(G\right)$.
+
+\begin{proposition}{拓扑群的子群按子空间拓扑构成拓扑群}{}
+	在$G$诱导的子空间拓扑下,$H$是拓扑群.
+\end{proposition}
+
+\begin{convention}{}{}
+	今后,论及拓扑群的子群,我们总是默认它是装备了子空间拓扑的拓扑群.
+\end{convention}
+
+\begin{proposition}{子群的闭包是子群}{}
+	\begin{enumerate}
+		\item $\closure\left(H\right)$是$G$的子群.进一步,若$H\unlhd G$,则$\closure\left(H\right)\unlhd G$.
+		\item 特别地,$\closure\left(\left\{e\right\}\right)$.进一步,$G$是Hausdorff空间$\iff$ $\closure\left(\left\{e\right\}\right)=\left\{e\right\}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{Hausdorff拓扑群的交换子群的闭包依然是交换群}{}
+	设$G$是Hausdorff的,$H$是交换群,则$\closure\left(H\right)$是交换群.
+\end{proposition}
+
+\begin{proposition}{中心化子是拓扑群的闭子群}{}
+	设$G$是Hausdorff的.
+	\begin{enumerate}
+		\item 对每个$M\subseteq G$,它在$G$中的中心化子是$G$的闭子群.
+		\item 特别地,$Z\left(G\right)$是$G$的闭子群.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{在某点局部闭的子群一定闭}{}
+	如果$H$在$G$中某一点是局部闭的,那么$H$是$G$的闭子群.
+\end{proposition}
+
+\begin{corollary}{开子群的基本性质}{}
+	\begin{enumerate}
+		\item $H$是$G$的开子群$\iff$ $\interior\left(H\right)\neq\emptyset$.
+		\item 若$H$是$G$的开子群,则$H$也是$G$的闭子群.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{离散子群的基本性质}{}
+	\begin{enumerate}
+		\item $H$是$G$的离散子群$\iff$ $H$有孤立点.
+		\item 如果$G$是Hausdorff的,那么$G$的每个离散子群都是闭的.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{子群的闭包内部的稠密性}{}
+	对每个$x\in\closure\left(H\right)$,集合$xH$在$\closure\left(H\right)$中稠密.	
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

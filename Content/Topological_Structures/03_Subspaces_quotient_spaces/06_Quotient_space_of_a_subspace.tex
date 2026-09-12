@@ -1,0 +1,40 @@
+\section{拓扑子空间的商拓扑空间}
+
+记号约定:
+\begin{itemize}
+	\item $X$是拓扑空间,$R$是$X$上的等价关系,$A\subseteq X$,由$R$在$A$上诱导的等价关系是$R_{A}$.
+	\item $g\coloneq f|_{A}$的典范分解具体表作如下交换图:
+	\begin{center}
+		\begin{tikzcd}
+			{A/R_{A}} && {f\left(A\right)} \\
+			A && {X/R} \\
+			& X
+			\arrow["h", from=1-1, to=1-3]
+			\arrow["\psi", from=1-3, to=2-3]
+			\arrow["\varphi", from=2-1, to=1-1]
+			\arrow["g", from=2-1, to=2-3]
+			\arrow["\iota"', from=2-1, to=3-2]
+			\arrow["f"', from=3-2, to=2-3]
+		\end{tikzcd}
+	\end{center}
+\end{itemize}
+
+显然$h\in\Hom_{\mathsf{Top}}\left(A/R_{A},f\left(A\right)\right)$.
+
+
+\begin{proposition}{子空间的商拓扑诱导同胚的等价条件}{}
+	下列三个陈述等价:
+	\begin{enumerate}
+		\item $h\in\Isom_{\mathsf{Top}}\left(A/R_{A},Y\right)$.
+		\item 对$A$中每个关于$R_{A}$饱和的开集$U$,在$X$中存在关于$\mathcal{R}$饱和的开集$V$,满足$U=V\cap A$.
+		\item 对$A$中每个关于$R_{A}$饱和的闭集$F$,在$X$中存在关于$\mathcal{R}$饱和的闭集$V$,满足$F=W\cap A$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{饱和开(相对的,闭)子空间}{}
+	设$A$关于$R$饱和.若$A$是$X$中的开集(相对的,闭集),则$h\in\Isom_{\mathsf{Top}}\left(A/R_{A},Y\right)$.
+\end{corollary}
+
+\begin{corollary}{利用收缩映射构造同胚}{}
+	若存在$u\in\Hom_{\mathsf{Top}}\left(X,A\right)$满足$\forall x\in X\left(R\left\{u\left(x\right),x\right\}\right)$,则$f\left(A\right)=X/R,h\in\Isom_{\mathsf{Top}}\left(A/R_{A},f\left(A\right)\right)$.
+\end{corollary}

@@ -1,0 +1,21 @@
+\section{双重极限的连续性延拓}
+
+记号约定:$X,X_{1},X_{2},Y$是集合.
+
+\begin{theorem}{稠密集上的连续延拓定理}{}
+	设$X$是拓扑空间,$Y$是正则空间,$A$是$X$的稠密集,$f\in\Hom_{\mathsf{Set}}\left(A,Y\right)$连续,则下列陈述等价:
+	\begin{enumerate}
+		\item 存在$\bar{f}\in\Hom_{\mathsf{Top}}\left(X,Y\right)$使得$\bar{f}|_{A}=f$.
+		\item 对每个$x\in X$,存在$y_{0}\in Y$使得$\limit_{\substack{y\to x\\ y\in A}}f\left(y\right)=y_{0}$.
+	\end{enumerate}
+	这两个陈述之一成立时,$\bar{f}$是唯一的.我们称之为$f$在$X$上的连续延拓.
+\end{theorem}
+
+\begin{corollary}{双重极限定理}{}
+	设$Y$是正则空间,$\mathfrak{F}_{1},\mathfrak{B}_{2}$分别是$X_{1},X_{2}$的滤子,$X=X_{1}\times X_{2}$,$\varphi\in\Hom_{\mathsf{Set}}\left(X,Y\right)$,$\mathcal{B}_{1}$与$\mathcal{B}_{2}$的乘积滤子为$\mathcal{B}_{1}\times\mathcal{B}_{2}$.若
+	\begin{enumerate}
+		\item 存在$\ell\in Y$,使得$\limit_{\mathfrak{B}_{1}\times\mathfrak{F}_{2}}\varphi=\ell$,
+		\item 对每个$x_{1}\in X_{1}$,存在$y\in Y$使得$\limit_{\mathfrak{F}_{2}}f\left(x_{1},\cdot\right)=y$,
+	\end{enumerate}
+	则$\limit_{\mathfrak{F}_{1}}\left(\limit_{\mathfrak{F}_{2}}f\left(x_{1},x_{2}\right)\right)=\limit_{\mathfrak{F}_{1}\times\mathfrak{F}_{2}}f\left(x_{1},x_{2}\right)$.
+\end{corollary}

@@ -1,0 +1,54 @@
+\section{相对于子空间的连续性}
+
+记号约定:$X$和$Y$是拓扑空间,$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.
+
+\begin{proposition}{陪域限制的连续性}{}
+	设$\im\left(f\right)\subseteq B\subseteq Y$,映射$\iota:X\to B$是典范单射,则对任意$x\in X$,映射$f$在$x$处连续$\iff$ $\iota$在$x$处连续.
+\end{proposition}
+
+\begin{proposition}{相对子空间的连续性}{}
+	设$A\subseteq X$.
+	\begin{enumerate}
+		\item 若$x\in A$且$f$在$x$处连续,则$f|_{A}$在$x$处连续.
+		\item 若$f$连续,则$f|_{A}$连续.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{相对子空间的连续性}{}
+	设$A\subseteq X$.
+	\begin{enumerate}
+		\item 若$x\in A$且$f|_{A}$在$x$处连续,则称$f$相对$A$在$x$处连续.
+		\item 若$f|_{A}$连续,则称$f$相对$A$连续.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{限制映射的连续性不保证整个空间的连续性}{}
+	即便$f|_{A}$连续,也不能保证$f$连续.例如,$A$和$X\setminus A$在$X$中稠密,为$\left\{0,1\right\}$配备离散拓扑,则$\chi_{A}$在$X$上不连续,但$\chi_{A}|_{A}$连续.
+\end{remark}
+
+\begin{proposition}{连续性的局部特征}{}
+	设$x\in A$且$A$是$x$在$X$中的邻域.若$f|_{A}$在$x$处连续,则$f$在$x$处连续.
+\end{proposition}
+
+\begin{proposition}{连续映射的粘贴引理}{}
+	设$\left(A_{i}\right)_{i\in I}$是$X$的子集族,满足下列条件之一:
+	\begin{enumerate}
+		\item $X=\bigcup\limits_{i\in I}\interior_{X}\left(A_{i}\right)$.
+		\item $\left(A_{i}\right)_{i\in I}$是$X$的局部有限闭覆盖.
+	\end{enumerate}
+	若$\left(f|_{A_{i}}\right)_{i\in I}$是一族连续映射,则$f$是连续映射.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

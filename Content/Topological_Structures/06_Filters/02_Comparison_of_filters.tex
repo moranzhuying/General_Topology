@@ -1,0 +1,48 @@
+\section{滤子的比较}
+
+记号约定:$X$是集合.
+
+\begin{definition}{滤子的粗细比较}{}
+	设$\mathfrak{F}$和$\mathfrak{G}$是$X$上的滤子.
+	\begin{enumerate}
+		\item 若$\mathfrak{F}\subseteq\mathfrak{G}$,则称$\mathfrak{G}$比$\mathfrak{F}$细,$\mathfrak{F}$比$\mathfrak{G}$粗.
+		\item 若$\mathfrak{F}\subset\mathfrak{G}$,则称$\mathfrak{G}$比$\mathfrak{F}$严格细,$\mathfrak{F}$比$\mathfrak{G}$严格粗.
+		\item 若$\mathfrak{F}$和$\mathfrak{G}$中有一者比另一者细,则称$\mathfrak{F}$和$\mathfrak{G}$可比较.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{滤子和包含偏序}{}
+	\begin{enumerate}
+		\item $X$上所有滤子组成的集合按包含偏序构成偏序集.
+		\item 设$\left(\mathfrak{F}_{i}\right)_{i\in I}$是$X$上的滤子族,$I\neq\emptyset$,则$\bigcap\limits_{i\in I}\mathfrak{F}_{i}$是$X$的滤子,称为该滤子族的交.显然$\bigcap\limits_{i\in I}\mathfrak{F}_{i}=\inf\limits_{i\in I}\mathfrak{F}_{i}$.
+		\item $\left\{X\right\}$是$X$上最小的滤子.后面会看到,当$\left|X\right|>1$时,$X$上不存在最大的滤子.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{生成滤子,滤子的子基}{}
+	设$\mathfrak{S}\subseteq\mathcal{P}\left(X\right)$.当$X$上存在包含$\mathfrak{S}$的滤子时,称包含$\mathfrak{S}$的所有滤子的交为$\mathfrak{S}$生成的滤子,记作$\langle\mathfrak{S}\rangle$,称$\mathfrak{S}$是该滤子的子基.
+\end{definition}
+
+\begin{proposition}{生成滤子存在的等价条件}{}
+	设$\mathfrak{S}\subseteq\mathcal{P}\left(X\right)$,则$X$上存在包含$\mathfrak{S}$的滤子$\iff$ $\forall\mathcal{S}\in\fin\left(\mathfrak{S}\right)\left(\bigcap\limits_{S\in\mathcal{S}}S\neq\emptyset\right)$.
+\end{proposition}
+
+\begin{example}{拓扑基和邻域滤子}{}
+	设$\mathfrak{S}\subseteq\mathcal{P}\left(X\right)$,拓扑$\tau$以$\mathfrak{S}$为子基.对每个$x\in X$,它在$X$中的邻域滤子由$\left\{U\in\mathfrak{S}\middle|x\in U\right\}$生成.
+\end{example}
+
+\begin{corollary}{包含给定集合的滤子的加细存在的等价条件}{}
+	设$\mathfrak{F}$是$X$上的滤子,$A\subseteq X$,则$X$上存在比$\mathfrak{F}$细且包含$A$的滤子$\iff$ $\forall F\in\mathfrak{F}\left(A\cap F\neq\emptyset\right)$.
+\end{corollary}
+
+\begin{corollary}{滤子族上确界存在的等价条件}{}
+	设集合$X$非空,$\Phi$是$X$中的滤子组成的集合$\Psi$的子集.下列陈述等价:
+	\begin{enumerate}
+		\item $\Phi$在$\Psi$中有上确界.
+		\item 对每个$n\in\N$和$\Phi$的每个元素族$\left(\mathfrak{F}_{i}\right)_{i=1}^{n}$,对每个$\left(A_{i}\right)_{i=1}^{n}\in\prod\limits_{i=1}^{n}\mathfrak{F}_{i}$有$\bigcap\limits_{i=1}^{n}A_{i}\neq\emptyset$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{滤子偏序集的归纳性}{}
+	若$X\neq\emptyset$,则$X$中的滤子组成的集合是归纳集.
+\end{corollary}

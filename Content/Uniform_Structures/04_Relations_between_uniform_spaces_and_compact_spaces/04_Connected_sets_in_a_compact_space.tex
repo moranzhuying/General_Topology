@@ -1,0 +1,27 @@
+\section{一致空间中的连通集}
+
+记号约定:$X$是一致空间,其一致结构为$\mathfrak{U}$,$X$上的对称邻里构成的集合为$\mathfrak{S}$.
+
+\begin{definition}{$V$-链,$V$-连通}{}
+	设$\left(x_{i}\right)_{i=0}^{n}$是$X$中的有限序列,$V\in\mathfrak{S}$.若$\forall 0\leq i<n\left(\left(x_{i},x_{i+1}\right)\in V\right)$,则称$\left(x_{i}\right)_{i=0}^{n}$是$X$的一条$V$-链,$x_{0}$和$x_{n}$称为该$V$-链的端点,称二者被该$V$-链$V$-连通.
+\end{definition}
+
+\begin{definition}{$V$-连通类}{}
+	设$V\in\mathfrak{S}$.考虑公式$R\left\{x,y\right\}:\text{存在链接}x\text{和}y\text{的}V\text{-链}$,这是一个等价关系.对每个$x\in X$,记$A_{x,V}=\left[x\right]_{R}$.
+\end{definition}
+
+\begin{definition}{$A_{x}$-集合}{}
+	设$x\in X$.定义$A_{x}=\bigcap\limits_{V\in\mathfrak{S}}A_{x,V}$.
+\end{definition}
+
+\begin{proposition}{}{}
+	若$X$是紧空间,则对每个$x\in X$,它在$X$中的连通分支是$A_{x}$,也是$X$中所有包含$x$的开闭集的交.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$X$是局部紧空间,$K$是$X$的紧连通分支,则$X$中包含$K$的开闭邻域组成的的集合是$K$在$X$中的邻域基.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$X$是紧空间,等价关系$R$满足如下条件:对每个$x\in X$,它的$R$-等价类是$X$的连通分支,则$X/R$是完全不连通的紧空间.
+\end{proposition}

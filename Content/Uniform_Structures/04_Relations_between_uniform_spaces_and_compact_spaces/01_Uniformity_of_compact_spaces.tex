@@ -1,0 +1,36 @@
+\chapter{一致空间与紧空间的关系}
+
+\section{紧空间上的一致结构}
+
+记号约定:$X$是拓扑空间,它配备的拓扑是$\tau$.
+
+\begin{definition}{一致结构和拓扑的相容性,可一致化空间}{}
+	\begin{enumerate}
+		\item 设$\mathfrak{U}$是$X$上的一致结构.如果它诱导的拓扑是$\tau$,则称$\mathfrak{U}$和拓扑$\tau$相容.
+		\item 如果$X$上存在与$\tau$相容的一致结构,则称$X$是可一致化空间,称$\tau$为可一致化拓扑.
+	\end{enumerate}
+\end{definition}
+
+\begin{theorem}{紧空间上的相容一致结构存在且唯一}{}
+	如$X$是紧空间,则$X$上有且仅有与$\tau$相容的一致结构$\mathfrak{U}$,它和$\Delta_{X}$在$X\times X$中的邻域滤子相等,配备$\mathcal{U}$后$X$是完备空间.
+\end{theorem}
+
+\begin{corollary}{紧空间的子空间可一致化}{}
+	若$X$是紧空间,则$X$的每个子空间都可一致化.
+\end{corollary}
+
+\begin{corollary}{局部紧空间可一致化}{}
+	每个局部紧空间都可一致化.
+\end{corollary}
+
+\begin{theorem}{紧空间到一致空间的连续映射都一致连续}{}
+	设$X$是紧空间,$Y$是一致空间,则$\Hom_{\mathsf{Top}}\left(X,Y\right)=\Hom_{\mathsf{Uni}}\left(X,Y\right)$.
+\end{theorem}
+
+\begin{remark}{局部紧空间相容一致结构的非唯一性}{}
+	在一个可一致化拓扑空间上,可能存在多个不同的相容一致结构(即使是局部紧空间).例如,在无限离散空间上,存在多个不同的与离散拓扑相容的一致结构.因此.相容一致结构的唯一性并不是紧空间的特征性质.
+\end{remark}
+
+\begin{corollary}{稠密子空间上函数的延拓}{}
+	设$X$是紧空间,$A$是其稠密子空间,$Y$是完备空间,$f\in\Hom_{\mathsf{Set}}\left(A,Y\right)$,则$f$能被连续延拓到$X$上$\iff$ $f\in\Hom_{\mathsf{Uni}}\left(A,Y\right)$.
+\end{corollary}

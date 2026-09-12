@@ -1,0 +1,40 @@
+\section{紧空间的逆向极限}
+
+记号约定:$I$是上定向集.
+
+\begin{proposition}{紧空间的逆向极限是紧空间}{}
+	设$\left(\left(X_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是紧空间的逆系统,对每个$\alpha\in I$,映射$f_{\alpha\alpha}$是恒等映射.
+	\begin{enumerate}
+		\item $\varprojlim X_{\alpha}$是紧空间,对每个$\alpha\in I$有$f_{\alpha}\left(\varprojlim X_{\alpha}\right)=\bigcap\limits_{\beta\geq\alpha}f_{\alpha\beta}\left(X_{\beta}\right)$.
+		\item 若$\left(X_{\alpha}\right)_{\alpha\in I}$是一族非空拓扑空间,则$\varprojlim X_{\alpha}\neq\emptyset$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{纤维为紧集时的投影性质}{}
+	设$\left(\left(X_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是拓扑空间的逆系统,$\forall\alpha,\beta\in I\forall x_{\alpha}\in X_{\alpha}\left(\alpha\leq\beta\implies f_{\alpha\beta}^{-1}\left(\left\{x_{\alpha}\right\}\right)\text{是}\varprojlim X_{\alpha}\text{的紧集}\right)$.
+	\begin{enumerate}
+		\item 对每个$\alpha\in I$有$f_{\alpha}\left(\varprojlim X_{\alpha}\right)=\bigcap\limits_{\beta\geq\alpha}f_{\alpha\beta}\left(X_{\beta}\right)$.
+		\item 对每个$\alpha\in I$,集合$f_{\alpha}^{-1}\left(\left\{x_{\alpha}\right\}\right)$是$\varprojlim X_{\alpha}$的紧集.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{逆极限映射的纤维紧性与满射性}{}
+	设$\left(\left(X_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right),\left(\left(Y_{\alpha}\right)_{\alpha\in I},\left(g_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是拓扑空间的逆系统,$\left(u_{\alpha}\right)_{\alpha\in I}$是二者间的映射系统,$u=\varprojlim u_{\alpha}$.
+	\begin{enumerate}
+		\item 设$\left(y_{\alpha}\right)_{\alpha\in I}\in\varprojlim Y_{\alpha}$.若对每个$\alpha\in I$,集合$u_{\alpha}^{-1}\left(\left\{y_{\alpha}\right\}\right)$是非空紧集,则$u^{-1}\left(\left\{\left(y_{\alpha}\right)_{\alpha\in I}\right\}\right)$也是非空紧集.
+		\item 若$\left(X_{\alpha}\right)_{\alpha\in I}$是紧空间族,$\left(Y_{\alpha}\right)_{\alpha\in I}$是Hausdorff空间族,$\left(u_{\alpha}\right)_{\alpha\in I}$是连续满射族,则$u$是满射.
+	\end{enumerate}
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+

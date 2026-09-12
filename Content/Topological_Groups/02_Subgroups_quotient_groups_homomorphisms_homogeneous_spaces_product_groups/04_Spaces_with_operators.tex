@@ -1,0 +1,50 @@
+\section{拓扑\texorpdfstring{$G$}{G}-空间}
+
+记号约定:$E,E^{\prime}$是拓扑空间,$G,G^{\prime}$是拓扑群.没有强调的情况下,本节所说的群作用都是指左作用.
+
+\begin{definition}{连续群作用}{}
+	设$G$作用于$E$.如果该作用连续,则称$G$连续作用于$E$,称$E$是拓扑$G$-空间,$G$是$E$的连续算子群.
+\end{definition}
+
+\begin{lemma}{作用诱导的左乘是同胚}{}
+	设$G$连续作用于$E$,则对每个$g\in G$,它诱导的左乘$E\to E,x\mapsto gx$是同胚.
+\end{lemma}
+
+\begin{lemma}{轨道诱导的等价关系是开的}{}
+	设$G$连续作用于$E$上的左作用连续,那么该作用诱导的等价关系是开的.
+\end{lemma}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 设$H$是$G$的子群,则$H\times G\to G,\left(h,g\right)\mapsto hg$和$H\times G\to G,\left(h,g\right)\mapsto hgh^{-1}$都是连续作用.
+		\item 设$K$是拓扑除环,那么$K^{\times}$在$K$上的作用$\left(k,x\right)\mapsto kx$是连续的.
+		\item $G\times E\to E,\left(g,x\right)\mapsto x$是连续作用,我们称该作用是$G$在$E$上的平凡作用.
+	\end{enumerate}
+\end{example}
+
+\begin{remark}{术语转换的说明}{}
+	我们通常说$G$连续地\textbf{左}作用于拓扑空间$X$(而不是说拓扑群$G$在拓扑空间$X$上的作用连续).当拓扑群$G^{\op}$连续地左作用于$X$时,我们称$G$连续地右作用于$X$(这等价于说$G$在$X$上的右作用连续).
+	
+	如果$E\times G\to E,\left(x,g\right)\mapsto xg$是连续的右作用,那么$G\times E\to E,\left(g,x\right)\mapsto xg^{-1}$是连续的左作用.
+\end{remark}
+
+\begin{definition}{等变映射对}{}
+	设$G,G^{\prime}$各自连续地作用于$E,E^{\prime}$,$f\in\Hom_{\mathsf{TopGrp}}\left(G,G^{\prime}\right),g\in\Hom_{\mathsf{Top}}\left(E,E^{\prime}\right)$.若$g$是$f$-等变的,则称$\left(f,g\right)$是拓扑$G$-空间的$f$-等变映射对.
+\end{definition}
+
+\begin{remark}{}{}
+	如果$\left(f,g\right)$是$f$-等变映射对,那么我们有连续映射$E/G\to E^{\prime}/G^{\prime}$.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$G$连续作用于$E$,$S$是$E$上的相容开等价关系,那么$G$典范地连续作用于$E/S$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$G$连续作用于$E$,$\varphi:E\to E/G$是典范映射,$A\subseteq E$,$A^{\prime}$是$A$的饱和化,则典范双射$\varphi\left(A\right)\to A^{\prime}/G$是同胚.
+\end{proposition}
+
+\begin{remark}{}{}
+	设$G,G^{\prime}$都连续作用于$E$,并且这两个作用可交换,那么$G$连续作用于$E/G^{\prime}$,$G^{\prime}$连续作用于$E/G$.
+\end{remark}
+

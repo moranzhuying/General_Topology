@@ -1,0 +1,60 @@
+\chapter{拓扑子空间,商拓扑空间}
+
+\section{拓扑空间的子空间}
+
+记号约定:$X$是拓扑空间,配备拓扑$\tau$.
+
+\begin{definition}{子空间拓扑}{}
+	设$A\subseteq X$.定义$X$在$A$上诱导的拓扑为$\left\{U\cap A\subseteq A\middle|U\text{是}X\text{的开集}\right\}$,配备该拓扑的$A$称为拓扑空间$X$的拓扑子空间.
+\end{definition}
+
+\begin{example}{$\Q$在$\Z$上诱导离散拓扑}{}
+	$\Q$在$\Z$上诱导的拓扑为离散拓扑,因为对每个$n\in\Z$都有$\Z\cap\left(n-\frac{1}{2},n+\frac{1}{2}\right)\cap\Q=\left\{n\right\}$.
+\end{example}
+
+\begin{proposition}{子空间拓扑的传递性}{}
+	设$A$是$X$的拓扑子空间.
+	\begin{enumerate}
+		\item 若$B\subseteq A\subseteq X$,那么$X$在$B$上诱导的拓扑和$A$在$B$上诱导的拓扑相同.
+		\item 若$\mathcal{S}$是$X$的拓扑子基,则$\mathcal{S}_{A}\coloneq\left\{S\cap A\middle|S\in\mathcal{S}\right\}$是$A$的拓扑子基.
+		\item 若$\mathcal{B}$是$X$的拓扑基,则$\mathcal{B}_{A}\coloneq\left\{B\cap A\middle|B\in\mathcal{B}\right\}$是$A$的拓扑基.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{开集,闭集和邻域的相对性}{}
+	在讨论$A$中的元素或$A$的子集时,须区分它们在$X$中的性质和在$A$中的性质,后者通常用``在$A$中''或``相对于$A$''来表述.
+	\begin{itemize}
+		\item 子空间$A$中的开集不一定是$X$中的开集.事实上,$A$中的每一个开集都是$X$中的开集$\iff$ $A$是$X$中的开集.
+		\item 子空间$A$中的闭集一定是$X$中的闭集和$A$的交.事实上,$A$中的每个闭集都是$X$中的闭集$\iff$ $A$是$X$中的闭集.
+		\item 固定$x\in A$,它在$A$中的邻域是它在$x$中的邻域和$A$的交.进一步,
+		\begin{center}
+			$x$在$A$中的每个邻域都是$x$在$X$中的邻域$\iff$ $A$是$x$在$X$中的邻域.
+		\end{center}
+	\end{itemize}
+\end{remark}
+
+\begin{proposition}{拓扑子空间的相对闭包}{}	
+	若$B\subseteq A\subseteq X$,则$\closure_{A}\left(B\right)=\closure_{X}\left(B\right)\cap A$.进一步,$\closure_{A}\left(B\right)=A\iff\closure_{X}\left(B\right)=\closure_{X}\left(A\right)\iff A\subseteq\closure_{X}\left(B\right)$.
+\end{proposition}
+
+\begin{corollary}{拓扑子空间中稠密性的传递性}{}
+	若$C\subseteq B\subseteq A\subseteq X,\closure_{A}\left(B\right)=A,\closure_{B}\left(C\right)=B$,那么$\closure_{A}\left(C\right)=A$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$A$是$X$的稠密集,则对每个$x\in A$和$x$在$A$中的每个邻域$V$,集合$\closure_{X}\left(V\right)$是$x$在$X$中的邻域.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\left(A_{i}\right)_{i\in I}$是$X$的子集族,满足下列条件之一:
+	\begin{enumerate}
+		\item $\bigcup\limits_{i\in I}\interior_{X}\left(A_{i}\right)=X$.
+		\item $\left(A_{i}\right)_{i\in I}$是$X$的局部有限闭覆盖.
+	\end{enumerate}
+	对每个固定的$B\subseteq X$,它是$X$的开集(相对的,闭集)$\iff$对每个$i\in I$,集合$B\cap A_{i}$是$A_{i}$的开集(相对的,闭集).
+\end{proposition}
+
+\begin{remark}{}{}
+	如果$\left(U_{i}\right)_{i\in I}$是$X$的开覆盖,并且对每个$i\in I$,集合$\mathcal{B}_{i}$是$U_{i}$的拓扑基,则$\bigcup\limits_{i\in I}\mathcal{B}_{i}$是$X$的拓扑基.
+\end{remark}
+

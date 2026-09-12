@@ -1,0 +1,47 @@
+\section{齐性空间}
+
+记号约定:$G$是拓扑群(乘法记号),$H\in\Sub\left(G\right)$.
+
+\begin{proposition}{}{}
+	$H$通过左平移连续地左作用于$G/H$.
+\end{proposition}
+
+\begin{convention}{}{}
+	当我们把$G$-齐性空间$G/H$视为拓扑空间时,没有特殊声明时,总是默认它装备了典范映射$G\to G/H$诱导的商拓扑.
+\end{convention}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item $G/H$是Hausdorff空间$\iff$ $H$是$G$的闭子群.
+		\item $G/H$是离散空间$\iff$ $H$是$G$的开子群.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{拓扑齐性$G$-空间}{}
+	设$E$是非空拓扑空间,$G$连续且传递地作用于$E$.如果对每个$x\in E$,映射$G\to E,s\mapsto sx$是开映射,则称$E$是拓扑$G$-齐性空间.
+\end{definition}
+
+\begin{remark}{}{}
+	$E$是拓扑齐性$G$-空间当且仅当下列条件之一成立:
+	\begin{itemize}
+		\item 对每个$x\in E$,连续满射$G\to E,s\mapsto sx$诱导的连续双射$G/\Stab\left(x\right)\to E$是同胚.
+		\item 存在$x\in E$,使得连续满射$G\to E,s\mapsto sx$诱导的连续双射$G/\Stab\left(x\right)\to E$是同胚.
+	\end{itemize}
+\end{remark}
+
+\begin{proposition}{}{}
+	设$G$连续且传递地作用于$X$,那么下列陈述等价:
+	\begin{enumerate}
+		\item $X$是拓扑$G$-齐性空间.
+		\item 存在$x_{0}\in X$,使得$\mathcal{N}\left(e\right)$在映射$G\to X,s\mapsto sx_{0}$下的像包含于$\mathcal{N}\left(x_{0}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+
+\begin{proposition}{}{}
+	设$G$在$X$上的左作用$\cdot$连续传递.若存在$x_{0}\in X$,使得$\varphi:G\to X,s\mapsto s\cdot x_{0}$满足如下条件:
+	\begin{center}
+		对$0_{G}$在$G$中的每个邻域$U$,$\varphi\left(U\right)$是$x_{0}$在$X$中的邻域,
+	\end{center}
+	则$X$是拓扑左齐性空间.
+\end{proposition}

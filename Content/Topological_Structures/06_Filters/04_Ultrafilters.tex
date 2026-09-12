@@ -1,0 +1,42 @@
+\section{超滤子}
+
+记号约定:$X$是集合.
+
+\begin{definition}{超滤子}{}
+	设$\mathfrak{F}$是$X$上的滤子.若$\mathfrak{F}$是$X$上的极大滤子,则称$\mathcal{F}$是$X$上的超滤子.
+\end{definition}
+
+\begin{theorem}{超滤子存在定理}{}
+	对$X$上的每个滤子$\mathcal{F}$,都存在一个比$\mathfrak{F}$细的超滤子.
+\end{theorem}
+
+\begin{proposition}{超滤子的并素元性质}{}
+	设$\mathfrak{F}$是$X$上的超滤子.若$A,B\subseteq X$且$A\cup B\in\mathfrak{U}$,则$A\in\mathfrak{F}\vee B\in\mathfrak{F}$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\mathfrak{F}$是$X$上的超滤子.若$X$的子集族$\left(A_{i}\right)_{i=1}^{n}$满足$\bigcup\limits_{i=1}^{n}A_{i}\in\mathfrak{F}$,则$\exists 1\leq i\leq n\left(A_{i}\in\mathfrak{F}\right)$.
+\end{corollary}
+
+\begin{remark}{}{}
+	特别地,上述推论在$\left(A_{i}\right)_{i=1}^{n}$是$X$的覆盖时也成立.
+\end{remark}
+
+\begin{proposition}{超滤子的生成系判定}{}
+	设$\mathfrak{S}$是$X$上某个滤子的子基.若$\forall Y\subseteq X\left(Y\in\mathfrak{S}\vee X\setminus Y\in\mathfrak{S}\right)$,则$\mathfrak{S}$是$X$上的超滤子.
+\end{proposition}
+
+\begin{example}{平凡超滤子}{}
+	当$X$是非空集合时,对给定的$a\in X$,集合$X$中所有包含$a$的子集构成的集合是$X$上的超滤子,称为平凡超滤子.
+\end{example}
+
+\begin{remark}{集合上最大的滤子和集合的基数有关}{}
+	当$\left|X\right|\geqslant 2$时,$X$上至少有两个不同的超滤子,因此$X$上没有最大的滤子.
+\end{remark}
+
+\begin{proposition}{滤子的超滤子表示定理}{}
+	$X$上每个滤子都等于$X$上所有比$\mathfrak{F}$更细的超滤子的交.
+\end{proposition}
+
+
+

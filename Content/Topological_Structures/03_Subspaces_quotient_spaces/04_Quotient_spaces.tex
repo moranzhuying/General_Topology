@@ -1,0 +1,35 @@
+\section{商拓扑空间}
+
+记号约定:$X$和$Y$是拓扑空间,各自配备相容等价关系$R$和$S$,相应的典范满射分别是$\varphi$和$\psi$.
+
+\begin{definition}{商拓扑空间}{}
+	配备商拓扑的集合$X/R$称为$X$相对$R$的商拓扑空间.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 在没有额外说明的情况下,默认$X/R$配备商拓扑.终拓扑的泛性质保证了用到的等价关系诱导的映射是良定义的,因此我们无需为其担心.
+		\item 我们经常说$X/R$通过把$X$中属于同一个关于$R$的等价类的点粘合(或等同)后得到的拓扑空间.事实上这正是商集定义的体现,对于商群(更一般地,商环,商模,商代数等对象)都可以按照类似的方式来理解.
+		\item 设$U\subseteq X/R$,那么$U$是$X/R$的开集(相对的,闭集)$\iff$ $\varphi^{-1}\left(U\right)$是$X$的开集(相对的,闭集).于是,这给出了$X$中的开集(相对的,闭集)组成的集合与$X/R$中先对$R$饱和的开集(相对的,闭集)组成的集合之间的一一对应.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{商空间的泛性质}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(X/R,Y\right)$,则$f$连续$\iff$ $f\circ\varphi$连续.
+\end{proposition}
+
+\begin{remark}{}{}
+	等价地说,$\Hom_{\mathsf{Top}}\left(X/R,Y\right)\to\left\{f\in\Hom_{\mathsf{Top}}\left(X,Y\right)\middle|\forall x\in X\left(f|_{\left[x\right]_{R}}\text{是常值映射}\right)\right\},\rho\mapsto\rho\circ\varphi$是双射.
+\end{remark}
+
+\begin{example}{一维环面}{}
+	考虑$\R$上的等价关系$x\equiv y\pmod{1}$,由$\R$模掉该等价关系所得的商拓扑空间称为$1$维环面,记作$\mathbb{T}$.每个$x\in\R$关于该等价关系的等价类是$x+\Z$.根据商空间的泛性质,$\End_{\mathsf{Top}}\left(\mathbb{T}\right)$和$\R$上周期为$1$的连续映射组成的集合之间存在一一对应.
+\end{example}
+
+\begin{corollary}{商拓扑的自然性}{}
+	设$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$且与等价关系相容,则$f$诱导的典范映射连续.
+\end{corollary}
+
+\begin{proposition}{商拓扑的传递性}{}
+	设$R$比$S$细,则典范双射$\left(X/R\right)/\left(S/R\right)\to X/S$是同胚.
+\end{proposition}

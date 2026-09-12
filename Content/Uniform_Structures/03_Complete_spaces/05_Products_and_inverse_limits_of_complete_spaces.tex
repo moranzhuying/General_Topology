@@ -1,0 +1,51 @@
+\section{完备空间的乘积和逆向极限}
+
+\begin{proposition}{}{}
+	设$\left(X_{i}\right)_{i\in I}$是一族非空一致空间,则$\prod\limits_{i\in I}X_{i}$是完备空间$\iff$ $\left(X_{i}\right)_{i\in I}$是完备空间族.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\left(\left(X_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是一致空间的逆向系统.若$\left(X_{\alpha}\right)_{\alpha\in I}$是Hausdorff完备空间族,则$\varprojlim X_{\alpha}$完备且Hausdorff.
+\end{corollary}
+
+\begin{theorem}{Mittag-Leffler定理}{}
+	设$I$是具有可数共尾子集的定向集,$\left(\left(X_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是一致空间的逆向系统,$\left(X_{\alpha}\right)_{\alpha\in I}$是一族具备可数邻里基的完备Hausdorff空间,并且满足条件($\mathrm{ML}_{\alpha\beta}$):
+	\begin{align*}
+		\forall\alpha\in I\exists\beta\in I\left(\beta\geq\alpha\implies\forall\gamma\in I\left(\gamma\geq\beta\implies f_{\alpha\gamma}\left(X_{\gamma}\right)\text{在}f_{\alpha\beta}\left(X_{\beta}\right)\text{中稠密}\right)\right),
+	\end{align*}
+	\begin{enumerate}
+		\item 对每个$\alpha,\beta\in I$,当$\beta\geq\alpha$且条件($\mathrm{ML}_{\alpha\beta}$)成立时,$f_{\alpha}\left(X_{\alpha}\right)$在$f_{\alpha\beta}\left(X_{\beta}\right)$中稠密.
+		\item 若$\left(X_{\alpha}\right)_{\alpha\in I}$是一族非空一致空间,则$\varprojlim X_{\alpha}\neq\emptyset$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}{}{}
+	设$I$是具有可数共尾子集的定向集,$\left(\left(X_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是集合的逆向系统.若$\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}$是满射族,则$\left(f_{\alpha}\right)_{\alpha\in I}$亦然.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$I$是有可数共尾子集的定向集,$\left(\left(X_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right),\left(\left(Y_{\alpha}\right)_{\alpha\in I},\left(g_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是集合的逆向系统,$\left(u_{\alpha}\right)_{\alpha\in I}$是前者到后者的映射逆系统,$u=\varprojlim u_{\alpha}$,$\left(y_{\alpha}\right)_{\alpha\in I}\in\varprojlim Y_{\alpha}$.若
+	\begin{align*}
+		\forall\alpha\in I\exists\beta\in I\left(\beta\geq\alpha\implies\forall\gamma\in I\left(\gamma\geq\beta\implies f_{\alpha\gamma}\left(u_{\gamma}^{-1}\left(y_{\gamma}\right)\right)\right)=f_{\alpha\beta}\left(u_{\beta}^{-1}\left(y_{\beta}\right)\right)\right),
+	\end{align*}
+	则存在$\left(x_{\alpha}\right)_{\alpha\in I}\in\varprojlim X_{\alpha}$使得$u\left(\left(x_{\alpha}\right)_{\alpha\in I}\right)=\left(y_{\alpha}\right)_{\alpha\in I}$.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

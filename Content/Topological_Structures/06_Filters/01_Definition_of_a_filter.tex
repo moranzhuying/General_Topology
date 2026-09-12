@@ -1,0 +1,34 @@
+\chapter{滤子}
+
+\section{滤子的定义}
+
+记号约定:$X$是集合,$\mathfrak{F}\subseteq\mathcal{P}\left(X\right)$.
+
+\begin{definition}{滤子}{}
+	当$\mathcal{F}$满足如下条件时,称之为$X$上的滤子,称$X$是由$\mathfrak{F}$滤过的集合.
+	\begin{itemize}
+		\item ($\mathrm{F}_{1}$)$\forall A\in\mathfrak{F}\forall B\subseteq X\left(A\subseteq B\subseteq X\implies B\in\mathfrak{F}\right)$.
+		\item ($\mathrm{F}_{2}$)$\forall\mathcal{S}\in\fin\left(\mathfrak{F}\right)\left(\bigcap\limits_{S\in\mathcal{S}}S\in\mathfrak{F}\right)$.
+		\item ($\mathrm{F}_{3}$)$\emptyset\notin\mathcal{F}$.
+	\end{itemize}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 根据($\mathrm{F}_{2}$)和($\mathrm{F}_{3}$)可知$\forall\mathcal{S}\in\fin\left(\mathfrak{F}\right)\left(\bigcap\limits_{S\in\mathcal{S}}S\neq\emptyset\right)$.
+		\item 条件($\mathrm{F}_{2}$)等价于如下条件的合取.条件($\mathrm{F}_{2b}$)和($\mathrm{F}_{3}$)保证了空集上不存在滤子.
+		\begin{itemize}
+			\item ($\mathrm{F}_{2a}$)$\forall A,B\in\mathfrak{F}\left(A\cap B\in\mathfrak{F}\right)$.
+			\item ($\mathrm{F}_{2b}$)$X\in\mathfrak{F}$.
+		\end{itemize}
+		\item $\mathfrak{F}$满足($\mathrm{F}_{1}$)和($\mathrm{F}_{2b}$)$\iff$ $\mathfrak{F}\neq\emptyset$;$\mathfrak{F}$满足($\mathrm{F}_{1}$)和($\mathrm{F}_{3}$)$\iff$ $\mathfrak{F}\neq\mathcal{P}\left(X\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{滤子的例子}{}
+	\begin{enumerate}
+		\item 若$X\neq\emptyset$,则$\left\{X\right\}$就是滤子,称为$X$上的平凡滤子.更一般的,对$X$的一个给定非空子集$A$,由$X$的所有包含$A$的子集构成的集合是$X$上的滤子,称为$A$生成的主滤子.
+		\item 若$X$是拓扑空间,则对$X$的每个非空子集$A$,它在$X$中的邻域组成的集合是一个滤子,称为$A$的邻域滤子.
+		\item 若$X$是无限集,则$\left\{A\subseteq X\middle|X\setminus A\text{是有限集}\right\}$是$X$的滤子,称为余有限滤子.特别地当$X=\N$时称之为Fren\'{e}t滤子.
+	\end{enumerate}
+\end{example}

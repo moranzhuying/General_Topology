@@ -1,0 +1,34 @@
+\section{拓扑群同态和严格态射}
+
+记号约定:$G,G^{\prime}$是拓扑群,$f\in\Hom_{\mathsf{Grp}}\left(G,G^{\prime}\right)$.
+
+\begin{proposition}{群同态的连续性由一点的连续性决定}{}
+	$f$是连续映射$\iff$ $f$在$G$上某一点连续.
+\end{proposition}
+
+\begin{proposition}{严格拓扑群同态的等价条件}{equivalent-condition-of-strict-morphism}
+	设$f$是拓扑群同态,其典范分解为$G\xlongrightarrow{\varphi}G/\ker\left(f\right)\xlongrightarrow{\bar{f}}\im\left(f\right)\xlongrightarrow{\psi}G^{\prime}$.下列陈述等价:
+	\begin{enumerate}
+		\item $\bar{f}$是拓扑群同构.
+		\item $f^{\circ}$是开映射.
+		\item $f\left(\mathcal{N}\left(e\right)\right)\subseteq\mathcal{N}\left(e^{\prime}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{严格态射}{}
+	沿用\cref{equivalent-condition-of-strict-morphism}的设定.其中的陈述之一成立时,称$f$为严格拓扑群同态(或严格态射).
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 下列条件之一成立时,$f$是严格拓扑群同态:
+		\begin{itemize}
+			\item $G^{\prime}$是离散群;
+			\item $G$是紧群,$\im\left(f\right)$是$G^{\prime}$的Hausdorff集.
+		\end{itemize}
+		\item 设$f:G\to G^{\prime}$和$g:G^{\prime}\to G^{\prime\prime}$是严格拓扑群同态.若$f$是满射或$g$是单射,则$g\circ f$是严格拓扑群同态.
+		\item 设$H\unlhd G$,那么典范映射$G/H\to \im\left(f\right)/f\left(H\right)$是拓扑群同态.特别地,当$f$是严格拓扑群同态时,该拓扑群同态也是严格的.
+	\end{enumerate}
+\end{remark}
+
+

@@ -1,0 +1,43 @@
+\section{拓扑空间的粘贴}
+
+\begin{definition}{集合的粘贴数据,粘贴集合}{pasting-of-family-of-sets}
+	设$\left(X_{\lambda}\right)_{\lambda\in\Lambda}$是集合族,$X=\coprod\limits_{i\in I}X_{i}$,其典范嵌入族为$\left(j_{\lambda}\right)_{\lambda\in\Lambda}$,对任意$\left(\lambda,\mu\right)\in\Lambda\times\Lambda$,有$A_{\lambda\mu}\subseteq X_{\lambda}$和$h_{\mu\lambda}\in\End_{\mathsf{Set}}\left(A_{\lambda\mu}\right)$.假设$\left(A_{\lambda\mu}\right)_{\lambda,\mu\in\Lambda}$和$\left(h_{\mu\lambda}\right)_{\mu,\lambda\in\Lambda}$满足下列条件:
+	\begin{enumerate}
+		\item 对任意$\lambda\in\Lambda$有$A_{\lambda\lambda}=X_{\lambda}$和$h_{\lambda\lambda}=\id_{X_{\lambda}}$.
+		\item 对任意$\lambda,\mu,\nu\in\Lambda$和$x\in A_{\lambda\mu}\cap A_{\lambda\nu}$,有$h_{\nu\lambda}\left(x\right)\in A_{\nu\nu}$和$h_{\mu\lambda}\left(x\right)=h_{\nu\mu}\left(h_{\mu\lambda}\left(x\right)\right)$.
+	\end{enumerate}
+	考虑$X$上的等价关系$R\left\{x,y\right\}:\exists\lambda,\mu\in\Lambda\left(\left(x,y\right)\in A_{\lambda\mu}\times A_{\mu\lambda}\wedge y=h_{\mu\lambda}\left(x\right)\right)$.在此等价关系的每个等价类的基数最多为$1$.我们称$X/R$由$\left(X_{\lambda}\right)_{\lambda\in\Lambda}$沿$\left(A_{\mu\lambda}\right)_{\mu,\lambda\in\Lambda}$沿$\left(h_{\mu\lambda}\right)_{\mu,\lambda\in\Lambda}$粘贴得到.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 假设$S$是$X$上的等价关系,并且对每个$x\in X$和$\lambda\in\Lambda$都有$\left|\left[x\right]_{S}\cap X_{\lambda}\right|\leq 1$.对任意$\left(\lambda,\mu\right)\in\Lambda\times\Lambda$,定义
+		\begin{align*}
+			A_{\lambda\mu}=\left\{x\in X\middle|\exists y\in X_{\mu}\left(R\left\{x,y\right\}\right)\right\},
+		\end{align*}
+		则有良定义的映射$h_{\mu\lambda}:A_{\lambda\mu}\to A_{\mu\lambda}$,并且$\left(A_{\lambda\mu}\right)_{\lambda,\mu\in\Lambda}$和$\left(h_{\mu\lambda}\right)_{\mu,\lambda\in\Lambda}$满足上述定义中的条件.
+		\item 设$\varphi:X\to X/R$是典范满射,则对任意$\lambda\in\Lambda$,映射$\varphi$诱导典范双射$X_{\lambda}\to\varphi\left(X_{\lambda}\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{拓扑空间的粘贴}{pasting-of-family-of-topological-spaces}
+	沿用定义(\ref{def:pasting-of-family-of-sets})的设定.假设$\varphi:X\to X/R$是典范满射,$\tau$是$\left(\varphi\circ j_{\lambda}\right)_{\lambda\in\Lambda}$的终拓扑,对每个$\lambda\in\Lambda$,集合$X_{\lambda}$配备拓扑$\tau_{\lambda}$.我们称拓扑空间$X/R$是通过$\left(X_{\lambda}\right)_{\lambda\in\Lambda}$沿$\left(A_{\mu\lambda}\right)_{\mu,\lambda\in\Lambda}$沿$\left(h_{\mu\lambda}\right)_{\mu,\lambda\in\Lambda}$粘贴得到.
+\end{definition}
+
+\begin{corollary}{粘贴所得的拓扑空间中的开闭集特征}{}
+	沿用定义(\ref{def:pasting-of-family-of-topological-spaces})的设定,则$X/R$中的开集(相对的,闭集)是$X$中满足下列条件的子集$B$在$\varphi$下的像:
+	\begin{enumerate}
+		\item $B$是关于$R$的饱和开集.
+		\item 对每个$\lambda\in\Lambda$,集合$B\cap X_{\lambda}$是$X_{\lambda}$的开集(相对的,闭集).
+	\end{enumerate}
+\end{corollary}
+
+\begin{remark}{粘贴所得的拓扑空间的子空间拓扑}{}
+	设对任意$\lambda\in\Lambda$,映射$\iota_{\lambda}:\varphi\left(X_{\lambda}\right)\to X/R$是典范单射.那么,$\left(\iota_{\lambda}\right)_{\lambda\in\Lambda}$的终拓扑和$\left(\varphi\circ j_{\lambda}\right)_{\lambda\in\Lambda}$的终拓扑相同.但是,在一般情况下,对每个给定的$\lambda\in\Lambda$,拓扑$\tau$在$\varphi\left(X_{\lambda}\right)$上诱导的子空间拓扑比映射$X_{\lambda}\to\varphi\left(X_{\lambda}\right)$诱导的拓扑更粗,并且通常不相同,即便$\left(h_{\mu\lambda}\right)_{\mu,\lambda\in\Lambda}$是一族同胚也不一定相同.
+\end{remark}
+
+\begin{proposition}{粘贴拓扑空间的子空间拓扑相同的充分条件}{}
+	沿用定义(\ref{def:pasting-of-family-of-topological-spaces})的设定.若$\left(h_{\mu\lambda}\right)_{\mu,\lambda\in\Lambda}$是同胚族,对每个固定的$\left(\lambda,\mu\right)\in\Lambda\times\Lambda$,集合$A_{\lambda\mu}$是$X_{\lambda\mu}$的开集(相对的,闭集),则对每个$\lambda\in\Lambda$,集合$\varphi\left(X_{\lambda}\right)$是$X/R$的开集(相对的,闭集),并且典范映射$X_{\lambda}\to\varphi\left(X_{\lambda}\right)$是同胚.
+\end{proposition}
+
+

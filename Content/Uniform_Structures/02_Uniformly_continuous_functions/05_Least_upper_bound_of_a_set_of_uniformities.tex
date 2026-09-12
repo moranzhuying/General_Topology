@@ -1,0 +1,22 @@
+\section{一致结构集的上确界}
+
+记号约定:$X$是集合,$\left(\mathfrak{U}_{i}\right)_{i\in I}$是$X$的一族一致结构,对每个$i\in I$,集合$X$配备$\mathfrak{U}_{i}$构成的一致空间为$X_{i}$.
+
+\begin{proposition}{}{}
+	设读每个$i\in I$,映射$f_{i}:X\to X_{i}$是恒等映射.
+	\begin{enumerate}
+		\item $\left(f_{i}\right)_{i\in I}$的始一致结构和$\sup\limits_{i\in I}\mathfrak{U}_{i}$相等.
+		\item 如果对每个$\in I$,一致结构$\mathfrak{U}_{i}$诱导拓扑$\tau_{i}$,则$\sup\limits_{i\in I}\mathfrak{U}_{i}$诱导的拓扑等于$\sup\limits_{i\in I}\tau_{i}$.
+		\item 设$X\neq\emptyset$.把$\mathfrak{U}$视为$X\times X$上的邻里滤子,则$\sup\limits_{i\in I}\mathfrak{U}_{i}$是滤子族$\left(\mathfrak{U}_{i}\right)_{i\in I}$的上确界.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{有限划分一致结构和一致结构的上确界}{}
+	设$X\neq\emptyset$.记$X$上的有限划分构成的集合为$\mathfrak{F}$,对$X$的每个有限划分$\mathfrak{m}=\left(A_{i}\right)_{i=1}^{n}$,记$V_{\mathfrak{m}}\coloneq\bigcup\limits_{i=1}^{n}\left(A_{i}\times A_{i}\right)$生成的一致结构为$\mathfrak{U}_{\mathfrak{m}}$,则$X$的有限划分一致结构等于$\sup\limits_{\mathfrak{m}\in\mathfrak{F}}V_{\mathfrak{m}}$.
+\end{example}
+
+\begin{remark}{一致结构的下确界}{}
+	$\left(\mathfrak{U}_{i}\right)_{i\in I}$的下确界存在,但是当$X\neq\emptyset$时$\inf\limits_{i\in I}\mathfrak{U}_{i}$不一定等于$\bigcap\limits_{i\in I}\mathfrak{U}_{i}$.
+\end{remark}
+
+

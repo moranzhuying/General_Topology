@@ -1,0 +1,42 @@
+\section{局部连通空间}
+
+记号约定:$X$是拓扑空间.
+
+\begin{definition}{局部连通空间}{}
+	\begin{enumerate}
+		\item 若$X$中每一点都有一个由该点在$X$中的连通邻域构成的邻域基,则称$X$是局部连通空间.
+		\item 设$A\subseteq X$.若$A$是局部连通空间,则称$A$是$X$的局部连通集.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	``$X$中每一点都有一个连通邻域''并不足以保证$X$是局部连通空间.$X$可以是连通的但不是局部连通的,也可以是局部连通但不连通的(例如$X$是包含多于一个点的离散空间).
+\end{remark}
+
+\begin{example}{局部连通空间的例子}{}
+	实直线$\R$是局部连通空间.
+\end{example}
+
+\begin{proposition}{局部连通性的开集连通分支判定}{}
+	$X$是局部连通空间$\iff$ $X$中每个开集的连通分支都是$X$的开集.
+\end{proposition}
+
+\begin{remark}{}{}
+	如果$X$是局部连通空间,那么$X$的所有连通分支构成$X$的一个由开集组成的划分.进一步,$X$是该集合族的无交并.
+\end{remark}
+
+\begin{corollary}{分支边界的包含关系}{}
+	设$X$是局部连通空间,$U$是$X$的开集,$V$是$U$在$X$中的一个连通分支,则$\boundary\left(V\right)\subseteq\boundary\left(U\right)$.
+\end{corollary}
+
+\begin{proposition}{局部连通性遗传到商空间}{}
+	设$X$是局部连通空间,$R$是$X$上的等价关系,则$X/R$是局部连通空间.
+\end{proposition}
+
+\begin{proposition}{积空间的局部连通性}{}
+	设$\left(X_{i}\right)_{i\in I}$是一族非空拓扑空间,$X=\prod\limits_{i\in I}X_{i}$,则下列陈述等价:
+	\begin{enumerate}
+		\item $X$是局部连通空间.
+		\item $\left(X_{i}\right)_{i\in I}$是一族局部连通空间,并且存在$J\in\fin\left(I\right)$,使得$\left(X_{i}\right)_{i\in I\setminus J}$是一族连通空间.
+	\end{enumerate}
+\end{proposition}

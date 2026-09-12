@@ -1,0 +1,18 @@
+\section{闭映射的特有性质}
+
+记号约定:$X$和$Y$是拓扑空间
+
+\begin{proposition}{连续闭映射的必爆特征}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$,则$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$且是闭映射$\iff$对$X$的每个子集$A$都有$f\left(\closure\left(A\right)\right)=\closure\left(f\left(A\right)\right)$.
+\end{proposition}
+
+\begin{proposition}{闭等价关系的饱和邻域基特征}{}
+	设$R$是$X$上的等价关系,$\varphi:X\to X/R$是典范满射,则$\varphi$是闭映射$\iff$对每个$x\in X$,$\varphi\left(x\right)$有一个由关于$R$饱和的开邻域组成的邻域基.
+\end{proposition}
+
+\begin{remark}{开等价关系和闭等价关系的区别}{}
+	上述命题表明:如果$R$是闭等价关系,则对每个$x\in X$和$\varphi\left(x\right)$在$X$中的每个邻域$U$,集合$\varphi\left(U\right)$是$\varphi\left(x\right)$在$X/R$中的邻域.但是,这不意味着,对每个$x\in X$,它在$x$中的每个邻域$V$都满足$\varphi\left(V\right)$是$\varphi\left(x\right)$在$X/R$的邻域.换言之,闭等价关系不一定是开等价关系.反之,开等价关系也不一定是闭等价关系.除去恒等关系,存在既开又闭的等价关系,也存在既非开又非闭的等价关系.
+\end{remark}
+
+
+

@@ -1,0 +1,61 @@
+\section{始拓扑}
+
+\begin{proposition}{始拓扑的构造和泛性质}{construction-and-universal-property-of-initial-topology}
+	设$X$是集合,$\left(Y_{i}\right)_{i\in I}$是拓扑空间族,对每个$i\in I$有$f_{i}\in\Hom_{\mathsf{Set}}\left(X,Y_{i}\right)$.令
+	\begin{align*}
+		\mathcal{S}=\left\{f_{i}^{-1}\left(U_{i}\right)\subseteq X\middle|i\in I,U_{i}\text{是}Y_{i}\text{的开集}\right\},\mathcal{B}=\left\{\bigcap\limits_{B\in J}B\in\mathcal{S}\middle|J\in\fin\left(\mathcal{S}\right)\right\}.
+	\end{align*}
+	\begin{enumerate}
+		\item $X$上存在唯一的拓扑$\tau$以$\mathcal{B}$为拓扑基,该拓扑是$X$上使得$\left(f_{i}\right)_{i\in I}$是连续映射族的最粗拓扑.
+		\item 对任意拓扑空间$Z$,对任意$z\in Z$和$f\in\Hom_{\mathsf{Set}}\left(Z,X\right)$,映射$f$在$z$处连续$\iff$ $\left(f_{i}\circ g\right)_{i\in I}$是一族在$z$处连续的映射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{始拓扑的另一个拓扑基}{}
+	记号和假设同命题(\ref{prop:construction-and-universal-property-of-initial-topology}).设对任意$i\in I$,集合$\mathcal{B}_{i}$是$Y_{i}$的拓扑基.令
+	\begin{align*}
+		\mathcal{S}^{\prime}=\left\{f_{i}^{-1}\left(U_{i}\right)\subseteq X\middle|i\in I,U_{i}\in\mathcal{B}_{i}\right\},\mathcal{B}=\left\{\bigcap\limits_{B\in J}B^{\prime}\in\mathcal{S}\middle|J\in\fin\left(\mathcal{S}^{\prime}\right)\right\},
+	\end{align*}
+	那么$\mathcal{B}^{\prime}$也是$\tau$的基.
+\end{proposition}
+
+\begin{definition}{映射族的始拓扑}{}
+	记号和假设同命题(\ref{prop:construction-and-universal-property-of-initial-topology}).我们称拓扑$\tau$是$\left(f_{i}\right)_{i\in I}$的始拓扑.
+\end{definition}
+
+\begin{proposition}{始拓扑的传递性}{}
+	设$X$是集合,$\left(Z_{i}\right)_{i\in I}$是拓扑空间族,$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的划分,$\left(Y_{\lambda}\right)_{\lambda\in\Lambda}$是集合族,对任意$\lambda\in\Lambda$和$i\in J_{\lambda}$有
+	\begin{align*}
+		h_{\lambda}\in\Hom_{\mathsf{Set}}\left(X,Y_{\lambda}\right),g_{i,\lambda}\in\Hom_{\mathsf{Set}}\left(Y_{\lambda},Z_{i}\right),f_{i}=g_{i,\lambda}\circ h_{\lambda}.
+	\end{align*}
+	若对每个$\lambda\in\Lambda$,$Y_{\lambda}$配备$\left(g_{i,\lambda}\right)_{i\in I_{\lambda}}$的始拓扑,则$\left(f_{i}\right)_{i\in I}$的始拓扑和$\left(h_{\lambda}\right)_{\lambda\in\Lambda}$的始拓扑相同.
+\end{proposition}
+
+\begin{definition}{拓扑的拉回}{}
+	设$X$是集合,$Y$是拓扑空间,$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.称$X$上使得$f$连续的最粗拓扑称为$Y$上的拓扑在$f$下的拉回.
+\end{definition}
+
+\begin{remark}{}{}
+	记$Y$上的拓扑为$\tau$,其拉回为$\tau^{\ast}$.
+	\begin{enumerate}
+		\item $X$中的开集(相对的,闭集)一定是$Y$中的开集(相对的,闭集)在$f$下的原像.对任意$x\in X$,若$\mathcal{V}\left(f\left(x\right)\right)$是$f\left(x\right)$的邻域基,则$\left\{f^{-1}\left(W\right)\subseteq X\middle|W\in\mathcal{V}\left(f\left(x\right)\right)\right\}$是$X$的邻域基.
+		\item 当$X\subseteq Y$,并且$f$是典范单射时,称$\tau^{\ast}$是$X$上(相对$Y$上的拓扑$\tau$)的诱导拓扑,$X$是$Y$(相对$\tau$)的(拓扑)子空间.
+		\item 当$X$是拓扑空间,并且装备另一个拓扑$\tau_{0}$时,$f$是连续映射$\iff$ $\tau_{0}$比$\tau^{\ast}$细.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{拓扑族的上确界的构造}{}
+	设$\left(\tau_{i}\right)_{i\in I}$是$X$上的拓扑族,对任意$i\in I$,集合$X$配备$\tau_{i}$构成的拓扑空间记作$X_{i}$,映射$j_{i}:X\to X_{i}$是恒等映射,则$\left(j_{i}\right)_{i\in I}$的始拓扑等于$\sup\limits_{i\in I}\tau_{i}$.
+\end{proposition}
+
+\begin{proposition}{拓扑子基}{}
+	设$X$是集合,$\mathfrak{S}\subseteq\mathcal{P}\left(X\right)$.对每个$U\in\mathfrak{S}$,记$\mathfrak{T}_{U}=\left\{\emptyset,X,U\right\}$.我们称$\mathfrak{T}_{0}\coloneq\sup\limits_{U\in\mathfrak{S}}\mathfrak{T}_{U}$是$\mathfrak{S}$生成的拓扑.此外,
+	\begin{align*}
+		\mathfrak{B}=\left\{\bigcap\limits_{S\in\mathcal{S}}S\middle|\mathcal{S}\in\fin\left(\mathfrak{S}\right)\right\}
+	\end{align*}
+	是$\mathfrak{T}_{0}$的基.我们称$\mathfrak{S}$是$\mathfrak{T}_{0}$的一个子基.
+\end{proposition}
+
+\begin{definition}{积拓扑}{}
+	设$\left(X_{i}\right)_{i\in I}$是拓扑空间组.我们称$\left(\pr_{i}\right)_{i\in I}$的始拓扑为$\left(X_{i}\right)_{i\in I}$的积拓扑.
+\end{definition}

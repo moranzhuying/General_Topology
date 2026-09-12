@@ -1,0 +1,66 @@
+\chapter{完备空间}
+
+\section{Cauchy滤子}
+
+记号约定:$X$是一致空间,其一致结构为$\mathfrak{U}$.
+
+\begin{definition}{$V$-小集}{}
+	设$V\in\mathfrak{U},A\subseteq X$.若$A\times A\subseteq V$,则称$A$是($X$的)$V$-小集.
+\end{definition}
+
+\begin{proposition}{相交的$V$-小集的并}{}
+	设$V\in\mathfrak{U}$,$A,B$是$X$的$V$-小集.若$A\cap B\neq\emptyset$,则$A\cup B$是$V^{2}$-小集.
+\end{proposition}
+
+\begin{definition}{Cauchy滤子}{}
+	设$\mathfrak{F}$是$X$上的滤子.若对每个$V\in\mathfrak{U}$,在$X$中存在$V$-小集$A$使得$A\in\mathfrak{F}$,则称$\mathfrak{F}$是$X$上的Cauchy滤子.
+\end{definition}
+
+\begin{remark}{}{}
+	在这里,我们同样可以用``充分小的集合''和``一个如我们所愿的小集合''来让表述更加简洁.于是,Cauchy滤子的定义可以重述为``一个包含任意小的集合的滤子''.
+\end{remark}
+
+\begin{definition}{Cauchy序列}{}
+	设$\left(x_{n}\right)_{n=0}^{\infty}$是$X$中的序列.若$\left(x_{n}\right)_{n=0}^{\infty}$的初等滤子是Cauchy滤子,则称$\left(x_{n}\right)_{n=0}^{\infty}$是$X$中的Cauchy序列.
+\end{definition}
+
+\begin{remark}{}{}
+	把上述定义展开就得到了我们熟悉的定义:$\left(x_{n}\right)_{n=0}^{\infty}$是Cauchy序列当且仅当
+	\begin{align*}
+		\forall V\in\mathfrak{U}\exists n_{0}\in\N\forall m,n\in\N\left(m,n\geq n_{0}\implies\left(x_{m},x_{n}\right)\in V\right).
+	\end{align*}
+\end{remark}
+
+\begin{proposition}{收敛滤子一定Cauchy}{}
+	$X$上的每个收敛滤子都是Cauchy滤子.
+\end{proposition}
+
+\begin{remark}{}{}
+	显然,比Cauchy滤子细的滤子都是Cauchy滤子.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$Y$是一致空间,$\mathfrak{B}$是$X$的Cauchy滤子基,$f\in\Hom_{\mathsf{Uni}}\left(X,Y\right)$,则$f^{\ast}\left(\mathfrak{B}\right)$是$Y$的Cauchy滤子基.
+\end{proposition}
+
+\begin{remark}{}{}
+	如果把$\mathfrak{U}$换成更细的一致结构,那么$f^{\ast}\left(\mathfrak{B}\right)$还是$Y$的Cauchy滤子.换言之,$X$上的一致结构越细,$X$上的Cauchy滤子越少.
+\end{remark}
+
+\begin{proposition}{始一致结构下的Cauchy滤子}{}
+	设$\mathfrak{B}$是$X$的滤子基,$\left(Y_{i}\right)_{i\in I}$是一致空间族,对每个$i\in I$有$f_{i}\in\Hom_{\mathsf{Set}}\left(X,Y_{i}\right)$,为$X$配备$\left(f_{i}\right)_{i\in I}$的始一致结构,则
+	\begin{center}
+		$\mathfrak{B}$是$X$的Cauchy滤子基$\iff$对每个$i\in I$,滤子基$\mathfrak{B}$在$f_{i}$下的提升是$X_{i}$上的Cauchy滤子基.
+	\end{center}
+\end{proposition}
+
+\begin{corollary}{子空间上的Cauchy滤子}{}
+	设$\mathfrak{F}$是$X$的Cauchy滤子,$A\subseteq X$.若$\mathfrak{F}$在$A$上诱导了滤子$\mathfrak{F}_{A}$,则$\mathfrak{F}_{A}$是$A$上的Cauchy滤子.
+\end{corollary}
+
+\begin{corollary}{积一致空间的Cauchy滤子}{}
+	设$\left(X_{i}\right)_{i\in I}$是一致空间族,$\mathfrak{B}$是$\prod\limits_{i\in I}X_{i}$的滤子基,则
+	\begin{center}
+		$\mathfrak{B}$是Cauchy滤子基$\iff$对每个$i\in I$,滤子基$\mathfrak{B}$在$\pr_{i}$下的提升是$X_{i}$的Cauchy滤子基.
+	\end{center}
+\end{corollary}

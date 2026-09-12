@@ -1,0 +1,98 @@
+\section{半直积}
+
+\begin{proposition}{内部半直积的构造}{}
+	设$G$是群,$L,N\in\Sub\left(G\right),\varphi:N\times L\to G,\left(x,y\right)\mapsto xy$.
+	\begin{enumerate}
+		\item 若$LN=NL$,则$LN\in\Sub\left(G\right)$.
+		\item $\varphi$是单射$\iff$ $N\cap L=\left\{e\right\}$.
+		\item $\varphi$是双射$\iff$ $LN=G$且$N\cap L=\left\{e\right\}$.
+		\item 若$N\unlhd G$,则$LN=NL$,并且$L\to\Aut_{\mathsf{Grp}}\left(N\right),y\mapsto\ad_{y}$是群同态.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{外部半直积的构造}{construction-of-exterior-semi-product}
+	设$N,L$是群,$S=N\times L$,对每个$y\in L$记$\sigma_{y}:N\to N,x\mapsto xyx^{-1}$.定义$S$上的运算为
+	\begin{align*}
+		\left(\left(x,y\right),\left(x^{\prime},y^{\prime}\right)\right)\mapsto\left(x\sigma_{y}\left(x^{\prime}\right),yy^{\prime}\right).
+	\end{align*}
+	令$j_{1}:N\to N\times\left\{e_{L}\right\},x\mapsto\left(x,e_{L}\right),j_{2}:\L\to\left\{e_{N}\right\}\times L,y\mapsto\left(e_{N},y\right)$.
+	\begin{enumerate}
+		\item $S$是群,$j_{1},j_{2}$是群同构,$\im\left(j_{1}\right)\unlhd S,\im\left(j_{2}\right)\in\Sub\left(S\right)$,典范投影$\pr_{2}:S\to L$是群同态和满射,$\ker\left(\pr_{2}\right)=\im\left(j_{1}\right)$.
+		\item 设$G$是群,$f\in\Hom_{\mathsf{Grp}}\left(N,G\right),g\in\Hom_{\mathsf{Grp}}\left(L,G\right)$.若
+		\begin{align*}
+			\forall y\in L\forall x\in N\left(f\left(\sigma_{y}\left(x\right)\right)\right)=g\left(y\right)f\left(x\right)\left(g\left(y\right)\right)^{-1},
+		\end{align*}
+		则存在唯一的$h\in\Hom_{\mathsf{Grp}}\left(S,G\right)$使得下图交换.
+		\begin{center}
+			\begin{tikzcd}
+				& G & \\
+				N && L \\
+				& S
+				\arrow["f", from=2-1, to=1-2]
+				\arrow["{j_{1}}"', hook, from=2-1, to=3-2]
+				\arrow["g"', from=2-3, to=1-2]
+				\arrow["{j_{2}}", from=2-3, to=3-2]
+				\arrow["{\exists!h}"', dashed, from=3-2, to=1-2]
+			\end{tikzcd}
+		\end{center}
+		此时$\forall\left(x,y\right)\in S\left(h\left(x,y\right)=f\left(x\right)g\left(y\right)\right)$.进一步,
+		\begin{itemize}
+			\item $h$是单射$\iff$ $f,g$是单射且$\im\left(f\right)\cap\im\left(g\right)=\left\{e\right\}$.
+			\item $h$是满射$\iff$ $\im\left(f\right)\im\left(g\right)=G$.
+		\end{itemize}
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{外部半直积}{}
+	在\cref{construction-of-exterior-semi-product}的记号和设定下,我们称$S$是$N$和$L$的外半直积.
+\end{definition}
+
+\begin{definition}{内部半直积}{}
+	设$G$是群,$N\unlhd G,L\leq G$.如果$LN=G,L\cap N=\left\{e\right\}$,则称$G$是$N$和$L$的内半直积.
+\end{definition}
+
+\begin{proposition}{拓扑群的内半直积}{}
+	设$N$和$L$是拓扑群,对每个$y\in L$记$\sigma_{y}:N\to N,x\mapsto xyx^{-1}$.假设$\sigma:L\to\Aut_{\mathsf{Grp}}\left(N\right),y\mapsto\sigma_{y}$是拓扑群同态.
+	\begin{enumerate}
+		\item $N$和$L$的外半直积$S$在乘积拓扑下是拓扑群.
+		\item 如果$G$是拓扑群,$f:N\to G$和$g:L\to G$是拓扑群同态,那么$h:S\to G,\left(x,y\right)\mapsto f\left(x\right)g\left(y\right)$是拓扑群同态.
+	\end{enumerate}
+\end{proposition}
+
+\begin{convention}{}{}
+	我们称如此得到的拓扑群$S$为$N$和$L$关于$\sigma$的拓扑外半直积,今后总是默认它装备乘积拓扑.
+\end{convention}
+
+\begin{proposition}{拓扑内半直积的等价条件}{}
+	设$G$是拓扑群,$N\unlhd G,L\in\Sub\left(G\right)$,$G$作为群是$N$和$L$的内半直积,$S$是$N$和$L$的外半直积.那么,下列陈述等价:
+	\begin{enumerate}
+		\item $G$是拓扑内半直积.
+		\item 典范投影$G\to N$和$G\to L$中任意一者连续时,典范映射$S\to G$是同胚.
+		\item 典范群同构$L\to G/N$是拓扑群同构.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

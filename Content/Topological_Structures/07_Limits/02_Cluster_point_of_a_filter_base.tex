@@ -1,0 +1,53 @@
+\section{滤子基的聚点}
+
+记号约定:$X$是拓扑空间,装备的拓扑为$\tau$,$a\in X$.
+
+\begin{definition}{滤子基的触点(聚点)}{}
+	设$\mathfrak{B}$是$X$的滤子基.若$x\in\bigcap\limits_{B\in\mathfrak{B}}\closure\left(B\right)$,则称$a$是$\mathfrak{B}$的聚点(或触点).
+\end{definition}
+
+\begin{remark}{}{}
+	如果$a$是$\mathfrak{B}$的聚点,那么它也是每一个和$\mathfrak{B}$等价的滤子基的聚点.特别地,$a$是$\mathfrak{B}$生成的滤子的聚点.
+\end{remark}
+
+\begin{proposition}{滤子基聚点的邻域刻画}{}
+	设$\mathfrak{B}$是$X$上的滤子基,则$a$是$\mathfrak{B}$的聚点$\iff$ $a$在$X$中的每个邻域和$\mathfrak{B}$的每个元素都相交.
+\end{proposition}
+
+\begin{proposition}{滤子聚点的滤子刻画}{}
+	设$\mathfrak{F}$是$X$上的滤子,则$a$是$\mathfrak{B}$的聚点$\iff$在$X$上有一个收敛到$a$且比$\mathfrak{F}$的滤子.
+\end{proposition}
+
+\begin{remark}{}{}
+	特别地,$\mathfrak{F}$的每个极限点都是它的聚点.
+\end{remark}
+
+\begin{corollary}{超滤子的收敛准则}{}
+	设$\mathfrak{U}$是$X$上的超滤子,则$a$是$\mathfrak{U}$的极限点$\iff$ $a$是$\mathfrak{U}$的聚点.
+\end{corollary}
+
+\begin{remark}{滤子的聚点和拓扑粗细的关系}{}
+	如果$a$是$X$上的滤子$\mathfrak{F}$的聚点,那么它也是$X$上每个比$\mathfrak{F}$粗的滤子的聚点.进一步,如果把$\tau$换成更粗的拓扑,那么在新拓扑下$a$还是$\mathfrak{F}$的聚点.
+\end{remark}
+
+\begin{proposition}{滤子基的聚点集合是闭集}{}
+	设$\mathfrak{B}$是$X$上的滤子基,则它在$X$中的聚点组成的集合是$\bigcap\limits_{B\in\mathfrak{B}}\closure\left(B\right)$,并且这是一个闭集.
+\end{proposition}
+
+\begin{proposition}{子集闭包和滤子极限的关系}{}
+	设$A\subseteq X$,集合$\mathfrak{B}$是$A$上的滤子基.
+	\begin{enumerate}
+		\item $\mathfrak{B}$在$X$中的每个聚点都属于$\closure\left(A\right)$.
+		\item $\closure\left(A\right)$中的每个元素都是$\mathfrak{B}\left(x\right)_{A}$在$X$中的极限点.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{滤子聚点的存在性}{}
+	拓扑空间中的滤子不一定有聚点(进一步,不一定有极限点).例如,在无限离散空间中,余有限滤子没有聚点.每个滤子都有聚点的拓扑空间在数学中占有重要的地位,我们将在第九章中加以研究.
+\end{remark}
+
+
+
+
+
+

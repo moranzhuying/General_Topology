@@ -1,0 +1,85 @@
+\chapter{泛闭映射}
+
+\section{泛闭映射}
+
+记号约定:$X,Y$是拓扑空间,$f\in\Hom_{\mathsf{Set}}\left(X,Y\right)$,对每个$T\subseteq Y$,记$f_{T}:f^{-1}\left(T\right)\to T,x\mapsto f\left(x\right)$.
+
+\begin{definition}{泛闭映射}{}
+	若对每个拓扑空间$Z$,映射$f\times\id_{Z}$是闭映射,则称$f$是泛闭映射.
+\end{definition}
+
+\begin{remark}{}{}
+	两个连续闭映射的乘积不一定是闭映射.例如,$f:\Q\to\Q,x\mapsto 0$和$\id_{\Q}$都是闭映射,但$f\times\id_{\Q}$不是闭映射.
+\end{remark}
+
+\begin{proposition}{泛闭映射的闭性}{}
+	每个泛闭映射都是闭映射.
+\end{proposition}
+
+\begin{proposition}{连续单射是泛闭映射的等价条件}{}
+	设$f$是连续单射,则$f$是泛闭映射$\iff$ $f$是闭映射$\iff$ $f$的余限制是同胚.
+\end{proposition}
+
+\begin{proposition}{泛闭映射的局部化与拼接}{}
+	设$f$连续.
+	\begin{enumerate}
+		\item 若$f$是泛闭映射,则对$Y$的每个子集$T$,映射$f_{T}$是泛闭映射.
+		\item 设$\left(T_{i}\right)_{i\in I}$是$Y$的子集族,满足下列条件之一:
+		\begin{itemize}
+			\item $\left(\interior\left(T_{i}\right)\right)_{i\in I}$是$Y$的覆盖,
+			\item $\left(T_{i}\right)_{i\in I}$是$Y$的局部有限闭覆盖.
+		\end{itemize}
+		若$\left(f_{T_{i}}\right)_{i\in I}$是泛闭映射族,则$f$是泛闭映射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{有限个泛闭映射的乘积}{}
+	设$I$是有限集,$\left(X_{i}\right)_{i\in I},\left(Y_{i}\right)_{i\in I}$是拓扑空间族,$X=\prod\limits_{i\in I}X_{i},Y=\prod\limits_{i\in I}Y_{i}$,对每个$i\in I$有$f_{i}\in\Hom_{\mathsf{Top}}\left(X_{i},Y_{i}\right)$,$f=\prod\limits_{i\in I}f_{i}$.
+	\begin{enumerate}
+		\item 若$\left(f_{i}\right)_{i\in I}$是泛闭映射族,则$f$是泛闭映射.
+		\item 若$f$是泛闭映射,$\left(X_{i}\right)_{i\in I}$是一族非空拓扑空间,则$\left(f_{i}\right)_{i\in I}$是泛闭映射族.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{泛闭映射的复合与分解}{}
+	设$Z$是拓扑空间,$f\in\Hom_{\mathsf{Top}}\left(X,Y\right),g\in\Hom_{\mathsf{Top}}\left(Y,Z\right)$.
+	\begin{enumerate}
+		\item 若$f,g$都是泛闭映射,则$g\circ f$是泛闭映射.
+		\item 若$g\circ f$是泛闭映射,$f$是满射,则$g$是泛闭映射.
+		\item 若$g\circ f$是泛闭映射,$g$是单射,则$f$是泛闭映射.
+		\item 若$g\circ f$是泛闭映射,$Y$是Hausdorff空间,则$f$是泛闭映射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	若$Y$不是Hausdorff空间,则$g\circ f$可以是泛闭映射而$f$不是.例如,$X$和$Z$都是单点集,$Y$是两点集,三者都配备平庸拓扑.
+\end{remark}
+
+\begin{corollary}{泛闭映射在闭子集上的限制}{}
+	设$f$是泛闭映射,$U$是$X$的闭集,则$f|_{U}$是泛闭映射.
+\end{corollary}
+
+\begin{corollary}{泛闭映射下的像}{}
+	设$f$是泛闭映射.若$X$是Hausdorff空间,则$\im\left(f\right)$是Hausdorff空间.
+\end{corollary}
+
+\begin{corollary}{对角映射的泛闭性}{}
+	设$I$是有限集,$\left(X_{i}\right)_{i\in I}$是一族拓扑空间,对每个$i\in I$,映射$f_{i}\in\Hom_{\mathsf{Set}}\left(X,Y_{i}\right)$泛闭.若$X$是Hausdorff空间,则
+	\begin{align*}
+		X\to\prod\limits_{i\in I}X_{i},x\mapsto\left(f_{i}\left(x\right)\right)_{i\in I}
+	\end{align*}
+	是泛闭映射.
+\end{corollary}
+
+\begin{corollary}{泛闭映射的典范分解}{}
+	设$f$连续,$R$是$f$在$X$上诱导的等价关系,$f$的典范分解为$f=\iota\circ\bar{f}\circ p$,则
+	\begin{center}
+		$f$是泛闭映射$\iff$ $p$是泛闭映射,$\bar{f}$是同胚,$\im\left(f\right)$是$Y$的闭集.
+	\end{center}
+\end{corollary}
+
+
+
+
+
+

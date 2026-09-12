@@ -1,0 +1,55 @@
+\section{局部紧空间}
+
+记号约定:$X$是拓扑空间.
+
+\begin{definition}{局部紧空间}{}
+	若$X$是每一点都有一个紧邻域的Hausdorff空间,则称$X$是局部紧空间.
+\end{definition}
+
+\begin{remark}{}{}
+	每个紧空间都是局部紧空间,但是局部紧空间不一定是紧空间.例如,每个离散空间都是局部紧空间,但当它是无限集时就不是紧空间.后面会看到,实直线$\R$是局部紧空间,但不是紧空间.
+\end{remark}
+
+\begin{proposition}{局部紧空间的正则性}{}
+	每个局部紧空间都是正则空间.
+\end{proposition}
+
+\begin{corollary}{局部紧空间的各点有紧邻域基}{}
+	若$X$是局部紧空间,则$X$中每一点$x$都有一个由$x$的紧邻域构成的邻域基.
+\end{corollary}
+
+\begin{remark}{}{}
+	每一点都有一个紧邻域,但不是Hausdorff空间的拓扑空间存在.
+\end{remark}
+
+\begin{proposition}{局部紧空间中的每个紧集都有一个紧邻域基}{}
+	若$X$是局部紧空间,则$X$中的每个紧集$K$都有一个由$K$的紧邻域构成的邻域基.
+\end{proposition}
+
+\begin{proposition}{局部紧空间中的闭集判定}{}
+	设$X$是局部紧空间,$F\subseteq X$.若对$X$的每个紧集$F$,集合$K\cap F$是$X$的紧集,则$F$是$X$的闭集.
+\end{proposition}
+
+\begin{proposition}{Hausdorff空间的局部紧子空间都局部闭}{}
+	若$X$是Hausdorff空间,则$X$的每个局部紧子空间都是$X$的局部闭子空间.
+\end{proposition}
+
+\begin{proposition}{局部紧空间的局部闭子空间都局部紧}{}
+	若$X$是局部紧空间,则$X$的每个局部闭子空间都是$X$的局部紧子空间.
+\end{proposition}
+
+\begin{remark}{}{}
+	紧空间的性质无法推广到不是紧空间的局部紧空间:
+	\begin{itemize}
+		\item 在无限离散空间$X$中,给定$a\in X$,在$X$中包含$a$且补集为有限集的子集构成的滤子不收敛到$a$,但它的聚点只有$a$.
+		\item 当$X$是无限离散空间,$Y$是Hausdorff空间时,对$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$,集合$\im\left(f\right)$一般不一定是$Y$的闭集.
+	\end{itemize}
+\end{remark}
+
+\begin{proposition}{局部紧空间的积空间}{}
+	设$\left(X_{i}\right)_{i\in I}$是一族非空拓扑空间,$X=\prod\limits_{i\in I}X_{i}$.
+	\begin{enumerate}
+		\item 若$\left(X_{i}\right)_{i\in I}$是局部紧空间族,并且存在$J\in\fin\left(I\right)$使$\left(X_{i}\right)_{i\in I\setminus J}$是紧空间族,则$X$是局部紧空间.
+		\item 若$X$是局部紧空间,则$\left(X_{i}\right)_{i\in I}$是局部紧空间族,并且存在$J\in\fin\left(I\right)$使$\left(X_{i}\right)_{i\in I\setminus J}$是紧空间族.
+	\end{enumerate}
+\end{proposition}

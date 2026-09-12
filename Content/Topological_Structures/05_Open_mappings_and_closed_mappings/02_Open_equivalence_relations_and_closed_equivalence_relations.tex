@@ -1,0 +1,48 @@
+\section{开等价关系和闭等价关系}
+
+记号约定:$X$是拓扑空间,$R$是$X$上的等价关系,$\varphi:X\to X/R$是典范满射.
+
+\begin{definition}{开等价关系,闭等价关系}{}
+	若$\varphi$是开映射(相对的,闭映射),则称$R$是$X$上的开等价关系(相对的,闭等价关系).
+\end{definition}
+
+\begin{remark}{}{}
+	$R$是开等价关系(相对的,闭等价关系)$\iff$ $X$中每个开集(相对的,闭集)关于$R$的饱和化还是$X$的开集(相对的,闭集).
+\end{remark}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 设$\Gamma=\Aut_{\mathsf{Top}}\left(X\right)$,则$\Gamma$上定义为$\exists\sigma\in\Gamma\left(y=\sigma\left(x.\right)\right)$的等价关系$\sim$是开等价关系.特别地,$\R$上的等价关系$x\equiv y\pmod{1}$是开等价关系.
+		\item 设$\left(X_{i}\right)_{i\in I}$是拓扑空间族,$X=\coprod\limits_{i\in I}X_{i}$,对每个$i\in I$,$\left(A_{ki}\right)_{k\in I}$是$X_{i}$的子集族,对每个$k,i\in I$有双射$h_{ki}:A_{ik}\to A_{ki}$.考虑由$\left(A_{ik}\right)_{i,k\in I}$和$\left(h_{ik}\right)_{i,k\in I}$定义的等价关系$R$.
+		\begin{itemize}
+			\item 若$\left(h_{ki}\right)_{k,i\in I}$是同胚族,对每个$i\in I$集合族$\left(A_{ik}\right)_{k\in I}$是$X_{i}$的开集族,则$R$是开等价关系.
+			\item 若$\left(h_{ki}\right)_{k,i\in I}$是同胚族,对每个$i\in I$集合族$\left(A_{ik}\right)_{k\in I}$是$X_{i}$的闭集族,并且
+			\begin{align*}
+				\exists k\in\fin\left(I\right)\left(A_{ik}\neq\emptyset\right),
+			\end{align*}
+			则$R$是闭等价关系.
+		\end{itemize}
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{映射的开(闭)性与典范分解的关系}{}
+	设$Y$是拓扑空间,$f\in\Hom_{\mathsf{Top}}\left(X,Y\right)$定义的等价关系是$R$.考虑$f$的典范分解$f=\iota\circ\bar{f}\circ\varphi$.下列陈述等价:
+	\begin{enumerate}
+		\item $f$是开映射.
+		\item $\varphi,\bar{f},\iota$都是开映射.
+		\item $R$是开等价关系,$\bar{f}$是同胚,$\im\left(f\right)$是$Y$的开集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{诱导等价关系的开(闭)性}{}
+	设$R$是开等价关系,$A\subseteq X$且满足下列条件之一:
+	\begin{itemize}
+		\item $A$是$X$中的开集.
+		\item $A$关于$R$是饱和的.
+	\end{itemize}
+	那么$R$在$A$上诱导的等价关系$R_{A}$是开等价关系,典范映射$A/R_{A}\to f\left(A\right)$是同胚.
+\end{proposition}
+
+\begin{remark}{}{}
+	把上述两个命题中的``开''都换成``闭'',结论依然成立.
+\end{remark}

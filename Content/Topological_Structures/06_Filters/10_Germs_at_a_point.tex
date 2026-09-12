@@ -1,0 +1,38 @@
+\section{某一点的芽}
+
+记号约定:$X$是拓扑空间,$a\in X$,$\mathfrak{F}$是$X$上的滤子,$\Phi=\left\{f\in\Hom_{\mathsf{Set}}\left(V,X\right)\middle|V\in\mathfrak{F}\right\}$.
+
+\begin{definition}{某点的芽}{}
+	如果$\mathfrak{F}$是$a$在$X$中的邻域滤子,则称沿$\mathfrak{F}$的芽为在$a$处的芽.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $a$在$X$中的每个邻域在$a$处的芽都相等,并且等于$X$沿$\mathfrak{F}$的芽.
+		\item 对$X$中的每个闭集$F$和$a$处的每个局部闭集$F^{\prime}$,二者在$a$处的芽相同.
+		\item 若$\xi$和$\eta$是$a$处的两个局部闭集的芽,则$\xi\bar{\cup}\eta$和$\xi\bar{\cap}\eta$都是$a$处的局部闭集的芽.
+	\end{enumerate}
+\end{remark}
+
+本节剩下的内容默认$\mathfrak{F}$是$a$在$X$中的邻域滤子.
+
+\begin{definition}{映射芽在某点的值}{}
+	设$f\in\Phi$.称$f\left(a\right)$为$\tilde{f}$在$a$处的值,记作$\tilde{f}\left(a\right)$.
+\end{definition}
+
+\begin{remark}{}{}
+	一般而言,对$f,g\in\Phi$,二者的芽在$a$处的值相等并不意味着$f=g$.
+\end{remark}
+
+\begin{proposition}{映射芽的复合定理}{composition-of-germs-of-mappings}
+	设$Y,Z$是拓扑空间,$b\in Y$.假设
+	\begin{enumerate}
+		\item $f,f^{\prime}\in\Hom_{\mathsf{Set}}\left(X,Y\right)$在$a$处连续且有相同的芽,而且$f\left(a\right)=f^{\prime}\left(a\right)=b$;
+		\item $g,g^{\prime}\in\Hom_{\mathsf{Set}}\left(Y,Z\right)$在$b$处有相同的芽,
+	\end{enumerate}
+	那么$g\circ f$和$g^{\prime}\circ f^{\prime}$在$a$处有相同的芽.
+\end{proposition}
+
+\begin{definition}{映射芽的复合}{}
+	沿用命题(\ref{prop:composition-of-germs-of-mappings})的设定.称$g\circ f$在$a$处的芽为$\tilde{g}$(在$b$处)和$\tilde{f}$(在$a$处)的复合,记作$\tilde{g}\circ\tilde{f}$.
+\end{definition}

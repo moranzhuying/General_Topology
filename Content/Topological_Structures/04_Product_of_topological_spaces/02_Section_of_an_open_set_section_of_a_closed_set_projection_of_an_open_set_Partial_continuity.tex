@@ -1,0 +1,43 @@
+\section{闭集的截面,开集的投影,部分连续性}
+
+记号约定:$X_{1}$和$X_{2}$是拓扑空间.
+
+\begin{proposition}{截面映射的同胚性}{}
+	对每个$a_{1}\in X_{1}$,映射$X_{2}\to\left\{a_{1}\right\}\times X_{2},x_{2}\mapsto\left(a_{1},x_{2}\right)$是同胚.
+\end{proposition}
+
+\begin{remark}{}{}
+	上述映射是关于$X_{1}\times X_{2}$上的等价关系$\pr_{2}\left(z\right)=\pr_{2}\left(z^{\prime}\right)$的连续截面.在此等价关系下,$X_{1}\times X_{2}$和$X_{2}$同胚.
+\end{remark}
+
+\begin{corollary}{截面保持开性和闭性}{}
+	若$A$是$X_{1}\times X_{2}$的开集(相对的,闭集),则对每个$x_{1}\in X_{1}$,集合$\left\{x_{2}\in X_{2}\middle|\left(x_{1},x_{2}\right)\in A\right\}$是$X_{2}$的开集(相对的,闭集).
+\end{corollary}
+
+\begin{proposition}{典范投影都是开映射}{}
+	对$X_{1}\times X_{2}$的每个开集$U$,集合$\pr_{1}\left(U\right)$和$\pr_{2}\left(U\right)$都是开集.
+\end{proposition}
+
+\begin{example}{典范投影不一定是闭集}{}
+	为$\Q^{2}$配备$\R^{2}$诱导的子空间拓扑,则$F\coloneq\left\{\left(x_{1},x_{2}\right)\in\Q^{2}\middle|x_{1}x_{2}=1\right\}$是闭集,但$\pr_{1}\left(F\right)=\pr_{2}\left(F\right)=\Q\setminus\left\{0\right\}$,这不是闭集.
+\end{example}
+
+\begin{proposition}{连续映射的部分连续性}{}
+	设$Y$是拓扑空间,$f\in\Hom_{\mathsf{Set}}\left(X_{1}\times X_{2},Y\right)$在在$\left(a_{1},a_{2}\right)\in X_{1}\times X_{2}$处连续,则$f\left(a_{1},-\right)$在$a_{2}$处连续.
+\end{proposition}
+
+\begin{example}{部分连续性不保证整体的连续性}{}
+	考虑$f:\R^{2}\to\R,\left(x,y\right)\mapsto
+	\begin{cases}
+		\frac{xy}{x^{2}+y^{2}},&\left(x,y\right)\neq\left(0,0\right),\\
+		0,&\left(x,y\right)=\left(0,0\right).
+	\end{cases}$对每个$a\in\R$,映射$f\left(a,-\right)$和$f\left(-,a\right)$都连续,但$f$在$\left(0,0\right)$处不连续.
+\end{example}
+
+\begin{proposition}{常数化拉回映射的连续性}{}
+	设$Y$是拓扑空间,$f:X_{1}\to Y$在$a_{1}\in X_{1}$处连续,则对每个$a_{2}\in X_{2}$,映射$\pr_{1}\circ f$在$\left(a_{1},a_{2}\right)$处连续.
+\end{proposition}
+
+\begin{remark}{}{}
+	本节的内容可以推广到任意一族拓扑空间$\left(X_{i}\right)_{i\in I}$的积空间:取$I$的子集$J,K$使得$I=J\sqcup K$,考虑同胚$\prod\limits_{i\in I}X_{i}\simeq\prod\limits_{i\in J}X_{i}\times\prod\limits_{j\in K}X_{i}$即可.
+\end{remark}

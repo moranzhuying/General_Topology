@@ -1,0 +1,34 @@
+\section{滤子的乘积}
+
+记号约定:$\left(X_{i}\right)_{i\in I}$是集合族,$X=\prod\limits_{i\in I}X_{i}$,对每个$i\in I$,集合$\mathfrak{B}_{i}$是$X_{i}$的滤子基.
+
+\begin{proposition}{滤子基的乘积的构造}{construction-of-product-of-family-of-filter-bases}
+	$\mathfrak{B}\coloneq\left\{\prod\limits_{i\in I}M_{i}\middle|\exists J\in\fin\left(I\right)\forall i\in I\setminus J\left(M_{i}=X_{i}\right)\wedge\forall j\in J\left(M_{i}\in\mathfrak{B}_{i}\right)\right\}$是$X$的滤子基.
+\end{proposition}
+
+\begin{remark}{滤子基的乘积生成的滤子的另一个基}{}
+	$\mathfrak{B}$生成的滤子的另一个滤子基是$\left\{\pr_{k}^{-1}\left(M_{k}\right)\middle|k\in I,M_{k}\in\mathfrak{B}_{k}\right\}$.
+\end{remark}
+
+\begin{definition}{滤子的乘积}{}
+	设对每个$i\in I$,集合$\mathfrak{F}_{i}$是$X_{i}$的滤子.我们称$X$上由
+	\begin{align*}
+		\left\{\prod\limits_{i\in I}M_{i}\middle|\exists J\in\fin\left(I\right)\forall i\in I\setminus J\left(M_{i}=X_{i}\right)\wedge\forall j\in J\left(M_{i}\in\mathfrak{F}_{i}\right)\right\}
+	\end{align*}
+	生成的滤子是$\left(\mathfrak{F}_{i}\right)_{i\in I}$的乘积,并将该滤子记作$\prod\limits_{i\in I}\mathfrak{F}_{i}$.
+\end{definition}
+
+\begin{proposition}{乘积滤子的泛性质}{}
+	设对每个$i\in I$,集合$\mathfrak{F}_{i}$是$X_{i}$的滤子,则$\prod\limits_{i\in I}\mathfrak{F}_{i}$是$X$上满足$\forall i\in I\left(\pr_{i}\left(\prod\limits_{i\in I}\mathfrak{F}_{i}\right)=\mathcal{F}_{i}\right)$的最粗滤子.
+\end{proposition}
+
+\begin{example}{积空间中的邻域滤子}{}
+	设$\left(X_{i}\right)_{i\in I}$是拓扑空间族,$\left(x_{i}\right)_{i\in I}\in X$,则$\left(x_{i}\right)_{i\in I}$在$X$中的邻域滤子是每个$x_{i}$的邻域滤子的乘积.
+\end{example}
+
+\begin{remark}{有限乘积中的滤子}{}
+	当$I$是有限集时,$\prod\limits_{i\in I}\mathfrak{F}_{i}$的一个滤子基是$\left\{\prod\limits_{i\in I}M_{i}\middle|\forall i\in I\left(M_{i}\in\mathfrak{F}_{i}\right)\right\}$.当$I=\left\{1,\ldots,n\right\}$时记$\prod\limits_{i\in I}\mathfrak{F}_{i}$为$\mathfrak{F}_{1}\times\ldots\times\mathfrak{F}_{n}$.
+\end{remark}
+
+
+

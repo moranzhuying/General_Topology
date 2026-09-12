@@ -1,0 +1,25 @@
+\section{极限与连续性}
+
+记号约定:$X,Y$是拓扑空间,$f\in\Hom_{\mathsf{Set}}\left(X,Y\right),a\in X,b\in Y$.
+
+\begin{definition}{映射在某点的极限点和聚点}{}
+	\begin{enumerate}
+		\item 若$b$是$f$沿$\mathfrak{B}\left(a\right)$的极限点,则称$b$是$f$在$a$处的极限(或$x$趋于$a$时$f\left(x\right)$趋于$b$),记作$\limit_{x\to a}f\left(x\right)=b$.
+		\item 若$b$是$f$沿$\mathfrak{B}\left(a\right)$的聚点,则称$b$是$f$在$a$处的聚点.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{映射在某点连续的极限刻画}{}
+	$f$在$a$处连续$\iff$ $\limit_{x\to a}f\left(x\right)=f\left(a\right)$.
+\end{proposition}
+
+\begin{corollary}{映射的连续性与保持滤子/超滤子收敛的关系}{}
+	\begin{enumerate}
+		\item 若$f$在$a$处连续,则对$X$上每个收敛到$a$的滤子基$\mathfrak{B}$,它在$f$下的提升在$Y$中收敛到$f\left(a\right)$.
+		\item 若对$X$上每个收敛到$a$的超滤子$\mathfrak{U}$,它在$f$下的提升在$Y$中收敛到$f\left(a\right)$,则$f$在$a$处连续.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{极限与连续映射的复合}{}
+	设$Z$是集合,$g\in\Hom_{\mathsf{Set}}\left(Z,X\right)$,集合$\mathfrak{F}$是$Z$上的滤子.若$\limit_{\mathfrak{F}}g=a$,映射$f$在$a$处连续,则$\limit_{\mathfrak{F}}\left(f\circ g\right)=f\left(a\right)$.
+\end{corollary}
