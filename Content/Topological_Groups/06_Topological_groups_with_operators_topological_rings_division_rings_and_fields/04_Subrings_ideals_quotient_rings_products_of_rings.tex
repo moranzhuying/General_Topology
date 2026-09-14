@@ -1,1 +1,31 @@
-\section{}
+\section{子环,理想,商环,乘积环}
+
+记号约定:$A$是拓扑环.
+
+\begin{proposition}{拓扑环的子环也是拓扑环}{}
+	设$H$是$A$的子环.给$H$装备$A$在$H$上诱导的子空间拓扑,那么$H$是拓扑环.
+\end{proposition}
+
+\begin{proposition}{拓扑环的稠密子环(左/右/双边理想)的闭包是拓扑环的子环(左/右/双边理想)}{}
+	设$H$是$A$的稠密子环.
+	\begin{enumerate}
+		\item 若$K$是$H$的子环,则$\closure\left(K\right)$是$A$的子环.
+		\item 若$K$是$H$的左理想(相对的,右理想,双边理想),则$\closure\left(K\right)$是$A$的左理想(相对的,右理想,双边理想).
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{商环在商拓扑下是拓扑环}{}
+	设$H$是$A$的双边理想.给$A/H$配备商拓扑,那么$A/H$在此拓扑下是拓扑环.
+\end{proposition}
+
+\begin{proposition}{}{}
+	如果$A$不是Hausdorff的,那么$\closure\left(\left\{0\right\}\right)$是$R$的闭双边理想,$A/\closure\left(\left\{0\right\}\right)$是Hausdorff的.
+\end{proposition}
+
+\begin{definition}{拓扑环的Hausdorff化}{}
+	我们称拓扑环$A/\closure\left(\left\{0\right\}\right)$是环$A$的Hausdorff化.
+\end{definition}
+
+\begin{proposition}{拓扑环的乘积在乘积拓扑下是拓扑环}{}
+	设$\left(A_{i}\right)_{i\in I}$是一族拓扑环,$A=\prod\limits_{i\in I}A_{i}$.给$A$装备乘积拓扑,那么$A$是拓扑环.
+\end{proposition}

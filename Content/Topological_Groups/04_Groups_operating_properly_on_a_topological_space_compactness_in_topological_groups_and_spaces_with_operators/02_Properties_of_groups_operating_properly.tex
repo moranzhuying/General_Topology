@@ -1,1 +1,34 @@
-\section{}
+\section{泛闭作用的性质}
+
+记号约定:$G,G^{\prime}$是拓扑群(乘法记号),$E,E^{\prime}$是拓扑空间.
+
+\begin{proposition}{轨道空间的Hausdorff性}{}
+	设$G$泛闭地作用于$E$.
+	\begin{enumerate}
+		\item $E/G$是Hausdorff空间.
+		\item 若$G$是Hausdorff空间,那么$E$是Hausdorff空间.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$G$泛闭地作用于$E$,$x\in E$.
+	\begin{enumerate}
+		\item $G\to E,s\mapsto sx$是泛闭映射.
+		\item $\Stab\left(x\right)$是$G$的拟紧集.
+		\item 典范映射$G/\Stab\left(x\right)\to\Orb\left(x\right)$是同胚.
+		\item $\Orb\left(x\right)$是$E$的闭集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$G,G^{\prime}$各自连续地作用于$E,E^{\prime}$,$\varphi\in\Hom_{\mathsf{TopGrp}}\left(G,G^{\prime}\right),\psi\in\Hom_{\mathsf{Top}}\left(E,E^{\prime}\right)$,其中$\psi$是$\varphi$-等变的.
+	\begin{enumerate}
+		\item 若$\varphi,\psi$是满射,$\psi$泛闭,$G$泛闭地作用于$E$,则$G^{\prime}$泛闭地作用于$E^{\prime}$.
+		\item 若$\varphi$泛闭,$G^{\prime}$泛闭地作用于$E^{\prime}$,$E$是Hausdorff空间,则$G$泛闭地作用于$E$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$K\in\Sub\left(G\right)$,那么$G$通过左平移泛闭地作用于$G/K$ $\iff$ $K$是$G$的拟紧集.
+\end{corollary}
+

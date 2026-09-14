@@ -1,3 +1,56 @@
-\chapter{}
+\chapter{拓扑群在拓扑空间和\texorpdfstring{$G$}{G}-空间上的泛闭作用}
 
-\section{}
+\section{拓扑群在拓扑空间上的泛闭作用}
+
+记号约定:$G$是拓扑群(乘法记号),$E$是拓扑空间.
+
+\begin{definition}{恰当作用}{}
+	设$G$连续作用于$E$.如果$G\times E\to E\times E,\left(g,x\right)\mapsto\left(x,gx\right)$是泛闭映射,则称$G$在$E$上的作用是泛闭的.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$G$连续作用于$E$.下列陈述等价:
+	\begin{enumerate}
+		\item $G$泛闭地作用于$E$.
+		\item 对每个集合$A$和$A$上的每个超滤子$\mathfrak{F}$,对每个$a,b\in E$和$E$中的元素族$\left(\left(s_{\alpha},x_{\alpha}\right)\right)_{\alpha\in A}$,当$\left(\left(s_{\alpha}x_{\alpha},x_{\alpha}\right)\right)_{\alpha\in A}$沿$\mathfrak{F}$收敛到$\left(b,a\right)$时,存在$t\in G$,使得$\left(s_{\alpha}\right)_{\alpha\in A}$沿$\mathfrak{F}$收敛到$t$且$ta=b$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 设$H$是$G$的闭子群.若$G$泛闭地作用于$E$,则$H$也泛闭地作用于$E$(特别地,$H$通过左平移泛闭地作用于$G$).
+		\item 设$G$泛闭地作用于$E$,那么$G$也泛闭地作用于$E$的每个饱和子空间.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{}{}
+	设$K$是$G$的拟紧集,$G$连续地作用于$E$.
+	\begin{enumerate}
+		\item $K\times E\to E,\left(s,x\right)\mapsto sx$是泛闭映射.
+		\item 如果$A$是$E$的闭集,那么$KA$是$E$的闭集.
+		\item 如果$A$是$E$的紧集,$E$是Hausdorff空间,那么$KA$是$E$的紧集.
+		\item 如果$F$是$G$的笔记,$K$是$G$的紧集,那么$KF$是$G$的闭集.
+		\item 如果$K$是$G$的子群,典范映射$G\to G/K$是泛闭的闭映射.
+		\item 如果$K$是$H$的正规子群,$\varphi:G\to G/K$是典范映射,那么对$G$的每个闭子群$A$,典范双射$A/\left(A\cap K\right)\to\varphi\left(A\right)$是拓扑群同构.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$G$是紧群,$E$是Hausdorff空间,$G$连续地作用于$E$.
+	\begin{enumerate}
+		\item $G$泛闭地作用于$E$.
+		\item $K\times E\to E,\left(s,x\right)\mapsto sx$是泛闭映射.
+		\item 典范映射$E\to E/K$是泛闭映射.
+		\item $E$是紧空间(相对的,局部紧空间)$\iff$ $E/K$是紧空间(相对的,局部紧空间).
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$G$是Hausdorff的,$K$是$G$的紧子群.
+	\begin{enumerate}
+		\item $G$是紧群$\iff$ $G/K$是紧群.
+		\item $G$是局部紧群$\iff$ $G/K$是局部紧群.
+	\end{enumerate}
+\end{corollary}
+
+

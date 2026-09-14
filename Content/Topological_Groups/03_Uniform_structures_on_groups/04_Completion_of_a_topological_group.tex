@@ -1,1 +1,96 @@
-\section{}
+\section{拓扑群的完备化}
+
+记号约定:$G$是加法拓扑群.
+
+\begin{proposition}{}{}
+	设$\mathfrak{F},\mathfrak{G}$是$G_{d}$上的Cauchy滤子,则$\mathfrak{F}\times\mathfrak{G}$是$G_{d}$上的Cauchy滤子基.
+\end{proposition}
+
+\begin{corollary}{}{}
+	$G$上的乘法可以唯一地连续延拓为$\hat{G}_{d}\times\hat{G}_{d}\to\hat{G}_{d}$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	下列陈述等价:
+	\begin{enumerate}
+		\item $G\to G,x\mapsto x^{-1}$能连续延拓为$\hat{G}_{d}\to\hat{G}_{d},x\mapsto x^{-1}$.
+		\item 对$G_{d}$的每个Cauchy滤子$\mathfrak{F}$,它在映射$G_{d}\to G_{d},x\mapsto x^{-1}$下的前推还是$G_{d}$的Cauchy滤子.
+	\end{enumerate}
+\end{proposition}
+
+\begin{theorem}{}{}
+	设$G\to G,x\mapsto x^{-1}$能连续延拓为$\hat{G}_{d}\to\hat{G}_{d},x\mapsto x^{-1}$.
+	\begin{enumerate}
+		\item $\hat{G}_{d}$是Hausdorff的拓扑群,典范嵌入$G\hookrightarrow\hat{G}$下的像在$\hat{G}_{d}$中稠密.
+		\item $\hat{G}_{d}$的右一致结构和$G$的完备一致结构相同.
+		\item 精确到拓扑群同构,使典范嵌入$G\hookrightarrow H$的像稠密的Hausdorff拓扑群$H$是唯一的.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}{Hausdorff拓扑群的完备化的存在性与唯一性}{existence-and-uniqueness-of-completion-of-hausdorff-topological-group}
+	设$G$是Hausdorff的.
+	\begin{enumerate}
+		\item 下列陈述等价:
+		\begin{itemize}
+			\item 存在完备Hausdorff拓扑群$\hat{G}$和典范嵌入$\iota:G\hookrightarrow\hat{G}$,使得$\im\left(\iota\right)$在$\hat{G}$中稠密.
+			\item 对$G_{d}$的每个Cauchy滤子$\mathfrak{F}$,它在$G\to G,x\mapsto x^{-1}$下的前推还是$G_{d}$的Cauchy滤子.
+		\end{itemize}
+		\item 当(1)中满足条件的$\hat{G}$存在时,它在精确到拓扑群同构的意义下是唯一的.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}{Hausdorff拓扑群的完备化}{}
+	设$G$是Hausdorff的.
+	\begin{enumerate}
+		\item \cref{existence-and-uniqueness-of-completion-of-hausdorff-topological-group}(1)的条件之一成立时,称$(\hat{G},\iota)$是$G$的完备化,称$\hat{G}$是$G$的完备化群,$\iota$是$G$的完备化映射.
+		\item 如果\cref{existence-and-uniqueness-of-completion-of-hausdorff-topological-group}(1)的条件之一成立,则称$G$可完备化.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{}{}
+	设$G$可完备化,则$\closure_{\hat{G}}\left(\mathcal{N}\left(e_{G}\right)\right)$是$e_{\hat{G}}$的邻域基.
+\end{proposition}
+
+\begin{definition}{拓扑群的Hausdorff完备化}{}
+	设$N=\closure\left(\left\{e\right\}\right),G^{\prime}=G/N$.如果$\hat{G}^{\prime}$可完备化,则称$\hat{G}^{\prime}$是$G$的Hausdorff完备化群.
+\end{definition}
+
+\begin{convention}{}{}
+	注意,当$\hat{G}^{\prime}$可完备化时,在精确到一致同构的意义下:
+	\begin{itemize}
+		\item $G$的Hausdorff一致完备化和$G$的Hausdorff完备化相同;
+		\item $\hat{G}_{s}^{\prime}$是$G_{s}$的Hausdorff一致完备化;
+		\item $\hat{G}_{d}^{\prime}$是$G_{d}$的Hausdorff一致完备化.
+	\end{itemize}
+	今后,在没有歧义的情况下,我们不会对这几种情况里各自包含的两个数学对象进行严格区分.
+\end{convention}
+
+\begin{proposition}{}{}
+	设$G$可Hausdorff完备化,$\iota:G\to\widehat{G/\closure\left(\left\{e\right\}\right)}$是典范映射.那么,对每个Hausdorff拓扑群和$u\in\Hom_{\mathsf{TopGrp}}\left(G,H\right)$,存在唯一的拓扑群同态$\hat{u}\in\Hom_{\mathsf{TopGrp}}(\widehat{G/\closure\left(\left\{e\right\}\right)},H)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			G \arrow[rr, "u"] \arrow[rd, "\iota"'] &                                                             & H \\
+			& \widehat{G/\closure\left(\left\{e\right\}\right)}\arrow[ru, "\exists!\hat{u}"', dashed] &  
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{corollary}{Hausdorff完备化的函子性}{}
+	设$G,H$是可Hausdorff完备化的拓扑群,$\iota_{1}:G\to\widehat{G/\closure\left(\left\{e_{G}\right\}\right)}$和$\iota_{2}:H\to\widehat{H/\closure\left(\left\{e_{H}\right\}\right)}$是典范映射,则对每个拓扑群同态$f:G\to H$,存在唯一的拓扑群同态$\hat{f}:\widehat{G/\closure\left(\left\{e_{G}\right\}\right)}\to\widehat{H/\closure\left(\left\{e_{H}\right\}\right)}$使得下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			G && H \\
+			{\widehat{G/\{e_{G}\}}} && {\widehat{H/\{e_{H}\}}}
+			\arrow["f", from=1-1, to=1-3]
+			\arrow["{\iota_{1}}"', from=1-1, to=2-1]
+			\arrow["{\iota_{2}}", from=1-3, to=2-3]
+			\arrow["{\exists!\hat{f}}"', dashed, from=2-1, to=2-3]
+		\end{tikzcd}
+	\end{center}
+\end{corollary}
+
+\begin{proposition}{拓扑群可完备化的一个充分条件}{}
+	设$G$是Hausdorff的.若存在$V_{0}\in\mathcal{N}\left(e\right)$使得$V_{0}\to V_{0},x\mapsto x^{-1}$一致连续,则$G$可完备化.
+\end{proposition}
+
+

@@ -1,1 +1,34 @@
-\section{}
+\section{交换拓扑群的一致结构及其完备化}
+
+记号约定:$G$是交换拓扑群.
+
+\begin{definition}{交换拓扑群的一致结构}{}
+	$G$的左一致结构称为$G$的一致结构.
+\end{definition}
+
+\begin{theorem}{}{}
+	\begin{enumerate}
+		\item $G$上的加法和$G\to G,x\mapsto -x$都一致连续.
+		\item $\hat{G}$可Hausdorff完备化,并且$G$的Hausdorff完备化是交换群.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}{}{}
+	设$E$是一致空间,给$G$采用加法记号.
+	\begin{enumerate}
+		\item 若$f\in\Hom_{\mathsf{Uni}}\left(E,G\right)$,则$-f\in\Hom_{\mathsf{Uni}}\left(E,G\right)$.
+		\item 若$f,g\in\Hom_{\mathsf{Uni}}\left(E,G\right)$,则$f+g\in\Hom_{\mathsf{Uni}}\left(E,G\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$H$是交换群,$\mathcal{T}_{1},\mathcal{T}_{2}$是$H$上的Hausdorff拓扑,并且都使$H$构成拓扑群.假设
+	\begin{itemize}
+		\item $\mathcal{T}_{1}\supseteq\mathcal{T}_{2}$;
+		\item $e_{H}$在$\mathcal{T}_{1}$下有一个邻域基由$\mathcal{T}_{2}$下的拓扑构成的邻域基.
+	\end{itemize}
+	\begin{enumerate}
+		\item 若$G_{1},G_{2}$分别是$G$在$\mathcal{T}_{1},\mathcal{T}_{2}$下构成的拓扑群,则$\id_{G}$连续延拓得到的拓扑群同态$G_{1}\to G_{2},x\mapsto x$是单射.
+		\item 若$A$是$G$的拓扑子空间,它在$\mathcal{T}_{2}$诱导的一致结构下是完备空间,则$A$在$\mathcal{T}_{2}$诱导的一致结构下是完备空间
+	\end{enumerate}
+\end{proposition}

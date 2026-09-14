@@ -1,3 +1,60 @@
 \chapter{拓扑群上的一致结构}
 
-\section{}
+\section{拓扑群上的左一致结构和右一致结构}
+
+记号约定:$G$是拓扑群(乘法记号),$\mathfrak{B}=\mathcal{N}\left(e\right)$.
+
+\begin{lemma}{拓扑群上的左右一致结构的存在性}{existence-of-left-and-right-uniformities-on-topological-group}
+	对每个$V\in\mathfrak{B}$,记$V_{s}=\left\{\left(x,y\right)\in G\times G\middle|x^{-1}y\in V\right\},V_{d}=\left\{\left(x,y\right)\in G\times G\middle|yx^{-1}\in V\right\}$.
+	\begin{enumerate}
+		\item $\left\{V_{s}\middle|V\in\mathfrak{B}\right\}$和$\left\{V_{d}\middle|V\in\mathfrak{B}\right\}$是$G$上的邻里基.设他们各自生成的一致结构为$\mathcal{U}_{d}$和$\mathcal{U}_{d}$
+		\item $\mathcal{U}_{s}$和$\mathcal{U}_{d}$各自在$G$上诱导的拓扑和$G$上原来的拓扑相同.
+	\end{enumerate}
+\end{lemma}
+
+\begin{remark}{}{}
+	对每个$\left(V,x,A\right)\in\mathfrak{B}\times G\times\mathcal{P}\left(A\right)$有$V_{s}\left(x\right)=xV,V_{s}\left(A\right)=VA,V_{d}\left(x\right)=Vx,V_{d}\left(A\right)=VA$.
+\end{remark}
+
+\begin{definition}{拓扑群上的左一致结构和右一致结构}{}
+	沿用\cref{existence-of-left-and-right-uniformities-on-topological-group}的记号.
+	\begin{enumerate}
+		\item $\left\{V_{s}\middle|V\in\mathfrak{B}\right\}$在$G$上生成的一致结构称为$G$的左一致结构,装备了该一致结构的$G$构成的一致空间记作$G_{s}$.
+		\item $\left\{V_{d}\middle|V\in\mathfrak{B}\right\}$在$G$上生成的一致结构称为$G$的右一致结构,装备了该一致结构的$G$构成的一致空间记作$G_{d}$.
+	\end{enumerate}
+\end{definition}
+
+\begin{corollary}{装备一致结构的拓扑群的非空子集的闭包}{}
+	设$\emptyset\neq A\subseteq G$,则$\closure\left(A\right)=\bigcap\limits_{V\in\mathfrak{B}}VA=\bigcap\limits_{V\in\mathfrak{B}}AV$.
+\end{corollary}
+
+\begin{corollary}{Hausdorff拓扑群一定正则}{}
+	如果$G$是Hausdorff空间,那么$G$是正则空间.
+\end{corollary}
+
+\begin{remark}{}{}
+	一般来说,$G$上的左一致结构和右一致结构不相等.但是,当$G$是交换群或紧群时,左一致结构和右一致结构相等.
+\end{remark}
+
+\begin{proposition}{拓扑群上的平移和内自同构在左(右)一致结构下是一致同构}{}
+	\begin{enumerate}
+		\item 对每个$a\in G$,它在$G$上诱导的左平移和右平移既是$G_{d}$上的一致同构,也是$G_{s}$上的一致同构.
+		\item 对每个$a\in G$,它在$G$上诱导的内自同构既是$G_{d}$上的一致同构,也是$G_{s}$上的一致同构.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	$G\to G,x\mapsto x^{-1}$是$G_{d}$到$G_{s}$的一致同构.
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $G$上的乘法一般不是$G_{d}\times G_{d}\to G_{d}$的一致连续映射.
+		\item $G\to G,x\mapsto x^{-1}$一般也不是$G_{d}$到$G_{d}$(或$G_{s}$到$G_{s}$)的一致连续映射.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{拓扑群同态一致连续}{}
+	设$G^{\prime}$是拓扑群,$f\in\Hom_{\mathsf{Top}}\left(G,G^{\prime}\right)$,那么$f$是$G_{d}$到$G_{d}^{\prime}$的一致连续映射,也是$G_{s}$到$G_{s}^{\prime}$的一致连续映射.
+\end{proposition}
+

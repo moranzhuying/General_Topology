@@ -1,1 +1,82 @@
-\section{}
+\section{拓扑除环,拓扑域}
+
+
+记号约定:$K$是除环,并且装备了拓扑$\mathscr{T}$.
+
+\begin{definition}{拓扑除环}{}
+	如果$K$满足如下条件,则称之为拓扑除环.
+	\begin{itemize}
+		\item $K$是拓扑环.
+		\item ($\mathrm{KT}$)$K^{\times}\to K^{\times},x\mapsto x^{-1}$是连续映射.
+	\end{itemize}
+\end{definition}
+
+\begin{remark}{}{}
+	如果$K$是拓扑除环,那么$K^{\times}$在装备了$K$诱导的子空间拓扑后成为拓扑群.
+\end{remark}
+
+\begin{definition}{拓扑域}{}
+	如果$K$是拓扑除环,$K$上的乘法满足交换律,则称$K$是拓扑域.
+\end{definition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 让$\mathscr{F}$是离散拓扑,那么$K$是拓扑除环.装备了离散拓扑的拓扑除环称为离散除环.
+		\item $\Q$和$\R$在通常拓扑下构成拓扑域.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{}{}
+	设$K$是拓扑域.
+	\begin{enumerate}
+		\item 对每个$a\in K\setminus\left\{0\right\}$,它在$K$上诱导的左乘和右乘是拓扑环同构.
+		\item 对每个$a\in K\setminus\left\{0\right\}$和$b\in K$,映射$K\to K,x\mapsto ax+b$是拓扑环同构.
+		\item 对每个$a\in K\setminus\left\{0\right\}$和$V\in\mathcal{N}\left(0\right)$有$aV\in\mathcal{N}\left(0\right)$和$Va\in\mathcal{N}\left(0\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 设$E$是拓扑空间,$f\in\Hom_{\mathsf{Top}}\left(E,K\right),x_{0}\in E$.若$f\left(x_{0}\right)\neq 0$,则$\frac{1}{f}$在$x_{0}$处连续.
+		\item 设$K$是拓扑域,则对每个$n\in\N$,$K$上的$n$元有理函数在分母不为$0$的点上都连续.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$E$是装备了滤子$\mathfrak{F}$的集合,$K$是Hausdorff拓扑域,$f\in\Hom_{\mathsf{Set}}\left(E,K\right)$.若$f$沿$\mathfrak{F}$收敛但极限$\neq 0$,则
+	\begin{align*}
+		\limit_{\mathfrak{F}}\frac{1}{f}=\left(\limit_{\mathfrak{F}}f\right)^{-1}.
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$K$是拓扑除环,$H$是$K$的子除环.
+	\begin{enumerate}
+		\item 给$H$装备子空间拓扑,那么$H$是拓扑除环.
+		\item $\closure\left(H\right)$是$K$的子除环.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	设$K$是拓扑除环.由于$\closure\left(\left\{0\right\}\right)\in\left\{\left\{0\right\},K\right\}$,因此$K$上的拓扑只可能是离散拓扑和Hausdorff拓扑.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

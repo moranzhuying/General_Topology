@@ -1,1 +1,34 @@
-\section{}
+\section{子群,商群,乘积群上的一致结构}
+
+记号约定:$G$是拓扑群,$\mathcal{N}\left(e\right)$是$G$的单位元$e$在$G$中的邻域滤子.
+
+\begin{proposition}{子群上的诱导一致结构}{}
+	设$H\in\Sub\left(G\right)$.
+	\begin{enumerate}
+		\item $H$上的左一致结构和$G_{s}$在$H$上诱导的一致结构相同.
+		\item $H$上的右一致结构和$G_{d}$在$H$上诱导的一致结构相同.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{商群的诱导一致结构}{}
+	设$H\unlhd G$,$\pi:G\twoheadrightarrow G/H$是典范满射.对每个$V\in\mathcal{N}\left(e\right)$,记
+	\begin{gather*}
+		\tilde{V}_{s}=\left\{\left(\pi\left(x\right),\pi\left(y\right)\right)\in\left(G/H\right)\times\left(G/H\right)\middle|\pi\left(x^{-1}y\right)\in\pi\left(V\right)\right\},\\
+		\tilde{V}_{d}=\left\{\left(\varphi\left(x\right),\varphi\left(y\right)\right)\in\left(G/H\right)\times\left(G/H\right)\middle|\pi\left(yx^{-1}\right)\in\pi\left(V\right)\right\}.
+	\end{gather*}
+	那么,$\left\{\tilde{V}_{s}\middle|V\in\mathcal{N}\left(e\right)\right\}$和$\left\{\tilde{V}_{d}\middle|V\in\mathcal{N}\left(e\right)\right\}$分别是$\left(G/H\right)_{s}$和$\left(G/H\right)$的邻里基.
+\end{proposition}
+
+\begin{corollary}{商拓扑群的Hausdorff化}{}
+	设$N=\closure\left(\left\{e\right\}\right)$,那么$\left(G/H\right)_{s}$和$\left(G/H\right)_{d}$分别一致同构于$G_{s}$和$G_{d}$的Hausdorff化.
+\end{corollary}
+
+\begin{proposition}{拓扑群的乘积的一致结构}{}
+	设$\left(G_{i}\right)_{i\in I}$是一族拓扑群,$G=\prod\limits_{i\in I}G_{i}$.
+	\begin{enumerate}
+		\item $G$的左一致结构和$\left(\left(G_{i}\right)_{s}\right)_{i\in I}$的乘积一致结构相同.
+		\item $G$的右一致结构和$\left(\left(G_{i}\right)_{d}\right)_{i\in I}$的乘积一致结构相同.
+		\item $G$上的左一致结构和右一致结构相同$\iff$ $\left(G_{i}\right)_{i\in I}$中每一项的左一致结构和右一致结构都相同.
+		\item 如果$\left(G_{i}\right)_{i\in I}$的每一项要么是交换群,要么是紧群,那么$G$上的左一致结构和右一致结构相同.
+	\end{enumerate}
+\end{proposition}

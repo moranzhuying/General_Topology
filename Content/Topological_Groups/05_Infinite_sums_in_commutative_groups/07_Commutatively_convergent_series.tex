@@ -1,1 +1,28 @@
-\section{}
+\section{交换收敛级数}
+
+记号约定:$G$是Hausdorff的交换拓扑群(加法记号),$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$是$G$中的级数.
+
+\begin{proposition}{}{}
+	如果$\left(x_{n}\right)_{n=0}^{\infty}$可和,那么$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$收敛到$\sum\limits_{n=0}^{\infty}x_{n}$.
+\end{proposition}
+
+\begin{remark}{}{}
+	这个命题的逆不成立.事实上,$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$的收敛与否依赖于$\N$上装备的偏序.
+\end{remark}
+
+\begin{definition}{无条件收敛(交换收敛)}{}
+	如果对每个$\sigma\in\Aut_{\mathsf{Set}}\left(\N\right)$,以$\left(x_{\sigma\left(n\right)}\right)_{n=0}^{\infty}$为通项的级数都收敛,则称$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$无条件收敛(或交换收敛).
+\end{definition}
+
+\begin{proposition}{}{}
+	下列陈述等价:
+	\begin{enumerate}
+		\item $\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$无条件收敛.
+		\item $\left(x_{n}\right)_{n=0}^{\infty}$可和.
+	\end{enumerate}
+	两条件之一成立时,对每个$\sigma\in\Aut_{\mathsf{Set}}\left(\N\right)$有$\sum\limits_{n=0}^{\infty}x_{\sigma\left(n\right)}=\sum\limits_{n=0}^{\infty}x_{n}$.
+\end{proposition}
+
+\begin{remark}{}{}
+	设$G$是完备的.如果$0$在$G$中有一个由子群构成的邻域基,那么$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$收敛$\iff$ $\limit_{n\to+\infty}x_{n}=0$.
+\end{remark}
