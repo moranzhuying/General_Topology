@@ -1,1 +1,67 @@
-\section{}
+\section{拓扑直和,不变子群}
+
+记号约定:$\Omega$是集合,$A=\Z^{\Mo\left(\Omega\right)}$,$E,F$是交换拓扑$\Omega$-群.
+
+\begin{convention}{}{}
+	为了简便起见,我们把$\Omega$-群视为$A$-模.在此意义下,
+	\begin{itemize}
+		\item $\Omega$-交换群的$\Omega$-不变子群就是$A$-模的子模.
+		\item $\Omega$-群同态就是$A$-线性映射.
+		\item $\Omega$-交换群上幂等的$\Omega$-群同态就是$A$-模上的幂等算子.
+	\end{itemize}
+	接下来的内容里,我们会混用$A$-模和$\Omega$-群的术语.$\Omega$-群.
+\end{convention}
+
+\begin{definition}{拓扑直和}{}
+	设$\left(M_{i}\right)_{i=1}^{n}$是$E$的一族子模(其中$n\geq 1$).如果
+	\begin{enumerate}
+		\item 作为$A$-模,$E$是子模族$\left(M_{i}\right)_{i=1}^{n}$的内直和;
+		\item 典范双射$\prod\limits_{i=1}^{n}M_{i}\to E,\left(x_{i}\right)_{i=1}^{n}\mapsto\sum\limits_{i=1}^{n}x_{i}$是同胚,
+	\end{enumerate}
+	则称$E$是$\left(M_{i}\right)_{i=1}^{n}$的拓扑直和.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$\left(M_{i}\right)_{i=1}^{n}$是$E$的一族子模(其中$n\geq 1$),$E$是$\left(M_{i}\right)_{i=1}^{n}$的内直和,$\left(p_{i}\right)_{i=1}^{n}$是$\left(M_{i}\right)_{i=1}^{n}$的投影算子族.
+	\begin{enumerate}
+		\item $E$是$\left(M_{i}\right)_{i=1}^{n}$的拓扑直和$\iff$ $\left(p_{i}\right)_{i=1}^{n}$的每一项都连续.
+		\item 如果$\left(p_{i}\right)_{i=1}^{n}$中有$n-1$项连续,那么$\left(p_{i}\right)_{i=1}^{n}$中剩下的那一项也连续.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{拓扑补,拓扑可补}{}
+	设$M$是$E$的子模.
+	\begin{enumerate}
+		\item 设$N$是$E$的子模.如果$E$是$M$和$N$的拓扑直和,则称$N$是$M$在$E$中的一个拓扑补.
+		\item 如果$M$在$E$中有拓扑补,则称$M$在$E$中是拓扑可补的.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	设$N$是$E$的子模.如果$E$只是$M$和$N$的直和,则称$N$是$E$在$M$中的代数补.
+\end{remark}
+
+\begin{remark}{}{}
+	记$i:N\hookrightarrow E$为典范嵌入,$p:E\twoheadrightarrow E/M$是典范满射,则$N$是$M$的拓扑补$\iff$ $p\circ i$是同胚和$A$-模同构.
+\end{remark}
+
+\begin{proposition}{拓扑可补的等价条件}{}
+	设$M$是$E$的子模.下列陈述等价:
+	\begin{enumerate}
+		\item $M$在$E$中有拓扑补.
+		\item 存在连续的投影算子$p:E\to E$使得$\im\left(p\right)=M$.
+		\item $\id_{M}$可以连续延拓为$E$到$M$的线性映射(此时,$M$的拓扑补可以是$\ker\left(p\right)$,在$\ker\left(p\right)$上的投影算子为$\id_{E}-p$).
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	如果$E$是Hausdorff的,并且是有限个子模的拓扑直和,那么这些子模中的每一项都是$E$中的闭集.
+\end{remark}
+
+\begin{proposition}{连续左逆和连续右逆存在的等价条件}{}
+	设$u:E\to F$是连续的$A$-线性映射.
+	\begin{enumerate}
+		\item $u$有连续的右逆$\iff$ $u$是满射和开映射,并且$\ker\left(u\right)$在$E$中是拓扑可补的.
+		\item $u$有连续的左逆$\iff$ $u^{\circ}$是同胚和$A$-模同构,并且$\im\left(u\right)$在$F$中是拓扑可补的.
+	\end{enumerate}
+\end{proposition}

@@ -1,1 +1,19 @@
-\section{}
+\section{可和族在拓扑群同态下的像}
+
+记号约定:$G,H$是Hausdorff的交换拓扑群(加法记号).
+
+\begin{proposition}{}{}
+	设$f\in\Hom_{\mathsf{TopGrp}}\left(G,H\right)$.若$\left(x_{i}\right)_{i\in I}$是$G$的可和族,则$\left(f\left(x_{i}\right)\right)_{i\in I}$是$H$的可和族,并且$f\left(\sum\limits_{i\in I}x_{i}\right)=\sum\limits_{i\in I}f\left(x_{i}\right)$.
+\end{proposition}
+
+\begin{proposition}{拓扑群中的可和族构成向量空间}{}
+	设$I$是集合,$\mathcal{S}_{I}=\left\{\left(x_{i}\right)_{i\in I}\in G^{I}\middle|\left(x_{i}\right)_{i\in I}\text{可和}\right\}$.
+	\begin{enumerate}
+		\item $\mathcal{S}_{I}$是$G^{I}$的$\Z$-子模.
+		\item $\varphi:\mathcal{S}_{I}\to G,\left(x_{i}\right)_{i\in I}\mapsto\sum\limits_{i\in I}x_{i}$是$\Z$-线性映射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	这两个命题都可以推广到Hausdorff的交换拓扑幺半群.值得注意的是,第二个命题中,$\Z$-子模要换成$\N$-子半模,$\Z$-线性映射要换成$\N$-线性映射.半模的定义参见\href{https://zhuanlan.zhihu.com/p/1920469493227956098}{这篇知乎专栏},这里不做赘述.
+\end{remark}

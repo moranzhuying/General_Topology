@@ -1,3 +1,38 @@
-\chapter{}
+\chapter{交换群中的无限和}
 
-\section{}
+\section{交换群中的可和族}
+
+记号约定:
+\begin{itemize}
+	\item $G$是Hausdorff的交换拓扑群,装备的拓扑记作$\mathscr{T}$.
+	\item $\left(x_{i}\right)_{i\in I}$是$G$的元素族,$\mathfrak{F}$是$\fin\left(I\right)$的邻域滤子.
+\end{itemize}
+
+\begin{definition}{部分和,可和族}{}
+	给$G$使用加法记号,令$\varphi:\fin\left(I\right)\to G,J\mapsto\sum\limits_{j\in J}x_{j}$.
+	\begin{enumerate}
+		\item 对每个$J\in\fin\left(I\right)$,称$\sum\limits_{j\in J}x_{j}$是$\left(x_{i}\right)_{i\in I}$的$J$-部分和.
+		\item 若$\varphi$沿$\mathfrak{F}$收敛,则称$\left(x_{i}\right)_{i\in I}$是$G$中的可和族,该极限点记作$\sum\limits_{i\in I}x_{i}$,称为$\left(x_{i}\right)_{i\in I}$(相对拓扑$\mathscr{T}$)的和.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{部分乘积,可乘族}{}
+	给$G$使用乘法记号,令$\varphi:\fin\left(I\right)\to G,J\mapsto\prod\limits_{j\in J}x_{j}$.
+	\begin{enumerate}
+		\item 对每个$J\in\fin\left(I\right)$,称$\prod\limits_{j\in J}x_{j}$是$\left(x_{i}\right)_{i\in I}$的$J$-部分乘积.
+		\item 若$\varphi$沿$\mathfrak{F}$收敛,则称$\left(x_{i}\right)_{i\in I}$是$G$中的可乘族,该极限点记作$\prod\limits_{i\in I}x_{i}$,称为$\left(x_{i}\right)_{i\in I}$(相对拓扑$\mathscr{T}$)的积.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 可和族与可乘族的定义(除了记号不同)并没有实质上的差异.简便起见,我们主要叙述加法记号的命题.
+		\item 给$G$使用加法记号.按照熟悉的收敛定义,$\left(x_{i}\right)_{i\in I}$是可和族等价于
+		\begin{align*}
+			\exists s\in G\forall V\in\mathcal{N}\left(0\right)\exists J_{0}\in\fin\left(I\right)\forall J\in\fin\left(I\right)\left(J\supseteq J_{0}\implies\sum\limits_{j\in J}x_{j}\in s+V\right).
+		\end{align*}
+		\item 如果$J\in\fin\left(I\right)$,并且对每个$i\in I\setminus J$有$x_{i}=0$,那么$\sum\limits_{i\in I}x_{i}=\sum\limits_{i\in I\setminus{J}}x_{i}$.
+		\item 如果$K$是集合,$\varphi\in\Isom_{\mathsf{Set}}\left(K,I\right)$,$\left(x_{i}\right)_{i\in I}$可和,那么$(x_{\varphi\left(k\right)})_{k\in K}$可和,并且$\sum\limits_{k\in K}x_{\varphi\left(k\right)}=\sum\limits_{i\in I}x_{i}$.由此可见,可和族的和不依赖其指标集上定义的偏序.
+		\item 当$I$是有限集时,这里给出的定义与代数卷第二部分中给出的定义完全一致.因此,我们还需要处理$I$是无限集的情形,这也正是我们引入Hausdorff的交换拓扑群的原因.事实上,本节的定义还可以推广到Hausdorff的交换拓扑幺半群上,因为这里并没有使用拓扑群定义中的公理.
+	\end{enumerate}
+\end{remark}

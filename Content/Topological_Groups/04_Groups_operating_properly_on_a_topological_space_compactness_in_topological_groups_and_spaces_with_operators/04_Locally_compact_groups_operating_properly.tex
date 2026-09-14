@@ -1,1 +1,41 @@
-\section{}
+\section{局部紧群的泛闭作用}
+
+记号约定:$G$是拓扑群,$E$是Hausdorff空间,$G$连续地作用于$E$.
+
+\begin{proposition}{}{}
+	设$G$是局部紧的.那么,如下条件等价:
+	\begin{enumerate}
+		\item $G$泛闭地作用于$E$.
+		\item 对每个$\left(x,y\right)\in E\times E$,存在$\left(V_{x},V_{y}\right)\in\mathcal{N}\left(x\right)\times\mathcal{N}\left(y\right)$,使得$\left\{s\in G\middle|s\left(V_{x}\cap V_{y}\right)\neq\emptyset\right\}$在$G$中相对紧.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	当$G$是紧群时,上述条件之一自动成立;当$G$是离散群时,条件(2)变为:
+	\begin{center}
+		对每个$\left(x,y\right)\in E\times E$,存在$\left(V_{x},V_{y}\right)\in\mathcal{N}\left(x\right)\times\mathcal{N}\left(y\right)$,使得$\left\{s\in G\middle|s\left(V_{x}\cap V_{y}\right)\neq\emptyset\right\}$有限.
+	\end{center}
+\end{remark}
+
+\begin{proposition}{}{}
+	设$G$是离散群,它泛闭地作用于$E$,$x\in E$.
+	\begin{enumerate}
+		\item $\Stab\left(x\right)$是有限群.
+		\item $x$在$E$中有一个开邻域$U_{x}$满足如下条件:
+		\begin{itemize}
+			\item $\Stab\left(x\right)U_{x}=U_{x}$.
+			\item $G$在$U_{x}$上诱导的等价关系和$\Stab\left(x\right)$诱导的等价关系相同.
+			\item 对$G$中每个不属于$\Stab\left(x\right)$的元素$s$有$U_{x}\cap sU_{x}=\emptyset$.
+		\end{itemize}
+		\item 典范映射$U_{x}/\Stab\left(x\right)\to E/G$的余限制是同胚.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$G$是离散群,它自由而泛闭地作用于$E$,$x\in E$,那么存在$x$在$E$中的开邻域$U_{x}$,使得
+	\begin{enumerate}
+		\item 对每个$s\in G\setminus\left\{e\right\}$有$U_{x}\cap sU_{x}=\emptyset$;
+		\item 典范映射$\varphi:E\to E/G$满足$\varphi|_{U}$的余限制是同胚.
+	\end{enumerate}
+\end{corollary}
+

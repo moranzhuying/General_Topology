@@ -1,1 +1,88 @@
-\section{}
+\section{拓扑模}
+
+记号约定:$A$是拓扑环,$E$是装备了拓扑的左$A$-模.
+
+\begin{definition}{拓扑左$A$-模}{}
+	如果$E$满足如下条件,则称$E$是拓扑左$A$-模.
+	\begin{enumerate}
+		\item $E$作为加法群是拓扑群.
+		\item ($\mathrm{MT}$)$A$在$E$上的标量乘法是连续映射.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	如果$E$作为加法群是拓扑群,那么($\mathrm{MT}$)和如下三个条件等价:
+	\begin{enumerate}
+		\item ($\mathrm{MT}_{1}$)对每个$x_{0}\in E$,映射$A\to E,\lambda\mapsto\lambda x_{0}$在原点连续.
+		\item ($\mathrm{MT}_{2}$)对每个$\lambda_{0}\in A$,映射$E\to E,x\mapsto\lambda_{0}x$在原点连续.
+		\item ($\mathrm{MT}_{3}$)$A$在$E$上的标量乘法在$\left(0,0\right)$处连续.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item $\R$-TVS和$\C$-TVS分别是拓扑$\R$-模和拓扑$\C$-模.
+		\item 设$\mathfrak{B}$是$A$的双边理想构成的滤子基.如果$A$上的拓扑使$\mathfrak{B}$是$0_{A}$的邻域基,$E$上的拓扑使得$\left\{\mathfrak{a}E\middle|\mathfrak{a}\in\mathfrak{B}\right\}$是$0_{E}$的邻域基,那么$E$是拓扑$A$-模.
+		\item 给$\Z$装备离散拓扑,那么每个交换拓扑群都是拓扑$\Z$-模.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{}{}
+	设$\mathfrak{B}$是$0$在$E$中的滤子.下列陈述等价:
+	\begin{enumerate}
+		\item $\mathfrak{B}$能诱导$E$上的拓扑$\mathcal{T}$,使得$E$在此拓扑下是拓扑模.
+		\item $\mathfrak{B}$满足($\mathrm{GA}_{1}$),($\mathrm{GA}_{2}$)和如下条件:
+		\begin{itemize}
+			\item ($\mathrm{MV}_{1}$)$\forall x_{0}\in E\forall V\in\mathfrak{B}\exists S\in\mathcal{N}\left(0_{A}\right)\left(Sx_{0}\subseteq V\right)$.
+			\item ($\mathrm{MV}_{2}$)$\forall \lambda_{0}\in A\forall V\in\mathfrak{B}\exists W\in\mathfrak{B}\left(\lambda_{0}W\subseteq V\right)$.
+			\item ($\mathrm{MV}_{3}$)$\forall V\in\mathfrak{B}\exists U\in\mathfrak{B}\exists T\in\mathfrak{N}\left(0_{A}\right)\left(TU\subseteq V\right)$.
+		\end{itemize}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{子模在子空间拓扑下是拓扑模,商模在商拓扑下是拓扑模}{}
+	设$E$是拓扑模,$M$是$E$的子模.
+	\begin{enumerate}
+		\item 给$M$装备$E$在$M$上诱导的子空间拓扑,那么$M$是拓扑$A$-模.
+		\item 给$E/M$装备$E$在$E/M$上诱导的商拓扑,那么$E/M$是拓扑$A$-模.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{乘积模在乘积拓扑下是拓扑模}{}
+	设$\left(E_{i}\right)_{i\in I}$是一族拓扑左$A$-模.给$\prod\limits_{i\in I}E_{i}$装备乘积拓扑,那么$\prod\limits_{i\in I}E_{i}$是拓扑左$A$-模.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$A$是Hausdorff拓扑环,$E$是Hausdorff拓扑$A$-模,则$E$作为加法群的Hausdorff完备化$\hat{E}$可以唯一地定义$\hat{A}$在$\hat{E}$上的标量乘法,使之成为拓扑$\hat{A}$-模.
+\end{proposition}
+
+\begin{definition}{拓扑环上拓扑模的Hausdorff完备化}{}
+	设$E$是拓扑$A$-模,$N=\closure\left(\left\{0_{A}\right\}\right),F=\closure\left(\left\{0_{E}\right\}\right),B=A/N,L=E/F$.拓扑$\hat{B}$-模$L$的Hausdorff完备化记作$\hat{E}$,称为拓扑模$E$的Hausdorff完备化.
+\end{definition}
+
+\begin{proposition}{拓扑模的Hausdorff完备化的泛性质和函子性}{}
+	设$E$是拓扑$A$-模,$i:A\to\hat{A}$和$\varphi:E\to\hat{E}$是完备化映射.
+	\begin{enumerate}
+		\item 设$G$是完备Hausdorff拓扑$\hat{A}$-模,$u\in\Hom_{A-\mathsf{TopMod}}\left(E,i_{\ast}\left(G\right)\right)$,则存在唯一的$v\in\Hom_{A-\mathsf{TopMod}}(\hat{E},G)$使得下图交换.其中,$\varphi_{A}$是$A$-线性映射,它和$\varphi$在集合层面相同.
+		\begin{center}
+			\begin{tikzcd}
+				E && {i_{\ast}(G)} \\
+				& {i_{\ast}(\hat{E})}
+				\arrow["u", from=1-1, to=1-3]
+				\arrow["{\varphi_{A}}"', from=1-1, to=2-2]
+				\arrow["{i_{\ast}v}"', from=2-2, to=1-3]
+			\end{tikzcd}
+		\end{center}
+		\item 设$F$是拓扑$A$-模,$\psi:F\to\hat{F}$是完备化映射,$u\in\Hom_{A-\mathsf{TopMod}}\left(E,F\right)$,则存在唯一的$\hat{u}\in\Hom_{\hat{A}-\mathsf{TopMod}}(\hat{E},\hat{F})$使得下图交换.其中,$\varphi_{A},\psi_{A}$是$A$-线性映射,各自和$\varphi,\psi$在集合层面相同.
+		\begin{center}
+			\begin{tikzcd}
+				E & F \\
+				{i_{\ast}(\hat{E})} & {i_{\ast}(\hat{F})}
+				\arrow["u", from=1-1, to=1-2]
+				\arrow["{\varphi_{A}}"', from=1-1, to=2-1]
+				\arrow["{\psi_{A}}", from=1-2, to=2-2]
+				\arrow["{i_{\ast}\hat{u}}"', from=2-1, to=2-2]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}

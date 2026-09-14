@@ -1,1 +1,76 @@
-\section{}
+\section{拓扑环}
+
+记号约定:$A$是环.
+
+\begin{definition}{拓扑环}{}
+	如下条件成立时,称$A$是拓扑环.
+	\begin{enumerate}
+		\item ($\mathrm{AT}_{1}$)$A$的加法群构成拓扑群；
+		\item ($\mathrm{AT}_{2}$)$A$的乘法群构成拓扑群.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{拓扑环同态}{}
+	设$B$是拓扑环,$f\in\Hom_{\mathsf{Ring}}\left(A,B\right)$.
+	\begin{enumerate}
+		\item 若$f$连续,则称$f$是拓扑环同态.从$A$到$B$的拓扑环同态构成的集合记作$\Hom_{\mathsf{TopRing}}\left(A,B\right)$.
+		\item 若$f$连续,并且存在$g\in\Hom_{\mathsf{TopRing}}\left(B,A\right)$使得$f\circ g=\id_{A},g\circ f=\id_{B}$,则称$f$是拓扑环同构.从$A$到$B$的拓扑环同构组成的集合记作$\Isom_{\mathsf{TopGrp}}\left(A,B\right)$.
+		\item 令$\End_{\mathsf{TopRing}}\left(A\right)=\Hom_{\mathsf{TopRing}}\left(A,A\right),\Aut_{\mathsf{TopRing}}\left(A\right)=\Isom_{\mathsf{TopGrp}}\left(A,A\right)$.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$A$是拓扑环,那么
+		\begin{itemize}
+			\item 对每个$a\in A$,它在$A$上诱导的左乘和右乘都是拓扑环同态.
+			\item 对每个$a\in A^{\times}$,它在$A$上诱导的左乘和右乘都是拓扑环同构.
+		\end{itemize}
+		\item 设$A$是拓扑环,$\mathcal{T}$是$A^{\times}$上使包含映射$A^{\times}\hookrightarrow A$和$A^{\times}\to A,x\mapsto x^{-1}$都连续的最粗拓扑,那么$A^{\times}$在此拓扑下构成拓扑群.
+		\item 设$A$满足条件($\mathrm{AT}_{1}$),那么($\mathrm{AT}_{2}$)等价于如下两个条件:
+		\begin{itemize}
+			\item ($\mathrm{A}_{3a}$)对每个$x_{0}\in A$,它在$A$上诱导的左乘和右乘在$0$处连续.
+			\item ($\mathrm{AT}_{3b}$)$A$上的乘法在$\left(0,0\right)$处连续.
+		\end{itemize}
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 给$A$装备离散拓扑,那么$A$在此拓扑下是拓扑环.我们称装备了离散拓扑的环是离散环.
+		\item 在第四章中,我们会知道$\Q$(相对的,实直线$\R$)按照通常拓扑构成拓扑环.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{}{}
+	设$\mathfrak{B}$是$0$在$A$中的滤子.下列陈述等价:
+	\begin{enumerate}
+		\item $\mathfrak{B}$能诱导$A$上的拓扑$\mathcal{T}$,使得$A$在此拓扑下是拓扑环.
+		\item $\mathfrak{B}$满足($\mathrm{GA}_{1}$),($\mathrm{GA}_{2}$)和如下条件:
+		\begin{itemize}
+			\item ($\mathrm{AV}_{1}$)$\forall x_{0}\in A\forall V\in\mathfrak{B}\exists W\in\mathfrak{B}\left(x_{0}W\subseteq V\wedge Wx_{0}\subseteq V\right)$.
+			\item ($\mathrm{AV}_{2}$)$\forall V\in\mathfrak{B}\exists W\in\mathfrak{B}\left(WW\subseteq V\right)$.
+		\end{itemize}
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{}{}
+	设$\mathfrak{B}$是$A$中的双边理想构成的滤子基,那么$\mathfrak{B}$在$A$上能诱导一个拓扑,使得$A$在此拓扑下是拓扑环.
+\end{example}
+
+\begin{proposition}{连续函数环}{}
+	设$X$是拓扑空间,$A$是拓扑环.
+	\begin{enumerate}
+		\item 对每个$x_{0}\in X$,集合$C_{x_{0}}\coloneq\left\{f\in\Hom_{\mathsf{Set}}\left(X,A\right)\middle|f\text{在}x_{0}\text{处连续}\right\}$是$\Hom_{\mathsf{Set}}\left(X,A\right)$的子环.
+		\item $\Hom_{\mathsf{Top}}\left(X,A\right)$是$\Hom_{\mathsf{Set}}\left(X,A\right)$的子环.
+		\item 如果$A$是交换环,那么对每个$n\in\N$,从$A^{n}$到$A$的$n$元多项式函数都连续.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$X$是配备了滤子$\mathfrak{F}$的集合,$A$是Hausdorff的拓扑环,$V=\left\{f\in\Hom_{\mathsf{Set}}\left(X,A\right)\middle|f\text{沿}\mathfrak{F}\text{收敛}\right\}$.定义
+	\begin{align*}
+		L:V\to A,f\mapsto\limit_{\mathfrak{F}}f,
+	\end{align*}
+	那么$L$是环同态.
+\end{proposition}

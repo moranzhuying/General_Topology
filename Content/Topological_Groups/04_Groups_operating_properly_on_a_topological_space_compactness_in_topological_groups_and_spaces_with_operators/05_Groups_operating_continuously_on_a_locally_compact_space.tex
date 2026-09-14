@@ -1,1 +1,44 @@
-\section{}
+\section{拓扑群在局部紧空间上的连续作用}
+
+记号约定:$G$是拓扑群,$E$是拓扑空间.
+
+\begin{proposition}{}{}
+	设$E$是局部紧空间,$G$连续地作用于$E$.
+	\begin{enumerate}
+		\item 若$E/G$是Hausdorff空间,则$E/G$是局部紧空间.
+		\item 若$E/G$是Hausdorff空间,$\varphi:E\to E/G$是典范映射,则对$E/G$的每个紧集$K$,存在$E$的紧集$K^{\prime}$使得$\varphi\left(K^{\prime}\right)=K$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$G$是Hausdorff的,$X\neq\emptyset$,$G$泛闭地作用于$E$.
+	\begin{enumerate}
+		\item 若$X$是紧空间,则$G$和$X/G$是紧空间.
+		\item 若$X$是局部紧空间,则$G$和$X/G$是局部紧空间.
+	\end{enumerate}
+\end{proposition}
+
+\begin{theorem}{}{}
+	设$G$是Hausdorff的.对每个$K,L\subseteq E$,记$P\left(K,L\right)=\left\{s\in G\middle|s\left(K\cap L\right)\neq\emptyset\right\}$.
+	\begin{enumerate}
+		\item 若$K$是$E$的紧集,$L$是$E$的闭集,则$P\left(K,L\right)$是$G$的闭集.
+		\item 若$G$泛闭地作用于$E$,那么对$X$的任意紧集$K,L$,集合$P\left(K,L\right)$是$G$的紧集.
+		\item 若$E$是局部紧空间,并且对$X$的任意紧集$K,L$,集合$P\left(K,L\right)$在$G$中相对紧,那么$G$泛闭地作用于$E$(进一步,如果$X\neq\emptyset$,那么$G$是局部紧群).
+	\end{enumerate}
+\end{theorem}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$E$是局部紧的,那么$G$泛闭地作用于$E$ $\iff$对$E$的每个紧集$K$,集合$P\left(K,K\right)$在$G$中相对紧.
+		\item 如果$G$是离散群,$E$局部紧,那么$G$泛闭地作用于$E$ $\iff$对$E$的每个紧集$K$,集合$P\left(K,K\right)$有限.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{}{}
+	设$G$是Hausdorff的.对$X$的每个紧集$K$,记$\varphi_{K}:G\times K\to E,\left(s,x\right)\mapsto sx$.
+	\begin{enumerate}
+		\item 若$G$泛闭地作用于$E$,那么对$X$的每个紧集$K$,映射$\rho_{K}$泛闭.
+		\item 若$E$是局部紧的,对$E$的每个紧集$K$,映射$\rho_{K}$泛闭,则$G$泛闭地作用于$E$.
+		\item 若$G$泛闭地作用于$E$,那么对$E$的每个紧集$K$和$G$的每个闭集$F$,集合$FK$是$E$的闭集.
+	\end{enumerate}
+\end{proposition}

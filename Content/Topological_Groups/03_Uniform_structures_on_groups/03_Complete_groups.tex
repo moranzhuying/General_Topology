@@ -1,1 +1,43 @@
-\section{}
+\section{完备拓扑群}
+
+记号约定:$G$是拓扑群(乘法记号,幺元为$e$),$\mathfrak{B}=\mathcal{N}\left(e\right)$.
+
+\begin{definition}{完备拓扑群}{}
+	若$G_{s}$和$G_{d}$作为一致空间都是完备的,则称$G$是完备拓扑群.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$G_{s}$和$G_{d}$中有一个是完备空间,那么$G$是完备拓扑群.
+		\item $G$是完备拓扑群$\iff$ $G$的Hausdorff化是完备的.
+		\item 如果$G$是完备拓扑群,那么$G$的每个闭子群都是完备拓扑群.
+		\item 如果$\left(G_{i}\right)_{i\in I}$是一族完备拓扑群,那么$\prod\limits_{i\in I}G_{i}$是完备拓扑群.
+		\item 如果$H$是$G$的闭正规子群,那么$G/H$不一定是完备拓扑群.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{}{}
+	如果存在$V\in\mathfrak{B}$,使得$V$是$G_{s}$或$G_{d}$的完备一致子空间,那么$G$是完备拓扑群.
+\end{proposition}
+
+\begin{corollary}{}{}
+	每个局部紧拓扑群都是完备拓扑群.
+\end{corollary}
+
+\begin{corollary}{}{}
+	如果$G$是Hausdorff的,那么$G$的每个局部紧子群都是$G$的闭子群.
+\end{corollary}
+
+\begin{proposition}{稠密子群之间的拓扑群同态能被唯一延拓}{}
+	设$G^{\prime}$是Hausdorff的完备拓扑群,$H$和$H^{\prime}$分别是$G$和$G^{\prime}$的稠密子群.
+	\begin{enumerate}
+		\item 对每个$u\in\Hom_{\mathsf{TopGrp}}\left(H,H^{\prime}\right)$,存在唯一的$\tilde{u}\in\Hom_{\mathsf{TopGrp}}\left(G,G^{\prime}\right)$使得$\forall x\in H\left(\tilde{u}\left(x\right)=u\left(x\right)\right)$.
+		\item 如果$G$是Hausdorff的完备拓扑群,则$g\in\Isom_{\mathsf{TopGrp}}\left(H,H^{\prime}\right)$,那么$\tilde{u}\in\Isom_{\mathsf{TopGrp}}\left(G,G^{\prime}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	若$v\in\Hom_{\mathsf{TopGrp}}\left(H,H^{\prime}\right)$是双射,那么$u$能延拓为$\tilde{u}\in\Hom_{\mathsf{TopGrp}}\left(G,G^{\prime}\right)$,但$\tilde{u}$不一定是单射,也不一定是满射.
+\end{remark}
+
+

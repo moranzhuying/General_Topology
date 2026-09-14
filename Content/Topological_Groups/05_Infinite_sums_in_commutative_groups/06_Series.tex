@@ -1,1 +1,129 @@
-\section{}
+\section{级数}
+
+记号约定:$G$是Hausdorff的交换拓扑群(加法记号).
+
+\begin{definition}{级数,级数的和}{}
+	设$\left(x_{n}\right)_{n=0}^{\infty}$是$G$中的序列,对每个$n\in\N$,记$s_{n}$是$\left(x_{n}\right)_{n=0}^{\infty}$的$\left[0,n\right]$-部分和.
+	\begin{enumerate}
+		\item 我们称$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$是$G$中的级数,称$\left(s_{n}\right)_{n=0}^{\infty}$是$\left(x_{n}\right)_{n=0}^{\infty}$的部分和序列.
+		\item 如果$\left(s_{n}\right)_{n=0}^{\infty}$在$G$中收敛,则称$\left(s_{n}\right)_{n=0}^{\infty}$的极限点为$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$的和,记作$\sum\limits_{n=0}^{\infty}x_{n}$,称该级数收敛.
+	\end{enumerate}
+\end{definition}
+
+\begin{convention}{}{}
+	为了简便,我们通常会滥用记号,直接用$\sum\limits_{n=0}^{\infty}x_{n}$表示级数$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$.
+\end{convention}
+
+\begin{proposition}{级数的Cauchy收敛准则}{}
+	设$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$是$G$中的级数.
+	\begin{enumerate}
+		\item 若该级数收敛,则$\forall V\in\mathcal{N}\left(0\right)\exists n_{0}\geq 0\forall n\geq n_{0}\forall p\geq 1\left(\sum\limits_{i=n+1}^{n+p}x_{i}\in V\right)$.
+		\item 设$G$完备.若$\forall V\in\mathcal{N}\left(0\right)\exists n_{0}\geq 0\forall n\geq n_{0}\forall p\geq 1\left(\sum\limits_{i=n+1}^{n+p}x_{i}\in V\right)$,则该级数收敛.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	如果$G$中的级数$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$收敛,那么$\limit_{n\to+\infty}x_{n}=0$.
+\end{proposition}
+
+\begin{proposition}{收敛级数构成$\Z$-模}{}
+	设$\mathsf{S}_{\N}$是$G$中的级数构成的集合,则$\mathsf{S}_{\N}$是$\Z$-模,$\varphi:\mathsf{S}_{\N}\to G,\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)\mapsto\sum\limits_{n=0}^{\infty}x_{n}$是$\Z$-线性映射.
+\end{proposition}
+
+\begin{proposition}{级数的收敛性与和只跟尾部有关}{}
+	设$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right),\left(\left(y_{n}\right)_{n=0}^{\infty},\left(t_{n}\right)_{n=0}^{\infty}\right)$是$G$中的级数.如果
+	\begin{itemize}
+		\item $\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$收敛,
+		\item $\exists n_{0}\geq 0\forall n\geq n_{0}\left(x_{n}=y_{n}\right)$,
+	\end{itemize}
+	那么$\left(\left(y_{n}\right)_{n=0}^{\infty},\left(t_{n}\right)_{n=0}^{\infty}\right)$收敛,并且$\sum\limits_{n=0}^{\infty}x_{n}=\sum\limits_{n=0}^{\infty}y_{n}$.
+\end{proposition}
+
+\begin{proposition}{乘积群中的级数}{}
+	设$\left(G_{\lambda}\right)_{\lambda\in\Lambda}$是一族Hausdorff的交换拓扑群,$G=\prod\limits_{\lambda\in\Lambda}G_{\lambda}$,$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$是$G$中的级数.
+	\begin{itemize}
+		\item 对每个$\lambda\in\Lambda$和$n\in\N$,令$x_{\lambda,n}=\pr_{\lambda}\left(x_{n}\right)$.
+		\item 对每个$\lambda\in\Lambda$和$n\in\N$,令$s_{\lambda,n}=\pr_{\lambda}\left(s_{n}\right)$.
+	\end{itemize}
+	\begin{enumerate}
+		\item 级数$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$收敛$\iff$对每个$\lambda\in\Lambda$,级数$\left(\left(x_{\lambda,n}\right)_{n=0}^{\infty},\left(s_{\lambda,n}\right)_{n=0}^{\infty}\right)$收敛.
+		\item 设对每个$\lambda\in\Lambda$,级数$\left(\left(x_{\lambda,n}\right)_{n=0}^{\infty},\left(s_{\lambda,n}\right)_{n=0}^{\infty}\right)$收敛$S_{\lambda}$,那么$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$收敛到$\left(S_{\lambda}\right)_{\lambda\in\Lambda}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$H$是Hausdorff的交换拓扑群,$f\in\Hom_{\mathsf{TopGrp}}\left(G,H\right)$,$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$是$G$中的级数.
+	\begin{enumerate}
+		\item 若$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$收敛,则$\left(\left(f\left(x_{n}\right)\right)_{n=0}^{\infty},\left(f\left(s_{n}\right)\right)_{n=0}^{\infty}\right)$收敛.
+		\item $\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$收敛时,$f\left(\sum\limits_{n=0}^{\infty}x_{n}\right)=\sum\limits_{n=0}^{\infty}f\left(x_{n}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{definition}{$m$-截断级数}{}
+	设$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right),\left(\left(y_{n}\right)_{n=0}^{\infty},\left(t_{n}\right)_{n=0}^{\infty}\right)$是$G$中的级数,$m\geq 1$,对每个$n\in\N$,定义
+	\begin{align*}
+		y_{n}=
+		\begin{cases}
+			0,&n<m,\\
+			x_{n},&n\geq m.
+		\end{cases}
+	\end{align*}
+	我们称$\left(\left(y_{n}\right)_{n=0}^{\infty},\left(t_{n}\right)_{n=0}^{\infty}\right)$是$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$的$m$-截断.
+\end{definition}
+
+\begin{proposition}{级数的$m$-截断的基本性质}{}
+	设$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$是$G$中的级数,$m\geq 1$,$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$的$m$-截断级数为$\left(\left(y_{n}\right)_{n=0}^{\infty},\left(t_{n}\right)_{n=0}^{\infty}\right)$.
+	\begin{enumerate}
+		\item 级数$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$收敛$\iff$级数$\left(\left(y_{n}\right)_{n=0}^{\infty},\left(t_{n}\right)_{n=0}^{\infty}\right)$收敛.
+		\item 当级数$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$收敛时,$\sum\limits_{n=m}^{\infty}x_{n}=\sum\limits_{n=0}^{\infty}x_{n}-s_{m-1},\limit_{m\to+\infty}\sum\limits_{n=m}^{\infty}x_{n}=0$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{级数$m$-余项}{}
+	设$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$是$G$中的收敛级数,$m\geq 1$.把该级数的$m$-截断的和记作$\sum\limits_{n=m}^{\infty}x_{m}$,称之为$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$的$m$-余项.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$\left(k_{n}\right)_{n=0}^{\infty}$是$\N$中的严格递增序列,$k_{0}=0$,$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$是$G$中的级数.对每个$n\in\N$,令
+	\begin{align*}
+		u_{n}=\sum\limits_{p=k_{n}}^{k_{n+1}-1}x_{p},t_{n}=\sum\limits_{k=0}^{n}u_{k}.
+	\end{align*}
+	若级数$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$收敛,则$\left(\left(u_{n}\right)_{n=0}^{\infty},\left(t_{n}\right)_{n=0}^{\infty}\right)$收敛,并且$\sum\limits_{n=0}^{\infty}u_{n}=\sum\limits_{n=0}^{\infty}v_{n}$.
+\end{proposition}
+
+\begin{definition}{}{}
+	设$I$是$\N$的无限子集,$\varphi:\N\to I$是严格保序同构,$\left(x_{i}\right)_{i\in I}$是$G$中的序列.对每个$n\in\N$,令$s_{n}=\sum\limits_{k=0}^{n}x_{\varphi\left(k\right)}$.
+	\begin{enumerate}
+		\item 我们称$\left(\left(x_{\varphi\left(n\right)}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$是$\left(x_{i}\right)_{i\in I}$通过$\varphi$定义的级数.
+		\item 当$\left(\left(x_{\varphi\left(n\right)}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$收敛时,将它的和记作$\sum\limits_{i\in I}x_{i}$,称之为$\left(x_{i}\right)_{i\in I}$的和.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	对每个$n\in\N$,令$z_{n}=
+	\begin{cases}
+		x_{n},&n\in I,\\
+		0,&n\notin I.
+	\end{cases}$那么,$\left(\left(x_{\varphi\left(n\right)}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$收敛$\iff$以$\left(z_{n}\right)_{n=0}^{\infty}$为通项的级数收敛.
+\end{remark}
