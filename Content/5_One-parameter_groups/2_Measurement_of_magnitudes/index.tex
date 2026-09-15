@@ -1,1 +1,59 @@
 \chapter{刻度的测量}
+
+本节中,$\left(X,\leqslant\right)$是全序集,$\cdot:I\times I\to X$,$w\in X$是最小元,$I\subseteq X$满足如下条件:
+\begin{itemize}
+	\item $w\in I$;
+	\item $\forall x\in I\forall y\in X\left(y\leqslant x\implies y\in I\right)$.
+\end{itemize}
+递归地定义$x^{n}$如下($n\in\Z_{\geqslant 0}$):$x^{0}=w$,$x^{1}=x$;若$x^{n}$有定义且属于$I$,则$x^{n+1}=x^{n}\cdot x$.我们考虑如下条件:
+\begin{enumerate}
+	\item ($\mathrm{GR}_{1a}$)$\forall x\in I\left(xw=wx=x\right)$.
+	\item ($\mathrm{GR}_{1b}$)$\forall x,y,z\in I\left(xy,yz,\left(xy\right)z,x\left(yz\right)\in I\implies \left(xy\right)z=x\left(yz\right)\right)$.
+	\item ($\mathrm{GR}_{2}$)$\forall x,y\in I\left(x<y\implies \forall z\in I\left(xz<yz\wedge zx<zy\right)\right)$.
+	\item ($\mathrm{GR}_{3a}$)$I_{w}\coloneq\left\{x\in I\middle|x>w\right\}\neq\emptyset$且没有最小元.
+	\item ($\mathrm{GR}_{3b}$)$\forall x,y\in I\left(x<y\implies\exists z\in I_{w}\left(xz<y\right)\right)$.
+	\item ($\mathrm{GR}_{3b}^{\prime}$)$\forall x,y\in I\left(x<y\implies\exists z\in I\left(xz=y\right)\right)$.
+	\item ($\mathrm{GR}_{4}$)对任一$x\in I_{w}$和$y\in I$,存在$n\in\Z_{\geqslant 1}$使得$x^{n}$有定义且$x^{n}>y$.
+	\item ($\mathrm{GR}_{4}^{\prime}$)$I$中每个单调递增且有上界的序列$\left(x_{n}\right)_{n=0}^{\infty}$在$I$中有上确界.
+\end{enumerate}
+
+\begin{definition}{}{}
+	条件(1)$\sim$(5),(7)成立时,称$\left(X,\leqslant,w,I,\cdot\right)$是测量结构.
+\end{definition}
+
+\begin{proposition}{}{}
+	$\left(X,\leqslant,w,I,\cdot\right)$是测量结构,则存在满足下列条件的严格单调递增映射$f:I\to\R_{>0}$:
+	\begin{itemize}
+		\item $f\left(w\right)=0$;
+		\item $\forall x,y\in I\left(xy\in I\implies f\left(xy\right)=f\left(x\right)+f\left(y\right)\right)$;
+		\item 对任一$b\in I$,$\im\left(f\right)\cap\left[0,f\left(b\right)\right]$是$\left[0,f\left(b\right)\right]$的稠密集.
+	\end{itemize}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$b\in I$且$b^{2}\in I$,则$\forall x,y\in I\left(x\leqslant b\wedge y\leqslant b\implies xy=yx\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	$\left(X,\leqslant,w,I,\cdot\right)$是测量结构,映射$f,g\in\R_{>0}^{I}$严格单调递增且满足下列条件:
+	\begin{itemize}
+		\item $f\left(w\right)=g\left(w\right)=0$;
+		\item $\forall x,y\in I\left(xy\in I\implies f\left(xy\right)=f\left(x\right)+f\left(y\right)\wedge g\left(xy\right)=g\left(x\right)+g\left(y\right)\right)$;
+		\item 对任一$b\in I$,$\im\left(f\right)\cap\left[0,f\left(b\right)\right]$是$\left[0,f\left(b\right)\right]$的稠密集,$\im\left(g\right)\cap\left[0,g\left(b\right)\right]$是$\left[0,g\left(b\right)\right]$的稠密集.
+	\end{itemize}
+	则存在$\lambda\in\R_{>0}$使得$g=\lambda f$.
+\end{proposition}
+
+\begin{lemma}{}{}
+	设(1)$\sim$(4),(6),(8)成立,则条件(7)成立.
+\end{lemma}
+
+\begin{proposition}{}{}
+	设条件(1)$\sim$(4),(6),(8)成立,则存在$\alpha\in\R_{>0}\sqcup\left\{+\infty\right\}$和严格单调递增映射$f:I\to\left[0,\alpha\right)$满足如下条件:
+	\begin{itemize}
+		\item $f\left(w\right)=0$;
+		\item $\forall x,y\in I\left(xy\in I\implies f\left(xy\right)=f\left(x\right)+f\left(y\right)\right)$.
+		\item $f$是满射.
+	\end{itemize}
+	特别地,若$I=X$,则$\alpha=+\infty$.
+\end{proposition}

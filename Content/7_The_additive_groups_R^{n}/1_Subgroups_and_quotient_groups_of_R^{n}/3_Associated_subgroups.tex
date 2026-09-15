@@ -1,1 +1,59 @@
 \section{相伴子群}
+
+未加声明时,$G$是$\R^{n}$的子群,$m\in\Z_{\geqslant 1}$,$\left(a_{i}\right)_{i=1}^{m}$是$\R$的序列,$\left(e_{i}\right)_{i=1}^{n}$是$\R^{n}$的标准带标基.
+
+\begin{definition}
+	称$G^{\ast}\coloneq\left\{u\in\R^{n}\middle|\forall x\in G\left(\left(u\middle|x\right)\in\Z\right)\right\}$是$G$的对偶子群.
+\end{definition}
+
+\begin{proposition}
+	设$G$是$\R^{n}$的闭子群,则$G^{\ast}$是$\R^{n}$的闭子群,并且$\left(\closure\left(G\right)\right)^{\ast}=G^{\ast}$,$\closure\left(G\right)=\left(G^{\ast}\right)^{\ast}$.
+\end{proposition}
+
+\begin{proposition}
+	设$G$是$\R^{n}$的闭子群,则$r\left(G^{\ast}\right)=n-d\left(G\right)$,$d\left(G^{\ast}\right)=n-r\left(G\right)$.
+\end{proposition}
+
+\begin{corollary}
+	设$x\in G$,则$x\in\closure\left(G\right)\iff\forall u\in G^{\ast}\left(\left(u\middle|x\right)\in\Z\right)$.
+\end{corollary}
+
+\begin{theorem}
+	设$\left(b_{1},\ldots,b_{n}\right)\in\R^{n}$,对任一$i\in\llbracket 1,n\rrbracket$,$\left(a_{i,1},\ldots,a_{i,n}\right)\in\R^{n}$.下列命题等价:
+	\begin{enumerate}
+		\item 对任一$\varepsilon\in\R_{>0}$,存在$\Z$中的序列$\left(p_{i}\right)_{i=1}^{n}$和$\left(q_{j}\right)_{j=1}^{n}$使得$\forall j\in\llbracket 1,n\rrbracket\left(\left|\sum\limits_{i=1}^{m}q_{i}a_{i,j}-p_{j}-b_{j}\right|\leqslant\varepsilon\right)$.
+		\item 对任一$\Z$中的序列$\left(r_{i}\right)_{i=1}^{n}$,$\forall i\in\llbracket 1,m\rrbracket\left(\sum\limits_{j=1}^{n}a_{i,j}r_{j}\in\Z\right)\implies\sum\limits_{j=1}^{n}b_{j}r_{j}\in\Z$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+	设对任一$i\in\llbracket 1,n\rrbracket$,$a_{i}=\left(a_{i,1},\ldots,a_{i,n}\right)\in\R^{n}$,$G$是$\left\{a_{1},\ldots,a_{m}\right\}\cup\left\{e_{1},\ldots,e_{n}\right\}$生成的子群.
+	\begin{enumerate}
+		\item $G$在$\R^{n}$中稠密$\iff$不存在$\left(r_{1},\ldots,r_{n}\right)\in\Z^{n}\setminus\left\{0\right\}$使得$\forall i\in\llbracket 1,m\rrbracket\left(\sum\limits_{j=1}^{n}a_{i,j}r_{j}\in\Z\right)$.
+		\item $G$在$\R^{n}$中稠密$\iff$ $G^{\ast}=\left\{0\right\}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}
+	设$\left(\theta_{i}\right)_{i=1}^{n}$是$\R$中的序列.下列命题等价:
+	\begin{enumerate}
+		\item 对任一$\R$中的序列$\left(x_{i}\right)_{i=1}^{n}$和$\varepsilon\in\R_{>0}$,存在$q\in\Z$和$\Z$中的序列$\left(p_{i}\right)_{i=1}^{n}$使得$\forall j\in\llbracket 1,n\rrbracket\left(\left|q\theta_{j}-p_{j}-x_{j}\right|\leqslant\varepsilon\right)$.
+		\item 不存在$\left(r_{1},\ldots,r_{n}\right)\in\Z^{n}\setminus\left\{0\right\}$使得$\sum\limits_{j=1}^{n}r_{j}\theta_{j}\in\Z$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}
+	设$\left(\theta_{i}\right)_{i=1}^{n}$是$\R$中的序列.下列命题等价:
+	\begin{enumerate}
+		\item $\left\{\left(q\theta_{1}-\lfloor q\theta_{1}\rfloor,\ldots,q\theta_{n}-\lfloor q\theta_{n}\rfloor\right)\in\R^{n}\middle|q\in\Z\right\}$在$\left[0,1\right]^{n}$中稠密.
+		\item $\left\{\theta_{1},\ldots,\theta_{n},1\right\}$是$\R$的$\Q$-线性无关集.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}
+	设$G_{1}$,$G_{2}$是$\R^{n}$的闭子群,则$\left(G_{1}+G_{2}\right)^{\ast}=G_{1}^{\ast}\cap G_{2}^{\ast}$,$\left(G_{1}\cap G_{2}\right)^{\ast}=G_{1}^{\ast}+G_{2}^{\ast}$.
+\end{proposition}
+
+\begin{proposition}
+	设$G_{1}$,$G_{2}$是$\R^{n}$的格,$G_{2}\subseteq G_{1}$,则$G_{1}^{\ast}$,$G_{2}^{\ast}$也是格,$G_{1}^{\ast}\subseteq G_{2}^{\ast}$,并且有群同构$G_{1}/G_{2}\simeq G_{2}^{\ast}/G_{1}^{\ast}$.
+\end{proposition}

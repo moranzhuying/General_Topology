@@ -1,1 +1,28 @@
 \section{域\texorpdfstring{$\R$}{R}上的向量空间与代数的拓扑}
+
+\begin{proposition}
+	设$V$是$n$维$\R$-向量空间,$\left(v_{i}\right)_{i=1}^{n}$,$\left(v_{i}^{\prime}\right)_{i=1}^{n}$是$V$的有序基,
+	\begin{align*}
+		\varphi_{1}:\R^{n}\to V,\left(x_{1},\ldots,x_{n}\right)\mapsto\sum\limits_{i=1}^{n}x_{i}v_{i},\\
+		\varphi_{2}:\R^{n}\to V,\left(x_{1},\ldots,x_{n}\right)\mapsto\sum\limits_{i=1}^{n}x_{i}v_{i}^{\prime}.
+	\end{align*}
+	记$\tau_{1}=\left\{\varphi_{1}\left(U\right)\subseteq V\middle|U\text{是开集}\right\}$,$\tau_{2}=\left\{\varphi_{2}\left(U\right)\subseteq V\middle|U\text{是开集}\right\}$,则$\tau_{1}$,$\tau_{2}$都是$V$上的拓扑,并且$\tau_{1}=\tau_{2}$.
+\end{proposition}
+
+\begin{proposition}
+	设$V$是$n$维$\R$-向量空间,$\left(v_{i}\right)_{i=1}^{n}$是$V$的有序基,
+	\begin{align*}
+		\varphi:\R^{n}\to V,\left(x_{1},\ldots,x_{n}\right)\mapsto\sum\limits_{i=1}^{n}x_{i}v_{i}.
+	\end{align*}
+	定义$\tau=\left\{\varphi\left(U\right)\subseteq V\middle|U\text{是开集}\right\}$,则$\tau$是$V$上唯一一个$V$成为\text{Hausdorff}拓扑$\R$-模的拓扑.
+	
+	我们称$\tau$是$V$上通过$\varphi$和$\R$诱导的典范拓扑.
+\end{proposition}
+
+\begin{proposition}
+	设$V$,$W$,$X$是有限秩$\R$-模,$f:V\times W\to X$是$\R$-双线性映射,则$f$连续.
+\end{proposition}
+
+\begin{corollary}
+	设$A$是有限秩$\R$-代数,则$A$作为模配备的典范拓扑使得$A$成为有限秩拓扑$\R$-代数.
+\end{corollary}

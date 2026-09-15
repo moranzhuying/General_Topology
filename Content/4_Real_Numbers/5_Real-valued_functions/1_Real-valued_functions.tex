@@ -1,3 +1,35 @@
 \chapter{实值函数}
 
 \section{实值函数}
+
+未加声明时,$X$是集合,$\emptyset\neq A\subseteq X$.
+
+\begin{definition}{}{}
+	我们称$\overline{\R}^{X}$的元素是$X$上的实值函数.
+\end{definition}
+
+\begin{definition}{}{}
+	设$f\in\overline{\R}^{X}$.若$\left\{+\infty,-\infty\right\}\nsubseteq f\left(X\right)$,则称$f$为有限实值函数.
+\end{definition}
+
+\begin{definition}{}{}
+	定义$\overline{\R}$上的偏序为$\forall f,g\in\overline{\R}^{X}\left(f\leqslant g\iff \forall x\in X\left(f\left(x\right)\leqslant g\left(x\right)\right)\right)$,则$\overline{\R}^{X}$按此偏序构成格.
+\end{definition}
+
+\begin{definition}{}{}
+	对任一$f,g\in\overline{\R}^{X}$,定义
+	\begin{align*}
+		&\sup\left(f,g\right):X\to\overline{\R},x\mapsto\sup\left(f\left(x\right),g\left(x\right)\right),\\
+		&\inf\left(f,g\right):X\to\overline{\R},x\mapsto\inf\left(f\left(x\right),g\left(x\right)\right),
+	\end{align*}
+	则$\sup\left(f,g\right)$和$\inf\left(f,g\right)$分别是$f$和$g$在$\overline{\R}^{X}$中的上确界和下确界.
+\end{definition}
+
+\begin{definition}{}{}
+	设$f:X\to\overline{\R}$.
+	\begin{itemize}
+		\item 若$\sup\limits_{x\in A}f\left(x\right)<+\infty$,则称$f$在$A$上有上界.
+		\item 若$\inf\limits_{x\in A}f\left(x\right)>-\infty$,则称$f$在$A$上有下界.
+		\item 若$f$在$A$上既有上界又有下界(等价地,$\sup\limits_{x\in A}\left|f\left(x\right)\right|<+\infty$),则称$f$在$A$上有界.
+	\end{itemize}
+\end{definition}

@@ -1,1 +1,24 @@
 \section{从\texorpdfstring{$\R$}{R}到拓扑群的局部拓扑群同态的定义}
+
+未加声明时,默认$G$是乘法拓扑群
+
+\begin{proposition}{}{}
+	设$I\subseteq\R$是区间,$0\in I$且$\ell\left(I\right)>0$,$f:I\to\R$是加法群$\R$到乘法群$G$的拓扑群同态.那么,存在唯一的拓扑群同态$\bar{f}:\R\to G$使得$\bar{f}|_{I}=f$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$f:\R\to G$是拓扑群的局部同构,则存在唯一的拓扑群同态$\bar{f}:\R\to G$满足如下条件:
+	\begin{itemize}
+		\item 存在$0$在$\R$中的领域$U$使得$\bar{f}|_{U}=f$.
+		\item $\im\left(\bar{f}\right)$是$G$的开子群.
+		\item $\bar{f}$的余限制是严格拓扑群同态.
+	\end{itemize}
+\end{corollary}
+
+\begin{theorem}{}{}
+	设$G$连通且局部同构于$\R$,则下列情形一定有一种成立:
+	\begin{itemize}
+		\item $G$作为拓扑群同构于$\R$.
+		\item $G$作为拓扑群同构于$\T$.
+	\end{itemize}
+\end{theorem}

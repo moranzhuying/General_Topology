@@ -1,1 +1,27 @@
 \section{\texorpdfstring{$\R^{m}$}{Rm}到\texorpdfstring{$\T^{n}$}{Tn}的连续同态}
+
+\begin{proposition}
+	设$\varphi:\R^{n}\twoheadrightarrow\T^{n}$是典范满射,$f:\R^{m}\to\T^{n}$是拓扑群同态,则使下图交换的$\R$-模同态$u$存在且唯一:
+	\begin{center}
+		\begin{tikzcd}
+			\R^{n} \arrow[rr, "\varphi", two heads] &                                                         & \T^{n} \\
+			& \R^{m} \arrow[ru, "f"'] \arrow[lu, "\exists!u", dashed] &       
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{corollary}
+	设$\psi:\R^{n}\to G$是严格拓扑群同态,存在$0$在$\R^{n}$的邻域$U$使$\psi|_{U}$是局部同构,$f:\R^{n}\to G$是拓扑群同态,则使下图交换的$\R$-模同态$u$存在且唯一:
+	\begin{center}
+		\begin{tikzcd}
+			\R^{n} \arrow[rr, "\psi"] &                                                         & G \\
+			& \R^{m} \arrow[ru, "f"'] \arrow[lu, "\exists!u", dashed] &       
+		\end{tikzcd}
+	\end{center}
+\end{corollary}
+
+\begin{proposition}
+	设$\varphi:\R\twoheadrightarrow\T$是典范满射,$f:\R^{n}\to\T$是拓扑群同态,则存在$a\in\R$使得$\forall x\in\R\left(f\left(x\right)=\varphi\left(ax\right)\right)$.
+	
+	进一步,若$a\neq 0$,则$f$是严格拓扑群同态.
+\end{proposition}

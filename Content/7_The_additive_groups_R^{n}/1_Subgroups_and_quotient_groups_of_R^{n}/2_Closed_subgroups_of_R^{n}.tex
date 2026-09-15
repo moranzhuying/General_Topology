@@ -1,1 +1,31 @@
 \section{\texorpdfstring{$\R^{n}$}{Rn}的闭子群}
+
+没有特别声明时,$r\in\llbracket 1,n\rrbracket$.
+
+\begin{definition}
+	设$G$是$\R^{n}$的闭子群,记$r\left(G\right)=\dim_{\R}G$.
+\end{definition}
+
+\begin{theorem}
+	设$G$是$\R^{n}$的秩$r$闭子群.
+	\begin{enumerate}
+		\item 存在唯一的$\R^{n}$的子空间$V$使得$V\subseteq G$.记$d\left(G\right)=\dim_{\R}G$.
+		\item 对$\R^{n}$的每个和$V$互补的子空间$W$,有$G=V\oplus\left(W\cap G\right)$,其中$W\cap G$是$\R^{n}$的秩$r-d\left(G\right)$离散子群.
+		\item $G$作为拓扑群和$\R^{d\left(G\right)}\times\Z^{r-d\left(G\right)}$同构.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+	设$G$是$\R^{n}$的秩$r$闭子群,$p=d\left(G\right)$,则存在$a_{1},\ldots,a_{p}\in V,a_{p+1},\ldots,a_{r}\in G$使得
+	\begin{align*}
+		G=\left\{\sum\limits_{i=1}^{r}t_{i}a_{i}+\sum\limits_{j=p+1}^{r}n_{j}a_{j}\in\R\middle|\forall i\in\llbracket 1,n\rrbracket\left(t_{i}\in\R\right)\wedge\forall j\in\llbracket 1,n\rrbracket\left(n_{j}\in\Z\right)\right\}.
+	\end{align*}
+\end{corollary}
+
+\begin{corollary}
+	设$G$是$\R^{n}$的秩$r$闭子群,$p=d\left(G\right)$,则存在拓扑群同构$f:\R^{n}\to\R^{n}$使得$f\left(G\right)=\R^{p}\times\Z^{r-p}$.
+\end{corollary}
+
+\begin{proposition}
+	设$G$是$\R^{n}$的闭子群,则$d\left(G\right)\leqslant r\left(G\right)\leqslant n$.
+\end{proposition}

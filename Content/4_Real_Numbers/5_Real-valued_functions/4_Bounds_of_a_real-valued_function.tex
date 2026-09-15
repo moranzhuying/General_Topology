@@ -1,1 +1,27 @@
 \section{实值函数的上下界}
+
+未加声明时,集合$X$,$Y$非空,$\left(X_{i}\right)_{i\in I}$是$X$的一族非空子集,$\emptyset\neq A_{1}\subseteq X$,$\emptyset\neq A_{2}\subseteq Y$.
+
+\begin{proposition}{}{}
+	设$f\in\overline{\R}^{X}$,则$\varphi_{1}:\fin\left(X\right)\to\overline{\R},H\mapsto\sup\limits_{x\in H}f\left(x\right)$单调递增,$\varphi_{2}:\fin\left(X\right)\to\overline{\R},H\mapsto\sup\limits_{x\in H}f\left(x\right)$单调递减.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$f\in\overline{\R}^{X}$,则$\sup\limits_{x\in X}f\left(x\right)=\limit_{H\in\fin\left(X\right)}\sup\limits_{x\in H}f\left(x\right)$,$\inf\limits_{x\in X}f\left(x\right)=\limit_{H\in\fin\left(X\right)}\inf\limits_{x\in H}f\left(x\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$f,g\in\overline{\R}^{X}$.若$\forall x\in A\left(f\left(x\right)\leqslant g\left(x\right)\right)$,则$\sup\limits_{x\in A}f\left(x\right)\leqslant\sup\limits_{x\in A}g\left(x\right)$,$\inf\limits_{x\in A}f\left(x\right)\geqslant\inf\limits_{x\in A}g\left(x\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$f\in\overline{\R}^{X}$,$\emptyset\neq A\subseteq B\subseteq X$,则$\sup\limits_{x\in A}f\left(x\right)\leqslant\sup\limits_{x\in B}f\left(x\right)$,$\inf\limits_{x\in A}f\left(x\right)\geqslant\inf\limits_{x\in A}g\left(x\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$f\in\overline{\R}^{X}$,则$\sup\limits_{x\in\bigcup\limits_{i\in I}X_{i}}=\sup\limits_{i\in I}\sup\limits_{x\in X_{i}}f\left(x\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$f\in\overline{\R}^{X\times Y}$,则$\sup\limits_{\left(x,y\right)\in A_{1}\times A_{2}}f\left(x,y\right)=\sup\limits_{x\in A_{1}}\sup\limits_{y\in A_{2}}f\left(x,y\right)=\sup\limits_{y\in A_{2}}\sup\limits_{x\in A_{1}}f\left(x,y\right)$.
+\end{proposition}

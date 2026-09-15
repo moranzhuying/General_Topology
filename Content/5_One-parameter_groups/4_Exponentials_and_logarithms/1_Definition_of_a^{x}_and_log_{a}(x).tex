@@ -2,5 +2,59 @@
 
 \section{以实数\texorpdfstring{$a$}{a}为底的指数和对数}
 
+\begin{theorem}{}{}
+	乘法群$\R_{>0}$和加法群$\R$作为拓扑群同构.
+\end{theorem}
 
+\begin{lemma}{}{}
+	对任一$a\in\R_{>0}$,存在唯一的拓扑群同构$f:\R\to\R_{>0}$使得$f_{a}\left(1\right)=a$.
+\end{lemma}
+
+\begin{definition}{}{}
+	设$a\in\R_{>0}$,拓扑群同构$f:\R\to\R_{>0}$满足$f_{a}\left(1\right)=a$.对任一$x\in\R_{>0}$,记$f_{a}\left(x\right)=a^{x}$.
+	
+	我们称$f_{a}$是以$a$为底的指数函数.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$a\in\R_{>0}\setminus\left\{1\right\}$,则$f_{a}:\R_{>0}\to\R,x\mapsto a^{x}$是可逆拓扑群同态.
+\end{proposition}
+
+\begin{definition}{}{}
+	设$a\in\R_{>0}\setminus\left\{1\right\}$,$f_{a}$是以$a$为底的指数函数.我们称$\log_{a}\coloneq f_{a}^{-1}$是以$a$为底的对数函数.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$a\in\R_{>0}$,$x,y\in\R$.
+	\begin{enumerate}
+		\item $a^{x+y}=a^{x}a^{y}$.
+		\item $a^{-x}=\left(a^{x}\right)^{-1}$.
+		\item $\left(a^{x}\right)^{y}=a^{xy}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$a\in\R_{>0}\setminus\left\{1\right\}$,$x\in\R_{>0}$,$y\in\R$,则$x^{y}=a^{y\log_{a}x}$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$a\in\R_{>0}\setminus\left\{1\right\}$,$x,y\in\R_{>0}$.
+	\begin{enumerate}
+		\item $\log_{a}a=0$,$\log_{a}a=1$.
+		\item $\log_{a}\left(xy\right)=\log_{a}x+\log_{a}y$.
+		\item $\log_{a}x^{-1}=-\log_{a}x$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$a\in\R_{>0}\setminus\left\{1\right\}$,$x\in\R_{>0}$,$y\in\R$,则$\log_{a}\left(x^{y}\right)=y\log_{a}x$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$a,b\in\R_{>0}\setminus\left\{1\right\}$,$x\in\R_{>0}$,则$\log_{a}x=\left(\log_{a}b\right)\cdot\left(\log_{b}x\right)$.
+\end{corollary}
+
+\begin{theorem}{}{}
+	对$\R_{>0}$上的每个拓扑群自同态$f$,存在$\alpha\in\R$使得$\forall x\in\R_{>0}\left(f\left(x\right)=x^{\alpha}\right)$.
+\end{theorem}
 
