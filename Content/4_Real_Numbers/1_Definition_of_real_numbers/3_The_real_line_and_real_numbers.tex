@@ -1,1 +1,30 @@
 \section{实直线和实数}
+
+\begin{definition}{实数,实直线,实直线的加法群}{}
+	把加法群$\Q$的完备化记作$\R$.
+	\begin{enumerate}
+		\item $\R$中的元素称为实数.
+		\item 拓扑空间$\R$称为实直线,拓扑群$\R$称为实直线的加法群.
+		\item 设$\iota:\Q\hookrightarrow\R$是典范映射.我们称$\R\setminus\im\left(\iota\right)$是无理数集,其中的元素称为无理数.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{$\R$上标准全序的构造}{construction-of-standard-total-ordering-over-R}
+	设$\iota:\Q\hookrightarrow\R$是典范映射.定义$\R$上的全序关系$\leq$为
+	\begin{align*}
+		\forall x,y\in\R\left(x\leq y\iff y-x\in\closure\left(\iota\left(\Q_{>0}\right)\right)\right).
+	\end{align*}
+	那么,$\leq$是使$\R$构成有序群的全序,$\iota$是保序同构.
+\end{proposition}
+
+\begin{definition}{$\R$上的标准全序}{}
+	沿用\cref{construction-of-standard-total-ordering-over-R}的设定.我们称$\leq$是$\R$上的全序.
+\end{definition}
+
+\begin{convention}{}{}
+	无歧义时,我们总是把$\im\left(\Q\right)$视同$\Q$,在此意义下$\Q$是$\R$的子集,$\R\setminus\im\left(\iota\right)$相应地写作$\R\setminus\Q$.
+\end{convention}
+
+\begin{proposition}{}{}
+	$\R_{\geq 0}$是$\R$中的闭集,$\R_{>0}$是$\R$中的开集.
+\end{proposition}

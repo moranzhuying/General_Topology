@@ -1,3 +1,33 @@
 \chapter{Euclid度量和球面}
 
 \section{\texorpdfstring{$\R^{n}$}{Rn}中的Euclid度量}
+
+\begin{definition}
+	我们称$d:\R^{n}\times\R^{n}\to\R^{n},\left(\left(x_{1},\ldots,x_{n}\right),\left(y_{1},\ldots,y_{n}\right)\right)\mapsto\sqrt{\sum\limits_{i=1}^{n}\left(x_{i}-y_{i}\right)^{2}}$为$\R^{n}$上的\text{Euclid}度量.
+\end{definition}
+
+\begin{proposition}
+	设$d$是$\R^{n}$上的\text{Euclid}度量.
+	\begin{enumerate}
+		\item $\forall x,y\in\R^{n}\left(d\left(x,y\right)=0\iff x=y\right)$.
+		\item $\forall x,y\in\R^{n}\left(d\left(x,y\right)=d\left(y,x\right)\right)$.
+		\item $\forall x,y,z\in\R^{n}\left(d\left(x+z,y+z\right)=d\left(x,y\right)\right)$.
+		\item $\forall t\in\R\forall x,y\in\R^{n}\left(d\left(tx,ty\right)=\left|t\right|d\left(x,y\right)\right)$.
+		\item $\forall x,y,z\in\R^{n}\left(d\left(x,y\right)\leqslant d\left(x,z\right)+d\left(z,y\right)\right)$.
+		\item $\forall x,y,z\in\R^{n}\left(d\left(x,y\right)\geqslant\left|d\left(x,z\right)-d\left(y,z\right)\right|\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}
+	称$\left\|\cdot\right\|:\R^{n}\to\R,x\mapsto d\left(0,x\right)$是$\R^{n}$上的\text{Euclid}范数.
+\end{definition}
+
+以下,我们总是默认$d$是$\R^{n}$上的\text{Euclid}度量,$\left\|\cdot\right\|$是$\R^{n}$上的\text{Euclid}范数.
+
+\begin{proposition}
+	对任一$\left(x_{1},\ldots,x_{n}\right),\left(y_{1},\ldots,y_{n}\right)\in\R^{n}$,有$\max\limits_{1\leqslant i\leqslant n}\left|x_{i}-y_{i}\right|\leqslant\sqrt{\sum\limits_{i=1}^{n}\left(x_{i}-y_{i}\right)^{2}}\leqslant\sqrt{n}\max\limits_{1\leqslant i\leqslant n}\left|x_{i}-y_{i}\right|$.
+\end{proposition}
+
+\begin{proposition}
+	设$A\subseteq\R^{n}$,则$A$在$\R^{n}$中有界$\iff$ $\sup\limits_{x\in A}\left\|x\right\|<+\infty$.
+\end{proposition}

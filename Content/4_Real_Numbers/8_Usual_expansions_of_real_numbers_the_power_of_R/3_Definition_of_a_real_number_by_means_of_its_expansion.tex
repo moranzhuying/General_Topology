@@ -1,1 +1,44 @@
 \section{通过展开式定义的实数}
+
+未加声明时,$\left(d_{n}\right)_{n=0}^{\infty}$是底序列,$\left(a_{n}\right)_{n=0}^{\infty}$是相对$\left(d_{n}\right)_{n=0}^{\infty}$的底因子列.
+
+\begin{proposition}{}{}
+	对任一$q_{0}\in\Z$和$\Z$中满足$\forall n\in\Z_{\geqslant 0}\left(0\leqslant v_{n}\leqslant a_{n}-1\right)$的序列$\left(v_{n}\right)_{n=0}^{\infty}$,存在$x\in\R$使得$q_{0}+\sum\limits_{n=1}^{\infty}\frac{v_{n}}{d_{n}}=x$,且
+	\begin{align*}
+		\forall m\in\Z_{\geqslant 0}\left(q_{0}\leqslant\sum\limits_{n=1}^{m}\frac{v_{n}}{d_{n}}\leqslant x\leqslant q_{0}+\sum\limits_{n=1}^{m}\frac{v_{n}}{d_{n}}+\frac{1}{d_{m}}\right).
+	\end{align*}
+\end{proposition}
+
+\begin{theorem}{}{}
+	设$x\in\R$关于$\left(d_{n}\right)_{n=0}^{\infty}$有展开式$\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{d_{n}}$,则下列情形有且仅有一种成立:
+	\begin{enumerate}
+		\item $\left\{n\in\Z_{\geqslant 0}\middle|u_{n}<a_{n}-1\right\}$是无限集.此时$\forall m\in\Z_{\geqslant 0}\left(\frac{
+			\lfloor d_{m}x\rfloor}{d_{m}}=q_{0}+\sum\limits_{n=1}^{m}\frac{v_{n}}{d_{n}}\right)$,且$x$关于$\left(d_{n}\right)_{n=0}^{\infty}$的展开式只有
+		\begin{align*}
+			\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{d_{n}}.
+		\end{align*}
+		\item $\exists m\in\Z_{\geqslant 0}\left(\forall n\in\llbracket m+1,+\infty)\left(u_{n}=a_{n}-1\right)\wedge m\geqslant 1\implies u_{m}<a_{m}-1\right)$.此时
+		\begin{align*}
+			\exists k\in\Z\left(x=\lfloor x\rfloor+\sum\limits_{n=1}^{m}\frac{u_{n}}{d_{n}}+\sum\limits_{n=m+1}^{\infty}\frac{a_{n}-1}{d_{n}}=\frac{k}{d_{m}}\right),
+		\end{align*}
+		并且$\forall n\in\llbracket m+1,+\infty)\left(u_{n}=0\right)$.
+	\end{enumerate}
+	$\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{d_{n}}$和$\lfloor x\rfloor+\sum\limits_{n=1}^{m}\frac{u_{n}}{d_{n}}+\sum\limits_{n=m+1}^{\infty}\frac{a_{n}-1}{d_{n}}$分别叫$x$在$\left(d_{n}\right)_{n=0}^{\infty}$下的正常展开式和反常展开式.
+\end{theorem}
+
+\begin{definition}{}{}
+	设$x\in\R$关于$\left(d_{n}\right)_{n=0}^{\infty}$有展开式$\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{d_{n}}$.若$\exists k\in\Z\left(x=\frac{k}{d_{m}}\right)$,则称该展开式终止.
+\end{definition}
+
+\begin{definition}{}{}
+	设$x\in\Q$能表示成既约形式$\frac{p}{q}$.下列命题等价:
+	\begin{enumerate}
+		\item $x$在$\left(d_{n}\right)_{n=0}^{\infty}$下的正则展开式终止.
+		\item $\exists n\in\Z_{\geqslant 0}\left(q\mid d_{m}\right)$.
+	\end{enumerate}
+	两个条件之一成立时,记$m=\min\left\{n\in\Z_{\geqslant 0}\middle|q\mid d_{m}\right\}$,则$\exists k\in\Z\left(x=\frac{k}{d_{m}}\right)$,且$\lfloor x\rfloor+\sum\limits_{n=1}^{m}\frac{u_{n}}{d_{n}}+\sum\limits_{n=m+1}^{\infty}\frac{a_{n}-1}{d_{n}}$是$x$的反常展开式,其中$\lfloor x\rfloor+\sum\limits_{n=1}^{m}\frac{u_{n}}{d_{n}}$是$x$的正常展开式.
+\end{definition}
+
+\begin{corollary}{}{}
+	设$\forall k\in\Z_{\geqslant 0}\exists n\in\Z_{\geqslant 0}\left(m\mid d_{k}\right)$,$x\in\R$,则$x\in\Q$ $\iff$ $x$的正常展开式终止.
+\end{corollary}

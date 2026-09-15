@@ -1,1 +1,31 @@
 \section{定向集上的实值函数}
+
+未加声明时,$X$是集合,$\emptyset\neq A\subseteq X$,$\fin\left(X\right)$是$X$的所有有限子集组成的集合,$\mathcal{F}$是$X$上的滤子.
+
+\begin{proposition}{}{}
+	设$f,g\in\overline{\R}^{X}$关于$\mathcal{F}$在$\overline{\R}$中有极限点.若$\exists M\in\mathcal{F}\forall x\in M\left(f\left(x\right)\leqslant g\left(x\right)\right)$,则$\limit_{\mathcal{F}}f\leqslant\limit_{\mathcal{F}}g$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\left(X,\leqslant\right)$是偏序集,$A$按$\leqslant$是右定向的,$f:A\to\overline{\R}$单调.
+	\begin{enumerate}
+		\item 若$f$单调递增,则$\limit_{A}f=\sup\limits_{x\in A}f\left(x\right)$.
+		\item 若$f$单调递减,则$\limit_{A}f=\inf\limits_{x\in A}f\left(x\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\left(X,\leqslant\right)$是偏序集,$A$按$\leqslant$是右定向的,$f:A\to\overline{\R}$单调.
+	\begin{enumerate}
+		\item 若$f$单调递增,则$\limit_{A}f\in\R$ $\iff$ $f$在$A$上有上界.
+		\item 若$f$单调递减,则$\limit_{A}f\in\R$ $\iff$ $f$在$A$上有下界.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$\R$中的序列$\left(x_{n}\right)_{n=0}^{\infty}$单调,则$\left(x_{n}\right)_{n=0}^{\infty}$在$\overline{\R}$中有极限点.进一步:
+	\begin{enumerate}
+		\item 若$\left(x_{n}\right)_{n=0}^{\infty}$在$\Z_{\geqslant 0}$上有上界,则$\left(x_{n}\right)_{n=0}^{\infty}$在$\overline{\R}$中的极限点属于$\R$,否则$\left(x_{n}\right)_{n=0}^{\infty}$的极限点为$+\infty$.
+		\item 若$\left(x_{n}\right)_{n=0}^{\infty}$在$\Z_{\geqslant 0}$上有下界,则$\left(x_{n}\right)_{n=0}^{\infty}$在$\overline{\R}$中的极限点属于$\R$,否则$\left(x_{n}\right)_{n=0}^{\infty}$的极限点为$-\infty$.
+	\end{enumerate}
+\end{corollary}

@@ -1,3 +1,51 @@
 \chapter{实数的定义}
 
 \section{有理数有序群}
+
+本节的内容早已在代数卷中作了一般的讨论,这里仅回顾$\Q$上的情形,为接下来定义实数做准备.
+
+\begin{proposition}{$\Q$中绝对值和正负部的关系}{}
+	对每个$x\in\Q$有$x=x^{+}-x^{-},\left|x\right|=x^{+}+x^{-}$.
+\end{proposition}
+
+\begin{proposition}{绝对值的三角不等式}{}
+	对每个$x,y\in\Q$有$\left|x+y\right|\leq\left|x\right|+\left|y\right|,\left|\left|x\right|-\left|y\right|\right|\leq\left|x-y\right|,\left|x^{+}-y^{+}\right|\leq\left|x-y\right|$.
+\end{proposition}
+
+\begin{proposition}{正负部对正元素的刻画}{}
+	对每个$x\in\Q$有
+	\begin{gather*}
+		x\geq 0\iff x=x^{+}\iff x^{-}=0\iff\left|x\right|=x,\\
+		x\leq 0\iff x=-x^{-}\iff x^{+}=0\iff\left|x\right|=-x,\\
+		x=0\iff\left|x\right|=0.
+	\end{gather*}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$x,a\in\Q$,那么
+	\begin{enumerate}
+		\item 当$a\geq 0$时$\left|x\right|\leq a\iff -a\leq x\leq a$;
+		\item $\left|x\right|\geq a\iff\left(x\leq -a\vee x\geq a\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{$\Q$的分配格性质}{}
+	\begin{enumerate}
+		\item 对每个$x,y,z\in\Q$有$\sup\left(x,y\right)+z=\sup\left(x+z,y+z\right)$.
+		\item 对每个$x,y\in\Q$有$\inf\left(x,y\right)=-\sup\left(-x,-y\right)$.
+		\item 对每个$x,y\in\Q$有$\sup\left(x,y\right)=x+\left(y-x\right)^{+}=x+\left(x-y\right)^{-},\inf\left(x,y\right)=x-\left(y-x\right)^{-}=x-\left(x-y\right)^{+}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{$\Q_{\geq 0}$的正锥性质}{}
+	\begin{enumerate}
+		\item $\Q_{\geq 0}+\Q_{\geq 0}\subseteq\Q_{\geq 0},\Q_{\geq 0}\cap\left(-\Q_{\geq 0}\right)=\left\{0\right\},\Q_{\geq 0}\cup\left(-\Q_{\geq 0}\right)=\Q$.
+		\item 对每个$x,y\in\Q$有$x\leq y\iff y-x\in\Q_{\geq 0}$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+

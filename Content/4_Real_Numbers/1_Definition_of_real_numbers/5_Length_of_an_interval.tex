@@ -1,1 +1,26 @@
 \section{区间的长度}
+
+\begin{definition}{$\R$中有界区间的长度}{}
+	设$a,b\in\R$且$a\leqslant b$,$I\in\left\{\left(a,b\right),\left[a,b\right],\left(a,b\right],\left[a,b\right)\right\}$.我们称$\ell\left(I\right)\coloneq b-a$是区间$I$的长度.
+\end{definition}
+
+\begin{proposition}{有界区间的长度的基本性质}{}
+	\begin{enumerate}
+		\item 若$I$是$\R$中的有界区间,$\left|I\right|\geq 2$,则$\ell\left(I\right)>0$.
+		\item 若$a,b\in\R$且$a\leq b$,则$\ell\left(\left(a,b\right)\right)=\ell\left(\left[a,b\right]\right)=\ell\left(\left(a,b\right]\right)=\ell\left(\left[a,b\right)\right)=b-a$.
+		\item 若$I$是$\R$中的有界区间,$c\in\R$,则$\ell\left(I+c\right)=\ell\left(I\right)$.
+		\item 若$I,J$是$\R$中的有界区间,$I\subseteq J$,则$\ell\left(I\right)\leq\ell\left(J\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{$\R$中不相交开区间的长度与估计}{}
+	设$a,b\in\R$且$a<b$,$n\geq 2$,对每个$1\leq k\leq n$有$I_{k}=\left(c_{k},d_{k}\right)\subseteq\left[a,b\right]$和$c_{k}<d_{k}$.假设$\left(I_{k}\right)_{k=1}^{n}$两两不交.
+	\begin{enumerate}
+		\item 存在$\sigma\in\mathfrak{S}_{n}$使得$\forall 1\leq k\leq n-1\left(d_{\sigma\left(k\right)}\leq c_{\sigma\left(k+1\right)}\right)$.
+		\item $\sum\limits_{k=1}^{n}\ell\left(I_{k}\right)\leq b-a$,并且$\sum\limits_{k=1}^{n}\ell\left(I_{k}\right)=b-a$ $\iff$存在$\tau\in\mathfrak{S}_{n}$满足如下条件:
+		\begin{itemize}
+			\item $\left(c_{\tau\left(1\right)},d_{\tau\left(n\right)}\right)=\left(a,b\right)$.
+			\item $\forall 1\leq k\leq n-1\left(c_{\tau\left(k+1\right)}=d_{\tau\left(k\right)}\right)$.
+		\end{itemize}
+\end{enumerate}	
+\end{proposition}

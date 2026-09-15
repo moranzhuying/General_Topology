@@ -1,1 +1,126 @@
 \section{实值函数的代数运算}
+
+未加声明时,$X$,$Y$是非空集合,$\emptyset\neq A\subseteq X$,$\emptyset\neq B\subseteq Y$,$f,g\in\overline{\R}^{X}$.
+
+\begin{definition}{}{}
+	若对任一$x\in X$,$f\left(x\right)+g\left(x\right)$在$\overline{\R}$中有定义,则定义$f+g:X\to\overline{\R},x\mapsto f\left(x\right)+g\left(x\right)$.
+\end{definition}
+
+\begin{definition}{}{}
+	若对任一$x\in X$,$f\left(x\right)g\left(x\right)$在$\overline{\R}$中有定义,则定义$fg:X\to\overline{\R},x\mapsto f\left(x\right)g\left(x\right)$.
+\end{definition}
+
+\begin{definition}{}{}
+	若对任一$x\in X$,$\left(f\left(x\right)\right)^{-1}$在$\overline{\R}$中有定义,则定义$\frac{1}{f}:X\to\overline{\R},x\mapsto\frac{1}{f\left(x\right)}$.约定:
+	\begin{itemize}
+		\item 若$\forall x\in X\left(f\left(x\right)\geqslant 0\right)$,则$\frac{1}{0}=+\infty$;
+		\item 若$\forall x\in X\left(f\left(x\right)\leqslant 0\right)$,则$\frac{1}{0}=-\infty$.
+	\end{itemize}
+\end{definition}
+
+\begin{proposition}{}{}
+	设$\mathcal{F}$是$X$上的滤子,$f$,$g$关于$\mathcal{F}$在$X$中有极限点.若$f+g$,$fg$,$\frac{1}{f}$有定义,则
+	\begin{align*}
+		\limit_{\mathcal{F}}\left(f+g\right)=\limit_{\mathcal{F}}f+\limit_{\mathcal{F}}g,\limit_{\mathcal{F}}\left(fg\right)=\limit_{\mathcal{F}}f\limit_{\mathcal{F}}g,\limit_{\mathcal{F}}\frac{1}{f}=\frac{1}{\limit_{\mathcal{F}}f}.
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{}{}
+	若$f+g$在$A$上有定义,则
+	\begin{align*}
+		&\sup\limits_{x\in A}f\left(x\right)+\inf\limits_{x\in A}g\left(x\right)\leqslant\sup\limits_{x\in A}\left(f\left(x\right)+g\left(x\right)\right)\leqslant\sup\limits_{x\in A}f\left(x\right)+\sup\limits_{x\in A}f\left(x\right),\\
+		&\inf\limits_{x\in A}\left(f\left(x\right)+g\left(x\right)\right)\leqslant\inf\limits_{x\in A}f\left(x\right)+\inf\limits_{x\in A}g\left(x\right)\leqslant\sup\limits_{x\in A}f\left(x\right)+\inf\limits_{x\in A}g\left(x\right).
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{}{}
+	若$\forall x\in A\left(f\left(x\right)\geqslant 0\wedge g\left(x\right)\geqslant 0\right)$,则
+	\begin{align*}
+		&\sup\limits_{x\in A}f\left(x\right)\inf\limits_{x\in A}g\left(x\right)\leqslant\sup\limits_{x\in A}f\left(x\right)g\left(x\right)\leqslant\sup\limits_{x\in A}f\left(x\right)\sup\limits_{x\in A}g\left(x\right),\\
+		&\inf\limits_{x\in A}f\left(x\right)\inf\limits_{x\in A}g\left(x\right)\leqslant\inf\limits_{x\in A}f\left(x\right)g\left(x\right)\leqslant\inf\limits_{x\in A}f\left(x\right)\sup\limits_{x\in A}g\left(x\right).
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{}{}
+	若$\forall x\in A\left(f\left(x\right)\geqslant 0\right)$,则
+	\begin{align*}
+		\sup\limits_{x\in A}\frac{1}{f\left(x\right)}=\frac{1}{\inf\limits_{x\in A}f\left(x\right)},\inf\limits_{x\in A}\frac{1}{f\left(x\right)}=\frac{1}{\sup\limits_{x\in A}f\left(x\right)}.
+	\end{align*}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$k\in\R$.
+	\begin{enumerate}
+		\item 若$k+f$在$A$上有定义,则$\sup\limits_{x\in A}\left(k+f\left(x\right)\right)=k+\sup\limits_{x\in A}f\left(x\right)$,$\inf\limits_{x\in A}\left(k+f\left(x\right)\right)=k+\inf\limits_{x\in A}f\left(x\right)$.
+		\item 若$k\geqslant 0$且$kf$有定义,则$\sup\limits_{x\in A}kf\left(x\right)=k\sup\limits_{x\in A}f\left(x\right)$,$\inf\limits_{x\in A}kf\left(x\right)=k\inf\limits_{x\in A}f\left(x\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$f_{1}\in\overline{\R}^{A}$,$f_{2}\in\overline{\R}^{B}$.
+	\begin{enumerate}
+		\item 若$\sup\limits_{x\in A_{1}}f_{1}\left(x\right)+\sup\limits_{y\in A_{2}}f\left(x\right)$有定义,对任一$\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}$,$f_{1}\left(x_{1}\right)+f_{2}\left(x_{2}\right)$有定义,则
+		\begin{align*}
+			&\sup\limits_{\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}}\left(f_{1}\left(x_{1}\right)+f_{2}\left(x_{2}\right)\right)=\sup\limits_{x_{1}\in A_{1}}f_{1}\left(x_{1}\right)+\sup\limits_{x_{2}\in A_{2}}f_{2}\left(x_{2}\right),\\
+			&\inf\limits_{\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}}\left(f_{1}\left(x_{1}\right)+f_{2}\left(x_{2}\right)\right)=\inf\limits_{x_{1}\in A_{1}}f_{1}\left(x_{1}\right)+\inf\limits_{x_{2}\in A_{2}}f_{2}\left(x_{2}\right),
+		\end{align*}
+		\item 若$f_{1}|_{A_{1}},f_{2}|_{A_{2}}\geqslant 0$,$\sup\limits_{x\in A_{1}}f_{1}\left(x\right)\sup\limits_{y\in A_{2}}f\left(x\right)$有定义,对任一$\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}$,$f_{1}\left(x_{1}\right)f_{2}\left(x_{2}\right)$有定义,则
+		\begin{align*}
+			&\sup\limits_{\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}}\left(f_{1}\left(x_{1}\right)f_{2}\left(x_{2}\right)\right)=\sup\limits_{x_{1}\in A_{1}}f_{1}\left(x_{1}\right)\sup\limits_{x_{2}\in A_{2}}f_{2}\left(x_{2}\right),\\
+			&\inf\limits_{\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}}\left(f_{1}\left(x_{1}\right)f_{2}\left(x_{2}\right)\right)=\inf\limits_{x_{1}\in A_{1}}f_{1}\left(x_{1}\right)\inf\limits_{x_{2}\in A_{2}}f_{2}\left(x_{2}\right).
+		\end{align*}
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	若$A+B$有定义,则$\sup\left(A+B\right)=\sup A+\sup B$,$\inf\left(A+B\right)=\inf A+\inf B$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	若$A,B\subseteq\left[0,+\infty\right]$,则$\sup\left(AB\right)=\sup A\sup B$,$\inf\left(AB\right)=\inf A\inf B$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	若$f+g$在$X$上由定义,则
+	\begin{align*}
+		\varliminf_{\mathcal{F}}f+\varliminf_{\mathcal{F}}g\leqslant\varliminf_{\mathcal{F}}\left(f+g\right)\leqslant\varlimsup_{\mathcal{F}}f+\varliminf_{\mathcal{F}}g\leqslant\varlimsup_{\mathcal{F}}\left(f+g\right)\leqslant\varlimsup_{\mathcal{F}}f+\varlimsup_{\mathcal{F}}g.
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{}{}
+	若$\forall x\in X\left(f\left(x\right),g\left(x\right)\geqslant 0\right)$且$fg$有定义,则
+	\begin{align*}
+		\varliminf_{\mathcal{F}}f\varliminf_{\mathcal{F}}g\leqslant\varliminf_{\mathcal{F}}\left(fg\right)\leqslant\varlimsup_{\mathcal{F}}f\varliminf_{\mathcal{F}}g\leqslant\varlimsup_{\mathcal{F}}\left(fg\right)\leqslant\varlimsup_{\mathcal{F}}f\varlimsup_{\mathcal{F}}g.
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{}{}
+	若$\forall x\in X\left(f\left(x\right)\geqslant 0\right)$,则
+	\begin{align*}
+		\varlimsup_{\mathcal{F}}\frac{1}{f}=\frac{1}{\varliminf_{\mathcal{F}}f},\varliminf_{\mathcal{F}}\frac{1}{f}=\frac{1}{\varlimsup_{\mathcal{F}}f}.
+	\end{align*}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$g$关于$\mathcal{F}$在$\overline{\R}$中有极限点.
+	\begin{enumerate}
+		\item 若$f+g$有定义,则$\varlimsup_{\mathcal{F}}\left(f+g\right)=\varlimsup_{\mathcal{F}}f+\limit_{\mathcal{F}}g$,$\varliminf_{\mathcal{F}}\left(f+g\right)=\varliminf_{\mathcal{F}}f+\limit_{\mathcal{F}}g$.
+		\item 若$\forall x\in X\left(f\left(x\right),g\left(x\right)\geqslant 0\right)$且$fg$有定义,则$\varlimsup_{\mathcal{F}}\left(fg\right)=\varlimsup_{\mathcal{F}}f\limit_{\mathcal{F}}g$,$\varliminf_{\mathcal{F}}\left(fg\right)=\varliminf_{\mathcal{F}}f\limit_{\mathcal{F}}g$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$\limit_{\mathcal{F}}f=+\infty$.
+	\begin{enumerate}
+		\item 若$\varliminf_{\mathcal{F}}g>-\infty$且$f+g$有定义,则$\limit_{\mathcal{F}}\left(f+g\right)=+\infty$.
+		\item 若$\varliminf_{\mathcal{F}}g>0$且$fg$有定义,则$\limit_{\mathcal{F}}\left(fg\right)=+\infty$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$\limit_{\mathcal{F}}f=-\infty$.
+	\begin{enumerate}
+		\item 若$\varliminf_{\mathcal{F}}g<+\infty$且$f+g$有定义,则$\limit_{\mathcal{F}}\left(f+g\right)=-\infty$.
+		\item 若$\varliminf_{\mathcal{F}}g<0$且$fg$有定义,则$\limit_{\mathcal{F}}\left(fg\right)=-\infty$.
+	\end{enumerate}
+\end{corollary}

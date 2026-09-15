@@ -1,1 +1,23 @@
 \section{单变量实值函数在某点的左右极限}
+
+设$\emptyset\neq X\subseteq\overline{\R}$,$a\in\overline{\R}$,$Y$是拓扑空间,$f\in Y^{X}$.
+
+\begin{definition}{}{}
+	设$a\neq-\infty$且$a\in\closure_{\overline{\R}}\left(X\cap\left[-\infty,a\right)\right)$.若$\limit_{\substack{x\to a\\x\in X\cap\left(-\infty,a\right)}}f\left(x\right)$存在,则称之为$f$沿$A$在$a$处的左极限.
+	
+	特别地,若$Y$是\text{Hausdorff}空间,则记$f\left(a^{-}\right)=\limit_{\substack{x\to a\\x\in X\cap\left(-\infty,a\right)}}f\left(x\right)$.
+\end{definition}
+
+\begin{definition}{}{}
+	设$a\neq+\infty$且$a\in\closure_{\overline{\R}}\left(X\cap\left(a,+\infty\right]\right)$.若$\limit_{\substack{x\to a\\x\in X\cap\left(a,+\infty\right)}}f\left(x\right)$存在,则称之为$f$沿$A$在$a$处的右极限.
+	
+	特别地,若$Y$是\text{Hausdorff}空间,则记$f\left(a^{+}\right)=\limit_{\substack{x\to a\\x\in X\cap\left(a,+\infty\right)}}f\left(x\right)$.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$g:X\to\overline{\R}$单调.
+	\begin{enumerate}
+		\item 若$a\neq-\infty$且$a\in\closure_{\overline{\R}}\left(X\cap\left[-\infty,a\right)\right)$,则$f\left(a^{-}\right)$存在.
+		\item 若$a\neq+\infty$且$a\in\closure_{\overline{\R}}\left(X\cap\left(a,+\infty\right]\right)$,则$f\left(a^{+}\right)$存在.
+	\end{enumerate}
+\end{proposition}

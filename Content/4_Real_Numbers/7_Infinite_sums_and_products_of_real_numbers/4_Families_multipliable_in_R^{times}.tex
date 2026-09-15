@@ -1,1 +1,46 @@
 \section{\texorpdfstring{$\R^{\times}$}{R*}中的可乘族}
+
+\begin{lemma}{}{}
+	设$p\in\Z_{\geqslant 1}$,$\left(x_{i}\right)_{i=1}^{p}$是$\R$的元素族.
+	\begin{enumerate}
+		\item 若$\forall i\in\llbracket 1,p\rrbracket\left(a_{i}\in\R_{>0}\right)$,则$\prod\limits_{i=1}^{p}\left(1+a_{i}\right)\geqslant 1+\sum\limits_{i=1}^{p}x_{i}$.
+		\item 若$\forall i\in\llbracket 1,p\rrbracket\left(a_{i}\in\left(0,1\right)\right)$,则$\prod\limits_{i=1}^{p}\left(1-a_{i}\right)\geqslant 1-\sum\limits_{i=1}^{p}x_{i}$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{theorem}{}{}
+	设$\left(x_{i}\right)_{i\in I}$是$\left(-1,+\infty\right)$的元素族,则$\left(1+x_{i}\right)_{i\in I}$在$\R\setminus\left\{0\right\}$中可乘$\iff$ $\left(x_{i}\right)_{i\in I}$在$\R$中可和.
+\end{theorem}
+
+\begin{proposition}{}{}
+	$\left[-\infty,0\right]$,$\left[0,+\infty\right]$中的每个可和族在$\overline{\R}$中可和.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\left(x_{i}\right)_{i\in I}$是$\R_{\geqslant 0}$的元素族.
+	\begin{enumerate}
+		\item $\left(1+x_{i}\right)_{i\in I}$在$\overline{\R}$中可乘.
+		\item 若$\forall i\in I\left(x_{i}\leqslant 1\right)$,则$\left(1-x_{i}\right)_{i\in I}$在$\overline{\R}$中可乘.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\left(x_{i}\right)_{i\in I}$是$\R_{\geqslant 0}$的元素族.
+	\begin{enumerate}
+		\item $\prod\limits_{i\in I}x_{i}\in\R$ $\iff$ $\sum\limits_{i\in I}x_{i}$收敛.
+		\item 设$\forall i\in I\left(x_{i}\leqslant 1\right)$,则$\prod\limits_{i\in I}\left(1-x_{i}\right)\in\R$ $\iff$ $\sum\limits_{i\in I}x_{i}<+\infty$.
+		\item 若$\sum\limits_{i\in I}x_{i}=+\infty$,则$\prod\limits_{i\in I}\left(1+x_{i}\right)=+\infty$,$\prod\limits_{i\in I}\left(1-x_{i}\right)=0$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\left(x_{i}\right)_{i\in I}$是$\left[0,+\infty\right]$的元素族,$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的划分,则$\sum\limits_{i\in I}x_{i}=\sum\limits_{\lambda\in\Lambda}\sum\limits_{i\in I_{\lambda}}x_{i}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\left(x_{i}\right)_{i\in I}$是$\left[0,1\right]$的可乘族,$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的划分,则$\prod\limits_{i\in I}x_{i}=\prod\limits_{\lambda\in\Lambda}\prod\limits_{i\in I_{\lambda}}x_{i}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\left(x_{i}\right)_{i\in I}$是$\left[1,+\infty\right]$的可乘族,$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的划分,则$\prod\limits_{i\in I}x_{i}=\prod\limits_{\lambda\in\Lambda}\prod\limits_{i\in I_{\lambda}}x_{i}$.
+\end{proposition}

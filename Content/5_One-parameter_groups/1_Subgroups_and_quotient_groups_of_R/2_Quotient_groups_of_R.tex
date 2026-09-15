@@ -1,1 +1,34 @@
 \section{\texorpdfstring{$\R$}{R}的商群}
+
+\begin{proposition}{}{}
+	设$H$是$\R$的闭子群,$R/H\neq\left\{0\right\}$.
+	\begin{enumerate}
+		\item 若$H=\left\{0\right\}$,则有拓扑群同构$\R/H\simeq\R$;
+		\item 若存在$a\in\R_{>0}$使$H=a\Z$,则有拓扑群同构$\R/H\simeq\R/a\Z$;
+		\item 若$H=\R$,则有拓扑群同构$\R/H\simeq\left\{0\right\}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{lemma}{}{}
+	对任一$a,b\in\R_{>0}$,有拓扑群同构$\R/a\Z\simeq\R/b\Z$.
+\end{lemma}
+
+\begin{proposition}{}{}
+	设$H$是$G$的闭子群,则有拓扑群同构$\R/H\simeq\R/\Z$.
+\end{proposition}
+
+\begin{definition}{}{}
+	设$a\in\R_{>0}$.拓扑群$\R/a\Z$称为模$a$的实数加法群.特别地,记$\T=\R/\Z$,称之为一维环面.
+\end{definition}
+
+\begin{proposition}{}{}
+	$\T$是连通,局部连通的紧\text{Hausdorff}空间.进一步,对任一$\alpha\in\R$,定义$\left[\alpha,\alpha+1\right]$上的等价关系$\sim_{\alpha}$为
+	\begin{align*}
+		\forall x,y\in\left[\alpha,\alpha+1\right]\left(x\sim_{\alpha}\iff\left(x=y\vee\left\{x,y\right\}=\left\{\alpha,\alpha+1\right\}\right)\right),
+	\end{align*}
+	则有同胚$\left[\alpha,\alpha+1\right]/\sim_{\alpha}\simeq\T$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\alpha\in\R$,$\varphi:\R\twoheadrightarrow\T$是典范满射,则$\varphi|_{\left[\alpha,\alpha+1\right]}$是连续双射,但$\varphi^{-1}$在$\varphi\left(\alpha\right)$处不连续.
+\end{proposition}

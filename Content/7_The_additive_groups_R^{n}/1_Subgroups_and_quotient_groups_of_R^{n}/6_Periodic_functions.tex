@@ -1,1 +1,48 @@
 \section{周期函数}
+
+未加声明时,$X$是集合,$f:\R^{n}\to X$,$q\in\Z_{\geqslant 1}$.
+
+\begin{definition}
+	记$\Per\left(f\right)=\left\{a\in\R^{n}\setminus\left\{0\right\}\middle|\forall x\in\R^{n}\left(f\left(x+a\right)=f\left(x\right)\right)\right\}$.
+	\begin{itemize}
+		\item 若$\Per\left(f\right)\neq\emptyset$,则称$f$是周期函数.
+		\item 若$T\in\Per\left(f\right)$,则称$T$是$f$的一个周期.
+	\end{itemize}
+	容易验证,$\Per\left(f\right)\neq\emptyset$时是$\R^{n}$的加法子群,此时称$\Per\left(f\right)$是$f$的周期群.
+\end{definition}
+
+\begin{proposition}
+	设$X$是\text{Hausdorff}空间,$f$连续,则$\Per\left(f\right)$是$\R^{n}$的闭子群.
+\end{proposition}
+
+\begin{definition}
+	设$\Per\left(f\right)\neq\emptyset$且是$\R^{n}$的离散子群.若$\Per\left(f\right)$作为$\Z$-模的秩是$q$,则称$f$是$q$重周期函数.
+\end{definition}
+
+\begin{definition}
+	设$f$是$q$重周期函数.$\Per\left(f\right)$的带标基称为$f$的主周期组.
+\end{definition}
+
+\begin{proposition}
+	设$f$是$q$重周期函数,$\left(a_{i}\right)_{i=1}^{q}$和$\left(b_{i}\right)_{i=1}^{q}$是$f$的主周期组,则
+	\begin{align*}
+		\exists\left[r_{i,j}\right]_{\substack{1\leqslant i\leqslant q\\1\leqslant j\leqslant q}}\in\GL_{n}\left(\Z\right)\forall i\in\llbracket 1,q\rrbracket\left(b_{i}=\sum\limits_{j=1}^{q}r_{i,j}a_{j}\right).
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}
+	设$\Per\left(f\right)\neq\emptyset$,$V$是包含于$\Per\left(f\right)$的最大$\R$-子模,
+	\begin{enumerate}
+		\item $\forall x\in\R^{n}\forall v\in V\left(f\left(x+v\right)=f\left(x\right)\right)$.
+		\item 设$W\subseteq\R^{n}$的$V$的$\R$-补子模,则$\forall x\in\R^{n}\exists !v\in V\exists w\in W\left(x=v+w\wedge f\left(x\right)=f\left(w\right)\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}
+	设$G$是$\R^{n}$的子群,$\varphi:\R^{n}\twoheadrightarrow \R^{n}/G$是典范满射.
+	\begin{enumerate}
+		\item $\psi:X^{\left(\R^{n}/G\right)}\to\left\{u\in X^{\R^{n}}\middle|G\subseteq\Per\left(f\right)\right\},g\mapsto g\circ\varphi$是可逆映射.
+		\item 设$X$是拓扑空间,$G\subseteq\Per\left(f\right)$,则$f\circ\varphi$连续$\iff$ $f$连续.
+		\item 设$g:\R^{n}/G\to X$,则$g$连续$\iff$ $g\circ\varphi$连续. 
+	\end{enumerate}
+\end{proposition}
