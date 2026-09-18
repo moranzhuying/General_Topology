@@ -1,23 +1,29 @@
 \section{实值函数族的包络}
 
-未加声明时,$X$是非空集合,$\left(f_{i}\right)_{i\in I}$是$\overline{\R}^{X}$的元素族.
+记号约定:$E$是集合,$\left(f_{i}\right)_{i\in I}$是$\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$的元素族.
 
-\begin{definition}{}{}
-	$\sup\limits_{i\in I}f_{i}:X\to\overline{\R},x\mapsto\sup\limits_{i\in I}f_{i}\left(x\right)$和$\inf\limits_{i\in I}f_{i}:X\to\overline{\R},x\mapsto\inf\limits_{i\in I}f_{i}\left(x\right)$依次称为$\left(f_{i}\right)_{i\in I}$的上包络与下包络.
+\begin{definition}{实值函数族的上包络和下包络}{}
+	\begin{enumerate}
+		\item $\left(f_{i}\right)_{i\in I}$在$\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$中的上确界记作$\sup\limits_{i\in I}f_{i}$,称为$\left(f_{i}\right)_{i\in I}$的上包络.
+		\item $\left(f_{i}\right)_{i\in I}$在$\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$中的下确界记作$\inf\limits_{i\in I}f_{i}$,称为$\left(f_{i}\right)_{i\in I}$的下包络.
+	\end{enumerate}
 \end{definition}
 
 \begin{proposition}{}{}
-	在$\overline{\R}^{X}$中,$\sup\limits_{i\in I}f_{i}=\limit_{H\in\fin\left(X\right)}\sup\limits_{i\in H}f_{i}$,$\inf\limits_{i\in I}f_{i}=\limit_{H\in\fin\left(X\right)}\inf\limits_{i\in H}f_{i}$.
+	记$\mathfrak{F}\left(E\right)=\fin\left(E\right)\setminus\left\{\emptyset\right\}$.给$\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$装备乘积拓扑,那么$\sup\limits_{i\in I}f_{i}=\limit_{H\in\mathfrak{F}\left(E\right)}\sup\limits_{i\in H}f_{i}$.
 \end{proposition}
 
-\begin{definition}{}{}
-	若$\exists a\in\R\forall i\in I\forall x\in X\left(f_{i}\left(x\right)\leqslant a\right)$,则称$\left(f_{i}\right)_{i\in I}$在$X$上一致有上界.
-	
-	若$\exists a\in\R\forall i\in I\forall x\in X\left(f_{i}\left(x\right)\leqslant a\right)$,则称$\left(f_{i}\right)_{i\in I}$在$X$上一致有上界.
-	
-	若$\left(f_{i}\right)_{i\in I}$在$X$上一致有上界且一致有下界,则称$\left(f_{i}\right)_{i\in I}$在$X$上一致有界.
+\begin{definition}{一致上有界,一致下有界,一致有界}{}
+	\begin{enumerate}
+		\item 如果$\exists a\in\R\forall x\in E\forall i\in I\left(f_{i}\left(x\right)\leq a\right)$,则称$\left(f_{i}\right)_{i\in I}$在$E$上一致上有界.
+		\item 如果$\exists a\in\R\forall i\in I\forall x\in E\left(f_{i}\left(x\right)\geq a\right)$,则称$\left(f_{i}\right)_{i\in I}$在$E$上一致下有界.
+		\item 如果$\left(f_{i}\right)_{i\in I}$在$E$上既一致上有界,又一致下有界,则称$\left(f_{i}\right)_{i\in I}$在$E$上一致有界.
+	\end{enumerate}
 \end{definition}
 
-\begin{proposition}{}{}
-	$\left(f_{i}\right)_{i\in I}$在$X$上一致有界$\iff$ $\exists a\in\R_{\geqslant 0}\forall i\in I\forall x\in X\left(\left|f_{i}\left(x\right)\right|\leqslant a\right)$.
-\end{proposition}
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\left(f_{i}\right)_{i\in I}$在$E$上一致上有界$\iff$ $\sup\limits_{i\in I}f_{i}$在$E$上有上界.
+		\item $\left(f_{i}\right)_{i\in I}$在$E$上一致有界$\iff$ $\left(\left|f_{i}\right|\right)_{i\in I}$在$E$上有上界.
+	\end{enumerate}
+\end{remark}

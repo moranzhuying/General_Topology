@@ -1,14 +1,14 @@
-\section{实数的\texorpdfstring{$a$}{a}进展开式}
+\section{实数的\texorpdfstring{$a$}{a}进制展开式}
 
-\begin{definition}{}{}
-	设$p\in\Z_{\geqslant 2}$.我们称$x\in\R$关于$\left(p^{n}\right)_{n=0}^{\infty}$的展开式$\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{p^{n}}$是$x$的$p$进制展开式.特别地:
-	\begin{itemize}
-		\item $p=10$时,称$\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{p^{n}}$是$x$的十进制展开式.
-		\item $p=3$时,称$\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{p^{n}}$是$x$的三进制展开式.
-		\item $p=2$时,称$\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{p^{n}}$是$x$的二进制展开式.
-	\end{itemize}
+记号约定:$a\geq 2$.
+
+\begin{definition}{实数的$a$进制展开式}{}
+	设$x\in\R$.我们称$x$在底列$\left(a^{n}\right)_{n=0}^{\infty}$下的Cantor级数展开式为$x$的$a$进制展开式,称$a$为底.
 \end{definition}
 
-\begin{convention}{}{}
-	设$p\in\Z_{\geqslant 2}$,$x\in\R_{\geqslant 0}$的$p$进制展开式为$\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{p^{n}}$.对任一$n\in\Z_{\geqslant 1}$,记$\left(\overline{\lfloor x\rfloor.u_{1}\ldots u_{n}}\right)_{p}=u_{0}+\sum\limits_{k=1}^{n}u_{k}$.
+\begin{convention}{实数的$a$进制展开式的小数记号}{}
+	当$x\geq 0$时,如果$x$的$a$进制规范展开式为$\lfloor x\rfloor+\sum\limits_{n=0}^{\infty}\dfrac{u_{n+1}}{a^{n+1}}$,则记$p_{0}=\lfloor x\rfloor$,把$p_{0}$的数字写在小数点左侧,再依次把$u_{1},\ldots,u_{n}$写在小数点右侧,所得记号简写为$x=S\ldots$.这里不是说$S\ldots$等于$x$,而是约定$S\ldots$是$x$的一个不足近似,其误差限$\leq\dfrac{1}{a^{n}}$.
+	
+	当$x<0$时,先对$-x$按上述规则记号表示,再在整个记号前加负号,因此所得记号表示的是$x$的一个$\frac{1}{a^{n}}$-过剩近似.在负对数的传统记法中,通常沿用正数的小数表示方式，并在整数部分上方加横线,横线表示整数部分取负,而小数部分仍按正数处理.例如,$\overline{3}.14=-3+0.14$.
 \end{convention}
+

@@ -1,17 +1,20 @@
 \chapter{连续实值函数,半连续实值函数}
 
-未加声明时,默认$X$是拓扑空间,$f,g\in\overline{\R}^{X}$.
+记号约定:$E$是拓扑空间.
 
 \section{连续实值函数}
 
-\begin{theorem}{}{}
-	设$X$是非空紧空间,$f$连续,则存在$a,b\in X$使得$f\left(a\right)=\sup\limits_{x\in X}f\left(x\right)$且$b=\inf\limits_{x\in X}f\left(x\right)$.
+\begin{theorem}{Weierstrass定理}{}
+	设$E$非空且紧,$f\in\Hom_{\mathsf{Top}}\left(E,\overline{\R}\right)$.那么,存在$a,b\in E$使得$f\left(a\right)=\sup\limits_{x\in X}f\left(x\right)$和$b=\inf\limits_{x\in X}f\left(x\right)$.
 \end{theorem}
 
 \begin{corollary}{}{}
-	设$X$是非空紧空间,$f$是连续的有限实值函数,则$f$在$X$上有界.
+	设$E$非空且拟紧,$f\in\Hom_{\mathsf{Top}}\left(E,\R\right)$,则$f$在$E$上有界.
 \end{corollary}
 
-\begin{theorem}{}{}
-	设$X$是连通空间,$f$连续,则对任一$a,b\in X$,$\alpha\in\left[\min\left\{a,b\right\},\max\left\{a,b\right\}\right]$,存在$c\in X$使得$f\left(c\right)=X$.
+\begin{theorem}{Bolzano定理(介值定理)}{}
+	设$E$是连通空间,$f\in\Hom_{\mathsf{Top}}\left(E,\overline{\R}\right)$,则对每个$a,b\in E$和$\alpha\in\left[\inf\left(a,b\right),\sup\left(a,b\right)\right]$,存在$x\in E$使得$f\left(x\right)=c$.
 \end{theorem}
+
+
+

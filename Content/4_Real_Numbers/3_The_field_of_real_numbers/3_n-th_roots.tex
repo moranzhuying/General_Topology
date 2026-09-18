@@ -1,15 +1,22 @@
 \section{实数的\texorpdfstring{$n$}{n}次方根}
 
-本小节中,对任一$n\in\Z_{\geqslant 1}$,记$f_{n}:\R_{>0}\to\R_{>0},x\mapsto x^{n}$.
-
 \begin{proposition}{}{}
-	对任一$n\in\Z_{\geqslant 1}$,$f_{n}$是严格单调递增的连续双射,从而是同胚.
+	对每个$n\geq 1$,映射$\R_{\geq 0}\to\R_{\geq 0},x\mapsto x^{n}$是同胚.
 \end{proposition}
 
-\begin{definition}{}{}
-	对任一$x\in\R_{>0}$和$n\in\Z_{\geqslant 1}$,定义$x^{\frac{1}{n}}=\sqrt[n]{x}=f_{n}^{-1}\left(x\right)$称为$x$的$n$次方根.
+\begin{definition}{$n$次方根}{}
+	对每个$n\geq 1$,
+	\begin{enumerate}
+		\item 我们称$\R_{\geq 0}\to\R_{\geq 0},x\mapsto x^{n}$的逆映射
+		记作$\sqrt[n]{\cdot}$,称之为$n$次幂根映射.
+		\item 对每个$x\in\R_{\geq 0}$,把$\sqrt[n]{x}$记作$x^{\frac{1}{n}}$,称之为$x$的$n$次方根(或$\frac{1}{n}$次幂).
+	\end{enumerate}
 \end{definition}
 
 \begin{proposition}{}{}
-	对任一$n\in\Z_{\geqslant 1}$,$f_{n}^{-1}$是$\R_{>0}$的拓扑群自同构.
+	对每个$n\geq 1$,
+	\begin{enumerate}
+		\item $\sqrt[n]{\cdot}$是$\R_{\geq 0}$上的同胚,满足$\sqrt[n]{0}=0,\sqrt[n]{1}=1$,对每个$x,y\in\R_{\geq 0}$有$\sqrt[n]{xy}=\sqrt[n]{x}\cdot\sqrt[n]{y}$;
+		\item $\R_{>0}\to\R_{>0},x\mapsto\sqrt[n]{x}$是拓扑群同构.
+	\end{enumerate}
 \end{proposition}

@@ -466,7 +466,7 @@ base_thmstyle, label type=sketch, colback=mainpurple!5!white, accent north=mainp
 \newcommand{\codim}{\operatorname{codim}}% 余维数
 \newcommand{\row}{\operatorname{row}}    % 行空间
 \newcommand{\col}{\operatorname{col}}    % 列空间
-\newcommand{\Mat}{\operatorname{Mat}}    % 矩阵空间
+\newcommand{\Mat}{\mathbf{M}}               % 矩阵空间（与正文 \mathbf{M} 一致）
 \newcommand{\am}{\operatorname{AM}}      % 代数重数
 \newcommand{\gm}{\operatorname{GM}}      % 几何重数
 \newcommand{\Ann}{\operatorname{Ann}}    % 零化子
@@ -522,6 +522,8 @@ base_thmstyle, label type=sketch, colback=mainpurple!5!white, accent north=mainp
 \newcommand{\Gram}{\operatorname{Gram}}  % Gram 矩阵
 \newcommand{\Sesq}{\operatorname{Sesq}}  % 半双线性形式
 \newcommand{\Tens}{\operatorname{Tens}}  % 张量
+\newcommand{\B}{\mathbb{B}}              % 球（boule）
+\renewcommand{\S}{\mathbb{S}}            % 球面（sphère）；覆盖内核的 § 符号
 \newcommand{\Alt}{\operatorname{Alt}}    % 交错张量
 \newcommand{\Sym}{\operatorname{Sym}}    % 对称张量
 \newcommand{\Bil}{\operatorname{Bil}}    % 双线性形式
@@ -533,16 +535,13 @@ base_thmstyle, label type=sketch, colback=mainpurple!5!white, accent north=mainp
 \newcommand{\Pc}{\operatorname{Pc}}      % 特征多项式
 
 % -- 以下记号合并自 Algebra 系旧项目的 structure.sty（2026-09-11） --
-\newcommand{\Seqs}{\operatorname{Seqs}}  % 序列
 \newcommand{\vect}{\operatorname{vec}}   % 向量化
-\newcommand{\alt}{\operatorname{alt}}    % 交替（交替化）
 \newcommand{\Mul}{\operatorname{Mul}}         % 多重线性记号
 \newcommand{\algmult}{\operatorname{AlgMult}} % 代数重数
 \newcommand{\geomult}{\operatorname{GeoMult}} % 几何重数
 
 % -------- 6.2 几何 --------
 \newcommand{\Vol}{\operatorname{Vol}}    % 体积
-\newcommand{\dr}{\operatorname{dr}}      % 外微分相关
 \newcommand{\OrdB}{\operatorname{OrdB}}  % 有序基
 \newcommand{\Tran}{\operatorname{Tran}}  % 转移矩阵
 \newcommand{\Aff}{\operatorname{Aff}}    % 仿射空间
@@ -569,15 +568,12 @@ base_thmstyle, label type=sketch, colback=mainpurple!5!white, accent north=mainp
 
 % -------- 6.3 分析 --------
 \newcommand{\limit}{\displaystyle\lim}   % 强制使用行间公式样式的极限
-\newcommand{\tg}{\operatorname{tg}}      % 正切函数
-\newcommand{\ctg}{\operatorname{ctg}}    % 余切函数
 \newcommand{\interior}{\operatorname{int}} % 内部
 \newcommand{\exterior}{\operatorname{ext}} % 外部
 \newcommand{\boundary}{\operatorname{bd}}  % 边界
 \newcommand{\closure}{\operatorname{cl}}   % 闭包
 \newcommand{\supp}{\operatorname{supp}}    % 支集
 \newcommand{\disc}{\operatorname{disc}}    % 判别式/离散
-\newcommand{\tw}{\operatorname{tw}}        % 扭结 (Twist)
 \newcommand{\Comp}{\operatorname{Comp}}    % 连通分支（合并自 General_Topology）
 \newcommand{\Fil}{\operatorname{Fil}}    % 滤子格（合并自 General_Topology）
 \newcommand{\Idl}{\operatorname{Idl}}    % 序理想格（合并自 General_Topology）

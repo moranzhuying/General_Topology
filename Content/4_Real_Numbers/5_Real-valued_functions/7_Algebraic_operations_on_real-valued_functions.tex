@@ -1,126 +1,93 @@
 \section{实值函数的代数运算}
 
-未加声明时,$X$,$Y$是非空集合,$\emptyset\neq A\subseteq X$,$\emptyset\neq B\subseteq Y$,$f,g\in\overline{\R}^{X}$.
+记号约定:$X,X_{1},X_{2}$是集合.
 
 \begin{definition}{}{}
-	若对任一$x\in X$,$f\left(x\right)+g\left(x\right)$在$\overline{\R}$中有定义,则定义$f+g:X\to\overline{\R},x\mapsto f\left(x\right)+g\left(x\right)$.
+	\begin{enumerate}
+		\item 设$f,g\in\Hom_{\mathsf{Set}}\left(X,\overline{\R}\right)$.
+		\begin{itemize}
+			\item 当对每个$x\in X$,$f\left(x\right)+g\left(x\right)$有定义时,令$f+g:X\to\overline{\R},x\mapsto f\left(x\right)+g\left(x\right)$.
+			\item 当对每个$x\in X$,$f\left(x\right)g\left(x\right)$有定义时,令$fg:X\to\overline{\R},x\mapsto f\left(x\right)g\left(x\right)$.
+		\end{itemize}
+		\item 设$f\in\Hom_{\mathsf{Set}}\left(X,\overline{\R}\right)$.当对每个$x\in X$,$\left(f\left(x\right)\right)^{-1}$有定义时,令$\frac{1}{f}:X\to\overline{\R},x\mapsto\left(f\left(x\right)\right)^{-1}$.特别地,
+		\begin{itemize}
+			\item 当$X=\left[0,+\infty\right]$时,补充定义$\frac{1}{f}\left(0\right)\coloneq +\infty$;
+			\item 当$X=\left[-\infty,0\right]$时,补充定义$\frac{1}{f}\left(0\right)\coloneq -\infty$.
+		\end{itemize}
+	\end{enumerate}
 \end{definition}
 
-\begin{definition}{}{}
-	若对任一$x\in X$,$f\left(x\right)g\left(x\right)$在$\overline{\R}$中有定义,则定义$fg:X\to\overline{\R},x\mapsto f\left(x\right)g\left(x\right)$.
-\end{definition}
-
-\begin{definition}{}{}
-	若对任一$x\in X$,$\left(f\left(x\right)\right)^{-1}$在$\overline{\R}$中有定义,则定义$\frac{1}{f}:X\to\overline{\R},x\mapsto\frac{1}{f\left(x\right)}$.约定:
-	\begin{itemize}
-		\item 若$\forall x\in X\left(f\left(x\right)\geqslant 0\right)$,则$\frac{1}{0}=+\infty$;
-		\item 若$\forall x\in X\left(f\left(x\right)\leqslant 0\right)$,则$\frac{1}{0}=-\infty$.
-	\end{itemize}
-\end{definition}
-
 \begin{proposition}{}{}
-	设$\mathcal{F}$是$X$上的滤子,$f$,$g$关于$\mathcal{F}$在$X$中有极限点.若$f+g$,$fg$,$\frac{1}{f}$有定义,则
-	\begin{align*}
-		\limit_{\mathcal{F}}\left(f+g\right)=\limit_{\mathcal{F}}f+\limit_{\mathcal{F}}g,\limit_{\mathcal{F}}\left(fg\right)=\limit_{\mathcal{F}}f\limit_{\mathcal{F}}g,\limit_{\mathcal{F}}\frac{1}{f}=\frac{1}{\limit_{\mathcal{F}}f}.
-	\end{align*}
-\end{proposition}
-
-\begin{proposition}{}{}
-	若$f+g$在$A$上有定义,则
-	\begin{align*}
-		&\sup\limits_{x\in A}f\left(x\right)+\inf\limits_{x\in A}g\left(x\right)\leqslant\sup\limits_{x\in A}\left(f\left(x\right)+g\left(x\right)\right)\leqslant\sup\limits_{x\in A}f\left(x\right)+\sup\limits_{x\in A}f\left(x\right),\\
-		&\inf\limits_{x\in A}\left(f\left(x\right)+g\left(x\right)\right)\leqslant\inf\limits_{x\in A}f\left(x\right)+\inf\limits_{x\in A}g\left(x\right)\leqslant\sup\limits_{x\in A}f\left(x\right)+\inf\limits_{x\in A}g\left(x\right).
-	\end{align*}
-\end{proposition}
-
-\begin{proposition}{}{}
-	若$\forall x\in A\left(f\left(x\right)\geqslant 0\wedge g\left(x\right)\geqslant 0\right)$,则
-	\begin{align*}
-		&\sup\limits_{x\in A}f\left(x\right)\inf\limits_{x\in A}g\left(x\right)\leqslant\sup\limits_{x\in A}f\left(x\right)g\left(x\right)\leqslant\sup\limits_{x\in A}f\left(x\right)\sup\limits_{x\in A}g\left(x\right),\\
-		&\inf\limits_{x\in A}f\left(x\right)\inf\limits_{x\in A}g\left(x\right)\leqslant\inf\limits_{x\in A}f\left(x\right)g\left(x\right)\leqslant\inf\limits_{x\in A}f\left(x\right)\sup\limits_{x\in A}g\left(x\right).
-	\end{align*}
-\end{proposition}
-
-\begin{proposition}{}{}
-	若$\forall x\in A\left(f\left(x\right)\geqslant 0\right)$,则
-	\begin{align*}
-		\sup\limits_{x\in A}\frac{1}{f\left(x\right)}=\frac{1}{\inf\limits_{x\in A}f\left(x\right)},\inf\limits_{x\in A}\frac{1}{f\left(x\right)}=\frac{1}{\sup\limits_{x\in A}f\left(x\right)}.
-	\end{align*}
+	设$\mathfrak{F}$是$X$上的滤子,$A$是$X$的非空子集,$f,g\in\Hom_{\mathsf{Set}}\left(X,\overline{\R}\right)$.
+	\begin{enumerate}
+		\item 如果$\sup\limits_{x\in A}f\left(x\right)+\inf\limits_{x\in A}g\left(x\right),\sup\limits_{x\in A}f\left(x\right)+\sup\limits_{x\in A}g\left(x\right)$有定义,对每个$x\in A$,$f\left(x\right)+g\left(x\right)$有定义,那么
+		\begin{align*}
+			\sup\limits_{x\in A}f\left(x\right)+\inf\limits_{x\in A}g\left(x\right)\leq\sup\limits_{x\in A}\left(f\left(x\right)+g\left(x\right)\right)\leq\sup\limits_{x\in A}f\left(x\right)+\sup\limits_{x\in A}g\left(x\right).
+		\end{align*}
+		\item 如果$f|_{A},g|_{A}\geq 0$,$\sup\limits_{x\in A}f\left(x\right)\sup\limits_{x\in A}g\left(x\right),\sup\limits_{x\in A}f\left(x\right)\inf\limits_{x\in A}g\left(x\right)$有定义,对每个$x\in A$,$f\left(x\right)g\left(x\right)$有定义,那么
+		\begin{align*}
+			\sup\limits_{x\in A}f\left(x\right)\inf\limits_{x\in A}g\left(x\right)\leq\sup\limits_{x\in A}\left(f\left(x\right)g\left(x\right)\right)\leq\sup\limits_{x\in A}f\left(x\right)\sup\limits_{x\in A}g\left(x\right).
+		\end{align*}
+		\item 如果$f|_{A}\geq 0$,那么$\sup\limits_{x\in A}\left(f\left(x\right)\right)^{-1}=\left(\inf\limits_{x\in A}f\left(x\right)\right)^{-1}$.
+	\end{enumerate}
 \end{proposition}
 
 \begin{corollary}{}{}
-	设$k\in\R$.
+	设$f\in\Hom_{\mathsf{Set}}\left(X,\overline{\R}\right),k\in\R$,$A$是$X$的非空子集
 	\begin{enumerate}
-		\item 若$k+f$在$A$上有定义,则$\sup\limits_{x\in A}\left(k+f\left(x\right)\right)=k+\sup\limits_{x\in A}f\left(x\right)$,$\inf\limits_{x\in A}\left(k+f\left(x\right)\right)=k+\inf\limits_{x\in A}f\left(x\right)$.
-		\item 若$k\geqslant 0$且$kf$有定义,则$\sup\limits_{x\in A}kf\left(x\right)=k\sup\limits_{x\in A}f\left(x\right)$,$\inf\limits_{x\in A}kf\left(x\right)=k\inf\limits_{x\in A}f\left(x\right)$.
+		\item 如果$k+\sup\limits_{x\in A}f\left(x\right)$有定义,对每个$x\in A$,$k+f\left(x\right)$有定义,那么$\sup\limits_{x\in A}\left(k+f\left(x\right)\right)=k+\sup\limits_{x\in A}f\left(x\right)$.
+		\item 如果$k\geq 0$,$k\sup\limits_{x\in A}f\left(x\right)$有定义,对每个$x\in A$,$kf\left(x\right)$有定义,那么$\sup\limits_{x\in A}kf\left(x\right)=k\sup\limits_{x\in A}f\left(x\right)$.
 	\end{enumerate}
 \end{corollary}
 
 \begin{corollary}{}{}
-	设$f_{1}\in\overline{\R}^{A}$,$f_{2}\in\overline{\R}^{B}$.
+	设$f_{1}\in\Hom_{\mathsf{Set}}\left(X_{1},\overline{\R}\right),f_{2}\in\Hom_{\mathsf{Set}}\left(X_{2},\overline{\R}\right)$,$A_{1},A_{2}$分别是$X_{1},X_{2}$的非空子集.
 	\begin{enumerate}
-		\item 若$\sup\limits_{x\in A_{1}}f_{1}\left(x\right)+\sup\limits_{y\in A_{2}}f\left(x\right)$有定义,对任一$\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}$,$f_{1}\left(x_{1}\right)+f_{2}\left(x_{2}\right)$有定义,则
+		\item 如果$\sup\limits_{x_{1}\in A_{1}}f_{1}\left(x_{1}\right)+\sup\limits_{x_{2}\in A_{2}}f\left(x_{2}\right)$有定义,对每个$\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}$,$f_{1}\left(x_{1}\right)+f_{2}\left(x_{2}\right)$有定义,那么
 		\begin{align*}
-			&\sup\limits_{\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}}\left(f_{1}\left(x_{1}\right)+f_{2}\left(x_{2}\right)\right)=\sup\limits_{x_{1}\in A_{1}}f_{1}\left(x_{1}\right)+\sup\limits_{x_{2}\in A_{2}}f_{2}\left(x_{2}\right),\\
-			&\inf\limits_{\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}}\left(f_{1}\left(x_{1}\right)+f_{2}\left(x_{2}\right)\right)=\inf\limits_{x_{1}\in A_{1}}f_{1}\left(x_{1}\right)+\inf\limits_{x_{2}\in A_{2}}f_{2}\left(x_{2}\right),
+			\sup\limits_{\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}}\left(f_{1}\left(x_{1}\right)+f_{2}\left(x_{2}\right)\right)=\sup\limits_{x_{1}\in A_{1}}f_{1}\left(x_{1}\right)+\sup\limits_{x_{2}\in A_{2}}f_{2}\left(x_{2}\right).
 		\end{align*}
-		\item 若$f_{1}|_{A_{1}},f_{2}|_{A_{2}}\geqslant 0$,$\sup\limits_{x\in A_{1}}f_{1}\left(x\right)\sup\limits_{y\in A_{2}}f\left(x\right)$有定义,对任一$\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}$,$f_{1}\left(x_{1}\right)f_{2}\left(x_{2}\right)$有定义,则
+		\item 如果$f_{1}|_{A_{1}},f_{2}|_{A_{2}}\geqslant 0$,$\sup\limits_{x\in A_{1}}f_{1}\left(x\right)\sup\limits_{x_{2}\in A_{2}}f\left(x_{2}\right)$有定义,对每个$\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}$,$f_{1}\left(x_{1}\right)f_{2}\left(x_{2}\right)$有定义,那么
 		\begin{align*}
-			&\sup\limits_{\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}}\left(f_{1}\left(x_{1}\right)f_{2}\left(x_{2}\right)\right)=\sup\limits_{x_{1}\in A_{1}}f_{1}\left(x_{1}\right)\sup\limits_{x_{2}\in A_{2}}f_{2}\left(x_{2}\right),\\
-			&\inf\limits_{\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}}\left(f_{1}\left(x_{1}\right)f_{2}\left(x_{2}\right)\right)=\inf\limits_{x_{1}\in A_{1}}f_{1}\left(x_{1}\right)\inf\limits_{x_{2}\in A_{2}}f_{2}\left(x_{2}\right).
+			\sup\limits_{\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}}\left(f_{1}\left(x_{1}\right)f_{2}\left(x_{2}\right)\right)=\sup\limits_{x_{1}\in A_{1}}f_{1}\left(x_{1}\right)\sup\limits_{x_{2}\in A_{2}}f_{2}\left(x_{2}\right).
 		\end{align*}
 	\end{enumerate}
 \end{corollary}
 
 \begin{corollary}{}{}
-	若$A+B$有定义,则$\sup\left(A+B\right)=\sup A+\sup B$,$\inf\left(A+B\right)=\inf A+\inf B$.
-\end{corollary}
-
-\begin{corollary}{}{}
-	若$A,B\subseteq\left[0,+\infty\right]$,则$\sup\left(AB\right)=\sup A\sup B$,$\inf\left(AB\right)=\inf A\inf B$.
-\end{corollary}
-
-\begin{proposition}{}{}
-	若$f+g$在$X$上由定义,则
-	\begin{align*}
-		\varliminf_{\mathcal{F}}f+\varliminf_{\mathcal{F}}g\leqslant\varliminf_{\mathcal{F}}\left(f+g\right)\leqslant\varlimsup_{\mathcal{F}}f+\varliminf_{\mathcal{F}}g\leqslant\varlimsup_{\mathcal{F}}\left(f+g\right)\leqslant\varlimsup_{\mathcal{F}}f+\varlimsup_{\mathcal{F}}g.
-	\end{align*}
-\end{proposition}
-
-\begin{proposition}{}{}
-	若$\forall x\in X\left(f\left(x\right),g\left(x\right)\geqslant 0\right)$且$fg$有定义,则
-	\begin{align*}
-		\varliminf_{\mathcal{F}}f\varliminf_{\mathcal{F}}g\leqslant\varliminf_{\mathcal{F}}\left(fg\right)\leqslant\varlimsup_{\mathcal{F}}f\varliminf_{\mathcal{F}}g\leqslant\varlimsup_{\mathcal{F}}\left(fg\right)\leqslant\varlimsup_{\mathcal{F}}f\varlimsup_{\mathcal{F}}g.
-	\end{align*}
-\end{proposition}
-
-\begin{proposition}{}{}
-	若$\forall x\in X\left(f\left(x\right)\geqslant 0\right)$,则
-	\begin{align*}
-		\varlimsup_{\mathcal{F}}\frac{1}{f}=\frac{1}{\varliminf_{\mathcal{F}}f},\varliminf_{\mathcal{F}}\frac{1}{f}=\frac{1}{\varlimsup_{\mathcal{F}}f}.
-	\end{align*}
-\end{proposition}
-
-\begin{corollary}{}{}
-	设$g$关于$\mathcal{F}$在$\overline{\R}$中有极限点.
 	\begin{enumerate}
-		\item 若$f+g$有定义,则$\varlimsup_{\mathcal{F}}\left(f+g\right)=\varlimsup_{\mathcal{F}}f+\limit_{\mathcal{F}}g$,$\varliminf_{\mathcal{F}}\left(f+g\right)=\varliminf_{\mathcal{F}}f+\limit_{\mathcal{F}}g$.
-		\item 若$\forall x\in X\left(f\left(x\right),g\left(x\right)\geqslant 0\right)$且$fg$有定义,则$\varlimsup_{\mathcal{F}}\left(fg\right)=\varlimsup_{\mathcal{F}}f\limit_{\mathcal{F}}g$,$\varliminf_{\mathcal{F}}\left(fg\right)=\varliminf_{\mathcal{F}}f\limit_{\mathcal{F}}g$.
+		\item 如果$A,B$是$\overline{\R}$的子集,$\sup\left(A\right)+\sup\left(B\right)$有定义,对每个$\left(x,y\right)\in A\times B$,$x+y$有定义,那么
+		\begin{align*}
+			\sup\left(A+B\right)=\sup\left(A\right)+\sup\left(B\right).
+		\end{align*}
+		\item 如果$A,B$是$\left[0,+\infty\right]$的子集,$\sup\left(A\right)\sup\left(B\right)$有定义,对每个$\left(x,y\right)\in A\times B$,$xy$有定义,那么
+		\begin{align*}
+			\sup\left(AB\right)=\sup\left(A\right)\sup\left(B\right).
+		\end{align*}
 	\end{enumerate}
 \end{corollary}
 
-\begin{corollary}{}{}
-	设$\limit_{\mathcal{F}}f=+\infty$.
+\begin{proposition}{}{}
+	设$X$是装备了滤子$\mathfrak{F}$的上定向集,$f,g\in\Hom_{\mathsf{Set}}\left(X,\overline{\R}\right)$.
 	\begin{enumerate}
-		\item 若$\varliminf_{\mathcal{F}}g>-\infty$且$f+g$有定义,则$\limit_{\mathcal{F}}\left(f+g\right)=+\infty$.
-		\item 若$\varliminf_{\mathcal{F}}g>0$且$fg$有定义,则$\limit_{\mathcal{F}}\left(fg\right)=+\infty$.
+		\item 如果$\varlimsup\limits_{\mathfrak{F}}f+\varliminf\limits_{\mathfrak{F}}g,\varlimsup\limits_{\mathfrak{F}}f+\varlimsup\limits_{\mathfrak{F}}g,f+g$有定义,那么
+		\begin{align*}
+			\varlimsup\limits_{\mathfrak{F}}f+\varliminf\limits_{\mathfrak{F}}g\leq\varlimsup\limits_{\mathfrak{F}}\left(f+g\right)\leq\varlimsup\limits_{\mathfrak{F}}f+\varlimsup\limits_{\mathfrak{F}}g.
+		\end{align*}
+		\item 如果$f,g\geq 0$,$\varlimsup\limits_{\mathfrak{F}}f\varlimsup\limits_{\mathfrak{F}}g,\varlimsup\limits_{\mathfrak{F}}f\varliminf\limits_{\mathfrak{F}}g,fg$有定义,那么
+		\begin{align*}
+			\sup\limits_{\mathfrak{F}}f\inf\limits_{\mathfrak{F}}g\leq\sup\limits_{\mathfrak{F}}\left(fg\right)\leq\sup\limits_{\mathfrak{F}}f\sup\limits_{\mathfrak{F}}g.
+		\end{align*}
+		\item 如果$f\geq 0$,那么$\varlimsup\limits_{\mathfrak{F}}\frac{1}{f}=\left(\varliminf\limits_{\mathfrak{F}}f\right)^{-1}$.
 	\end{enumerate}
-\end{corollary}
+\end{proposition}
 
 \begin{corollary}{}{}
-	设$\limit_{\mathcal{F}}f=-\infty$.
+	设$X$是装备了滤子$\mathfrak{F}$的上定向集,$f,g\in\Hom_{\mathsf{Set}}\left(X,\overline{\R}\right)$.
 	\begin{enumerate}
-		\item 若$\varliminf_{\mathcal{F}}g<+\infty$且$f+g$有定义,则$\limit_{\mathcal{F}}\left(f+g\right)=-\infty$.
-		\item 若$\varliminf_{\mathcal{F}}g<0$且$fg$有定义,则$\limit_{\mathcal{F}}\left(fg\right)=-\infty$.
+		\item 如果$g$沿$\mathfrak{F}$收敛,$f+g$有定义,$\varlimsup\limits_{\mathfrak{F}}f+\limit_{\mathfrak{F}}g$有定义,那么$\varlimsup\limits_{\mathfrak{F}}\left(f+g\right)=\varlimsup\limits_{\mathfrak{F}}f+\limit_{\mathfrak{F}}g$.
+		\item 如果$g$沿$\mathfrak{F}$收敛,$f,g\geq 0$,$fg$有定义,$\varlimsup\limits_{\mathfrak{F}}f\limit_{\mathfrak{F}}g$有定义,那么$\varlimsup\limits_{\mathfrak{F}}\left(fg\right)=\varlimsup\limits_{\mathfrak{F}}f\limit_{\mathfrak{F}}g$.
+		\item 如果$\limit_{\mathfrak{F}}f=+\infty,\varliminf\limits_{\mathfrak{F}}g>-\infty$,$f+g$有定义,那么$\limit_{\mathfrak{F}}\left(f+g\right)=+\infty$.
+		\item 如果$\limit_{\mathfrak{F}}f=+\infty,\varliminf\limits_{\mathfrak{F}}g>0$,$fg$有定义,那么$\limit_{\mathfrak{F}}fg=+\infty$.
 	\end{enumerate}
 \end{corollary}

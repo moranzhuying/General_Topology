@@ -1,19 +1,17 @@
 \section{\texorpdfstring{$\R$}{R}上的拓扑群自同态}
 
 \begin{proposition}{}{}
-	设$f$是$\R$的加法群的自同态,则$\exists!a\in\R\left(f=a\id_{\R}\right)$.进一步,若$a\neq 0$,则$f$是拓扑群自同构.
+	对加法群$\R$上的每个拓扑群自同态$f$,存在$a\in\R$使得$f$是$a$在$\R$上诱导的左乘.
 \end{proposition}
 
 \begin{corollary}{}{}
-	$\R$上的所有拓扑群自同态构成的的加法群同构于$\R$.
+	加法群$\R$的自同构群同构于$\R^{\times}$.
 \end{corollary}
 
 \begin{corollary}{}{}
-	$\R$上的所有拓扑群自同构按映射复合组成的乘法群同构于$\R^{\times}$.
+	设$G$是(作为拓扑群)同构于加法群$\R$的拓扑群(乘法记号).
+	\begin{enumerate}
+		\item 对每个$a\in G$,存在唯一的$f_{a}\in\Hom_{\mathsf{TopGrp}}\left(\R,G\right)$使得$f_{a}\left(1\right)=a$.
+		\item 对每个$a\in G\setminus\left\{1\right\}$有$f_{a}\in\Isom_{\mathsf{TopGrp}}\left(\R,G\right)$.
+	\end{enumerate}
 \end{corollary}
-
-\begin{proposition}{}{}
-	设拓扑群$G$同构于加法群$\R$,则对任一$a\in G$,存在唯一的拓扑群同态$f_{a}:\R\to G$使得$f_{a}\left(1\right)=a$.
-	
-	进一步,若$a\neq 1_{G}$,则$f_{a}$是拓扑群同构.
-\end{proposition}

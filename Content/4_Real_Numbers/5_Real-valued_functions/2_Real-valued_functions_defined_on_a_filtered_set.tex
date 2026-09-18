@@ -1,31 +1,47 @@
 \section{定向集上的实值函数}
 
-未加声明时,$X$是集合,$\emptyset\neq A\subseteq X$,$\fin\left(X\right)$是$X$的所有有限子集组成的集合,$\mathcal{F}$是$X$上的滤子.
+记号约定:$X$是装备了滤子$\mathfrak{F}$的集合.
 
-\begin{proposition}{}{}
-	设$f,g\in\overline{\R}^{X}$关于$\mathcal{F}$在$\overline{\R}$中有极限点.若$\exists M\in\mathcal{F}\forall x\in M\left(f\left(x\right)\leqslant g\left(x\right)\right)$,则$\limit_{\mathcal{F}}f\leqslant\limit_{\mathcal{F}}g$.
-\end{proposition}
-
-\begin{proposition}{}{}
-	设$\left(X,\leqslant\right)$是偏序集,$A$按$\leqslant$是右定向的,$f:A\to\overline{\R}$单调.
+\begin{theorem}{不等式的延拓定理}{}
+	设$f,g\in\Hom_{\mathsf{Set}}\left(X,\R\right)$,二者沿$\mathfrak{F}$收敛.
 	\begin{enumerate}
-		\item 若$f$单调递增,则$\limit_{A}f=\sup\limits_{x\in A}f\left(x\right)$.
-		\item 若$f$单调递减,则$\limit_{A}f=\inf\limits_{x\in A}f\left(x\right)$.
+		\item 如果对每个$A\in\mathfrak{F}$有$f|_{A}\leq g|_{A}$,那么$\limit_{\mathfrak{F}}f\leq\limit_{\mathfrak{F}}g$.
+		\item 如果$f\leq g$,那么$\limit_{\mathfrak{F}}f\leq\limit_{\mathfrak{F}}g$.
 	\end{enumerate}
-\end{proposition}
+\end{theorem}
+
+\begin{remark}{}{}
+	如果$f<g$,那么$\limit_{\mathfrak{F}}\leq\limit_{\mathfrak{F}}g$,但是$\limit_{\mathfrak{F}}f<\limit_{\mathfrak{F}}g$不一定成立.换言之,取极限不能保持严格的不等式.
+\end{remark}
+
+\begin{theorem}{单调极限定理}{}
+	设$X$是偏序集,$A$是$X$的上定向集.
+	\begin{enumerate}
+		\item 每个单调函数$f:A\to\overline{\R}$在$A$中都有极限点.
+		\item 如果$f:A\to\overline{\R}$递增,那么$\limit_{A}f=\sup\limits_{x\in A}f\left(x\right)$.
+		\item 如果$f:A\to\overline{\R}$递减,那么$\limit_{A}f=\inf\limits_{x\in A}f\left(x\right)$.
+	\end{enumerate}
+\end{theorem}
 
 \begin{corollary}{}{}
-	设$\left(X,\leqslant\right)$是偏序集,$A$按$\leqslant$是右定向的,$f:A\to\overline{\R}$单调.
+	设$X$是偏序集,$A$是$X$的上定向集,$f\in\Hom_{\mathsf{Set}}\left(A,\overline{\R}\right)$.
 	\begin{enumerate}
-		\item 若$f$单调递增,则$\limit_{A}f\in\R$ $\iff$ $f$在$A$上有上界.
-		\item 若$f$单调递减,则$\limit_{A}f\in\R$ $\iff$ $f$在$A$上有下界.
+		\item 当$f$递增时,$f$在$A$中的极限有限 $\iff$ $f$有上界.
+		\item 当$f$递减时,$f$在$A$中的极限有限 $\iff$ $f$有下界.
 	\end{enumerate}
 \end{corollary}
 
-\begin{corollary}{}{}
-	设$\R$中的序列$\left(x_{n}\right)_{n=0}^{\infty}$单调,则$\left(x_{n}\right)_{n=0}^{\infty}$在$\overline{\R}$中有极限点.进一步:
+\begin{proposition}{}{}
 	\begin{enumerate}
-		\item 若$\left(x_{n}\right)_{n=0}^{\infty}$在$\Z_{\geqslant 0}$上有上界,则$\left(x_{n}\right)_{n=0}^{\infty}$在$\overline{\R}$中的极限点属于$\R$,否则$\left(x_{n}\right)_{n=0}^{\infty}$的极限点为$+\infty$.
-		\item 若$\left(x_{n}\right)_{n=0}^{\infty}$在$\Z_{\geqslant 0}$上有下界,则$\left(x_{n}\right)_{n=0}^{\infty}$在$\overline{\R}$中的极限点属于$\R$,否则$\left(x_{n}\right)_{n=0}^{\infty}$的极限点为$-\infty$.
+		\item $\R$中的每个单调序列在$\overline{\R}$中都收敛.
+		\item 设$\left(x_{n}\right)_{n=0}^{\infty}$是$\R$中的递增序列.
+		\begin{itemize}
+			\item 如果$\left(x_{n}\right)_{n=0}^{\infty}$有上界,那么$\left(x_{n}\right)_{n=0}^{\infty}$的极限点在$\R$中.
+			\item 如果$\left(x_{n}\right)_{n=0}^{\infty}$无上界,那么$\left(x_{n}\right)_{n=0}^{\infty}$的极限点是$+\infty$.
+		\end{itemize}
 	\end{enumerate}
-\end{corollary}
+\end{proposition}
+
+\begin{remark}{}{}
+	$\N$中每个严格递增的序列都收敛到$+\infty$.
+\end{remark}

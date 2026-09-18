@@ -1,7 +1,23 @@
 \section{原点处的可乘族}
 
-本小节中,设$a\in\R_{>0}\setminus\left\{1\right\}$,$\left(x_{i}\right)_{i\in I}$是$\R_{>0}$的元素族.
+记号约定:$a\in\R_{>0}\setminus\left\{1\right\}$.
+
+\begin{proposition}{可乘族与可和族的对应}{}
+	设$\left(x_{i}\right)_{i\in I}$是$\R_{>0}$中的元素族,那么$\left(x_{i}\right)_{i\in I}$在$\R$中可乘$\iff$ $\left(\log_{a}\left(x_{i}\right)\right)_{i\in I}$在$\R$中可和.两条件之一成立时,
+	\begin{align*}
+		\log_{a}\left(\prod\limits_{i\in I}x_{i}\right)=\sum\limits_{i\in I}\log_{a}\left(x_{i}\right).
+	\end{align*}
+\end{proposition}
 
 \begin{proposition}{}{}
-	$\left(x_{i}\right)_{i\in I}$在$\R_{>0}$中可乘$\iff$ $\left(\log_{a}x_{i}\right)_{i\in I}$在$\R$中可和.两条件之一成立时,$\log_{a}\prod\limits_{i\in I}x_{i}=\sum\limits_{i\in I}\log_{a}x_{i}$.
+	设$\left(x_{n}\right)_{n=0}^{\infty}$是$\left(-1,+\infty\right)$中的序列.下列陈述等价:
+	\begin{enumerate}
+		\item 以$\left(1+x_{n}\right)_{n=0}^{\infty}$为一般项的无穷乘积收敛.
+		\item 以$\left(\log_{a}\left(1+x_{n}\right)\right)_{n=0}^{\infty}$为通项的级数收敛.
+	\end{enumerate}
+	两条件之一成立时,$\log_{a}\left(\prod\limits_{n=0}^{\infty}\left(1+x_{i}\right)\right)=\sum\limits_{n=0}^{\infty}\log_{a}\left(1+x_{i}\right)$.
 \end{proposition}
+
+\begin{remark}{}{}
+	正实数无穷乘积的研究由此化归为实数无穷和的研究,其中各项以对数形式出现.后面会看到,此类和可利用对数的微分性质来研究.
+\end{remark}

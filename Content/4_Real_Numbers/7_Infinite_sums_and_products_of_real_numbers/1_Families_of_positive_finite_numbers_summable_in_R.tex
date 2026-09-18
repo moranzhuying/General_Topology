@@ -2,79 +2,64 @@
 
 \section{\texorpdfstring{$\R$}{R}中的非负有限可和族}
 
-未加声明时,$\left(x_{i}\right)_{i\in I}$,$\left(y_{i}\right)_{i\in I}$是$\R_{\geqslant 0}$的元素族.
+记号约定:$\left(x_{i}\right)_{i\in I},\left(y_{i}\right)_{i\in I}$是$\R_{\geq 0}$的元素族.
 
 \begin{theorem}{}{}
-	$\left(x_{i}\right)_{i\in I}$在$\R$中可和$\iff$ $\left\{s_{H}\in\R_{\geqslant 0}\middle|H\in\fin\left(I\right)\right\}$在$\R$中有上界.两个条件之一成立时,
-	\begin{align*}
-		\sum\limits_{i\in I}x_{i}=\sup\limits_{H\in\fin\left(I\right)}\sum\limits_{i\in H}x_{i}.
-	\end{align*}
+	对每个$H\in\fin\left(I\right)$记$s_{H}=\sum\limits_{i\in H}x_{i}$.下列陈述等价:
+	\begin{enumerate}
+		\item $\left(x_{i}\right)_{i\in I}$在$\R$中可和.
+		\item $\left(s_{H}\right)_{H\in\fin\left(I\right)}$在$\R$中有上界.
+	\end{enumerate}
+	两条件之一成立时,$\sum\limits_{i\in I}x_{i}=\sup\limits_{H\in\fin\left(I\right)}s_{H}$.
 \end{theorem}
 
-\begin{proposition}{}{}
-	设$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$\fin\left(I\right)$的元素族,并且$\forall H\in\fin\left(I\right)\exists\lambda\in\Lambda\left(H\subseteq I_{\lambda}\right)$.下列命题等价:
+\begin{remark}{}{}
 	\begin{enumerate}
-		\item $\left(x_{i}\right)_{i\in I}$可和.
-		\item $\left(s_{I_{\lambda}}\right)_{\lambda\in\Lambda}$在$\R_{\geqslant 0}$中有上界.
+		\item 设$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$\fin\left(I\right)$的元素族,满足$\forall H\in\fin\left(I\right)\exists\lambda\in\Lambda\left(H\subseteq I_{\lambda}\right)$,那么
+		\begin{center}
+			$\left(x_{i}\right)_{i\in I}$在$\R$中可和$\iff$ $\left(s_{I_{\lambda}}\right)_{\lambda\in\Lambda}$在$\R$中有上界.
+		\end{center}
+		\item 设$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$是$\R_{\geqslant 0}$的级数,那么
+		\begin{center}	
+			$\left(x_{n}\right)_{n=0}^{\infty}$在$\R$中可和$\iff$存在$\N$中的严格递增序列$\left(k_{n}\right)_{n=0}^{\infty}$使得$\left(s_{k_{n}}\right)_{n=0}^{\infty}$在$\R$中有上界.
+		\end{center}
 	\end{enumerate}
-\end{proposition}
+\end{remark}
 
-\begin{corollary}{}{}
-	设$\left(x_{n}\right)_{n=0}^{\infty}$是$\R_{\geqslant 0}$的元素族,对任一$n\in\Z_{\geqslant 0}$,$s_{n}=\sum\limits_{p=0}^{n}x_{p}$.下列命题等价:
+\begin{example}{}{}
 	\begin{enumerate}
-		\item $\left(x_{n}\right)_{n=0}^{\infty}$在$\R_{\geqslant 0}$中可和.
-		\item 存在$\Z$中的严格单调序列$\left(n_{k}\right)_{k=0}^{\infty}$使得$\left(s_{n_{k}}\right)_{k=0}^{\infty}$在$\R_{\geqslant 0}$中有上界.
+		\item 对每个$q\in\left[0,1\right)\subseteq\R$,序列$\left(q^{n}\right)_{n=0}^{\infty}$在$\R$中可和,并且$\sum\limits_{n=0}^{\infty}q^{n}=\left(1-q\right)^{-1}$.
+		\item 设$a,b\in\left[0,1\right)\subseteq\R$,那么$\left(a^{m}b^{n}\right)_{\left(m,n\right)\in\N\times\N}$在$\R$中可和.
+		\item 对每个$p\geq 2$,序列$\left(n^{-p}\right)_{n=0}^{\infty}$在$\R$中可和.
+		\item 序列$((n+1)^{-1})_{n=0}^{\infty}$在$\R$中不可和.
+		\item 设$I$是$\R$中长度为$l\in\R_{\geq 0}$的有界区间,$\left(I_{n}\right)_{n=0}^{\infty}$是$\R$中一族两两不交且包含于$I$的开区间,那么$\left(\ell\left(I_{n}\right)\right)_{n=0}^{\infty}$可和且$\sum\limits_{n=0}^{\infty}\ell\left(I_{n}\right)\leq l$.
+	\end{enumerate}
+\end{example}
+
+\begin{theorem}{可和族的比较判别法}{}
+	设$\forall i\in I\left(x_{i}\leq y_{i}\right)$.
+	\begin{enumerate}
+		\item 如果$\left(y_{i}\right)_{i\in I}$在$\R$中可和,那么$\left(x_{i}\right)_{i\in I}$在$\R$中可和,$\sum\limits_{i\in I}x_{i}\leqslant\sum\limits_{i\in I}y_{i}$.
+		\item 如果$\left(y_{i}\right)_{i\in I}$在$\R$中可和,并且$\exists k\in I\left(x_{k}<y_{k}\right)$,那么$\sum\limits_{i\in I}x_{i}<\sum\limits_{i\in I}y_{i}$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}{序列的比较判别法}{}
+	设$\left(x_{n}\right)_{n=0}^{\infty},\left(y_{n}\right)_{n=0}^{\infty}$是$\R_{\geq 0}$的序列.
+	\begin{enumerate}
+		\item 如果$\left(y_{n}\right)_{n=0}^{\infty}$可和,并且$\exists a\in\R_{>0}\exists n_{0}\in\N\forall n\geq n_{0}\left(x_{n}\leqslant ay_{n}\right)$,那么$\left(x_{n}\right)_{n=0}^{\infty}$可和.
+		\item 如果$\left(y_{n}\right)_{n=0}^{\infty}$不可和,并且$\exists a\in\R_{>0}\exists n_{0}\in\N\forall n\geq n_{0}\left(x_{n}\geqslant ay_{n}\right)$,那么$\left(x_{n}\right)_{n=0}^{\infty}$不可和.
 	\end{enumerate}
 \end{corollary}
 
-\begin{theorem}{}{}
-	设$\forall i\in I\left(x_{i}\leqslant y_{i}\right)$.
+\begin{example}{}{}
 	\begin{enumerate}
-		\item 若$\left(y_{i}\right)_{i\in I}$可和,则$\left(x_{i}\right)_{i\in I}$可和,并且$\sum\limits_{i\in I}x_{i}\leqslant\sum\limits_{i\in I}y_{i}$.
-		\item 若$\exists k\in I\left(x_{k}<y_{k}\right)$,则$\left(x_{i}\right)_{i\in I}$和$\left(y_{i}\right)_{i\in I}$都可和,并且$\sum\limits_{i\in I}x_{i}<\sum\limits_{i\in I}y_{i}$.
+		\item 设$a\in\R_{>0}$,那么$(a^{n}(n!)^{-1})_{n=0}^{\infty}$在$\R$中可和.
+		\item 设$\left(a_{n}\right)_{n=0}^{\infty}$是$\R_{\geq 0}$中序列,并且在$\R$中可和,那么对每个$p\geq 2$,序列$\left(a_{n}^{p}\right)_{n=0}^{\infty}$在$\R$中可和.
+		\item 设$a,b\in\left(-\infty,1\right)\subseteq\R$,那么$((a^{m}+b^{n})^{-1})_{\left(m,n\right)\in\N\times\N}$在$\R$中可和.
 	\end{enumerate}
-\end{theorem}
-
-\begin{theorem}{}{}
-	设$\left(x_{n}\right)_{n=0}^{\infty}$和$\left(y_{n}\right)_{n=0}^{\infty}$都是$\R_{\geqslant 0}$的序列.
-	\begin{enumerate}
-		\item 若$\left(y_{n}\right)_{n=0}^{\infty}$可和且$\exists a\in\R_{>0}\exists n_{0}\in\Z_{\geqslant 0}\forall n\in\llbracket n_{0},+\infty)\left(x_{n}\leqslant ay_{n}\right)$,则$\left(x_{n}\right)_{n=0}^{\infty}$可和.
-		\item 若$\left(y_{n}\right)_{n=0}^{\infty}$不可和且$\exists a\in\R_{>0}\exists n_{0}\in\Z_{\geqslant 0}\forall n\in\llbracket n_{0},+\infty)\left(x_{n}\geqslant ay_{n}\right)$,则$\left(x_{n}\right)_{n=0}^{\infty}$不可和.
-	\end{enumerate}
-\end{theorem}
+\end{example}
 
 \begin{corollary}{}{}
-	设$\left(x_{i}\right)_{i\in I}$可和,则对任一$J\subseteq I$有$\sum\limits_{i\in J}x_{i}\leqslant\sum\limits_{i\in I}x_{i}$,并且$\sum\limits_{i\in J}x_{i}=\sum\limits_{i\in I}x_{i}\iff\forall i\in I\setminus J\left(x_{i}=0\right)$.
+	设$\left(x_{i}\right)_{i\in I}$在$\R$中可和.那么,对每个$J\subseteq I$,我们有$\sum\limits_{i\in J}x_{i}\leqslant\sum\limits_{i\in I}x_{i}$和$\sum\limits_{i\in J}x_{i}=\sum\limits_{i\in I}x_{i}\iff\forall i\in I\setminus J\left(x_{i}=0\right)$.
 \end{corollary}
-
-\begin{proposition}{}{}
-	设$q\in\left[0,1\right)$,则$\left(q_{n}\right)_{n=0}^{\infty}$可和,并且$\sum\limits_{n=0}^{\infty}q^{n}=\frac{1}{1-q}$.
-\end{proposition}
-
-\begin{proposition}{}{}
-	设$p\in\Z_{\geqslant 1}$,则$p=1$时$\left(\frac{1}{n^{p}}\right)_{n=1}^{\infty}$不可和,$p>1$时$\left(\frac{1}{n^{p}}\right)_{n=1}^{\infty}$可和.
-\end{proposition}
-
-\begin{proposition}{}{}
-	设$\R_{\geqslant 0}$的元素族$\left(x_{n}\right)_{n=0}^{\infty}$可和,$p\in\Z_{\geqslant 2}$,则$\left(x_{n}^{p}\right)_{n=0}^{\infty}$可和.
-\end{proposition}
-
-\begin{proposition}{}{}
-	设$\left(I_{n}\right)_{n=0}^{\infty}$是$\R$的一族两两不交的开区间,$\R$中的有界区间$I$满足
-	\begin{align*}
-		\forall n\in\Z_{\geqslant 0}\left(I_{n}\subseteq I\right)\wedge\ell\left(I\right)=l\in\R_{\geqslant 0},
-	\end{align*}
-	则$\left(\ell\left(I_{n}\right)\right)_{n=0}^{\infty}$可和且$\sum\limits_{n=0}^{\infty}\ell\left(I_{n}\right)\leqslant l$.
-\end{proposition}
-
-\begin{proposition}{}{}
-	设$\left(a,b\right)\in\R\times\R$.
-	\begin{enumerate}
-		\item 若$a,b\in\left[0,1\right)$,则$\left(a^{m}b^{n}\right)_{\left(m,n\right)\in\Z_{\geqslant 0}\times\Z_{\geqslant 0}}$可和,并且$\sum\limits_{m,n\in\Z_{\geqslant 0}}a^{m}b^{n}=\frac{1}{\left(1-a\right)\left(1-b\right)}$.
-		\item 若$a,b\in\left(-\infty,1\right)$,则$\left(\frac{1}{a^{m}+b^{n}}\right)_{\left(m,n\right)\in\Z_{\geqslant 0}\times\Z_{\geqslant 0}}$可和.
-	\end{enumerate}
-\end{proposition}
-
-\begin{proposition}{}{}
-	设$a\in\R_{>0}$,则$\left(\frac{a^{n}}{n!}\right)_{n=0}^{\infty}$可和.
-\end{proposition}

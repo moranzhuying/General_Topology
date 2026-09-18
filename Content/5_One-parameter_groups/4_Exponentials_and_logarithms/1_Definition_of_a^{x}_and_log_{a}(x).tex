@@ -6,55 +6,63 @@
 	乘法群$\R_{>0}$和加法群$\R$作为拓扑群同构.
 \end{theorem}
 
-\begin{lemma}{}{}
-	对任一$a\in\R_{>0}$,存在唯一的拓扑群同构$f:\R\to\R_{>0}$使得$f_{a}\left(1\right)=a$.
-\end{lemma}
+\begin{proposition}{实指数函数的存在性}{existence-and-uniqueness-of-real-expotential-function}
+	对每个$a\in\R_{>0}$,存在唯一的$f_{a}\in\Hom_{\mathsf{TopGrp}}\left(\R,\R_{>0}\right)$使得$f_{a}\left(1\right)=a$.
+\end{proposition}
 
-\begin{definition}{}{}
-	设$a\in\R_{>0}$,拓扑群同构$f:\R\to\R_{>0}$满足$f_{a}\left(1\right)=a$.对任一$x\in\R_{>0}$,记$f_{a}\left(x\right)=a^{x}$.
-	
-	我们称$f_{a}$是以$a$为底的指数函数.
+\begin{definition}{以$a$为底的实指数函数和实对数函数}{}
+	沿用\cref{existence-and-uniqueness-of-real-expotential-function}的记号.设$a\in\R_{>0}$.
+	\begin{enumerate}
+		\item 我们称$f_{a}$是以$a$为底的实指数函数.当$a\neq 1$时,记$\log_{a}\coloneq f_{a}^{-1}$,称$\log_{a}$是以$a$为底的实对数函数.
+		\item 对每个$x\in\R$,记$a^{x}\coloneq f_{a}\left(x\right)$,称$a^{x}$是以$a$为底的指数.
+		\item 当$a\neq 1$时,对每个$x\in\R_{>0}$,称$\log_{a}\left(x\right)$是以$a$为底的对数.
+	\end{enumerate}
 \end{definition}
 
 \begin{proposition}{}{}
-	设$a\in\R_{>0}\setminus\left\{1\right\}$,则$f_{a}:\R_{>0}\to\R,x\mapsto a^{x}$是可逆拓扑群同态.
-\end{proposition}
-
-\begin{definition}{}{}
-	设$a\in\R_{>0}\setminus\left\{1\right\}$,$f_{a}$是以$a$为底的指数函数.我们称$\log_{a}\coloneq f_{a}^{-1}$是以$a$为底的对数函数.
-\end{definition}
-
-\begin{proposition}{}{}
-	设$a\in\R_{>0}$,$x,y\in\R$.
-	\begin{enumerate}
-		\item $a^{x+y}=a^{x}a^{y}$.
-		\item $a^{-x}=\left(a^{x}\right)^{-1}$.
-		\item $\left(a^{x}\right)^{y}=a^{xy}$.
-	\end{enumerate}
+	对每个$f\in\Hom_{\mathsf{TopGrp}}\left(\R,\R_{>0}\right)$,存在$\lambda\in\R$使得$\forall x\in\R\left(f\left(x\right)=a^{\lambda x}\right)$.
 \end{proposition}
 
 \begin{corollary}{}{}
-	设$a\in\R_{>0}\setminus\left\{1\right\}$,$x\in\R_{>0}$,$y\in\R$,则$x^{y}=a^{y\log_{a}x}$.
+	\begin{enumerate}
+		\item 对每个$x,y\in\R$和$a\in\R_{>0}$有$\left(a^{x}\right)^{y}=a^{xy}$.
+		\item 对每个$a\in\R_{>0}\setminus\left\{1\right\},x\in\R_{>0}$和$y\in\R$有$x^{y}=a^{y\log_{a}\left(x\right)}$.
+		\item 对每个$a\in\R_{>0}$和$n\geq 1$有$a^{\frac{1}{n}}=\sqrt[n]{a}$.
+	\end{enumerate}
 \end{corollary}
 
 \begin{proposition}{}{}
-	设$a\in\R_{>0}\setminus\left\{1\right\}$,$x,y\in\R_{>0}$.
-	\begin{enumerate}
-		\item $\log_{a}a=0$,$\log_{a}a=1$.
-		\item $\log_{a}\left(xy\right)=\log_{a}x+\log_{a}y$.
-		\item $\log_{a}x^{-1}=-\log_{a}x$.
-	\end{enumerate}
+	对每个$a,b\in\R_{>0}\setminus\left\{1\right\}$和$x\in\R_{>0}$有$\log_{a}\left(x\right)=\log_{a}\left(b\right)\log_{b}\left(x\right)$.
 \end{proposition}
 
-\begin{corollary}{}{}
-	设$a\in\R_{>0}\setminus\left\{1\right\}$,$x\in\R_{>0}$,$y\in\R$,则$\log_{a}\left(x^{y}\right)=y\log_{a}x$.
-\end{corollary}
+\begin{proposition}{}{}
+	对每个$f\in\End_{\mathsf{TopGrp}}\left(\R_{>0}\right)$,存在唯一的$\alpha\in\R$使得$\forall x\in\R_{>0}\left(f\left(x\right)=x^{\alpha}\right)$.
+\end{proposition}
 
-\begin{corollary}{}{}
-	设$a,b\in\R_{>0}\setminus\left\{1\right\}$,$x\in\R_{>0}$,则$\log_{a}x=\left(\log_{a}b\right)\cdot\left(\log_{b}x\right)$.
-\end{corollary}
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 由于对数函数是群同态,对数长期是数值计算的基本工具,用于此目的时取$a=10$,并有$\log_{10}\left(x\right)$的数值表.
+		\item 在分析学中,我们经常采用另一个底$\mathrm{e}$,它满足
+		\begin{align*}
+			\limit_{\substack{x\to 1\\ x\in\R_{>0}\setminus\left\{1\right\}}}\frac{\log_{\mathrm{e}}\left(x\right)}{x-1}=1.
+		\end{align*}
+	\end{enumerate}
+\end{remark}
 
-\begin{theorem}{}{}
-	对$\R_{>0}$上的每个拓扑群自同态$f$,存在$\alpha\in\R$使得$\forall x\in\R_{>0}\left(f\left(x\right)=x^{\alpha}\right)$.
-\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

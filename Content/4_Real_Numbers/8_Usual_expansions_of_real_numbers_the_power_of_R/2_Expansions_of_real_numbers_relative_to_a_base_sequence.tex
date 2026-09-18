@@ -1,51 +1,59 @@
 \section{实数在基列下的展开式}
 
 \begin{lemma}{}{}
-	对任一$x\in\R$,存在唯一的$n\in\Z$使得$n\leqslant x<n+1$且$n=\max\left\{k\in\Z\middle|k\leqslant x\right\}$.
+	\begin{enumerate}
+		\item 对每个$x\in\R$,集合$\left\{k\in\Z\middle|k\leq x\right\}$有最大元$n$,并且$n$是$\Z$中唯一满足$n\leq x<n+1$的元素.
+		\item 对每个$x\in\R$,集合$\left\{k\in\Z\middle|k\geq x\right\}$有最小元$m$,并且$m$是$\Z$中唯一满足$m<x\leq m+1$的元素.
+	\end{enumerate}
 \end{lemma}
 
-\begin{lemma}{}{}
-	对任一$x\in\R$,存在唯一的$n\in\Z$使得$n<x-1\leqslant n$且$n=\min\left\{k\in\Z\middle|k\geqslant x\right\}$.
-\end{lemma}
-
-\begin{definition}{}{}
-	定义$\lfloor\cdot\rfloor:\R\to\Z,x\mapsto\max\left\{n\in\Z\middle|n\leqslant x\right\}$,$\lceil\cdot\rceil:\R\to\Z,x\mapsto\min\left\{n\in\Z\middle|n\geqslant x\right\}$.
-	\begin{itemize}
+\begin{definition}{下取整函数,上取整函数}{}
+	定义$\lfloor\cdot\rfloor:\R\to\Z,x\mapsto\max\left\{n\in\Z\middle|n\leq x\right\},\lceil\cdot\rceil:\R\to\Z,x\mapsto\min\left\{n\in\Z\middle|n\geq x\right\}$.
+	\begin{enumerate}
 		\item $\lfloor\cdot\rfloor$和$\lceil\cdot\rceil$分别称为下取整函数和上取整函数.
-		\item 对任一$x\in\R$,分别称$\lfloor x\rfloor$和$\lceil x\rceil$为$x$的上取整部分(整数部分)和下取整部分.
-	\end{itemize}
+		\item 对每个$x\in\R$,分别称$\lfloor x\rfloor$和$\lceil x\rceil$为$x$的上取整部分(或整数部分)和下取整部分.
+	\end{enumerate}
 \end{definition}
 
-\begin{definition}{}{}
-	设$\left(a_{n}\right)_{n=0}^{\infty}$和$\left(d_{n}\right)_{n=0}^{\infty}$是$\Z_{\geqslant 0}$中的序列,并且满足如下条件:
-	\begin{itemize}
-		\item $\forall n\in\Z_{\geqslant 0}\left(d_{n+1}=a_{n+1}d_{n}\right)$;
-		\item $\left(d_{n}\right)_{n=0}^{\infty}$严格单调递增;
-		\item $d_{0}=1$.
-	\end{itemize}
-	可以验证$\forall n\in\Z_{\geqslant 0}\left(a_{n}\geqslant 2\right)$.我们称$\left(d_{n}\right)_{n=0}^{\infty}$是基序列,$\left(a_{n}\right)_{n=0}^{\infty}$是底因子列.
+\begin{definition}{基列,底列}{}
+	设$\left(\left(a_{n},d_{n}\right)\right)_{n=0}^{\infty}$是$\N\times\N$中的序列.如果
+	\begin{enumerate}
+		\item $\left(d_{n}\right)_{n=0}^{\infty}$严格递增,
+		\item $d_{0}=1$,对每个$n\geq 1$有$d_{n}=a_{n}d_{n-1}$,
+	\end{enumerate}
+	则称$\left(d_{n}\right)_{n=0}^{\infty}$是(Cantor)基列,$\left(a_{n}\right)_{n=0}^{\infty}$是$\left(d_{n}\right)_{n=0}^{\infty}$-底列.
 \end{definition}
 
-\begin{definition}{}{}
-	设$\left(d_{n}\right)_{n=0}^{\infty}$是底序列,$x\in\R$.$\Q$中的序列$\left(\frac{\lfloor xd_{n}\rfloor}{d_{n}}\right)_{n=0}^{\infty}$称为$x$关于$\left(d_{n}\right)_{n=0}^{\infty}$的不足近似列.
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$\left(a_{n}\right)_{n=0}^{\infty}$是底列,那么$\left(a_{n}\right)_{n=0}^{\infty}$的每一项都$\geq 2$.
+		\item 如果$x\in\R$,那么对每个$n\in\N$有$\left|x-\dfrac{\lfloor xd_{n}\rfloor}{d_{n}}\right|\leq\dfrac{1}{d_{n}}$.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{关于基列的不足近似列}{}
+	设$x\in\R$,$\left(d_{n}\right)_{n=0}^{\infty}$是基列,$\left(a_{n}\right)_{n=0}^{\infty}$是$\left(d_{n}\right)_{n=0}^{\infty}$-底列,$\left(r_{n}\right)_{n=0}^{\infty}$是$\R$中的序列.如果
+	\begin{align*}
+		\forall n\in\N\left(r_{n}\leq x\leq r_{n}+d_{n}\right),
+	\end{align*}
+	则称$\left(r_{n}\right)_{n=0}^{\infty}$是$x$的$\left(d_{n}\right)_{n=0}^{\infty}$-不足近似列.
 \end{definition}
 
-\begin{proposition}{}{}
-	设$x\in\R$,$\left(d_{n}\right)_{n=0}^{\infty}$,$\left(a_{n}\right)_{n=0}^{\infty}$,$\left(r_{n}\right)_{n=0}^{\infty}$依次是底序列,底因子列,$x$关于$\left(d_{n}\right)_{n=0}^{\infty}$的不足近似列.
-	
-	那么,$\Z$中满足下列条件的序列$\left(u_{n}\right)_{n=1}^{\infty}$唯一:
-	\begin{itemize}
-		\item $\forall n\in\Z_{\geqslant 1}\left(0\leqslant u_{n}\leqslant a_{n}-1\wedge \lfloor xd_{n}\rfloor=a_{n}\lfloor xd_{n-1}\rfloor+u_{n}\right)$;
-		\item $\forall n\in\Z_{\geqslant 1}\left(r_{n}=\lfloor x\rfloor+\sum\limits_{k=1}^{n}\frac{u_{k}}{d_{k}}\right)$.
-	\end{itemize}
+\begin{proposition}{实数的Cantor级数展开的存在性}{cantor-series-expansion-of-real-numbers}
+	设$x\in\R$,$\left(d_{n}\right)_{n=0}^{\infty}$是基列,$\left(a_{n}\right)_{n=0}^{\infty}$是$\left(d_{n}\right)_{n=0}^{\infty}$-底列.对每个$n\in\N$,令$p_{n}=\lfloor xd_{n}\rfloor,r_{n}=\dfrac{p_{n}}{d_{n}},u_{n+1}=p_{n+1}-a_{n+1}p_{n}$.
+	\begin{enumerate}
+		\item $\left(r_{n}\right)_{n=0}^{\infty}$递增,对每个$n\in\N$有$r_{n}\leq x\leq r_{n}+\dfrac{1}{d_{n}}$.
+		\item 对每个$n\geq 1$有$0\leq u_{n}\leq a_{n}-1$和$r_{n}=p_{0}+\sum\limits_{k=1}^{n}\dfrac{u_{k}}{d_{k}}$.
+		\item $\limit_{n\to +\infty}r_{n}=x$.
+	\end{enumerate}
 \end{proposition}
 
-\begin{theorem}{}{}
-	对任一$x\in\R$,有$x=\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{d_{n}}$,其中:
-	\begin{itemize}
-		\item $\left(d_{n}\right)_{n=0}^{\infty}$,$\left(a_{n}\right)_{n=0}^{\infty}$,$\left(r_{n}\right)_{n=0}^{\infty}$依次是底序列,底因子列,$x$关于$\left(d_{n}\right)_{n=0}^{\infty}$的不足近似列.
-		\item $\left(u_{n}\right)_{n=0}^{\infty}$是$\Z$中的序列,满足$\forall n\in\Z_{\geqslant 1}\left(0\leqslant u_{n}\leqslant a_{n}-1\wedge \lfloor xd_{n}\rfloor=a_{n}\lfloor xd_{n-1}\rfloor+u_{n}\wedge r_{n}=\lfloor x\rfloor+\sum\limits_{k=1}^{n}\frac{u_{k}}{d_{k}}\right)$.
-		\item $\sum\limits_{n=1}^{\infty}\frac{u_{n}}{d_{n}}$收敛.
-	\end{itemize}
-	我们称$\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{d_{n}}$是$x$关于$\left(d_{n}\right)_{n=0}^{\infty}$的展开式,对任一$n\in\Z_{\geqslant 1}$,$u_{n}$称为$x$的第$n$位数字.
-\end{theorem}
+\begin{definition}{Cantor级数,实数的Cantor级数展开式和标准不足近似列}{}
+	沿用\cref{cantor-series-expansion-of-real-numbers}的设定.
+	\begin{enumerate}
+		\item 以$\left(\dfrac{u_{n+1}}{d_{n+1}}\right)_{n=0}^{\infty}$为通项的级数称为$\left(d_{n}\right)_{n=0}^{\infty}$-Cantor级数.
+		\item 对每个$n\geq 1$,称$u_{n}$是$x$在第$n$位的数字(或数码),$d_{n}$是$x$的第$n$位的分母.
+		\item 我们称$p_{0}+\sum\limits_{k=0}^{\infty}\dfrac{u_{k+1}}{d_{k+1}}$是$x$在$\left(d_{n}\right)_{n=0}^{\infty}$下的Cantor级数展开式.
+		\item 我们称$\left(r_{n}\right)_{n=0}^{\infty}$是$x$的$\left(d_{n}\right)_{n=0}^{\infty}$-标准不足近似列.
+	\end{enumerate}
+\end{definition}

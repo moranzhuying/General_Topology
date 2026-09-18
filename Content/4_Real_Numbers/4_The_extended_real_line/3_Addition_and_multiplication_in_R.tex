@@ -1,74 +1,54 @@
 \section{\texorpdfstring{$\R$}{R}中的加法和乘法}
 
-本小节中,记$A^{\prime}=\R\sqcup\left\{+\infty\right\}$,$A^{\prime\prime}=\R\sqcup\left\{-\infty\right\}$.
+记号约定:$A^{\prime}=\left(-\infty,+\infty\right],A^{\prime\prime}=\left[-\infty,+\infty\right)$.
 
 \begin{proposition}{}{}
-	$-\id_{\R}$可以唯一地延拓为$\overline{\R}$上的连续子同胚$\iota$,并且满足$\iota\left(-\infty\right)=+\infty$,$\iota\left(+\infty\right)=-\infty$.
+	$\R\to\R,x\mapsto x$可以连续延拓为$\overline{\R}\to\overline{\R},x\mapsto
+	\begin{cases}
+		-x,&-\infty<x<+\infty,\\
+		+\infty,&x=-\infty.\\
+		-\infty,&x=+\infty.
+	\end{cases}$
 \end{proposition}
 
-\begin{definition}{}{}
-	按照如下方式将$\R$上的加法分别延拓为$A^{\prime}$和$A^{\prime\prime}$上的加法:
+\begin{proposition}{}{}
+	分别把$\R$上的加法连续延拓到$A^{\prime}$和$A^{\prime\prime}$上,具体而言:
 	\begin{itemize}
-		\item 对任一$x\in A^{\prime}$,$x+\left(+\infty\right)=\left(+\infty\right)+x=+\infty$;
-		\item 对任一$x\in A^{\prime\prime}$,$x+\left(-\infty\right)=\left(-\infty\right)+x=-\infty$.
+		\item 对每个$x\in A^{\prime}$有$x+\left(+\infty\right)=\left(+\infty\right)+x=+\infty$;
+		\item 对每个$x\in A^{\prime\prime}$有$x+\left(-\infty\right)=\left(-\infty\right)+x=-\infty$.
 	\end{itemize}
-	容易验证,按上述延拓得到的映射只在$\left(-\infty,+\infty\right)$和$\left(+\infty,-\infty\right)$处不连续.
-\end{definition}
-
-\begin{proposition}{}{}
-	在延拓后的加法下,$A^{\prime}$和$A^{\prime\prime}$各自构成加法交换半群,二者的零元都是$0$.
-\end{proposition}
-
-\begin{proposition}{}{}
-	在延拓后的加法下,$A^{\prime}$中的不可消去元有且仅有$+\infty$,$A^{\prime\prime}$中的不可消去元有且仅有$-\infty$.
-\end{proposition}
-
-\begin{proposition}{}{}
-	设$x,y,u,v\in\overline{\R}$且$x+y$和$u+v$有定义.
 	\begin{enumerate}
-		\item 若$x\leqslant y$且$u\leqslant v$,则$x+u\leqslant u+v$.
-		\item 若$x<y$且$u<v$,则$x+u<u+v$.
+		\item $A^{\prime}$和$A^{\prime\prime}$都是交换幺半群,单位元是$0$,各自有唯一的不可消去元$+\infty$和$-\infty$.
+		\item 设$x,y,z,t\in\overline{\R}$.
+		\begin{itemize}
+			\item 如果$x\leq y,z\leq t$,并且$x+z,y+t$在$\overline{\R}$中有定义,那么$x+z\leq y+t$.
+			\item $\left(x<y\implies x+z<y+z\right)\iff z\in\R\wedge z\notin\left\{-\infty,+\infty\right\}$.
+			\item 如果$x<y,z<t$,$x+z$和$y+t$都有定义,那么$x+z<y+t$.
+		\end{itemize}
 	\end{enumerate}
 \end{proposition}
 
-\begin{definition}{}{}
+\begin{proposition}{}{}
 	对任一$x\in\overline{\R}$,定义$x^{+}=\sup\left(x,0\right)$,$x^{-}=\sup\left(-x,0\right)$,$\left|x\right|=\sup\left(x,-x\right)$.
-\end{definition}
-
-\begin{proposition}{}{}
-	$\left(+\infty\right)^{+}=+\infty$,$\left(-\infty\right)^{-}=+\infty$,$\left(+\infty\right)^{-}=0$,$\left(-\infty\right)^{+}=0$,$\left|+\infty\right|=\left|-\infty\right|=+\infty$.
-\end{proposition}
-
-\begin{proposition}{}{}
-	对任一$x\in\overline{\R}$,有$x=x^{+}-x^{-}$,$\left|x\right|=x^{+}+x^{-}$.
-\end{proposition}
-
-\begin{proposition}{}{}
-	设$x,y\in\overline{\R}$且$x+y$有定义,则$\left|x+y\right|\leqslant\left|x\right|+\left|y\right|$.
-\end{proposition}
-
-\begin{definition}{}{}
-	按照如下方式将$\R$上的乘法延拓为$\overline{\R}\setminus\left\{0\right\}$上的乘法:
-	\begin{itemize}
-		\item 对任一$x\in\R_{>0}$,$x\cdot\left(+\infty\right)=\left(+\infty\right)\cdot x=+\infty$,$x\cdot\left(-\infty\right)=\left(-\infty\right)\cdot x=-\infty$;
-		\item 对任一$x\in-\R_{>0}$,$x\cdot\left(+\infty\right)=\left(+\infty\right)\cdot x=-\infty$,$x\cdot\left(-\infty\right)=\left(-\infty\right)\cdot x=+\infty$.
-	\end{itemize}
-	容易验证,按上述延拓得到的映射只在$\left(0,+\infty\right)$,$\left(+\infty,0\right)$,$\left(0,-\infty\right)$,$\left(-\infty,0\right)$处不连续.
-\end{definition}
-
-\begin{proposition}{}{}
-	在延拓后的乘法下,$\overline{\R}\setminus\left\{0\right\}$构成乘法交换半群,幺元为$1$,$+\infty$和$-\infty$在该乘法下不可消去.
-\end{proposition}
-
-\begin{proposition}{}{}
-	设$x,y,z\in\overline{\R}$且$xz$和$yz$有定义.
 	\begin{enumerate}
-		\item 若$x\leqslant y$且$z>0$,则$xz\leqslant yz$.
-		\item 若$x\leqslant y$且$z<0$,则$xz\geqslant yz$.
-		\item 若$xy$有定义,则$\left|xy\right|=\left|x\right|\left|y\right|$.
+		\item $\left(+\infty\right)^{+}=+\infty,\left(-\infty\right)^{-}=+\infty,\left(+\infty\right)^{-}=0,\left(-\infty\right)^{+}=0,\left|+\infty\right|=\left|-\infty\right|=+\infty$.
+		\item 对每个$x\in\overline{\R}$,有$x=x^{+}-x^{-}$和$\left|x\right|=x^{+}+x^{-}$.
+		\item 对每个$x,y\in\overline{\R}$,当$x+y$有定义时,$\left|x+y\right|\leqslant\left|x\right|+\left|y\right|$.
 	\end{enumerate}
 \end{proposition}
 
+
 \begin{proposition}{}{}
-	设$x,y,z\in\overline{\R}$且$x\left(y+z\right)$,$xz$和$yz$有定义,则$x\left(y+z\right)=xz+yz$.
+	记$\overline{\R}^{\times}=\overline{\R}\setminus\left\{0\right\}$.把$\R$上的乘法连续延拓到$\overline{\R}^{\times}$上,具体而言:
+	\begin{itemize}
+		\item 对每个$x\in\R_{>0}$有$x\cdot\left(+\infty\right)=\left(+\infty\right)\cdot x=+\infty$和$x\cdot\left(-\infty\right)=\left(-\infty\right)\cdot x=-\infty$;
+		\item 对每个$x\in\R_{<0}$有$x\cdot\left(+\infty\right)=\left(+\infty\right)\cdot x=-\infty$和$x\cdot\left(-\infty\right)=\left(-\infty\right)\cdot x=+\infty$.
+	\end{itemize}
+	\begin{enumerate}
+		\item $\overline{\R}^{\times}$是交换幺半群,单位元是$1$,不可消去元是$+\infty$和$-\infty$.
+		\item 对每个$x,y,z\in\overline{\R}^{\times}$,当$x\leq y,z>0$且$xz$和$yz$有定义时,$xz\leq yz$.
+		\item 对每个$x,y,z\in\overline{\R}^{\times}$,当$y+z,xy,xz,x\left(y+z\right)$都有定义时,$x\left(y+z\right)=xy+xz$.
+		\item 对每个$x,y,z\in\overline{\R}$,当$xy$有定义时,$\left|x\right|$和$\left|y\right|$有定义,并且$\left|xy\right|=\left|x\right|\left|y\right|$.
+	\end{enumerate}
 \end{proposition}
+
