@@ -1,44 +1,87 @@
-\section{通过展开式定义的实数}
+\section{通过Cantor级数展开式定义实数}
 
-未加声明时,$\left(d_{n}\right)_{n=0}^{\infty}$是底序列,$\left(a_{n}\right)_{n=0}^{\infty}$是相对$\left(d_{n}\right)_{n=0}^{\infty}$的底因子列.
+记号约定:$\left(d_{n}\right)_{n=0}^{\infty}$是基列,$\left(a_{n}\right)_{n=0}^{\infty}$是$\left(d_{n}\right)_{n=0}^{\infty}$-底列.
 
-\begin{proposition}{}{}
-	对任一$q_{0}\in\Z$和$\Z$中满足$\forall n\in\Z_{\geqslant 0}\left(0\leqslant v_{n}\leqslant a_{n}-1\right)$的序列$\left(v_{n}\right)_{n=0}^{\infty}$,存在$x\in\R$使得$q_{0}+\sum\limits_{n=1}^{\infty}\frac{v_{n}}{d_{n}}=x$,且
-	\begin{align*}
-		\forall m\in\Z_{\geqslant 0}\left(q_{0}\leqslant\sum\limits_{n=1}^{m}\frac{v_{n}}{d_{n}}\leqslant x\leqslant q_{0}+\sum\limits_{n=1}^{m}\frac{v_{n}}{d_{n}}+\frac{1}{d_{m}}\right).
-	\end{align*}
-\end{proposition}
-
-\begin{theorem}{}{}
-	设$x\in\R$关于$\left(d_{n}\right)_{n=0}^{\infty}$有展开式$\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{d_{n}}$,则下列情形有且仅有一种成立:
+\begin{lemma}{}{}
+	设$\N$中的序列$\left(v_{n}\right)_{n=0}^{\infty}$满足$\forall n\in\N\left(0\leq v_{n}\leq a_{n}-1\right)$,$q_{0}\in\N$.对每个$m\geq 1$,令$s_{m}=q_{0}+\sum\limits_{n=1}^{m}\dfrac{v_{n}}{d_{n}}.$
 	\begin{enumerate}
-		\item $\left\{n\in\Z_{\geqslant 0}\middle|u_{n}<a_{n}-1\right\}$是无限集.此时$\forall m\in\Z_{\geqslant 0}\left(\frac{
-			\lfloor d_{m}x\rfloor}{d_{m}}=q_{0}+\sum\limits_{n=1}^{m}\frac{v_{n}}{d_{n}}\right)$,且$x$关于$\left(d_{n}\right)_{n=0}^{\infty}$的展开式只有
+		\item 如果满足下列条件的实数$x$存在,那么它一定唯一,并且等于$q_{0}+\sum\limits_{n=0}^{\infty}\dfrac{v_{n}}{d_{n}}$.
+		\begin{itemize}
+			\item $x$在$\left(d_{n}\right)_{n=0}^{\infty}$下的Cantor级数展开式为$p_{0}+\sum\limits_{k=0}^{\infty}\dfrac{u_{k+1}}{d_{k+1}}$.
+			\item $p_{0}=q_{0}$,对每个$n\in\N$有$u_{n}=v_{n}$.
+		\end{itemize}
+		\item 对每个$m\geq 1$有$\sum\limits_{n=0}^{\infty}\dfrac{v_{n+m+1}}{d_{n+m+1}}\leq\dfrac{1}{d_{m}}$和$\sum\limits_{n=0}^{\infty}\dfrac{v_{n+m+1}}{d_{n+m+1}}=\dfrac{1}{d_{m}}\iff\forall n\geq m+1\left(v_{n}=a_{n}-1\right)$.
+		\item 如果(1)中满足条件的$x$存在,那么对每个$m\geq 1$有$s_{m}\leq x\leq s_{m}+\dfrac{1}{d_{m}}$和
 		\begin{align*}
-			\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{d_{n}}.
+			x=s_{m}+\dfrac{1}{d_{m}}\iff\forall n\geq m+1\left(v_{n}=a_{n}-1\right)
 		\end{align*}
-		\item $\exists m\in\Z_{\geqslant 0}\left(\forall n\in\llbracket m+1,+\infty)\left(u_{n}=a_{n}-1\right)\wedge m\geqslant 1\implies u_{m}<a_{m}-1\right)$.此时
-		\begin{align*}
-			\exists k\in\Z\left(x=\lfloor x\rfloor+\sum\limits_{n=1}^{m}\frac{u_{n}}{d_{n}}+\sum\limits_{n=m+1}^{\infty}\frac{a_{n}-1}{d_{n}}=\frac{k}{d_{m}}\right),
-		\end{align*}
-		并且$\forall n\in\llbracket m+1,+\infty)\left(u_{n}=0\right)$.
 	\end{enumerate}
-	$\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{d_{n}}$和$\lfloor x\rfloor+\sum\limits_{n=1}^{m}\frac{u_{n}}{d_{n}}+\sum\limits_{n=m+1}^{\infty}\frac{a_{n}-1}{d_{n}}$分别叫$x$在$\left(d_{n}\right)_{n=0}^{\infty}$下的正常展开式和反常展开式.
+\end{lemma}
+
+\begin{theorem}{Cantor展开式的规范形式和反常形式}{proper-and-improper-expansion-of-cantor-expansion}
+	设$\N$中的序列$\left(v_{n}\right)_{n=0}^{\infty}$满足$\forall n\in\N\left(0\leq v_{n}\leq a_{n}-1\right)$,$q_{0}\in\N$.令$x=q_{0}+\sum\limits_{n=0}^{\infty}\dfrac{v_{n}}{d_{n}}$,则下列情形有且仅有一种成立:
+	\begin{enumerate}
+		\item \textbf{情形A}:集合$\left\{n\in\N\middle|v_{n}<a_{n}-1\right\}$无限.此时,$x$在$\left(d_{n}\right)_{n=0}^{\infty}$下的Cantor级数展开式就是$q_{0}+\sum\limits_{n=0}^{\infty}\dfrac{v_{n}}{d_{n}}$.
+		\item \textbf{情形B}:存在$m\in\N$使得如下条件成立:
+		\begin{itemize}
+			\item $\forall n\geq m\left(u_{n}=a_{n}-1\right)$.
+			\item $m\geq 1\implies u_{m}<a_{m}-1$.
+		\end{itemize}
+		此时,存在$k\in\N$使得$x=q_{0}+\sum\limits_{n=1}^{m}\dfrac{v_{n}}{d_{n}}+\dfrac{1}{d_{m}}=\dfrac{k}{d_{m}}$,并且$\forall n\geq m+1$$\left(u_{n}=0\right)$.
+	\end{enumerate}
 \end{theorem}
 
-\begin{definition}{}{}
-	设$x\in\R$关于$\left(d_{n}\right)_{n=0}^{\infty}$有展开式$\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{d_{n}}$.若$\exists k\in\Z\left(x=\frac{k}{d_{m}}\right)$,则称该展开式终止.
+\begin{definition}{规范展开式,反常展开式}{}
+	沿用\cref{proper-and-improper-expansion-of-cantor-expansion}的设定.
+	\begin{enumerate}
+		\item \textbf{情形A}成立时,称$q_{0}+\sum\limits_{n=0}^{\infty}\dfrac{v_{n}}{d_{n}}$为$x$在$\left(d_{n}\right)_{n=0}^{\infty}$下的规范Cantor级数展开式.
+		\item \textbf{情形B}成立时,称$q_{0}+\sum\limits_{n=1}^{m}\dfrac{v_{n}}{d_{n}}+\dfrac{1}{d_{m}}$为$x$在$\left(d_{n}\right)_{n=0}^{\infty}$下的反常Cantor级数展开式.
+	\end{enumerate}
 \end{definition}
 
-\begin{definition}{}{}
-	设$x\in\Q$能表示成既约形式$\frac{p}{q}$.下列命题等价:
-	\begin{enumerate}
-		\item $x$在$\left(d_{n}\right)_{n=0}^{\infty}$下的正则展开式终止.
-		\item $\exists n\in\Z_{\geqslant 0}\left(q\mid d_{m}\right)$.
-	\end{enumerate}
-	两个条件之一成立时,记$m=\min\left\{n\in\Z_{\geqslant 0}\middle|q\mid d_{m}\right\}$,则$\exists k\in\Z\left(x=\frac{k}{d_{m}}\right)$,且$\lfloor x\rfloor+\sum\limits_{n=1}^{m}\frac{u_{n}}{d_{n}}+\sum\limits_{n=m+1}^{\infty}\frac{a_{n}-1}{d_{n}}$是$x$的反常展开式,其中$\lfloor x\rfloor+\sum\limits_{n=1}^{m}\frac{u_{n}}{d_{n}}$是$x$的正常展开式.
+\begin{definition}{终止展开式}{}
+	设$x\in\R$,它关于$\left(d_{n}\right)_{n=0}^{\infty}$的Cantor级数展开式为$\lfloor x\rfloor+\sum\limits_{k=0}^{\infty}\dfrac{u_{n+1}}{d_{n+1}}$.如果
+	\begin{align*}
+		\exists m\in\N\forall n\geq m+1\left(u_{n}=0\right),
+	\end{align*}
+	则称$x$的这个Cantor级数展开式是终止的.
 \end{definition}
 
 \begin{corollary}{}{}
-	设$\forall k\in\Z_{\geqslant 0}\exists n\in\Z_{\geqslant 0}\left(m\mid d_{k}\right)$,$x\in\R$,则$x\in\Q$ $\iff$ $x$的正常展开式终止.
+	设$x\in\R$,那么$x$在$\left(d_{n}\right)_{n=0}^{\infty}$下的Cantor级数展开式终止$\iff$ $x\in\bigcup\limits_{n=0}^{\infty}\dfrac{1}{d_{n}}\Z$.
 \end{corollary}
+
+\begin{proposition}{}{}
+	设$x\in\Q$有既约形式$\dfrac{p}{q}$,那么下列陈述等价:
+	\begin{enumerate}
+		\item $x$在$\left(d_{n}\right)_{n=0}^{\infty}$下的Cantor级数展开式终止.
+		\item 存在$n\in\N$使得$q\mid d_{n}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	每个有理数$x$在$\left(d_{n}\right)_{n=0}^{\infty}$下的Cantor展开式都终止$\iff$ $\forall n\geq 1\exists n\in\N\left(q\mid d_{n}\right)$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	如果$\forall q\geq 1\exists n\in\N\left(q\mid d_{n}\right)$,那么对每个实数$x$都有$x\in\Q$ $\iff$ $x$在$\left(d_{n}\right)_{n=0}^{\infty}$下的规范Cantor展开式终止.
+\end{corollary}
+
+\begin{proposition}{}{evaluation-map-over-cantor-number-space}
+	对每个$n\geq 1$,令$I_{n}=\left\{0,\ldots,a_{n}-1\right\}$.记$\varphi:\Z\times\prod\limits_{n=1}^{\infty}I_{n}\to\R,\left(q_{0},\left(v_{n}\right)_{n=0}^{\infty}\right)\mapsto q_{0}+\sum\limits_{n=0}^{\infty}\dfrac{v_{n+1}}{d_{n+1}}$.
+	\begin{enumerate}
+		\item $\varphi$是满射.
+		\item 对每个$x\in\R$有$\left|\varphi^{-1}\left(\left\{x\right\}\right)\right|=
+		\begin{cases}
+			1,&x\notin\bigcup\limits_{n=0}^{\infty}\dfrac{1}{d_{n}}\Z,\\
+			2,&x\in\bigcup\limits_{n=0}^{\infty}\dfrac{1}{d_{n}}\Z.
+		\end{cases}$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+

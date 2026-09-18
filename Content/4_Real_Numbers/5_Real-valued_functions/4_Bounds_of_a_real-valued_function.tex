@@ -1,27 +1,53 @@
 \section{实值函数的上下界}
 
-未加声明时,集合$X$,$Y$非空,$\left(X_{i}\right)_{i\in I}$是$X$的一族非空子集,$\emptyset\neq A_{1}\subseteq X$,$\emptyset\neq A_{2}\subseteq Y$.
+记号约定:$E$是集合,$A,B$是$E$的非空子集.
+
+\begin{definition}{实值函数的上下确界}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(A,\overline{\R}\right)$.
+	\begin{enumerate}
+		\item 我们称$\sup\limits_{x\in A}f\left(x\right)\coloneq\sup\limits_{\overline{\R}}\im\left(f\right)$是$f$在$A$上的上确界.
+		\item 我们称$\inf\limits_{x\in A}f\left(x\right)\coloneq\inf\limits_{\overline{\R}}\im\left(f\right)$是$f$在$A$上的下确界.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	上下确界的其余性质依然成立.此外,$\sup\limits_{x\in A}f\left(x\right)$和$\inf\limits_{x\in A}f\left(x\right)$都属于$\closure\left(\im\left(f\right)\right)$.
+\end{remark}
 
 \begin{proposition}{}{}
-	设$f\in\overline{\R}^{X}$,则$\varphi_{1}:\fin\left(X\right)\to\overline{\R},H\mapsto\sup\limits_{x\in H}f\left(x\right)$单调递增,$\varphi_{2}:\fin\left(X\right)\to\overline{\R},H\mapsto\sup\limits_{x\in H}f\left(x\right)$单调递减.
+	设$f\in\Hom_{\mathsf{Set}}\left(A,\overline{\R}\right)$.
+	\begin{enumerate}
+		\item $f$在$A$上有上界$\iff$ $\sup\limits_{x\in A}f\left(x\right)<+\infty$.
+		\item $f$在$A$上有下界$\iff$ $\inf\limits_{x\in A}f\left(x\right)>-\infty$.
+		\item $f$在$A$上有界$\iff$ $\left|f\right|$在$A$上有上界$\iff$ $\sup\limits_{x\in A}\left|f\left(x\right)\right|<+\infty$.
+	\end{enumerate}
 \end{proposition}
 
 \begin{proposition}{}{}
-	设$f\in\overline{\R}^{X}$,则$\sup\limits_{x\in X}f\left(x\right)=\limit_{H\in\fin\left(X\right)}\sup\limits_{x\in H}f\left(x\right)$,$\inf\limits_{x\in X}f\left(x\right)=\limit_{H\in\fin\left(X\right)}\inf\limits_{x\in H}f\left(x\right)$.
+	设$f\in\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$.记$\mathfrak{F}\left(E\right)=\fin\left(E\right)\setminus\left\{\emptyset\right\}$.
+	\begin{enumerate}
+		\item $\mathfrak{F}\left(E\right)\to\overline{\R},H\mapsto\sup\limits_{x\in H}f\left(x\right)$递增,并且$\sup\limits_{x\in E}f\left(x\right)=\limit_{H\in\mathfrak{F}\left(E\right)}\sup\limits_{x\in H}f\left(x\right)$.
+		\item $\mathfrak{F}\left(E\right)\to\overline{\R},H\mapsto\inf\limits_{x\in H}f\left(x\right)$递减,并且$\inf\limits_{x\in E}f\left(x\right)=\limit_{H\in\mathfrak{F}\left(E\right)}\inf\limits_{x\in H}f\left(x\right)$.
+		\item $\sup\left(A\right)=\limit_{H\in\mathfrak{F}\left(A\right)}\sup\left(H\right)=\limit_{H\in\mathfrak{F}\left(A\right)}\sup\limits_{x\in H}x$.
+	\end{enumerate}
 \end{proposition}
 
 \begin{proposition}{}{}
-	设$f,g\in\overline{\R}^{X}$.若$\forall x\in A\left(f\left(x\right)\leqslant g\left(x\right)\right)$,则$\sup\limits_{x\in A}f\left(x\right)\leqslant\sup\limits_{x\in A}g\left(x\right)$,$\inf\limits_{x\in A}f\left(x\right)\geqslant\inf\limits_{x\in A}g\left(x\right)$.
+	设$f,g\in\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$.如果$f|_{A}\leq g|_{A}$,那么$\sup\limits_{x\in A}f\left(x\right)\leq\sup\limits_{x\in A}g\left(x\right),\inf\limits_{x\in A}f\left(x\right)\leq\inf\limits_{x\in A}g\left(x\right)$.
 \end{proposition}
 
 \begin{proposition}{}{}
-	设$f\in\overline{\R}^{X}$,$\emptyset\neq A\subseteq B\subseteq X$,则$\sup\limits_{x\in A}f\left(x\right)\leqslant\sup\limits_{x\in B}f\left(x\right)$,$\inf\limits_{x\in A}f\left(x\right)\geqslant\inf\limits_{x\in A}g\left(x\right)$.
+	设$f\in\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$.如果$A\subseteq B$,那么$\sup\limits_{x\in A}f\left(x\right)\leq\sup\limits_{x\in B}f\left(x\right)$.
 \end{proposition}
 
 \begin{proposition}{}{}
-	设$f\in\overline{\R}^{X}$,则$\sup\limits_{x\in\bigcup\limits_{i\in I}X_{i}}=\sup\limits_{i\in I}\sup\limits_{x\in X_{i}}f\left(x\right)$.
+	设$f\in\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$,$\left(A_{i}\right)_{i\in I}$是$E$的一族非空子集,$A=\bigcup\limits_{i\in I}A_{i}$,那么$\sup\limits_{x\in A}f\left(x\right)=\sup\limits_{i\in I}\sup\limits_{x\in A_{i}}f\left(x\right)$.
 \end{proposition}
 
 \begin{proposition}{}{}
-	设$f\in\overline{\R}^{X\times Y}$,则$\sup\limits_{\left(x,y\right)\in A_{1}\times A_{2}}f\left(x,y\right)=\sup\limits_{x\in A_{1}}\sup\limits_{y\in A_{2}}f\left(x,y\right)=\sup\limits_{y\in A_{2}}\sup\limits_{x\in A_{1}}f\left(x,y\right)$.
+	设$E_{1},E_{2}$是集合,$f\in\Hom_{\mathsf{Set}}\left(E_{1}\times E_{2},\overline{\R}\right)$,那么对$E_{1}$的每个非空子集$E_{1}$和$E_{2}$的每个非空子集$E_{2}$有
+	\begin{align*}
+		\sup\limits_{\left(x_{1},x_{2}\right)\in A_{1}\times A_{2}}=\sup\limits_{x_{1}\in A_{1}}\sup\limits_{x_{2}\in A_{2}}f\left(x_{1},x_{2}\right)=\sup\limits_{x_{2}\in A_{2}}\sup\limits_{x_{1}\in A_{1}}f\left(x_{1},x_{2}\right).
+	\end{align*}
 \end{proposition}
+

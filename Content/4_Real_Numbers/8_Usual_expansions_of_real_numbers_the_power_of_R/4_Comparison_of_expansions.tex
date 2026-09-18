@@ -1,30 +1,30 @@
-\section{展开式的比较}
+\section{Cantor级数展开式的比较}
 
-未加声明时,$\left(d_{n}\right)_{n=0}^{\infty}$是底序列,$\left(a_{n}\right)_{n=0}^{\infty}$是底因子列,$x,y\in\R$各自在$\left(d_{n}\right)_{n=0}^{\infty}$下的正则展开式依次是
-\begin{align*}
-	\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{d_{n}},\lfloor y\rfloor+\sum\limits_{n=1}^{\infty}\frac{v_{n}}{d_{n}}.
-\end{align*}
+记号约定:
+\begin{itemize}
+	\item $\left(d_{n}\right)_{n=0}^{\infty}$是基列,$\left(a_{n}\right)_{n=0}^{\infty}$是底列.
+	\item $x,y\in\R$,各自在$\left(d_{n}\right)_{n=0}^{\infty}$下的Cantor级数展开式为$\lfloor x\rfloor+\sum\limits_{n=1}^{\infty}\dfrac{u_{n+1}}{d_{n+1}}$和$\lfloor y\rfloor+\sum\limits_{n=0}^{\infty}\dfrac{v_{n+1}}{d_{n+1}}$.
+\end{itemize}
 
 \begin{proposition}{}{}
-	设$x\neq y$.
+	下列条件之一成立时,我们有$x<y$.
 	\begin{enumerate}
-		\item 若$\lfloor x\rfloor<\lfloor y\rfloor$,则$x<y$.
-		\item 若$\lfloor x\rfloor=\lfloor y\rfloor\wedge \exists m\in\Z_{\geqslant 1}\left(\forall n\in\llbracket 1,m-1\rrbracket\left(u_{n}=v_{n}\right)\wedge u_{m}<v_{m}\right)$,则$x<y$.
+		\item $\lfloor x\rfloor<\lfloor y\rfloor$.
+		\item $\lfloor x\rfloor=\lfloor y\rfloor$,并且$\exists m\geq 1\left(\forall 1\leq i\leq m-1\left(u_{n}=v_{n}\right)\wedge u_{m}<v_{m}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\lfloor x\rfloor=\lfloor y\rfloor$,$m\geq 1$且$\forall 1\leq i\leq m-1\left(u_{i}=v_{i}\right)\wedge u_{m}<v_{m}$,那么
+	\begin{enumerate}
+		\item $\left|x-y\right|\leq\dfrac{1}{d_{m}}$.
+		\item 对每个$z\in\left[x,y\right]$,如果$z$在$\left(d_{n}\right)_{n=0}^{\infty}$下的Cantor级数展开式为$\lfloor z\rfloor+\sum\limits_{n=0}^{\infty}\dfrac{w_{n+1}}{d_{n+1}}$,那么
+		\begin{align*}
+			\lfloor z\rfloor=\lfloor y\rfloor\wedge\forall 1\leq i\leq m-1\left(v_{n}=w_{n}\right).
+		\end{align*}
 	\end{enumerate}
 \end{proposition}
 
 \begin{corollary}{}{}
-	设$\lfloor x\rfloor=\lfloor y\rfloor\wedge \exists m\in\Z_{\geqslant 1}\left(\forall n\in\llbracket 1,m-1\rrbracket\left(u_{n}=v_{n}\right)\wedge u_{m}<v_{m}\right)$.
-	\begin{enumerate}
-		\item $\left|x-y\right|\leqslant\frac{1}{d_{m}}$.
-		\item 对$\left[x,y\right]$中任意有正常展开式$\lfloor z\rfloor+\sum\limits_{n=1}^{\infty}\frac{w_{n}}{d_{n}}$的元素$z$,有$\lfloor z\rfloor=\lfloor y\rfloor\wedge \exists m\in\Z_{\geqslant 1}\forall n\in\llbracket 1,m-1\rrbracket\left(w_{n}=v_{n}\right)$
-	\end{enumerate}
-\end{corollary}
-
-\begin{corollary}{}{}
-	设$X=\Z\times\prod\limits_{n=1}^{\infty}\llbracket 0,a_{n}-1\rrbracket$,给$\Z$和$\llbracket 0,a_{n}-1\rrbracket$($n\in\Z_{\geqslant 1}$)配备离散拓扑,$X$配备乘积拓扑.定义
-	\begin{align*}
-		\varphi:X\to\R,\left(p_{0},\left(u_{n}\right)_{n=0}^{\infty}\right)\mapsto p_{0}+\sum\limits_{n=1}^{\infty}\frac{u_{n}}{d_{n}},
-	\end{align*}
-	则$\varphi$是连续映射.
+	沿用\cref{evaluation-map-over-cantor-number-space}的记号.给$\Z$和$\left(I_{n}\right)_{n=1}^{\infty}$中的每一项配备离散拓扑,$X$配备乘积拓扑,那么$\varphi$连续.
 \end{corollary}

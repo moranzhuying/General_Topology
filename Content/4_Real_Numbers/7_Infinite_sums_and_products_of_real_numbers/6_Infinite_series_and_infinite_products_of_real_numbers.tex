@@ -1,47 +1,51 @@
 \section{\texorpdfstring{$\R$}{R}中的无穷级数和无限乘积}
 
-未加声明时,$\left(x_{n}\right)_{n=0}^{\infty}$,$\left(y_{n}\right)_{n=0}^{\infty}$是$\R$的序列.
-
-\begin{definition}{}{}
-	若$\sum\limits_{n=0}^{\infty}\left|x_{n}\right|$收敛,则称$\sum\limits_{n=0}^{\infty}x_{n}$绝对收敛.
+\begin{definition}{绝对收敛(级数)}{}
+	设$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$是$\R$中的级数.如果$\left(\left(\left|x_{n}\right|\right)_{n=0}^{\infty},\left(\left|s_{n}\right|\right)_{n=0}^{\infty}\right)$在$\R$中收敛,则称$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$(在$\R$中)绝对收敛.
 \end{definition}
 
-\begin{proposition}{}{}
-	$\sum\limits_{n=0}^{\infty}x_{n}$交换收敛$\iff$ $\sum\limits_{n=0}^{\infty}x_{n}$绝对收敛$\iff$ $\left(x_{n}\right)_{n=0}^{\infty}$在$\R$中可和.
-\end{proposition}
-
-\begin{corollary}{}{}
-	设$\sum\limits_{n=0}^{\infty}x_{n}$绝对收敛.
+\begin{proposition}{级数无条件收敛$\iff$级数绝对收敛$\iff$级数的通项可和}{}
+	设$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$是$\R$中的级数.下列陈述等价:
 	\begin{enumerate}
-		\item 对任一$I\subseteq\Z_{\geqslant 0}$,$\sum\limits_{n\in I}x_{n}$收敛.
-		\item 设$\left(I_{k}\right)_{k=0}^{\infty}$是$\Z_{\geqslant 0}$的划分,则$\sum\limits_{n=0}^{\infty}x_{n}=\sum\limits_{k=0}^{\infty}\sum\limits_{n\in I_{k}}x_{n}$.
-	\end{enumerate}
-\end{corollary}
-
-\begin{proposition}{}{}
-	设$\forall n\in\Z_{\geqslant 0}\left(x_{n}\geqslant 0\right)$.若$\left(x_{n}\right)_{n=0}^{\infty}$单调递减且在$\R$中的极限点为$0$,则$\left(\left(-1\right)^{n}x_{n}\right)_{n=0}^{\infty}$在$\R$中收敛.
-\end{proposition}
-
-\begin{proposition}{}{}
-	设$\sum\limits_{n=0}^{\infty}x_{n}$和$\sum\limits_{n=0}^{\infty}y_{n}$在$\R$中收敛.
-	\begin{enumerate}
-		\item 对任一$\lambda,\mu\in\R$,$\sum\limits_{n=0}^{\infty}\left(\lambda x_{n}+\mu y_{n}\right)$收敛,并且$\sum\limits_{n=0}^{\infty}\left(\lambda x_{n}+\mu y_{n}\right)=\lambda\sum\limits_{n=0}^{\infty}x_{n}+\mu\sum\limits_{n=0}^{\infty}y_{n}$.
-		\item 若$\forall n\in\Z_{\geqslant 0}\left(x_{n}\leqslant y_{n}\right)$,则$\sum\limits_{n=0}^{\infty}x_{n}\leqslant\sum\limits_{n=0}^{\infty}y_{n}$.
+		\item $\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$无条件收敛.
+		\item $\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$绝对收敛.
+		\item $\left(x_{n}\right)_{n=0}^{\infty}$在$\R$中可和.
 	\end{enumerate}
 \end{proposition}
 
-\begin{definition}{}{}
-	若$\prod\limits_{i=0}^{\infty}\left(1+\left|x_{n}\right|\right)$收敛,则称$\prod\limits_{n=0}^{\infty}\left(1+x_{n}\right)$绝对收敛.
+\begin{definition}{交错级数}{}
+	设$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$是$\R$中的级数.如果存在$\R_{\geq 0}$中的序列$\left(v_{n}\right)_{n=0}^{\infty}$使得
+	\begin{align*}
+		\forall n\in\N\left(u_{n}=\left(-1\right)^{n}v_{n}\right),
+	\end{align*}
+	则称$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$是$\R$中的交错级数.
 \end{definition}
 
-\begin{definition}{}{}
-	设$\forall n\in\Z_{\geqslant 0}\left(x_{n}\neq -1\right)$.若$\prod\limits_{n=0}^{\infty}\left(1+x_{n}\right)$在$\R\setminus\left\{0\right\}$中收敛,则称$\prod\limits_{i=0}^{\infty}\left(1+x_{n}\right)$收敛.
+\begin{example}{}{}
+	考虑交错级数$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$,其中对每个$n\geq 0$有$x_{n}=\left(-1\right)^{n+1}\frac{1}{n+1}$,那么该级数绝对收敛,但是不收敛.
+\end{example}
+
+\begin{remark}{}{}
+	如果$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(s_{n}\right)_{n=0}^{\infty}\right)$是交错级数,$\left(v_{n}\right)_{n=0}^{\infty}$单调递减且收敛到$0$,那么该交错级数收敛.
+\end{remark}
+
+\begin{definition}{绝对收敛(无穷乘积)}{}
+	设$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(p_{n}\right)_{n=0}^{\infty}\right)$是$\R$中的无穷乘积.如果以$\left(1+\left|x_{n}\right|\right)_{n=0}^{\infty}$为通项的无穷乘积收敛,则称$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(p_{n}\right)_{n=0}^{\infty}\right)$绝对收敛.
 \end{definition}
 
 \begin{proposition}{}{}
-	设$\forall n\in\Z_{\geqslant 0}\left(x_{n}\neq -1\right)$,则$\prod\limits_{i=0}^{\infty}\left(1+x_{n}\right)$交换收敛$\iff$ $\prod\limits_{i=0}^{\infty}\left(1+x_{n}\right)$绝对收敛.
+	设$\left(\left(x_{n}\right)_{n=0}^{\infty},\left(p_{n}\right)_{n=0}^{\infty}\right)$是$\R$中的无穷乘积.下列陈述等价:
+	\begin{enumerate}
+		\item $\left(\left(x_{n}\right)_{n=0}^{\infty},\left(p_{n}\right)_{n=0}^{\infty}\right)$无条件收敛.
+		\item $\left(\left(x_{n}\right)_{n=0}^{\infty},\left(p_{n}\right)_{n=0}^{\infty}\right)$绝对收敛.
+		\item $\left(x_{n}\right)_{n=0}^{\infty}$绝对收敛.
+	\end{enumerate}
 \end{proposition}
 
-\begin{proposition}{}{}
-	$\prod\limits_{n=0}^{\infty}\left(1+x_{n}\right)$绝对收敛$\iff$ $\sum\limits_{n=0}^{\infty}x_{n}$绝对收敛.
-\end{proposition}
+\begin{example}{}{}
+	定义$\R$中的序列$\left(x_{n}\right)_{n=0}^{\infty}$如下:对每个$n\geq 2$,
+	\begin{align*}
+		u_{2n-1}=-\frac{1}{n},u_{2n}=\frac{1}{n}.
+	\end{align*}
+	那么,以$\left(1+x_{n}\right)_{n=0}^{\infty}$为通项的无穷乘积不是绝对收敛的,但是收敛到$\frac{1}{2}$.
+\end{example}

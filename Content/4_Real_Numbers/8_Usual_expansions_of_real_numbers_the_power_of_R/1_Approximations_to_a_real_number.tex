@@ -2,33 +2,31 @@
 
 \section{实数的近似}
 
-\begin{definition}{}{}
-	设$\varepsilon\in\R_{>0}$,$x\in\R$.若$\left|x-r\right|\leqslant\varepsilon$,则称$r$是$x$的$\varepsilon$-近似.进一步:
-	\begin{itemize}
-		\item 若$r\leqslant x$,则称$r$是$x$的$\varepsilon$-不足近似.
-		\item 若$r\geqslant x$,则称$r$是$x$的$\varepsilon$-过剩近似.
-	\end{itemize}
+\begin{definition}{近似,误差限,不足近似,过剩近似}{}
+	设$\varepsilon\in\R_{>0},x\in\R$.
+	\begin{enumerate}
+		\item 如果$\left|x-r\right|\leq\varepsilon$,则称$r$是$x$的$\varepsilon$-近似,称$\varepsilon$为误差限(或容许误差).
+		\item 如果$\left|x-r\right|\leq\varepsilon$且$x\geq r$,则称$r$是$x$的$\varepsilon$-不足近似.
+		\item 如果$\left|x-r\right|\leq\varepsilon$且$x\leq r$,则称$r$是$x$的$\varepsilon$-过剩近似.
+	\end{enumerate}
 \end{definition}
 
 \begin{proposition}{}{}
-	设$A\subseteq\R$稠密,则对诸$x\in\R$和$\varepsilon\in\R_{>0}$,存在$r,s\in\R$使$r$是$x$的$\varepsilon$-不足近似且$s$是$x$的$\varepsilon$-过剩近似.
+	设$A$是$\R$的稠密子集.
+	\begin{enumerate}
+		\item $\forall x\in\R\forall\varepsilon\in\R_{>0}\exists r,s\in A\left(x\in\left[r,r+\varepsilon\right]\cap \left[s-\varepsilon,s\right]\right)$.
+		\item 设$x\in\R$,$\left(\left(\varepsilon_{n},r_{n}\right)\right)_{n=0}^{\infty}$是$\R_{>0}\times A$中的序列,$\left(\varepsilon_{n}\right)_{n=0}^{\infty}$严格递减且收敛到$0$,对每个$n\in\N$有$\left|x-r_{n}\right|\leq\varepsilon_{n}$,则
+		\begin{align*}
+			\limit_{n\to +\infty}r_{n}=x.
+		\end{align*}
+	\end{enumerate}
 \end{proposition}
 
 \begin{proposition}{}{}
-	设$x\in\R$,$\left(\varepsilon_{n}\right)_{n=0}^{\infty}$是$\R_{>0}$中严格单调递减且收敛于$0$的序列.若$\R$中的序列$\left(r_{n}\right)_{n=0}^{\infty}$满足
-	\begin{align*}
-		\forall n\in\Z_{\geqslant 0}\left(\left|r_{n}-x\right|\leqslant\varepsilon_{n}\right),
-	\end{align*}
-	则$\limit_{n\to+\infty}r_{n}=x$.
-\end{proposition}
-
-\begin{proposition}{}{}
-	设$A$是加法群$\R$的子群,$A\cap\R_{>0}$中严格单调递减的序列$\left(\varepsilon_{n}\right)_{n=0}^{\infty}$收敛于$0$.
-	
-	对任一$x\in\R$,存在唯一的$\Z$中的序列$\left(p_{n}\right)_{n=0}^{\infty}$满足如下条件:
-	\begin{itemize}
-		\item 对任一$n\in\Z_{\geqslant 0}$,$p_{n}\varepsilon_{n}\leqslant x<\left(p_{n}+1\right)\varepsilon_{n}$;
-		\item 对任一$n\in\Z_{\geqslant 0}$,$p_{n}\varepsilon_{n}\in A$且$p_{n}\varepsilon_{n}$是$x$的$\varepsilon_{n}$-不足近似;
-		\item 对任一$n\in\Z_{\geqslant 0}$,$\left(p_{n}+1\right)\varepsilon_{n}\in A$且$\left(p_{n}+1\right)\varepsilon_{n}$是$x$的$\varepsilon_{n}$-过剩近似.
-	\end{itemize}
+	设$A$是$\R$的稠密加法子群,$\left(\varepsilon_{n}\right)_{n=0}^{\infty}$是$A\cap\R_{>0}$中严格递减且收敛到$0$的序列.那么,对每个$x\in\R$,在$\N$中存在唯一的序列$\left(p_{n}\right)_{n=0}^{\infty}$使得如下条件成立:
+	\begin{enumerate}
+		\item $\left(p_{n}\varepsilon_{n}\right)_{n=0}^{\infty}$是$A$中的序列,对每个$n\in\N$,$p_{n}\varepsilon_{n}$是$x$的$\varepsilon_{n}$-不足近似;
+		\item $\left(\left(p_{n}+1\right)\varepsilon_{n}\right)_{n=0}^{\infty}$是$A$中的序列,对每个$n\in\N$,$\left(p_{n}+1\right)\varepsilon_{n}$是$x$的$\varepsilon_{n}$-过剩近似;
+		\item $\limit_{n\to +\infty}p_{n}\varepsilon_{n}=\limit_{n\to +\infty}\left(p_{n}+1\right)\varepsilon_{n}=x$.
+	\end{enumerate}
 \end{proposition}

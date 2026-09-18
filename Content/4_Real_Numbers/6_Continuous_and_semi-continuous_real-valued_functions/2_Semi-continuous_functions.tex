@@ -1,95 +1,110 @@
 \section{半连续函数}
 
-\begin{definition}{}{}
-	设$a\in X$.
-	\begin{itemize}
-		\item 若$\forall h\in\left(-\infty,f\left(a\right)\right)\exists V\in\mathcal{N}\left(a\right)\left(f\left(V\right)\subseteq\left(h,+\infty\right]\right)$,则称$f$在$a$处上半连续.
+\begin{definition}{在某一点上/下半连续}{}
+	设$a\in E,f\in\Hom_{\mathsf{Top}}\left(E,\overline{\R}\right)$.
+	\begin{enumerate}
+		\item 如果$\forall h\in\left(-\infty,f\left(a\right)\right)\exists V\in\mathcal{N}\left(a\right)\left(f\left(V\right)\subseteq\left(h,+\infty\right]\right)$,则称$f$在$a$处上半连续.
 		\item 若$\forall h\in\left(f\left(a\right),+\infty\right)\exists V\in\mathcal{N}\left(a\right)\left(f\left(V\right)\subseteq\left[-\infty,h\right)\right)$,则称$f$在$a$处下半连续.
-	\end{itemize}
+	\end{enumerate}
 \end{definition}
 
-\begin{definition}{}{}
-	若对任一$x\in X$,$f$在$x$处上半连续(下半连续),则称$f$在$X$上是上半连续(下半连续)的.
+\begin{definition}{上/下半连续}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$.
+	\begin{enumerate}
+		\item 如果$f$在$E$上每一点都上半连续,则称$f$上半连续.
+		\item 如果$f$在$E$上每一点都下半连续,则称$f$下半连续.
+	\end{enumerate}
 \end{definition}
 
 \begin{proposition}{}{}
-	设$a\in X$.
+	设$a\in X,f\in\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$.
 	\begin{enumerate}
 		\item $f$在$a$处连续$\iff$ $f$在$a$处既上半连续又下半连续.
 		\item $f$在$a$处下半连续$\iff$ $-f$在$a$处上半连续.
-		\item 若$\exists V\in\mathcal{N}\left(a\right)\left(f\left(V\right)\subseteq\left[-\infty,f\left(a\right)\right]\right)$,则$f$在$a$处上半连续.特别地,若$f\left(a\right)=+\infty$,则$f$在$a$处上半连续.
-		\item 若$\exists V\in\mathcal{N}\left(a\right)\left(f\left(V\right)\subseteq\left[f\left(a\right),+\infty\right]\right)$,则$f$在$a$处下半连续.特别地,若$f\left(a\right)=-\infty$,则$f$在$a$处下半连续.
+		\item 如果$f$下半连续,那么$f$在$E$的每个拓扑子空间上都下半连续.
+		\item $f$在$a$处下半连续$\iff$对每个$h\in\left(-\infty,f\left(a\right)\right)$有$f^{-1}\left(\left(-\infty,h\right]\right)\in\mathcal{N}\left(a\right)$.
 	\end{enumerate}
 \end{proposition}
 
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 设$\iota:\R\to\overline{\R}$是典范嵌入.给$\overline{\R}$装备拓扑$\tau$,其元素由$\emptyset$和$\overline{\R}$中的无上界区间构成,那么
+		\begin{center}
+			$f$在$a$处下半连续$\iff$ $\iota\circ f$在$a$处连续.
+		\end{center}
+		\item 下列条件之一成立时,$f$在$a$处下半连续.
+		\begin{itemize}
+			\item 存在$\R$的稠密子集$D$,对每个$k\in D$,$f^{-1}\left(\left(-\infty,k\right)\right)$是$E$的开集.
+			\item 存在$\left(-\infty,f\left(a\right)\right)$中的递增序列$\left(h_{n}\right)_{n=0}^{\infty}$使得$\limit_{n\to +\infty}h_{n}=f\left(a\right)$.
+		\end{itemize}
+	\end{enumerate}
+\end{remark}
+
 \begin{proposition}{}{}
-	$f$下半连续$\iff$对任一$k\in\R$,$f^{-1}\left(\left(k,+\infty\right)\right)$是$X$的开集$\iff$对任一$k\in\R$,$f^{-1}\left(\left(-\infty,k\right]\right)$是$X$的闭集.
+	设$f\in\Hom_{\mathsf{Top}}\left(E,\overline{\R}\right)$,那么$f$下半连续$\iff$对每个$k\in\R$,集合$f^{-1}\left(\left(k,+\infty\right)\right)$是$X$的开集.
 \end{proposition}
 
 \begin{corollary}{}{}
-	若存在$\R$的稠密子集$D$,对任一$k\in D$,$f^{-1}\left(\left(k,+\infty\right)\right)$是开集,则$f$下半连续.
+	设$A$是$E$的子集,$\chi_{A}$是$A$的特征函数.
+	\begin{enumerate}
+		\item $A$是$E$的开集$\iff$ $\chi_{A}$上半连续.
+		\item $A$是$E$的闭集$\iff$ $\chi_{A}$下半连续.
+	\end{enumerate}
 \end{corollary}
 
-\begin{corollary}{}{}
-	是$A\subseteq X$,$\chi_{A}$是$A$的特征函数,则$A$是$X$的开集(闭集)$\iff$ $\chi_{A}$上半连续(下半连续).
-\end{corollary}
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 设$f\in\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right),a\in E$.如果$f$在$a$处有局部极小值,那么$f$在$a$处下半连续.特别地,如果$f\left(a\right)=-\infty$,那么$f$在$a$处下半连续.
+		\item 定义
+		\begin{align*}
+			f:\R\to\R,x\mapsto
+			\begin{cases}
+				0,&x\in\R\setminus\Q,\\
+				\frac{1}{q},&x=\frac{p}{q},q>0,\gcd\left(p,q\right)=1
+			\end{cases}
+		\end{align*}
+		那么$f$在$\R$中的每个无理数点处都连续,在每个有理数点处有相对极小值,并且上半连续.
+	\end{enumerate}
+\end{example}
 
-\begin{theorem}{}{}
-	设$X$是非空紧空间,$f$下半连续,则存在$a\in X$使得$f\left(a\right)=\inf\limits_{x\in X}f\left(x\right)$.
+\begin{theorem}{极值定理}{}
+	设$E$非空且拟紧,$f\in\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$.如果$f$下半连续,那么存在$a\in E$使得$f\left(a\right)=\inf\limits_{x\in E}f\left(x\right)$.
 \end{theorem}
 
 \begin{corollary}{}{}
-	设$X$是非空紧空间,$f$下半连续且$f\left(X\right)\subseteq\left(-\infty,+\infty\right]$,则$f$在$X$上有下界.
+	设$E$非空且拟紧,$f\in\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$且下半连续.如果$\im\left(f\right)\subseteq\left(-\infty,+\infty\right]$,那么$f$在$E$上有下界.
 \end{corollary}
 
 \begin{proposition}{}{}
-	设$f$,$g$在$a$处下半连续.
+	设$a\in E,f,g\in\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$且在$a$处下半连续.
 	\begin{enumerate}
 		\item $\sup\left(f,g\right)$和$\inf\left(f,g\right)$在$a$处下半连续.
-		\item 若$f+g$有定义,则$f+g$在$a$处下半连续.
-		\item 若$\forall x\in X\left(f\left(x\right),g\left(x\right)\geqslant 0\right)$且$fg$有定义,则$fg$在$a$处下半连续.
+		\item 如果$f+g$有定义,那么$f+g$在$a$处下半连续.
+		\item 如果$f,g\geq 0$且$fg$有定义,那么$fg$在$a$处下半连续.
+		\item 如果$f\geq 0$,那么$\frac{1}{f}$在$a$处下半连续.
 	\end{enumerate}
 \end{proposition}
 
-\begin{proposition}{}{}
-	设$f$在$a$处下半连续且$\forall x\in X\left(f\left(x\right)\geqslant 0\right)$,则$\frac{1}{f}$在$a$处上半连续.
-\end{proposition}
-
 \begin{theorem}{}{}
-	设$\left(f_{i}\right)_{i\in I}$是$\overline{\R}^{X}$的元素族,并且对任一$i\in I$,$f_{i}$在$a$处下半连续,则$\left(f_{i}\right)_{i\in I}$的上包络在$a$处下半连续.
+	设$\left(f_{i}\right)_{i\in I}$是$\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$的元素族,$a\in E$.如果$\left(f_{i}\right)_{i\in I}$的各项在$a$处都下半连续,那么$\sup\limits_{i\in I}f_{i}$在$a$处下半连续.
 \end{theorem}
 
 \begin{corollary}{}{}
-	设$\left(f_{i}\right)_{i\in I}$是$\overline{\R}^{X}$的元素族,并且对任一$i\in I$,$f_{i}$连续,则$\left(f_{i}\right)_{i\in I}$的上包络连续.
-	
-	进一步,若$I$是有限集,则$\left(f_{i}\right)_{i\in I}$的下包络下半连续.
+	设$\left(f_{i}\right)_{i\in I}$是$\Hom_{\mathsf{Top}}\left(E,\overline{\R}\right)$的元素族,那么$\sup\limits_{i\in I}f_{i}$下半连续.
 \end{corollary}
 
 \begin{proposition}{}{}
-	$f$在$a$处下半连续$\iff$ $\varliminf_{x\to a}f\left(x\right)=f\left(a\right)$ $\iff$ $\varliminf_{x\to a}f\left(x\right)\geqslant f\left(a\right)$.
-\end{proposition}
-
-\begin{definition}{}{}
-	设$A$是$X$的稠密子集,$f\in\overline{\R}^{A}$.定义
-	\begin{align*}
-		&g_{1}:X\to\overline{\R},x\mapsto\limit_{y\to x}\inf\limits_{y\in A}f\left(y\right),\\
-		&g_{2}:X\to\overline{\R},x\mapsto\limit_{y\to x}\sup\limits_{y\in A}f\left(y\right).
-	\end{align*}
-	容易验证$g_{1}$下半连续,$g_{2}$上半连续.我们分别称$g_{1}$和$g_{2}$是$f$的下半连续正则化与上半连续正则化.
-\end{definition}
-
-\begin{proposition}{}{}
-	设$A$是$X$的稠密子集,$f\in\overline{\R}^{A}$.记
-	\begin{align*}
-		W_{1}=\left\{\varphi\in\overline{\R}^{X}\middle|\varphi|_{A}\leqslant f\right\},W_{2}=\left\{\varphi\in\overline{\R}^{X}\middle|\varphi|_{A}\geqslant f\right\},
-	\end{align*}
-	则$W_{1}$有最大元,$W_{2}$有最小元,并且$\max W_{1}$是$f$的下半连续正则化,$\min W_{2}$是$f$的上半连续正则化.
+	设$a\in E$,$f\in\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$,则$f$在$a$处下半连续$\iff$ $\varliminf\limits_{x\to a}f\left(x\right)\geq f\left(a\right)$.
 \end{proposition}
 
 \begin{proposition}{}{}
-	设$A$是$X$的稠密子集,$f\in\overline{\R}^{A}$.
+	设$A$是$E$的稠密子集,$f\in\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)$.定义
+	\begin{gather*}
+		g:E\to\overline{\R},x\mapsto\limit_{y\to x}\inf\limits_{y\in A}f\left(y\right),W_{1}=\left\{\psi\in\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)\middle|\psi|_{A}\leq f,\psi\text{下半连续}\right\},\\
+		h:E\to\overline{\R},x\mapsto\limit_{y\to x}\sup\limits_{y\in A}f\left(y\right),W_{2}=\left\{\psi\in\Hom_{\mathsf{Set}}\left(E,\overline{\R}\right)\middle|\psi|_{A}\geq f,\psi\text{上半连续}\right\}.
+	\end{gather*}
 	\begin{enumerate}
-		\item 若$f$下半连续,则$f$的下半连续正则化是$f$在$X$上的延拓.
-		\item 若$f$上半连续,则$f$的上半连续正则化是$f$在$X$上的延拓.
+		\item $g$下半连续且为$W_{1}$的最大元,$h$上半连续且为$W_{2}$的最小元.
+		\item 如果$f$下半连续,那么$g$是$f$的延拓;如果$f$上半连续,那么$h$是$f$的延拓.
 	\end{enumerate}
 \end{proposition}

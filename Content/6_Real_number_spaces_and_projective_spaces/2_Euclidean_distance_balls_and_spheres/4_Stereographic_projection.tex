@@ -1,19 +1,19 @@
 \section{球极投影}
 
-\begin{definition}
+\begin{definition}{}{}
 	设$e_{n}=\left(\delta_{1,n},\ldots,\delta_{n,n}\right)$,$H\subseteq\R^{n}$是过原点且与$e_{n}$正交的超平面.记
 	\begin{align*}
-		\varphi:\Sphere_{n-1}\Disptminus\left\{e_{n}\right\}\to H,\left(x_{1},\ldots,x_{n-1},0\right)\mapsto\left(\frac{x_{1}}{1-x_{1}},\ldots,\frac{x_{n-1}}{1-x_{n}},0\right),
+		\varphi:\S_{n-1}-\left\{e_{n}\right\}\to H,\left(x_{1},\ldots,x_{n-1},0\right)\mapsto\left(\frac{x_{1}}{1-x_{1}},\ldots,\frac{x_{n-1}}{1-x_{n}},0\right),
 	\end{align*}
 	则$\varphi$是同胚,并且
 	\begin{align*}
-		\varphi^{-1}:H\to\Sphere_{n-1}\Disptminus\left\{e_{n}\right\},\left(y_{1},\ldots,y_{n-1},0\right)\mapsto\left(\frac{2y_{1}}{\sum\limits_{i=1}^{n}y_{i}^{2}+1},\ldots,\frac{2y_{n-1}}{\sum\limits_{i=1}^{n}y_{i}^{2}+1},\frac{\sum\limits_{i=1}^{n}y_{i}^{2}-1}{\sum\limits_{i=1}^{n}y_{i}^{2}+1}\right).
+		\varphi^{-1}:H\to\S_{n-1}-\left\{e_{n}\right\},\left(y_{1},\ldots,y_{n-1},0\right)\mapsto\left(\frac{2y_{1}}{\sum\limits_{i=1}^{n}y_{i}^{2}+1},\ldots,\frac{2y_{n-1}}{\sum\limits_{i=1}^{n}y_{i}^{2}+1},\frac{\sum\limits_{i=1}^{n}y_{i}^{2}-1}{\sum\limits_{i=1}^{n}y_{i}^{2}+1}\right).
 	\end{align*}
 	我们称$\varphi$是以$e_{n}$为顶点,$H$为投影超平面的球极投影.
 \end{definition}
 
-\begin{definition}
-	设$e_{n}=\left(\delta_{1,n},\ldots,\delta_{n,n}\right)$,$a\in\Sphere_{n-1}$,超平面$H$,$H_{a}$过原点且分别和$e_{n}$,$a$正交,$f\in\mathrm{O}_{n}\left(\R\right)$满足
+\begin{definition}{}{}
+	设$e_{n}=\left(\delta_{1,n},\ldots,\delta_{n,n}\right)$,$a\in\S_{n-1}$,超平面$H$,$H_{a}$过原点且分别和$e_{n}$,$a$正交,$f\in\mathrm{O}_{n}\left(\R\right)$满足
 	\begin{align*}
 		f\left(a\right)=e_{n},f\left(H_{a}\right)=H.
 	\end{align*}
@@ -22,33 +22,33 @@
 	我们称$\pi_{a}\coloneq f^{-1}\circ \pi\circ f$是以$a$为顶点,$H_{a}$为投影超平面的一般球极投影.
 \end{definition}
 
-\begin{proposition}
-	设$n\geqslant 2$,则$\Sphere_{n-1}$和$\R^{n-1}$的单点紧化$\R^{n-1}\sqcup\left\{\infty\right\}$同胚.
+\begin{proposition}{}{}
+	设$n\geqslant 2$,则$\S_{n-1}$和$\R^{n-1}$的单点紧化$\R^{n-1}\sqcup\left\{\infty\right\}$同胚.
 \end{proposition}
 
-\begin{corollary}
-	设$n\geqslant 2$.定义$\overline{\Ball}_{n}$上定义等价关系$\sim$为
+\begin{corollary}{}{}
+	设$n\geqslant 2$.定义$\overline{\B}_{n}$上定义等价关系$\sim$为
 	\begin{align*}
-		\forall x,y\in\overline{\Ball}_{n}\left(x\sim y\iff x=y\vee\left\{x,y\right\}\subseteq\Sphere_{n-1}\right),
+		\forall x,y\in\overline{\B}_{n}\left(x\sim y\iff x=y\vee\left\{x,y\right\}\subseteq\S_{n-1}\right),
 	\end{align*}
-	则$\overline{\Ball}_{n}$和$\Sphere_{n-1}$同胚.
+	则$\overline{\B}_{n}$和$\S_{n-1}$同胚.
 \end{corollary}
 
-\begin{corollary}
-	$\Sphere_{1}$和$\T$同胚.
+\begin{corollary}{}{}
+	$\S_{1}$和$\T$同胚.
 \end{corollary}
 
-\begin{proposition}
-	设$n\geqslant 2$,则$\Sphere_{n-1}$连通且局部连通.此外,对任意$x\in\Sphere_{n-1}$,存在$x$在$\Sphere_{n-1}$的邻域$U$使$U$和$\R^{n-1}$同胚.
+\begin{proposition}{}{}
+	设$n\geqslant 2$,则$\S_{n-1}$连通且局部连通.此外,对任意$x\in\S_{n-1}$,存在$x$在$\S_{n-1}$的邻域$U$使$U$和$\R^{n-1}$同胚.
 \end{proposition}
 
-\begin{definition}
-	设$a\in\Sphere_{n-1}$,$H_{a}\subseteq\R^{n}$是过原点且和$a$正交的超平面.记
+\begin{definition}{}{}
+	设$a\in\S_{n-1}$,$H_{a}\subseteq\R^{n}$是过原点且和$a$正交的超平面.记
 	\begin{align*}
 		C_{a}^{+}=\left\{x\in\R^{n}\middle|\left(x\middle|a\right)\geqslant 0\right\},C_{a}^{-}=\left\{x\in\R^{n}\middle|\left(x\middle|a\right)\leqslant 0\right\}.
 	\end{align*}
 	\begin{itemize}
-		\item $\Sphere_{n-1}\cap C_{a}^{+}$和$\Sphere_{n-1}\cap C_{a}^{-}$称为由$H_{a}$确定的闭半球.
-		\item $\Sphere_{n-1}\cap\interior\left(C_{a}^{+}\right)$和$\Sphere_{n-1}\cap\interior\left(C_{a}^{-}\right)$称为由$H_{a}$确定的开半球.
+		\item $\S_{n-1}\cap C_{a}^{+}$和$\S_{n-1}\cap C_{a}^{-}$称为由$H_{a}$确定的闭半球.
+		\item $\S_{n-1}\cap\interior\left(C_{a}^{+}\right)$和$\S_{n-1}\cap\interior\left(C_{a}^{-}\right)$称为由$H_{a}$确定的开半球.
 	\end{itemize}
 \end{definition}

@@ -1,34 +1,39 @@
 \section{\texorpdfstring{$\R$}{R}的商群}
 
 \begin{proposition}{}{}
-	设$H$是$\R$的闭子群,$R/H\neq\left\{0\right\}$.
+	设$H$是加法群$\R$的闭子群.如果$\R/H$非平凡,那么存在$a\geq 0$使得$\R/a\Z$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$a\in\R_{\geq 1}$.如果$\R/a\Z$非平凡且作为拓扑群不同构于$\R$,那么$\R/a\Z$作为拓扑群同构于$\R/\Z$.
+\end{proposition}
+
+\begin{definition}{模$a$实数加法群,一维环面}{}
+	对每个$a\in\R_{>0}$,称拓扑群$\R/a\Z$为模$a$实数加法群.特别地,记$\T\coloneq\R/\Z$,称拓扑群$\T$为$1$维环面.
+\end{definition}
+
+\begin{remark}{}{}
 	\begin{enumerate}
-		\item 若$H=\left\{0\right\}$,则有拓扑群同构$\R/H\simeq\R$;
-		\item 若存在$a\in\R_{>0}$使$H=a\Z$,则有拓扑群同构$\R/H\simeq\R/a\Z$;
-		\item 若$H=\R$,则有拓扑群同构$\R/H\simeq\left\{0\right\}$.
+		\item 公式$x\equiv y\pmod{a\Z}$通常简写为$x\equiv y\pmod{a}$.当$a\in\Z$时,这和模$a$整数加法的记号一致.
+		\item $\T$同胚于$\R^{2}$中的单位圆周,$\T^{2}$同胚于$\R^{3}$中的旋转环面.一般地,可以定义$n$维环面.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 对每个$\alpha\in\R$,定义$\left[\alpha,\alpha+1\right]$上的等价关系$\sim_{\alpha}$为
+		\begin{align*}
+			\forall x,y\in\left[\alpha,\alpha+1\right]\left(x\sim_{\alpha}y\iff\left(x=y\vee\left\{x,y\right\}\right)=\left\{\alpha,\alpha+1\right\}\right).
+		\end{align*}
+		那么对每个$\alpha\in\R$,$1$维环面同胚于$\left[\alpha,\alpha+1\right]/\sim_{\alpha}$.
+		\item $\T$是紧,连通,局部连通的拓扑空间.
 	\end{enumerate}
 \end{proposition}
 
-\begin{lemma}{}{}
-	对任一$a,b\in\R_{>0}$,有拓扑群同构$\R/a\Z\simeq\R/b\Z$.
-\end{lemma}
-
-\begin{proposition}{}{}
-	设$H$是$G$的闭子群,则有拓扑群同构$\R/H\simeq\R/\Z$.
-\end{proposition}
-
-\begin{definition}{}{}
-	设$a\in\R_{>0}$.拓扑群$\R/a\Z$称为模$a$的实数加法群.特别地,记$\T=\R/\Z$,称之为一维环面.
-\end{definition}
-
-\begin{proposition}{}{}
-	$\T$是连通,局部连通的紧\text{Hausdorff}空间.进一步,对任一$\alpha\in\R$,定义$\left[\alpha,\alpha+1\right]$上的等价关系$\sim_{\alpha}$为
-	\begin{align*}
-		\forall x,y\in\left[\alpha,\alpha+1\right]\left(x\sim_{\alpha}\iff\left(x=y\vee\left\{x,y\right\}=\left\{\alpha,\alpha+1\right\}\right)\right),
-	\end{align*}
-	则有同胚$\left[\alpha,\alpha+1\right]/\sim_{\alpha}\simeq\T$.
-\end{proposition}
-
-\begin{proposition}{}{}
-	设$\alpha\in\R$,$\varphi:\R\twoheadrightarrow\T$是典范满射,则$\varphi|_{\left[\alpha,\alpha+1\right]}$是连续双射,但$\varphi^{-1}$在$\varphi\left(\alpha\right)$处不连续.
-\end{proposition}
+\begin{remark}{}{}
+	设$\varphi:\R\to\T$是典范映射,$a\in\R$.
+	\begin{enumerate}
+		\item $\varphi|_{\left[a,a+1\right)}$是连续双射但不是同胚.
+		\item 给$\left[a,a+1\right)$装备$\varphi|_{\left[a,a+1\right)}$诱导的拉回拓扑,该拓扑和$\R$诱导的子空间拓扑不同,并且使$\left[a,a+1\right)$同胚于$\T$
+	\end{enumerate}
+\end{remark}

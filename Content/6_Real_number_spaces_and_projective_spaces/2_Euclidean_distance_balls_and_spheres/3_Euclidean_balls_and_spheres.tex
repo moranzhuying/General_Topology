@@ -1,6 +1,6 @@
 \section{Euclid球和球面}
 
-\begin{proposition}
+\begin{proposition}{}{}
 	对任一$p\in\Z_{\geqslant 1}$,记
 	\begin{align*}
 		U_{p}=\left\{\left(x,y\right)\in\R^{n}\middle|d\left(x,y\right)<\frac{1}{p}\right\},
@@ -8,74 +8,74 @@
 	则$\left(U_{n}\right)_{n=1}^{\infty}$是$\R^{n}$的加法一致结构的周围基.
 \end{proposition}
 
-\begin{proposition}
+\begin{proposition}{}{}
 	$\R^{n}$上的\text{Euclid}度量和\text{Euclid}范数都一致连续.
 \end{proposition}
 
-\begin{definition}
+\begin{definition}{}{}
 	设$x_{0}\in\R^{n}$,$r\in\R_{>0}$.记
 	\begin{align*}
-		\Ball\left(x_{0},r\right)=\left\{x\in\R^{n}\middle|d\left(x_{0},x\right)<r\right\},\overline{\Ball}\left(x_{0},r\right)=\left\{x\in\R^{n}\middle|d\left(x_{0},x\right)\leqslant r\right\},\Sphere\left(x_{0},r\right)=\left\{x\in\R^{n}\middle|d\left(x_{0},x\right)=r\right\}.
+		\B\left(x_{0},r\right)=\left\{x\in\R^{n}\middle|d\left(x_{0},x\right)<r\right\},\overline{\B}\left(x_{0},r\right)=\left\{x\in\R^{n}\middle|d\left(x_{0},x\right)\leqslant r\right\},\S\left(x_{0},r\right)=\left\{x\in\R^{n}\middle|d\left(x_{0},x\right)=r\right\}.
 	\end{align*}
-	依次称$\Ball\left(x_{0},r\right)$,$\overline{\Ball}\left(x_{0},r\right)$,$\Sphere\left(x_{0},r\right)$为$\R^{n}$中以$x_{0}$为球心的开球,闭球,球面.特别地:
+	依次称$\B\left(x_{0},r\right)$,$\overline{\B}\left(x_{0},r\right)$,$\S\left(x_{0},r\right)$为$\R^{n}$中以$x_{0}$为球心的开球,闭球,球面.特别地:
 	\begin{itemize}
-		\item $n=2$时,依次称$\Ball\left(x_{0},r\right)$,$\overline{\Ball}\left(x_{0},r\right)$为$\R^{2}$中以$x_{0}$为圆心的开圆盘,闭圆盘.
-		\item $n=1$时,称$\Sphere\left(x_{0},r\right)$是圆周.
+		\item $n=2$时,依次称$\B\left(x_{0},r\right)$,$\overline{\B}\left(x_{0},r\right)$为$\R^{2}$中以$x_{0}$为圆心的开圆盘,闭圆盘.
+		\item $n=1$时,称$\S\left(x_{0},r\right)$是圆周.
 	\end{itemize}
 \end{definition}
 
-\begin{definition}
-	设$x_{0}\in\R^{n}$,$r\in\R_{>0}$.记$\Ball_{n}=\Ball\left(0,1\right)$,$\overline{\Ball}_{n}=\overline{\Ball}\left(0,1\right)$,$\Sphere_{n-1}=\Sphere\left(0,1\right)$.
+\begin{definition}{}{}
+	设$x_{0}\in\R^{n}$,$r\in\R_{>0}$.记$\B_{n}=\B\left(0,1\right)$,$\overline{\B}_{n}=\overline{\B}\left(0,1\right)$,$\S_{n-1}=\S\left(0,1\right)$.
 \end{definition}
 
-\begin{proposition}
+\begin{proposition}{}{}
 	设$x_{0}\in\R^{n}$.记
 	\begin{align*}
-		\mathcal{B}_{1}=\left\{\Ball\left(x_{0},r\right)\subseteq\R^{n}\middle|r\in\R_{>0}\right\},\mathcal{B}_{2}=\left\{\overline{\Ball}\left(x_{0},r\right)\subseteq\R^{n}\middle|r\in\R_{>0}\right\},\mathcal{B}_{3}=\left\{\Ball\left(x_{0},\frac{1}{n}\right)\subseteq\R^{n}\middle|n\in\Z_{\geqslant 1}\right\},
+		\mathcal{B}_{1}=\left\{\B\left(x_{0},r\right)\subseteq\R^{n}\middle|r\in\R_{>0}\right\},\mathcal{B}_{2}=\left\{\overline{\B}\left(x_{0},r\right)\subseteq\R^{n}\middle|r\in\R_{>0}\right\},\mathcal{B}_{3}=\left\{\B\left(x_{0},\frac{1}{n}\right)\subseteq\R^{n}\middle|n\in\Z_{\geqslant 1}\right\},
 	\end{align*}
 	则$\mathcal{B}_{1}$,$\mathcal{B}_{2}$,$\mathcal{B}_{3}$都是$\R^{n}$的邻域基,并且$\mathcal{B}_{3}$可数.
 \end{proposition}
 
-\begin{proposition}
+\begin{proposition}{}{}
 	设$x_{0}\in\R^{n}$,$r\in\R_{>0}$.
 	\begin{enumerate}
-		\item $\Ball\left(x_{0},r\right)$是$\R^{n}$的开集.
-		\item $\overline{\Ball}\left(x_{0},r\right)$是$\R^{n}$的紧集.
-		\item $\closure\left(\Ball\left(x_{0},r\right)\right)=\overline{\Ball}\left(x_{0},r\right)$.
-		\item $\interior\left(\overline{\Ball}\left(x_{0},r\right)\right)=\Ball\left(x_{0},r\right)$.
-		\item $\Sphere\left(x_{0},r\right)$是紧集,并且$\boundary\left(\Ball\left(x_{0},r\right)\right)=\boundary\left(\overline{\Ball}\left(x_{0},r\right)\right)=\Sphere\left(x_{0},r\right)$.
+		\item $\B\left(x_{0},r\right)$是$\R^{n}$的开集.
+		\item $\overline{\B}\left(x_{0},r\right)$是$\R^{n}$的紧集.
+		\item $\closure\left(\B\left(x_{0},r\right)\right)=\overline{\B}\left(x_{0},r\right)$.
+		\item $\interior\left(\overline{\B}\left(x_{0},r\right)\right)=\B\left(x_{0},r\right)$.
+		\item $\S\left(x_{0},r\right)$是紧集,并且$\boundary\left(\B\left(x_{0},r\right)\right)=\boundary\left(\overline{\B}\left(x_{0},r\right)\right)=\S\left(x_{0},r\right)$.
 	\end{enumerate}
 \end{proposition}
 
-\begin{corollary}
+\begin{corollary}{}{}
 	对任一$x_{0}\in\R^{n}$和$r\in\R_{>0}$,$L:\R^{n}\to\R^{n},x\mapsto r^{-1}\left(x-x_{0}\right)$是同胚,并且
 	\begin{align*}
-		L\left(\Ball\left(x_{0},r\right)\right)=\Ball_{n},L\left(\overline{\Ball}\left(x_{0},r\right)\right)=\overline{\Ball}_{n},L\left(\Sphere\left(x_{0},r\right)\right)=\Sphere_{n-1}.
+		L\left(\B\left(x_{0},r\right)\right)=\B_{n},L\left(\overline{\B}\left(x_{0},r\right)\right)=\overline{\B}_{n},L\left(\S\left(x_{0},r\right)\right)=\S_{n-1}.
 	\end{align*}
 \end{corollary}
 
-\begin{proposition}
-	对任一$x_{0}\in\R^{n}$和$r\in\R_{>0}$,$\Ball\left(x_{0},r\right)$和$\R^{n}$同胚》
+\begin{proposition}{}{}
+	对任一$x_{0}\in\R^{n}$和$r\in\R_{>0}$,$\B\left(x_{0},r\right)$和$\R^{n}$同胚》
 \end{proposition}
 
-\begin{proposition}
-	$\varphi:\left(\R\Disptminus\left\{0\right\}\right)^{n}\to\Sphere_{n-1}\times\R_{>0},x\mapsto\left(\left\|x\right\|^{-1}x,\left\|x\right\|\right)$是同胚,其逆映射为
+\begin{proposition}{}{}
+	$\varphi:\left(\R-\left\{0\right\}\right)^{n}\to\S_{n-1}\times\R_{>0},x\mapsto\left(\left\|x\right\|^{-1}x,\left\|x\right\|\right)$是同胚,其逆映射为
 	\begin{align*}
-		\varphi^{-1}:\Sphere_{n-1}\times\R_{>0}\to\left(\R\Disptminus\left\{0\right\}\right),\left(u,v\right)\mapsto vu.
+		\varphi^{-1}:\S_{n-1}\times\R_{>0}\to\left(\R-\left\{0\right\}\right),\left(u,v\right)\mapsto vu.
 	\end{align*}
 \end{proposition}
 
-\begin{corollary}
-	定义$\left(\R\Disptminus\left\{0\right\}\right)^{n}$上的等价关系$\sim$为
+\begin{corollary}{}{}
+	定义$\left(\R-\left\{0\right\}\right)^{n}$上的等价关系$\sim$为
 	\begin{align*}
-		\forall x,y\in\left(\R\Disptminus\left\{0\right\}\right)^{n}\left(x\sim y\iff y\in\R_{>0}t\right),
+		\forall x,y\in\left(\R-\left\{0\right\}\right)^{n}\left(x\sim y\iff y\in\R_{>0}t\right),
 	\end{align*}
-	则$\Sphere_{n-1}$和$\left(\R\Disptminus\left\{0\right\}\right)^{n}/\sim$同胚,进一步$\left(\R\Disptminus\left\{0\right\}\right)^{n}$和$\R\times\Sphere_{n-1}$同胚.
+	则$\S_{n-1}$和$\left(\R-\left\{0\right\}\right)^{n}/\sim$同胚,进一步$\left(\R-\left\{0\right\}\right)^{n}$和$\R\times\S_{n-1}$同胚.
 \end{corollary}
 
-\begin{proposition}
+\begin{proposition}{}{}
 	设$V$是$\R^{n}$的$p$维子空间,则存在$f\in\mathrm{O}_{n}\left(\R\right)$使得$f\left(V\right)$是$\R^{n}$的$p$维子空间.进一步,有同胚
 	\begin{align*}
-		V\cap\Sphere_{n-1}\simeq\Sphere_{p-1},V\cap\overline{\Ball}_{n}\simeq\overline{\Ball}_{p}.
+		V\cap\S_{n-1}\simeq\S_{p-1},V\cap\overline{\B}_{n}\simeq\overline{\B}_{p}.
 	\end{align*}
 \end{proposition}

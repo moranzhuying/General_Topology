@@ -1,19 +1,26 @@
 \chapter{\texorpdfstring{$\R$}{R}和\texorpdfstring{$\T$}{T}的拓扑特征}
 
-未加声明时,$G$是加法拓扑群.
+记号约定:$G$是拓扑群(乘法记号).
+
+\begin{definition}{单参数群}{}
+	如果$G$局部同构于加法群$\R$,则称$G$为单参数群.
+\end{definition}
 
 \begin{theorem}{}{}
-	若存在$1_{G}$的邻域$U$和$\R$的开区间$I$使得$U$和$I$同胚,则$G$局部同构于$\R$.
+	如果存在$U\in\mathcal{N}\left(1_{G}\right)$和$\R$中的开区间$I$使得$U$和$I$同胚,那么$G$是单参数群.
 \end{theorem}
 
 \begin{theorem}{}{}
-	设$G$连通,并且存在$1_{G}$的邻域$U$和$\R$的开区间$I$使得$U$和$I$同胚.
+	设$G$是连通的.如果存在$U\in\mathcal{N}\left(1_{G}\right)$和$\R$中的开区间$I$使得$U$和$I$同胚,那么下列情形之一成立:
 	\begin{enumerate}
-		\item 若$G$是紧\text{Hausdorff}群,则有拓扑群同构$G\simeq\T$.
-		\item 若$G$不是紧群,则有拓扑群同构$G\simeq\R$.
+		\item $G$同构于加法群$\R$.
+		\item $G$同构于$\T$.
 	\end{enumerate}
 \end{theorem}
 
-\begin{corollary}{}{}
-	若$G$作为拓扑空间和$\R$同胚,则$G$作为拓扑群和$\R$同构.
-\end{corollary}
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$G$是连通紧群,那么$G$同构于$\T$;如果$G$连通但不紧,那么$G$同构于加法群$\R$.
+		\item 每个同胚于$\R$的拓扑群一定同构于加法群$\R$.
+	\end{enumerate}
+\end{remark}
