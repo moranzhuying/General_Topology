@@ -1,54 +1,64 @@
 \section{球极投影}
 
-\begin{definition}{}{}
-	设$e_{n}=\left(\delta_{1,n},\ldots,\delta_{n,n}\right)$,$H\subseteq\R^{n}$是过原点且与$e_{n}$正交的超平面.记
-	\begin{align*}
-		\varphi:\S_{n-1}-\left\{e_{n}\right\}\to H,\left(x_{1},\ldots,x_{n-1},0\right)\mapsto\left(\frac{x_{1}}{1-x_{1}},\ldots,\frac{x_{n-1}}{1-x_{n}},0\right),
-	\end{align*}
-	则$\varphi$是同胚,并且
-	\begin{align*}
-		\varphi^{-1}:H\to\S_{n-1}-\left\{e_{n}\right\},\left(y_{1},\ldots,y_{n-1},0\right)\mapsto\left(\frac{2y_{1}}{\sum\limits_{i=1}^{n}y_{i}^{2}+1},\ldots,\frac{2y_{n-1}}{\sum\limits_{i=1}^{n}y_{i}^{2}+1},\frac{\sum\limits_{i=1}^{n}y_{i}^{2}-1}{\sum\limits_{i=1}^{n}y_{i}^{2}+1}\right).
-	\end{align*}
-	我们称$\varphi$是以$e_{n}$为顶点,$H$为投影超平面的球极投影.
-\end{definition}
+记号约定:
+\begin{itemize}
+	\item $\left(\mathbf{e}_{i}\right)_{i=1}^{n}$是$\R^{n}$中的典范基.
+	\item $\langle\cdot\mid\cdot\rangle,d,\left\|\cdot\right\|$分别是$\R^{n}$上的标准内积,Euclid度量和Euclid范数.
+\end{itemize}
 
-\begin{definition}{}{}
-	设$e_{n}=\left(\delta_{1,n},\ldots,\delta_{n,n}\right)$,$a\in\S_{n-1}$,超平面$H$,$H_{a}$过原点且分别和$e_{n}$,$a$正交,$f\in\mathrm{O}_{n}\left(\R\right)$满足
+\begin{proposition}{以$\R^{n}$中某一点为视点的球极投影的构造}{stereographic-projection-associate-to-a-point}
+	设$\mathbf{a}\in\S_{n-1},H=\left\{\mathbf{a}\right\}^{\circ},n\geq 2$,则$\varphi:\S_{n-1}\setminus\left\{\mathbf{a}\right\}\to H,\mathbf{x}\mapsto\left(1-\langle\mathbf{x}\mid\mathbf{a}\rangle\right)^{-1}\left(\mathbf{x}-\langle\mathbf{x}\mid\mathbf{a}\rangle\mathbf{a}\right)$是同胚,
 	\begin{align*}
-		f\left(a\right)=e_{n},f\left(H_{a}\right)=H.
+		\varphi^{-1}:H\to\S_{n-1}\setminus\left\{\mathbf{a}\right\},\mathbf{y}\mapsto \left(\left\|\mathbf{y}\right\|^{2}+1\right)^{-1}\left(\left(\left\|\mathbf{y}\right\|^{2}-1\right)\mathbf{a}+2\mathbf{y}\right).
 	\end{align*}
-	设$\pi$是过以$e_{n}$为顶点,$H$为投影超平面的球极投影,则$f^{-1}\circ \pi\circ f$是不依赖$f$的选取的同胚.
-	
-	我们称$\pi_{a}\coloneq f^{-1}\circ \pi\circ f$是以$a$为顶点,$H_{a}$为投影超平面的一般球极投影.
+\end{proposition}
+
+\begin{definition}{以$\R^{n}$中某一点为视点的球极投影}{}
+	沿用\cref{prop:stereographic-projection-associate-to-a-point}的记号和设定.
+	\begin{enumerate}
+		\item 我们称$\mathbf{a}$是视点,$H$是投影超平面.
+		\item 我们称$\varphi$是以$\mathbf{a}$为视点,$H$为投影超平面的球极投影.
+	\end{enumerate}
 \end{definition}
 
 \begin{proposition}{}{}
-	设$n\geqslant 2$,则$\S_{n-1}$和$\R^{n-1}$的单点紧化$\R^{n-1}\sqcup\left\{\infty\right\}$同胚.
+	如果$n\geq 1$,那么对每个$\mathbf{a}\in\R^{n}$,拓扑空间$\S_{n-1}\setminus\left\{\mathbf{a}\right\}$同胚于$\R^{n-1}$.
 \end{proposition}
-
-\begin{corollary}{}{}
-	设$n\geqslant 2$.定义$\overline{\B}_{n}$上定义等价关系$\sim$为
-	\begin{align*}
-		\forall x,y\in\overline{\B}_{n}\left(x\sim y\iff x=y\vee\left\{x,y\right\}\subseteq\S_{n-1}\right),
-	\end{align*}
-	则$\overline{\B}_{n}$和$\S_{n-1}$同胚.
-\end{corollary}
-
-\begin{corollary}{}{}
-	$\S_{1}$和$\T$同胚.
-\end{corollary}
 
 \begin{proposition}{}{}
-	设$n\geqslant 2$,则$\S_{n-1}$连通且局部连通.此外,对任意$x\in\S_{n-1}$,存在$x$在$\S_{n-1}$的邻域$U$使$U$和$\R^{n-1}$同胚.
+	如果$n\geq 1$,那么对每个$\mathbf{a}\in\R^{n}$,拓扑空间$\S_{n-1}\setminus\left\{\mathbf{a}\right\}$同胚于$\R^{n-1}$的单点紧化.
 \end{proposition}
 
-\begin{definition}{}{}
-	设$a\in\S_{n-1}$,$H_{a}\subseteq\R^{n}$是过原点且和$a$正交的超平面.记
-	\begin{align*}
-		C_{a}^{+}=\left\{x\in\R^{n}\middle|\left(x\middle|a\right)\geqslant 0\right\},C_{a}^{-}=\left\{x\in\R^{n}\middle|\left(x\middle|a\right)\leqslant 0\right\}.
-	\end{align*}
-	\begin{itemize}
-		\item $\S_{n-1}\cap C_{a}^{+}$和$\S_{n-1}\cap C_{a}^{-}$称为由$H_{a}$确定的闭半球.
-		\item $\S_{n-1}\cap\interior\left(C_{a}^{+}\right)$和$\S_{n-1}\cap\interior\left(C_{a}^{-}\right)$称为由$H_{a}$确定的开半球.
-	\end{itemize}
+\begin{proposition}{}{}
+	如果$n\geq 2$,那么$\S_{n-1}$连通且局部连通,并且$\S_{n-1}$上每一点有一个同胚于$\R^{n-1}$的开邻域.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$n\geq 2$.定义$\B_{n}$上的等价关系$\sim$为$\forall\mathbf{x},\mathbf{y}\in\overline{\B}_{n}\left(\mathbf{x}\sim\mathbf{y}\iff \mathbf{x}=\mathbf{y}\vee\left\{\mathbf{x},\mathbf{y}\right\}\subseteq\S_{n-1}\right)$,那么$\B_{n}/\sim$同胚于$\S_{n-1}$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	$\S_{1}$同胚于$\T$.
+\end{corollary}
+
+\begin{definition}{开半球面,闭半球面}{}
+	设$\mathbf{m}\in\R^{n}\setminus\left\{\mathbf{0}\right\},c\in\R,H_{\mathbf{m}}^{c}=\left\{\mathbf{z}\in\R^{n}\middle|\langle\mathbf{z}\mid\mathbf{m}\rangle=c\right\}$.记
+	\begin{gather*}
+		H_{\mathbf{m}}^{\geq c}\coloneq\left\{\mathbf{z}\in\R^{n}\middle|\langle\mathbf{z}\mid\mathbf{m}\rangle\geq c\right\},
+		H_{\mathbf{m}}^{\leq c}\coloneq\left\{\mathbf{z}\in\R^{n}\middle|\langle\mathbf{z}\mid\mathbf{m}\rangle\leq c\right\},\\
+		H_{\mathbf{m}}^{>c}\coloneq\left\{\mathbf{z}\in\R^{n}\middle|\langle\mathbf{z}\mid\mathbf{m}\rangle >c\right\},
+		H_{\mathbf{m}}^{<c}\coloneq\left\{\mathbf{z}\in\R^{n}\middle|\langle\mathbf{z}\mid\mathbf{m}\rangle <c\right\}.
+	\end{gather*}
+	\begin{enumerate}
+		\item $\S_{n-1}\cap H_{\mathbf{m}}^{\geq c}$和$\S_{n-1}\cap H_{\mathbf{m}}^{\leq c}$称为$\S_{n-1}$的闭半球面.
+		\item $\S_{n-1}\cap H_{\mathbf{m}}^{>c}$和$\S_{n-1}\cap H_{\mathbf{m}}^{<c}$称为$\S_{n-1}$的开半球面.
+	\end{enumerate}
 \end{definition}
+
+\begin{proposition}{球极投影把闭(开)半球面映到闭(开)球}{}
+	设$\mathbf{a}\in\S_{n-1},\mathbf{m}\in\R^{n}\setminus\left\{\mathbf{0}\right\},H=\left\{\mathbf{a}\right\}^{\circ},c\in\R,\langle\mathbf{a}\mid\mathbf{m}\rangle>c$,$\varphi:\S_{n-1}\setminus\left\{\mathbf{a}\right\}\to H$是以$\mathbf{a}$为视点的球极投影.如果
+	\begin{align*}
+		r=\sqrt{\left\|m\right\|^{2}-c^{2}}\left(\langle\mathbf{a}\mid\mathbf{m}\rangle-c\right)^{-1},\mathbf{y}_{0}=\left(\mathbf{m}-\langle\mathbf{m}\mid\mathbf{a}\rangle\mathbf{a}\right)\left(\langle\mathbf{a}\mid\mathbf{m}\rangle-c\right)^{-1},
+	\end{align*}
+	那么$\varphi\left(H_{\mathbf{m}}^{\geq c}\cap\S_{n-1}\right)=\overline{\B}\left(\mathbf{y}_{0},r\right),\varphi\left(H_{\mathbf{m}}^{>c}\cap\S_{n-1}\right)=\B\left(\mathbf{y}_{0},r\right)$.
+\end{proposition}

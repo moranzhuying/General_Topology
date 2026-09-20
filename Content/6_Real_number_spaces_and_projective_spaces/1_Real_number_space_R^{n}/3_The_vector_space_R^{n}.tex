@@ -1,33 +1,72 @@
 \section{向量空间\texorpdfstring{$\R^{n}$}{Rn}}
 
-\begin{definition}{}{}
-	定义$\R$在$\R^{n}$上的左作用$\cdot_{1}$和右作用$\cdot_{2}$如下:对任一$t\in\R$,$\left(x_{1},\ldots,x_{n}\right)\in\R^{n}$,
-	\begin{align*}
-		t\cdot_{1}\left(x_{1},\ldots,x_{n}\right)=\left(tx_{1},\ldots,tx_{n}\right),\left(x_{1},\ldots,x_{n}\right)\cdot_{2}t=\left(x_{1}t,\ldots,x_{n}t\right),
-	\end{align*}
-	则$\R^{n}$是$\left(\R,\R\right)$-双模.此外,$\R^{n}$按$\cdot_{1}$成为拓扑左$\R$-模,按$\cdot_{2}$成为拓扑右$\R$-模.今后我们将不再区分$\cdot_{1}$和$\cdot_{2}$.
-\end{definition}
+记号约定:$m\geq 0$.
 
-\begin{definition}{}{}
-	对任一$i\in\llbracket 1,n\rrbracket$,记$e_{i}=\left(\delta_{1,i},\ldots,\delta_{i,i},\ldots,\delta_{n,i}\right)$.我们称$\left(e_{i}\right)_{i=1}^{n}$是$\R^{n}$的标准有序基.
-\end{definition}
+\begin{proposition}{$\R^{n}$是拓扑$\R$-模}{}
+	$\R$在$\R^{n}$上的标量乘法$\R\times\R^{n}\to\R^{n},\left(t,\left(x_{i}\right)_{i=1}^{n}\right)\mapsto\left(tx_{i}\right)_{i=1}^{n}$是连续的.
+\end{proposition}
 
-\begin{proposition}{}{}
+\begin{proposition}{$\R^{n}$的维数}{}
 	$\R^{n}$是$n$维$\R$-向量空间.
 \end{proposition}
 
 \begin{proposition}{}{}
-	设$m\in\Z_{\geqslant 1}$,$f:\R^{n}\to\R^{m}$是仿射映射,则$f$按$\R^{n}$和$\R^{m}$的加法一致结构一致连续.
+	设$\left(\mathbf{e}_{i}\right)_{i=1}^{n},\left(\check{\mathbf{e}}_{j}\right)_{j=1}^{m}$分别是$\R^{n},\R^{m}$的典范基,$f\in\Hom_{\mathsf{Aff}}\left(\R^{n},\R^{m}\right),g:\R^{n}\to\R^{m},\mathbf{x}\mapsto f\left(\mathbf{x}\right)-f\left(\mathbf{0}\right)$.
+	\begin{enumerate}
+		\item $g\in\Hom_{\R}\left(\R^{n},\R^{m}\right)$.
+		\item 设$\mathbf{x}=\sum\limits_{i=1}^{n}x_{i}\mathbf{e}_{i}\in\R^{n},f\left(\mathbf{0}\right)=\sum\limits_{k=1}^{m}b_{k}\check{e}_{k}$,对每个$1\leq i\leq n$有$g\left(\mathbf{e}_{i}\right)=\sum\limits_{j=1}^{m}a_{ij}\check{\mathbf{e}}_{j},f\left(\mathbf{e}_{i}\right)=\sum\limits_{j=1}^{m}y_{j}\check{\mathbf{e}}_{j}$,则
+		\begin{align*}
+			\forall 1\leq j\leq m\left(y_{j}=\sum\limits_{i=1}^{n}x_{i}a_{ij}+b_{j}\right).
+		\end{align*}
+	\end{enumerate}
 \end{proposition}
 
-\begin{corollary}{}{}
-	设$f:\R^{n}\to\R^{n}$是仿射同构,则$f$是同胚,也是一致同构.
-\end{corollary}
+\begin{proposition}{}{}
+	每个$f\in\Hom_{\mathsf{Aff}}\left(\R^{n},\R^{m}\right)$都一致连续.
+\end{proposition}
 
-\begin{definition}{}{}
-	设$\left(a_{i}\right)_{i=1}^{n}$是$\R^{n}$的有序基,$b\in\R^{n}$.记
-	\begin{align*}
-		P_{1}=\left\{b+\sum\limits_{i=1}^{n}u_{i}a_{i}\in\R^{n}\middle|\forall i\in\llbracket 1,n\rrbracket\left(-1\leqslant u_{i}\leqslant 1\right)\right\},P_{2}=\left\{b+\sum\limits_{i=1}^{n}u_{i}a_{i}\in\R^{n}\middle|\forall i\in\llbracket 1,n\rrbracket\left(-1<u_{i}<1\right)\right\}.
-	\end{align*}
-	依次称$P_{1}$,$P_{2}$是以$b$为中心,$\left(a_{i}\right)_{i=1}^{n}$为基的闭平行多面体和开平行多面体.显然$P_{1}$是$b$的紧邻域.
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 每个是满射的仿射映射$f:\R^{n}\to\R^{n}$都是双射,并且$f^{-1}$是仿射映射.
+		\item 每个是满射的仿射映射$f:\R^{n}\to\R^{n}$都是同胚,并且是一致自同构.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\left(\mathbf{a}_{i}\right)_{i=1}^{n}$是$\R^{n}$的线性无关族,$\mathbf{b}\in\R^{n}$.记$P\coloneq\mathbf{b}+\sum\limits_{i=1}^{n}\left[-1,1\right]\mathbf{a}_{i}$,其中$\left[-1,1\right]$是$\R$中的区间.
+	\begin{enumerate}
+		\item $P$是$\mathbf{b}$的紧邻域.
+		\item $\interior\left(P\right)=\mathbf{b}+\sum\limits_{i=1}^{n}\left(-1,1\right)\mathbf{a}_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{闭平行多面体,开平行多面体}{}
+	设$\left(\mathbf{a}_{i}\right)_{i=1}^{n}$是$\R^{n}$的线性无关族,$\mathbf{b}\in\R^{n}$.
+	\begin{enumerate}
+		\item 我们称$\mathbf{b}+\sum\limits_{i=1}^{n}\left[-1,1\right]\mathbf{a}_{i}$是以$\mathbf{b}$为中心,由$\left(\mathbf{a}_{i}\right)_{i=1}^{n}$张成的闭平行多面体.
+		\item 我们称$\mathbf{b}+\sum\limits_{i=1}^{n}\left(-1,1\right)\mathbf{a}_{i}$是以$\mathbf{b}$为中心,由$\left(\mathbf{a}_{i}\right)_{i=1}^{n}$张成的开平行多面体.
+	\end{enumerate}
 \end{definition}
+
+\begin{proposition}{}{}
+	对各$f\in\R[X_{1},\ldots,X_{n}]$,记$\tilde{f}:\R^{n}\to\R$是$f$诱导的多项式函数,则$\R[X_{1},\ldots,X_{n}]\to\Pol\left(\R^{n},\R\right),P\mapsto\tilde{P}$是双射.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$f\in\Pol\left(\R^{n},\R\right)$,那么$f$连续.进一步,若$f\neq 0$,则$\R^{n}\setminus f^{-1}\left(\left\{\mathbf{0}\right\}\right)$是$\R^{n}$的稠密开集.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

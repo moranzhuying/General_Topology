@@ -1,81 +1,102 @@
 \section{Euclid球和球面}
 
-\begin{proposition}{}{}
-	对任一$p\in\Z_{\geqslant 1}$,记
-	\begin{align*}
-		U_{p}=\left\{\left(x,y\right)\in\R^{n}\middle|d\left(x,y\right)<\frac{1}{p}\right\},
-	\end{align*}
-	则$\left(U_{n}\right)_{n=1}^{\infty}$是$\R^{n}$的加法一致结构的周围基.
+记号约定:$d$是$\R^{n}$上的Euclid度量,$\left\|\cdot\right\|$是$\R^{n}$上的Euclid范数.
+
+\begin{proposition}{$\R^{n}$在Euclid度量下的邻里基}{}
+	对每个$p\geq 1$,记$U_{p}=\left\{\left(\mathbf{x},\mathbf{y}\right)\in\R^{n}\times\R^{n}\middle|d\left(\mathbf{x},\mathbf{y}\right)<\frac{1}{p}\right\}$,那么$\left\{U_{p}\middle|p\geq 1\right\}$是$\R^{n}$的加法一致结构的邻里基.
 \end{proposition}
 
-\begin{proposition}{}{}
-	$\R^{n}$上的\text{Euclid}度量和\text{Euclid}范数都一致连续.
+\begin{proposition}{Euclid度量和Euclid范数都一致连续}{}
+	$d$在$\R^{n}\times\R^{n}$上连续,$\left\|\cdot\right\|$在$\R^{n}$上连续.
 \end{proposition}
 
-\begin{definition}{}{}
-	设$x_{0}\in\R^{n}$,$r\in\R_{>0}$.记
+\begin{definition}{欧式开球,欧式闭球,欧式球面}{}
+	设$\mathbf{x}_{0}\in\R^{n},r\in\R_{>0}$.令
 	\begin{align*}
-		\B\left(x_{0},r\right)=\left\{x\in\R^{n}\middle|d\left(x_{0},x\right)<r\right\},\overline{\B}\left(x_{0},r\right)=\left\{x\in\R^{n}\middle|d\left(x_{0},x\right)\leqslant r\right\},\S\left(x_{0},r\right)=\left\{x\in\R^{n}\middle|d\left(x_{0},x\right)=r\right\}.
+		\B\left(\mathbf{x}_{0},r\right)\coloneq\left\{\mathbf{x}\in\R^{n}\middle|d\left(\mathbf{x}_{0},\mathbf{x}\right)<r\right\},
+		\overline{\B}\left(\mathbf{x}_{0},r\right)\coloneq\left\{x\in\R^{n}\middle|d\left(\mathbf{x}_{0},\mathbf{x}\right)\leq r\right\},
+		\S\left(\mathbf{x}_{0},r\right)=\left\{\mathbf{x}\in\R^{n}\middle|d\left(\mathbf{x}_{0},\mathbf{x}\right)=r\right\}.
 	\end{align*}
-	依次称$\B\left(x_{0},r\right)$,$\overline{\B}\left(x_{0},r\right)$,$\S\left(x_{0},r\right)$为$\R^{n}$中以$x_{0}$为球心的开球,闭球,球面.特别地:
-	\begin{itemize}
-		\item $n=2$时,依次称$\B\left(x_{0},r\right)$,$\overline{\B}\left(x_{0},r\right)$为$\R^{2}$中以$x_{0}$为圆心的开圆盘,闭圆盘.
-		\item $n=1$时,称$\S\left(x_{0},r\right)$是圆周.
-	\end{itemize}
-\end{definition}
-
-\begin{definition}{}{}
-	设$x_{0}\in\R^{n}$,$r\in\R_{>0}$.记$\B_{n}=\B\left(0,1\right)$,$\overline{\B}_{n}=\overline{\B}\left(0,1\right)$,$\S_{n-1}=\S\left(0,1\right)$.
-\end{definition}
-
-\begin{proposition}{}{}
-	设$x_{0}\in\R^{n}$.记
-	\begin{align*}
-		\mathcal{B}_{1}=\left\{\B\left(x_{0},r\right)\subseteq\R^{n}\middle|r\in\R_{>0}\right\},\mathcal{B}_{2}=\left\{\overline{\B}\left(x_{0},r\right)\subseteq\R^{n}\middle|r\in\R_{>0}\right\},\mathcal{B}_{3}=\left\{\B\left(x_{0},\frac{1}{n}\right)\subseteq\R^{n}\middle|n\in\Z_{\geqslant 1}\right\},
-	\end{align*}
-	则$\mathcal{B}_{1}$,$\mathcal{B}_{2}$,$\mathcal{B}_{3}$都是$\R^{n}$的邻域基,并且$\mathcal{B}_{3}$可数.
-\end{proposition}
-
-\begin{proposition}{}{}
-	设$x_{0}\in\R^{n}$,$r\in\R_{>0}$.
 	\begin{enumerate}
-		\item $\B\left(x_{0},r\right)$是$\R^{n}$的开集.
-		\item $\overline{\B}\left(x_{0},r\right)$是$\R^{n}$的紧集.
-		\item $\closure\left(\B\left(x_{0},r\right)\right)=\overline{\B}\left(x_{0},r\right)$.
-		\item $\interior\left(\overline{\B}\left(x_{0},r\right)\right)=\B\left(x_{0},r\right)$.
-		\item $\S\left(x_{0},r\right)$是紧集,并且$\boundary\left(\B\left(x_{0},r\right)\right)=\boundary\left(\overline{\B}\left(x_{0},r\right)\right)=\S\left(x_{0},r\right)$.
+		\item $\B\left(x_{0},r\right)$称为$\R^{n}$中以$x_{0}$为球心$r$为半径的$n$维欧式开球,$n=2$时称之为以$\mathbf{x}_{0}$为圆心$r$为半径的开圆盘.
+		\item $\overline{\B}\left(x_{0},r\right)$称为$\R^{n}$中以$x_{0}$为球心$r$为半径的$n$维欧式闭球.$n=2$时称之为以$\mathbf{x}_{0}$为圆心$r$为半径的闭圆盘.
+		\item $\S\left(x_{0},r\right)$称为$\R^{n}$中以$x_{0}$为球心$r$为半径的$n-1$维欧式球面,$n=2$时称之为以$\mathbf{x}_{0}$为圆心$r$为半径的圆周.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$n=1$时,$\B\left(\mathbf{x}_{0},r\right)=\left(\mathbf{x}_{0}-r,\mathbf{x}_{0}+r\right),\overline{\B}\left(\mathbf{x}_{0},r\right)=\left[\mathbf{x}_{0}-r,\mathbf{x}_{0}+r\right],\S\left(\mathbf{x}_{0},r\right)=\left\{\mathbf{x}_{0}-r,\mathbf{x}_{0}+r\right\}$.
+		\item 当$n=0$时,$\B\left(\mathbf{x}_{0},r\right)=\overline{\B}\left(\mathbf{x}_{0},r\right)=\left\{\mathbf{0}\right\},\S\left(\mathbf{x}_{0},r\right)=\emptyset$.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{$\R^{n}$中以某点为球心的开球和闭球构成该点的邻域基}{}
+	对每个$\mathbf{x}_{0}\in\R^{n}$,如下集合都是$\mathbf{x}_{0}$的邻域基:
+	\begin{gather*}
+		\left\{\B\left(\mathbf{x}_{0},r\right)\middle|r\in\R_{>0}\right\},\left\{\overline{\B}\left(\mathbf{x}_{0},r\right)\middle|r\in\R_{>0}\right\},\\
+		\left\{\B\left(\mathbf{x}_{0},p\right)\middle|p\geq 1\right\},\left\{\overline{\B}\left(\mathbf{x}_{0},p\right)\middle|p\geq 1\right\},\\
+		\left\{\B\left(\mathbf{x}_{0},\frac{1}{p}\right)\middle|p\geq 1\right\},\left\{\overline{\B}\left(\mathbf{x}_{0},\frac{1}{p}\right)\middle|p\geq 1\right\}.
+	\end{gather*}
+\end{proposition}
+
+\begin{proposition}{开球的开性,闭球和球面的紧性}{}
+	对每个$\mathbf{x}_{0}\in\R^{n}$和$r\in\R_{>0}$,
+	\begin{enumerate}
+		\item $\B\left(\mathbf{x}_{0},r\right)$是开集,$\closure\left(\B\left(\mathbf{x}_{0},r\right)\right)=\overline{\B}\left(\mathbf{x}_{0},r\right)$;
+		\item $\overline{\B}\left(\mathbf{x}_{0},r\right)$是紧集,$\interior\left(\overline{\B}\left(\mathbf{x}_{0},r\right)\right)=\B\left(\mathbf{x}_{0},r\right)$;
+		\item $\S\left(\mathbf{x}_{0},r\right)$是紧集,$\boundary\left(\B\left(\mathbf{x}_{0},r\right)\right)=\boundary\left(\overline{\B}\left(\mathbf{x}_{0},r\right)\right)=\S\left(\mathbf{x}_{0},r\right)$.
 	\end{enumerate}
 \end{proposition}
 
-\begin{corollary}{}{}
-	对任一$x_{0}\in\R^{n}$和$r\in\R_{>0}$,$L:\R^{n}\to\R^{n},x\mapsto r^{-1}\left(x-x_{0}\right)$是同胚,并且
+\begin{proposition}{开球,闭球,球面依次由单位开球,单位闭球,单位球面平移而来}{}
+	对每个$\mathbf{x}_{0}\in\R^{n}$和$r\in\R_{>0}$,令$L:\R^{n}\to\R^{n},\mathbf{x}\mapsto r^{-1}\left(\mathbf{x}-\mathbf{x}_{0}\right)$,那么
 	\begin{align*}
-		L\left(\B\left(x_{0},r\right)\right)=\B_{n},L\left(\overline{\B}\left(x_{0},r\right)\right)=\overline{\B}_{n},L\left(\S\left(x_{0},r\right)\right)=\S_{n-1}.
-	\end{align*}
-\end{corollary}
-
-\begin{proposition}{}{}
-	对任一$x_{0}\in\R^{n}$和$r\in\R_{>0}$,$\B\left(x_{0},r\right)$和$\R^{n}$同胚》
-\end{proposition}
-
-\begin{proposition}{}{}
-	$\varphi:\left(\R-\left\{0\right\}\right)^{n}\to\S_{n-1}\times\R_{>0},x\mapsto\left(\left\|x\right\|^{-1}x,\left\|x\right\|\right)$是同胚,其逆映射为
-	\begin{align*}
-		\varphi^{-1}:\S_{n-1}\times\R_{>0}\to\left(\R-\left\{0\right\}\right),\left(u,v\right)\mapsto vu.
+		L\left(\B\left(x_{0},r\right)\right)=\B\left(\mathbf{0},1\right),L\left(\overline{\B}\left(x_{0},r\right)\right)=\overline{\B}\left(\mathbf{0},1\right),L\left(\S\left(x_{0},r\right)\right)=\S\left(\mathbf{0},1\right).
 	\end{align*}
 \end{proposition}
 
-\begin{corollary}{}{}
-	定义$\left(\R-\left\{0\right\}\right)^{n}$上的等价关系$\sim$为
-	\begin{align*}
-		\forall x,y\in\left(\R-\left\{0\right\}\right)^{n}\left(x\sim y\iff y\in\R_{>0}t\right),
-	\end{align*}
-	则$\S_{n-1}$和$\left(\R-\left\{0\right\}\right)^{n}/\sim$同胚,进一步$\left(\R-\left\{0\right\}\right)^{n}$和$\R\times\S_{n-1}$同胚.
+\begin{definition}{单位欧式开球,单位欧式闭球,单位欧式球面}{}
+	记$\B_{n}\coloneq\B\left(\mathbf{0},1\right),\overline{\B}_{n}\coloneq\overline{\B}\left(\mathbf{0},1\right),\S_{n-1}\coloneq\S\left(\mathbf{0},1\right)$.
+	\begin{enumerate}
+		\item $\B_{n}\left(\mathbf{0},1\right)$称为$\R^{n}$中的单位欧式开球.
+		\item $\overline{\B}_{n}\left(\mathbf{0},1\right)$称为$\R^{n}$中的单位欧式闭球.
+		\item $\S_{n}\left(\mathbf{0},1\right)$称为$\R^{n}$中的单位欧式球面.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{$\R^{n}$中每个开球都和$\R^{n}$同胚}{}
+	对每个$\mathbf{x}_{0}\in\R^{n}$和$r\in\R_{>0}$,开球$\B\left(\mathbf{x}_{0},r\right)$同胚于$\R^{n}$.
+\end{proposition}
+
+\begin{definition}{中心投影}{}
+	记$\R_{n}^{\times}\coloneq\left(\R^{\times}\right)^{n}$.
+	\begin{enumerate}
+		\item 对每个$\mathbf{a}\in\R^{n}$,称$\R^{n}\setminus\left\{\mathbf{a}\right\}\to\S\left(\mathbf{a},1\right),\mathbf{x}\mapsto\mathbf{a}+\left\|\mathbf{x}-\mathbf{a}\right\|^{-1}\left(\mathbf{x}-\mathbf{a}\right)$是以$\mathbf{a}$为球心的中心投影.
+		\item 特别地,称$\R_{n}^{\times}\to\S_{n-1},\mathbf{x}\mapsto\left\|\mathbf{x}\right\|^{-1}\mathbf{x}$是中心投影.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{直角坐标到极坐标的转化}{}
+	$\R_{>0}\times\S_{n-1}\to\R_{n}^{\times},\left(t,\mathbf{z}\right)\mapsto t\mathbf{z}$是同胚.
+\end{proposition}
+
+\begin{corollary}{$\S_{n-1}$的商空间实现}{}
+	$\S_{n-1}$同胚于商拓扑空间$\R_{n}^{\times}/\R_{>0}$.
 \end{corollary}
 
+\begin{corollary}{}{}
+	$\R_{n}^{\times}$同胚于$\R\times\S_{n-1}$.
+\end{corollary}
+
+\begin{remark}{}{}
+	这两个推论可以推广到$\mathbf{0}$在$\R^{n}$中的任意一个紧邻域.
+\end{remark}
+
+\begin{proposition}{单位球面和单位开球在正交变换下不变}{}
+	对每个$f\in\mathrm{O}_{n}\left(\R\right)$有$f\left(\B_{n}\right)=\B_{n}$和$f\left(\S_{n-1}\right)=\S_{n-1}$.
+\end{proposition}
+
 \begin{proposition}{}{}
-	设$V$是$\R^{n}$的$p$维子空间,则存在$f\in\mathrm{O}_{n}\left(\R\right)$使得$f\left(V\right)$是$\R^{n}$的$p$维子空间.进一步,有同胚
-	\begin{align*}
-		V\cap\S_{n-1}\simeq\S_{p-1},V\cap\overline{\B}_{n}\simeq\overline{\B}_{p}.
-	\end{align*}
+	对$\R^{n}$的每个$p$维向量子空间$V$,拓扑空间$V\cap\S_{n-1}$和$V\cap\B_{n}$分别同胚于$\S_{p-1}$和$\B_{p}$.
 \end{proposition}

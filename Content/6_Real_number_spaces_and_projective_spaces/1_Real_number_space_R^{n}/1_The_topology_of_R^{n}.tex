@@ -1,67 +1,74 @@
 \chapter{实数空间\texorpdfstring{$\R^{n}$}{Rn}}
 
+记号约定:$n\geq 0$.
+
 \section{\texorpdfstring{$\R^{n}$}{Rn}的拓扑}
 
-\begin{definition}{}{}
-	给$\R^{n}$配备$n$个拓扑群$\R$的乘积拓扑.我们称拓扑空间$\R^{n}$是$n$维实数空间.
+\begin{definition}{$n$维实数空间}{}
+	拓扑空间族$\left(\R\right)_{k=1}^{n}$的乘积空间$\R^{n}$称为$n$维实数空间.
 \end{definition}
 
-\begin{proposition}{}{}
-	$\left|\R^{n}\right|=\left|\R\right|$.
+\begin{remark}{}{}
+	根据集合论的结果,当$n\geq 1$时$\left|\R^{n}\right|=\left|\R\right|$.
+\end{remark}
+
+\begin{definition}{开箱,闭箱}{}
+	\begin{enumerate}
+		\item $\R$中$n$个开区间的乘积称为$\R^{n}$中的开箱,$\R$中$n$个闭区间的乘积称为$\R^{n}$中的闭箱.
+		\item $\R^{2}$中的开箱称为$\R$中的开矩形,$\R^{2}$中的闭箱称为$\R^{2}$中的闭矩形.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{开箱和闭箱的拓扑性质}{}
+	\begin{enumerate}
+		\item $\R^{n}$中的开箱构成的集合是$\R^{n}$的乘积拓扑的基.
+		\item $\R^{n}$中的每个闭箱都是$\R^{n}$的闭集.
+		\item $\R^{n}$中每个开箱的闭包都是$\R^{n}$中的闭箱,$\R^{n}$中每个闭箱的内部都是$\R^{n}$的开箱.
+		\item 设$\mathbf{x}\in\R^{n}$,那么$\R^{n}$中所有包含$\mathbf{x}$的开箱构成的集合是$\mathbf{x}$的邻域基,$\R^{n}$中所有以$\mathbf{x}$为内点的闭箱构成的集合是$\mathbf{x}$的邻域基.
+		\item $\R^{n}$中的每个非空开箱都与$\R^{n}$同胚.
+		\item 当$n\geq 1$时,$\R^{n}$中的每个非空开集都和$\R$等势.
+	\end{enumerate}
 \end{proposition}
 
-\begin{definition}{}{}
-	设$U\subseteq\R^{n}$.
-	\begin{itemize}
-		\item 若存在$\R$中的开区间族$\left(I_{k}\right)_{k=1}^{n}$使得$U=\prod\limits_{k=1}^{n}I_{k}$,则称$U$是$\R^{n}$中的开箱.进一步,若$\left(I_{k}\right)_{k=1}^{n}$是一族长度相等的有界开区间,则称$U$是$\R^{n}$中的开长方体,称$\ell\left(I_{1}\right)$为边长.
-		\item 若存在$\R$中的闭区间族$\left(I_{k}\right)_{k=1}^{n}$使得$U=\prod\limits_{k=1}^{n}I_{k}$,则称$U$是$\R^{n}$中的闭箱.进一步,若$\left(I_{k}\right)_{k=1}^{n}$是一族长度相等的有界闭区间,则称$U$是$\R^{n}$中的闭长方体,称$\ell\left(I_{1}\right)$为边长.
-	\end{itemize}
+\begin{definition}{开立方体,闭立方体,开(闭)立方体的边长}{}
+	\begin{enumerate}
+		\item $\R$中$n$个长度相等的有界开区间的乘积称为$\R^{n}$的开立方体,$\R$中$n$个长度相等的有界闭区间的乘积称为$\R^{n}$的闭立方体.
+		\item $\R^{2}$中的开立方体称为$\R^{2}$中的开正方形,$\R^{2}$中的闭立方体称为$\R^{2}$中的闭正方形.
+		\item 设$U$是$\R^{n}$中的开立方体(或闭立方体).构成$U$的每一个区间的长度称为$U$的边长.
+	\end{enumerate}
 \end{definition}
 
-\begin{definition}{}{}
-	$\R^{2}$中的开箱,闭箱,开正方体,闭正方体依次称为$\R^{2}$中的开矩形,闭矩形,开正方形,闭正方形.
-\end{definition}
-
-\begin{proposition}{}{}
-	记$\mathcal{B}=\left\{U\subseteq\R^{n}\middle|U\text{是开正方体}\right\}$,则$\mathcal{B}$是$\R^{n}$的拓扑基.
-\end{proposition}
-
-\begin{proposition}{}{}
-	设$x\in\R^{n}$,记
+\begin{proposition}{$\R^{n}$中各点都有可数邻域基}{}
+	设$\mathbf{x}\coloneq\left(x_{i}\right)_{i=1}^{n}\in\R^{n}$,$\left(k_{i}\right)_{i=0}^{\infty}$是$\N$中递增且收敛到$+\infty$的序列.对每个$1\leq i\leq m$,记
 	\begin{align*}
-		\mathcal{B}_{1}=\left\{U\subseteq\R^{n}\middle|x\in U,U\text{是开正方体}\right\},\mathcal{B}_{2}=\left\{U\subseteq\R^{n}\middle|x\in\interior\left(U\right),U\text{是闭正方体}\right\},
+		K_{m}=\prod\limits_{i=1}^{m}\left(x_{i}-\frac{1}{k_{i}},x_{i}+\frac{1}{k_{i}}\right),L_{i}=\prod\limits_{j=1}^{m}\left(x_{i}-\frac{1}{j},x_{i}+\frac{1}{j}\right),
 	\end{align*}
-	则$\mathcal{B}_{1}$和$\mathcal{B}_{2}$都是$x$的邻域基.
+	那么$\left\{K_{i}\middle|i\geq 1\right\}$和$\left\{L_{i}\middle|i\geq 1\right\}$是$\mathbf{x}$的可数邻域基.
 \end{proposition}
 
-\begin{corollary}{}{}
-	设$x=\left(x_{1},\ldots,x_{n}\right)\in\R^{n}$.对任一$m\in\Z_{\geqslant 1}$,记$K_{m}=\prod\limits_{k=1}^{n}\left(x_{i}-\frac{1}{k},x_{i}+\frac{1}{k}\right)$,则
-	\begin{align*}
-		\left\{K_{m}\subseteq\R^{n}\middle|m\in\Z_{\geqslant 1}\right\}
-	\end{align*}
-	是$x$的可数邻域基.
+\begin{proposition}{$\R^{n}$的开箱和闭箱的连通性}{}
+	$\R^{n}$中的每个开箱和闭箱都是连通的.
+\end{proposition}
+
+\begin{corollary}{$\R^{n}$的连通性和局部连通性}{}
+	$\R^{n}$连通且局部连通.
 \end{corollary}
 
-\begin{proposition}{}{}
-	$\R^{n}$中的每个非空开立方体都和$\R^{n}$同胚.进一步,$\R^{n}$的每个非空开集$U$的基数等于$\left|\R\right|$.
-\end{proposition}
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\Q^{n}$是$\R^{n}$的一个可数稠密子集,因此$\R^{n}$可分.
+		\item 如果$A$是$\R^{n}$的非空开集,那么$A$的每个连通分支都是开集,并且$A$的所有连通分支构成的集合可数.
+	\end{enumerate}
+\end{remark}
 
-\begin{proposition}{}{}
-	$\R^{n}$的每个开立方体和闭立方体都是连通集.特别地,$\R^{n}$是连通且局部连通的拓扑空间.
-\end{proposition}
-
-\begin{corollary}{}{}
-	设$A$是$\R^{n}$的非空开集,则$A$在$\R^{n}$中的每个连通分支都是开集,并且$A$的连通分支组成的集合可数.
-\end{corollary}
-
-\begin{definition}{}{}
-	设$A\subseteq\R^{n}$.若对任一$i\in\llbracket 1,n\rrbracket$,$\pr_{i}\left(A\right)$在$\R$中按$\leqslant$有界,则称$A$在$\R^{n}$中有界.
+\begin{definition}{$\R^{n}$中的有界集}{}
+	设$A\subseteq\R^{n}$.如果$\left(\pr_{i}\left(A\right)\right)_{i=1}^{n}$是$\R$的一族有界集,则称$A$在$\R^{n}$中有界.
 \end{definition}
 
-\begin{proposition}{}{}
-	设$A\subseteq\R^{n}$,则$A$是$\R^{n}$的相对紧集$\iff$ $A$在$\R^{n}$中有界.
+\begin{proposition}{相对紧$\iff$有界}{}
+	设$A\subseteq\R^{n}$,则$A$在$\R^{n}$中相对紧$\iff$ $A$在$\R^{n}$中有界.
 \end{proposition}
 
-\begin{corollary}{}{}
-	$\R^{n}$是局部紧空间,当$n\geqslant 2$时,$\R^{n}$不是紧空间.
+\begin{corollary}{$\R^{n}$的局部紧性和紧性}{}
+	$\R^{n}$是局部紧空间.当$n\geq 1$时,$\R^{n}$不是紧空间.
 \end{corollary}

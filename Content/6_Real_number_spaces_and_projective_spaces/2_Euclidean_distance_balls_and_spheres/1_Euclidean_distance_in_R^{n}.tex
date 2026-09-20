@@ -2,32 +2,43 @@
 
 \section{\texorpdfstring{$\R^{n}$}{Rn}中的Euclid度量}
 
-\begin{definition}{}{}
-	我们称$d:\R^{n}\times\R^{n}\to\R^{n},\left(\left(x_{1},\ldots,x_{n}\right),\left(y_{1},\ldots,y_{n}\right)\right)\mapsto\sqrt{\sum\limits_{i=1}^{n}\left(x_{i}-y_{i}\right)^{2}}$为$\R^{n}$上的\text{Euclid}度量.
+\begin{definition}{Euclid度量}{}
+	我们称$d:\R^{n}\times\R^{n}\to\R^{n},\left(\left(x_{i}\right)_{i=1}^{n},\left(y_{i}\right)_{i=1}^{n}\right)\mapsto\sqrt{\sum\limits_{i=1}^{n}\left(x_{i}-y_{i}\right)^{2}}$是$\R^{n}$上的Euclid度量.
 \end{definition}
 
-\begin{proposition}{}{}
-	设$d$是$\R^{n}$上的\text{Euclid}度量.
+\begin{proposition}{Euclid度量的性质}{}
+	设$d$是$\R^{n}$上的Euclid度量.
 	\begin{enumerate}
-		\item $\forall x,y\in\R^{n}\left(d\left(x,y\right)=0\iff x=y\right)$.
-		\item $\forall x,y\in\R^{n}\left(d\left(x,y\right)=d\left(y,x\right)\right)$.
-		\item $\forall x,y,z\in\R^{n}\left(d\left(x+z,y+z\right)=d\left(x,y\right)\right)$.
-		\item $\forall t\in\R\forall x,y\in\R^{n}\left(d\left(tx,ty\right)=\left|t\right|d\left(x,y\right)\right)$.
-		\item $\forall x,y,z\in\R^{n}\left(d\left(x,y\right)\leqslant d\left(x,z\right)+d\left(z,y\right)\right)$.
-		\item $\forall x,y,z\in\R^{n}\left(d\left(x,y\right)\geqslant\left|d\left(x,z\right)-d\left(y,z\right)\right|\right)$.
+		\item $\forall \mathbf{x},\mathbf{y}\in\R^{n}\left(d\left(\mathbf{x},\mathbf{y}\right)=0\iff \mathbf{x}=\mathbf{y}\right)$.
+		\item $\forall \mathbf{x},\mathbf{y}\in\R^{n}\left(d\left(\mathbf{x},\mathbf{y}\right)=d\left(\mathbf{y},\mathbf{x}\right)\right)$.
+		\item $\forall \mathbf{x},\mathbf{y},\mathbf{z}\in\R^{n}\left(d\left(\mathbf{x}+\mathbf{z},\mathbf{y}+\mathbf{z}\right)=d\left(\mathbf{x},\mathbf{y}\right)\right)$.
+		\item $\forall t\in\R\forall \mathbf{x},\mathbf{y}\in\R^{n}\left(d\left(t\mathbf{x},t\mathbf{y}\right)=\left|t\right|d\left(\mathbf{x},\mathbf{y}\right)\right)$.
 	\end{enumerate}
 \end{proposition}
 
-\begin{definition}{}{}
-	称$\left\|\cdot\right\|:\R^{n}\to\R,x\mapsto d\left(0,x\right)$是$\R^{n}$上的\text{Euclid}范数.
+\begin{definition}{Euclid范数}{}
+	我们称$\left\|\cdot\right\|:\R^{n}\to\R,\mathbf{x}\mapsto d\left(\mathbf{0},\mathbf{x}\right)$是$\R^{n}$上的Euclid范数.
 \end{definition}
 
-以下,我们总是默认$d$是$\R^{n}$上的\text{Euclid}度量,$\left\|\cdot\right\|$是$\R^{n}$上的\text{Euclid}范数.
+\begin{definition}{$\R^{n}$中线段的长度}{}
+	设$\left\|\cdot\right\|$是$\R^{n}$上的Euclid范数.对每个$\mathbf{x},\mathbf{y}\in\R^{n}$,称$\left\|\mathbf{x}-\mathbf{y}\right\|$是以$\mathbf{x},\mathbf{y}$为端点的线段的长度.
+\end{definition}
 
-\begin{proposition}{}{}
-	对任一$\left(x_{1},\ldots,x_{n}\right),\left(y_{1},\ldots,y_{n}\right)\in\R^{n}$,有$\max\limits_{1\leqslant i\leqslant n}\left|x_{i}-y_{i}\right|\leqslant\sqrt{\sum\limits_{i=1}^{n}\left(x_{i}-y_{i}\right)^{2}}\leqslant\sqrt{n}\max\limits_{1\leqslant i\leqslant n}\left|x_{i}-y_{i}\right|$.
+\begin{corollary}{Euclid度量满足三角不等式和反向三角不等式}{}
+	设$d$是$\R^{n}$上的Euclid度量.
+	\begin{enumerate}
+		\item 对每个$\mathbf{x},\mathbf{y},\mathbf{z}\in\R^{n}$有$d\left(\mathbf{x},\mathbf{z}\right)\leq d\left(\mathbf{x},\mathbf{y}\right)+d\left(\mathbf{y},\mathbf{z}\right)$和
+		\begin{align*}
+			d\left(\mathbf{x},\mathbf{z}\right)=d\left(\mathbf{x},\mathbf{y}\right)+d\left(\mathbf{y},\mathbf{z}\right)\iff\exists\left(u,v\right)\in\R_{\geq 0}^{2}\left(u+v=1\wedge\mathbf{z}=u\mathbf{x}+v\mathbf{y}\right).
+		\end{align*}
+		\item 对每个$\mathbf{x},\mathbf{y},\mathbf{z}\in\R^{n}$有$d\left(\mathbf{x},\mathbf{y}\right)\geq\left|d\left(\mathbf{x},\mathbf{z}\right)-d\left(\mathbf{y},\mathbf{z}\right)\right|$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{$\R^{n}$上的$l^{1},l^{2},l^{\infty}$度量是Lipschitz等价的}{}
+	对每个$\left(x_{i}\right)_{i=1}^{n},\left(y_{i}\right)_{i=1}^{n}\in\R^{n}$有$\sup\limits_{1\leqslant i\leqslant n}\left|x_{i}-y_{i}\right|\leqslant\sqrt{\sum\limits_{i=1}^{n}\left(x_{i}-y_{i}\right)^{2}}\leqslant\sqrt{n}\max\limits_{1\leqslant i\leqslant n}\left|x_{i}-y_{i}\right|$.
 \end{proposition}
 
-\begin{proposition}{}{}
-	设$A\subseteq\R^{n}$,则$A$在$\R^{n}$中有界$\iff$ $\sup\limits_{x\in A}\left\|x\right\|<+\infty$.
-\end{proposition}
+\begin{corollary}{$\R^{n}$中子集有界的判别准则}{}
+	设$\left\|\cdot\right\|$是$\R^{n}$上的Euclid范数,$A\subseteq\R^{n}$,那么$A$在$\R^{n}$中有界$\iff$ $\sup\limits_{\mathbf{x}\in A}\left\|\mathbf{x}\right\|<+\infty$.
+\end{corollary}

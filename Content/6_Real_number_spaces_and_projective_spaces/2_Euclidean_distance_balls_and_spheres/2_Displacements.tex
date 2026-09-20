@@ -1,51 +1,25 @@
 \section{位移}
 
-\begin{definition}{}{}
-	设$f:\R^{n}\to\R^{n}$是仿射同构.若$\forall x,y\in\R^{n}\left(d\left(f\left(x\right),f\left(y\right)\right)=d\left(x,y\right)\right)$,则称$f$是$\R^{n}$上的\text{Euclid}位移.
+记号约定:$d$是$\R^{n}$上的Euclid度量,$\left\|\cdot\right\|$是$\R^{n}$上的Euclid范数.
+
+\begin{definition}{Euclid位移}{}
+	设$f\in\End_{\mathsf{Aff}}\left(\R^{n}\right)$.如果$d\circ\left(f\times f\right)=d$,则称$f$是Euclid位移.
 \end{definition}
 
-\begin{definition}{}{}
-	记$\Disp_{n}\left(\R\right)$是$\R^{n}$上的\text{Euclid}位移组成的集合,则$\Disp_{n}\left(\R\right)$按映射复合构成群.称$\Disp_{n}\left(\R\right)$是$\R^{n}$的位移群.
+\begin{definition}{位移群,正交变换群}{}
+	我们称$\Disp\left(\R^{n}\right)$是$\R^{n}$的Euclid位移群,称$\mathrm{O}_{n}\left(\R\right)$是$n$元实正交群,其元素称为实正交变换.
 \end{definition}
 
-\begin{proposition}{}{}
-	$\Disp_{n}\left(\R\right)$在$\R^{n}$上的左作用传递.
+\begin{definition}{$\R^{n}$上的标准内积}{}
+	我们把和$\frac{1}{2}\left\|\cdot\right\|^{2}$诱导的对称双线性形式记作$\langle\cdot\mid\cdot\rangle$,称之为$\R^{n}$上的标准内积.
+\end{definition}
+
+\begin{proposition}{正交变换的刻画}{}
+	设$\langle\cdot\mid\cdot\rangle$是$\R^{n}$上的标准内积,$f\in\End_{\R}\left(\R^{n}\right)$.下列陈述等价:
+	\begin{enumerate}
+		\item $f\in\mathrm{O}_{n}\left(\R\right)$.
+		\item $\forall\mathbf{x}\in\R^{n}\left(\left\|f\left(\mathbf{x}\right)\right\|=\left\|\mathbf{x}\right\|\right)$.
+		\item $\forall\mathbf{x}\in\R^{n}\left(\left\|f\left(\mathbf{x}\right)\right\|^{2}=\left\|\mathbf{x}\right\|^{2}\right)$.
+		\item $\forall\mathbf{x},\mathbf{y}\in\R^{n}\left(\langle f\left(\mathbf{x}\right)\mid f\left(\mathbf{y}\right)\rangle=\langle\mathbf{x}\mid\mathbf{y}\rangle\right)$.
+	\end{enumerate}
 \end{proposition}
-
-\begin{proposition}{}{}
-	对$\R^{n}$中任意两个维数相等的仿射线性簇$V_{1}$,$V_{2}$,存在$f\in\Disp_{n}\left(\R\right)$使得$f\left(V_{1}\right)=V_{2}$.
-\end{proposition}
-
-\begin{definition}{}{}
-	设$f\in\Disp_{n}\left(\R\right)$.若$f\left(0\right)=0$,则称$f$是正交变换.
-\end{definition}
-
-\begin{definition}{}{}
-	记$\mathrm{O}_{n}\left(\R\right)$是$\R^{n}$上的正交变换组成的集合,则$\mathrm{O}_{n}\left(\R\right)$按映射复合构成群.称$\mathrm{O}_{n}\left(\R\right)$是$n$元实正交群.
-\end{definition}
-
-\begin{proposition}{}{}
-	设$f:\R^{n}\to\R^{n}$,则$f\in\mathrm{O}_{n}\left(\R\right)\iff f\in\End_{_{\R}\mathsf{Mod}}\left(\R^{n}\right)\wedge\left\|\cdot\right\|\circ f=\left\|\cdot\right\|$.
-\end{proposition}
-
-\begin{definition}{}{}
-	定义$\left(\cdot\middle|\cdot\right):\R^{n}\times\R^{n}\to\R^{n}$如下:对任一$x=\left(x_{1},\ldots,x_{n}\right),y=\left(y_{1},\ldots,y_{n}\right)\in\R^{n}$,$\left(x\middle|y\right)=\sum\limits_{i=1}^{n}x_{i}y_{i}$.
-	
-	我们称$\left(\cdot\middle|\cdot\right)$是$\R^{n}$上的标准内积.显然对任一$x\in\R^{n}$都有$\left\|x\right\|^{2}=\left(x\middle|x\right)$.
-\end{definition}
-
-\begin{proposition}{}{}
-	设$f\in\mathrm{O}_{n}\left(\R\right)$,则$\forall x,y\in\R^{n}\left(\left(f\left(x\right)\middle|f\left(y\right)\right)=\left(x\middle|y\right)\right)$.
-\end{proposition}
-
-\begin{definition}{}{}
-	设$x,y\in\R^{n}$.若$\left(x\middle|y\right)=0$,则称$x$和$y$正交.
-\end{definition}
-
-\begin{definition}{}{}
-	设$V$,$W$是$\R^{n}$的子空间.若$\forall v\in V\forall w\in W\left(\left(v\middle|w\right)=0\right)$,则称$V$和$W$正交.
-\end{definition}
-
-\begin{definition}{}{}
-	设$P$,$Q$是$\R^{n}$的仿射线性簇,其中$P=a+V$,$Q=b+W$,$a,b\in\R^{n}$,$V$,$W$是$\R^{n}$的子空间.若$V$和$W$正交,则称$P$和$Q$正交.
-\end{definition}

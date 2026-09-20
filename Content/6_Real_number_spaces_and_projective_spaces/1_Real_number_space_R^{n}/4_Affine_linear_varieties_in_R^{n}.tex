@@ -1,102 +1,127 @@
 \section{\texorpdfstring{$\R^{n}$}{Rn}中的仿射子空间}
 
-本节中,默认$p\in\Z_{\geqslant 1}$,$\left(e_{i}\right)_{i=1}^{n}$是$\R^{n}$的标准基.
+记号约定:$\left(\mathbf{e}_{i}\right)_{i=1}^{n}$是$\R^{n}$的典范基,$p\geq 1$.
 
-\begin{definition}{}{}
-	对任一$i\in\llbracket 1,n\rrbracket$,直线$\R e_{i}$称为$\R^{n}$中的第$i$条坐标轴.
-\end{definition}
-
-\begin{definition}{}{}
-	设$n=2$时,$x=\left(x_{1},x_{2}\right)\in\R^{2}$.我们称$\R e_{1}$是横轴,$\R e_{2}$是纵轴,$x_{1}$,$x_{2}$依次称为$x$的横坐标和纵坐标.
-\end{definition}
-
-\begin{proposition}{}{}
-	$\R^{n}$中的每个$p$维仿射线性簇都是$\R^{n}$的闭集,并且与$\R^{p}$同胚.
-\end{proposition}
-
-\begin{proposition}{}{}
-	设$a\in\R^{n}$,$D$是$\R^{n}$中过$a$的直线,则存在$b\in\R^{n}\setminus\left\{0\right\}$使得$D=a+\R b$.此外,
-	\begin{align*}
-		\varphi:\R\to D,t\mapsto a+tb
-	\end{align*}
-	是同胚.
-\end{proposition}
-
-\begin{definition}{}{}
-	设$a\in\R^{n}$,$D$是$\R^{n}$中过$a$的直线,$b\in\R^{n}\setminus\left\{0\right\}$且$D=a+\R b$.
-	\begin{itemize}
-		\item 我们称$b$是$D$的一个方向向量.
-		\item 设$b=\left(b_{1},\ldots,b_{n}\right)$.我们称$\left(b_{1},\ldots,b_{n}\right)$是$D$的方向比.
-	\end{itemize}
-\end{definition}
-
-\begin{proposition}{}{}
-	设$a\in\R^{n}$,$D$是$\R^{n}$中过$a$的直线,$b,b^{\prime}\in\R^{n}\setminus\left\{0\right\}$是$D$的方向向量,则$\exists\lambda\in\R\setminus\left\{0\right\}\left(b=\lambda b^{\prime}\right)$.
-\end{proposition}
-
-\begin{definition}{}{}
-	设$a\in\R^{n}$,$b\in\R^{n}\setminus\left\{0\right\}$.
-	\begin{itemize}
-		\item $a+\R_{\geqslant 0}b$称为以$a$为原点,$b$为方向向量的闭射线(射线,班直线).
-		\item $a+\R_{>0}b$称为以$a$为原点,$b$为方向向量的开射线.
-	\end{itemize}
-	可以验证:
-\end{definition}
-
-\begin{proposition}{}{}
-	设$a\in\R^{n}$,$b\in\R^{n}\setminus\left\{0\right\}$.
+\begin{proposition}{$p$维仿射子空间同胚于$p$维实数空间}{}
+	对$\R^{n}$的每个$p$维非空仿射子空间$V$,存在$f\in\Aut_{\mathsf{Aff}}\left(\R^{n}\right)$满足如下条件:
 	\begin{enumerate}
-		\item $a+\R_{\geqslant 0}b$是$\R^{n}$的闭集,并且和$\left[0,+\infty\right)$同胚.
-		\item $a+\R_{>0}b$和$\left(0,+\infty\right)$同胚,是$a+\R b$的开集,但$n\geqslant 2$时$a+\R_{>0}b$不是$\R^{n}$的开集.
+		\item $f\left(V\right)=\langle\mathbf{e}_{1},\ldots,\mathbf{e}_{p}\rangle$.
+		\item $f\left(V\right)$是$\R^{n}$中同胚于$\R^{p}$的闭箱.
 	\end{enumerate}
 \end{proposition}
 
-\begin{definition}{}{}
-	设$x,y\in\R^{n}$.
-	\begin{itemize}
-		\item 记$\left[x,y\right]\coloneq\left\{\alpha x+\beta y\in\R^{n}\middle|\alpha,\beta\geqslant 0,\alpha+\beta=1\right\}$.我们称$\left[x,y\right]$是以$x$和$y$为端点的闭线段.
-		\item 设$x\neq y$.记$\left(x,y\right)\coloneq\left\{\alpha x+\beta y\in\R^{n}\middle|\alpha,\beta>0,\alpha+\beta=1\right\}$.我们称$\left(x,y\right)$是以$x$和$y$为端点的闭线段.
-		\item 设$x\neq y$.记$\left(x,y\right]\coloneq\left(x,y\right)\sqcup\left\{y\right\}$.我们称$\left(x,y\right]$是在$x$处开,在$y$处闭的线段.
-		\item 设$x\neq y$.记$\left[x,y\right)\coloneq\left(x,y\right)\sqcup\left\{y\right\}$.我们称$\left[x,y\right)$是在$x$处闭,在$y$处开的线段.
-	\end{itemize}
+\begin{proposition}{$p$维仿射子空间是闭集}{}
+	$\R^{n}$中每个非空的$p$维仿射子空间都是同胚于$\R^{p}$的闭集.
+\end{proposition}
+
+\begin{definition}{$\R^{n}$中的坐标轴}{}
+	设$\left(D_{i}\right)_{i=1}^{n}$是$\R^{n}$中一族过$\mathbf{0}$的直线,对每个$1\leq i\leq n$有$\mathbf{e}_{i}\in D_{i}$.
+	\begin{enumerate}
+		\item 我们称$\left(D_{i}\right)_{i=1}^{n}$中的每一项是$\R^{n}$中的坐标轴.
+		\item 当$n=2$时,分别称$D_{1}$和$D_{2}$为横轴和纵轴.
+		\item 对每个$\mathbf{x}\in\R^{2}$和$i\in\left\{1,2\right\}$,$\mathbf{x}$的第$1$个坐标和第二个坐标分别称为$\mathbf{x}$的横坐标和纵坐标.
+	\end{enumerate}
 \end{definition}
 
 \begin{proposition}{}{}
-	设$x,y\in\R^{n}$.
+	设$\mathbf{a}\in\R^{n}$,$D$是$\R^{n}$中过点$\mathbf{a}$的直线,则存在$\mathbf{b}\in\R^{n}\setminus\left\{\mathbf{0}\right\}$使得$D=a+\R\mathbf{b}$,映射$f:\R\to D,t\mapsto\mathbf{a}+t\mathbf{b}$是同胚.
+\end{proposition}
+
+\begin{definition}{直线的方向向量和方向参数}{}
+	设$\mathbf{a}\in\R^{n},\mathbf{b}\in\R^{n}\setminus\left\{\mathbf{0}\right\},D\coloneq\mathbf{a}+\R\mathbf{b}$.
 	\begin{enumerate}
-		\item 当$x=y$时,$\left[x,y\right]=\left\{x\right\}$;当$x\neq y$时,$\left[x,y\right]$和$\R$中的区间$\left[0,1\right]$同胚.
-		\item 设$x\neq y$,则$\left(x,y\right)$和$\R$中的区间$\left(0,1\right)$同胚.
-		\item 设$x\neq y$,则$\left(x,y\right]$和$\R$中的区间$\left(0,1\right]$同胚.
-		\item 设$x\neq y$,则$\left[x,y\right)$和$\R$中的区间$\left[0,1\right)$同胚.
+		\item 我们称$\mathbf{b}$是$D$的一个方向向量.
+		\item 如果$\mathbf{b}=\sum\limits_{i=1}^{n}b_{i}\mathbf{e}_{i}$,则称$\left(b_{i}\right)_{i=1}^{n}$是$D$的方向参数.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	如果$\mathbf{b}^{\prime}$也是$D$的方向向量,那么$\mathbf{b}\in\R^{\times}\mathbf{b}$.
+\end{remark}
+
+\begin{definition}{闭射线}{}
+	设$\mathbf{a}\in\R^{n},\mathbf{b}\in\R^{n}\setminus\left\{\mathbf{0}\right\}$.
+	\begin{enumerate}
+		\item 我们称$\mathbf{a}+\R_{\geq 0}\mathbf{b}$是以$\mathbf{a}$为起点,$\mathbf{b}$为方向向量的(闭)射线.
+		\item 如果$\mathbf{b}=\sum\limits_{i=1}^{n}b_{i}\mathbf{e}_{i}$,则称$\mathbf{a}+\R_{\geq 0}\mathbf{b}$是以$\mathbf{a}$为起点,$\left(b_{i}\right)_{i=1}^{n}$为方向参数的(闭)射线.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{闭射线都连通,闭,同胚于$\R_{\geq 0}$}{}
+	设$\mathbf{a}\in\R^{n},\mathbf{b}\in\R^{n}\setminus\left\{\mathbf{0}\right\}$,则$\mathbf{a}+\R_{\geq 0}\mathbf{b}$是同胚于$\R_{\geq 0}$的连通闭集.
+\end{proposition}
+
+\begin{definition}{方向相反的闭射线}{}
+	设$\mathbf{a}\in\R^{n},\mathbf{b}\in\R^{n}\setminus\left\{\mathbf{0}\right\}$.我们称闭射线$\mathbf{a}+\R_{\geq 0}\mathbf{b}$和$\mathbf{a}+\R_{\geq 0}\left(-\mathbf{b}\right)$的方向相反.
+\end{definition}
+
+\begin{proposition}{$\R^{n}$中的直线能表示成两条方向相反的闭射线的并}{}
+	设$\mathbf{a}\in\R^{n},\mathbf{b}\in\R^{n}\setminus\left\{\mathbf{0}\right\}$,则$\mathbf{a}+\R_{\geq 0}\mathbf{b}=\left(\mathbf{a}+\R_{\geq 0}\mathbf{b}\right)\cup\left(\mathbf{a}+\R_{\geq 0}\left(-\mathbf{b}\right)\right)$.
+\end{proposition}
+
+\begin{definition}{开射线}{}
+	设$\mathbf{a}\in\R^{n},\mathbf{b}\in\R^{n}\setminus\left\{\mathbf{0}\right\}$.我们称$\mathbf{a}+\R_{>0}\mathbf{b}$是以$\mathbf{a}$为起点,$\mathbf{b}$为方向向量的开射线.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$\mathbf{a}\in\R^{n},\mathbf{b}\in\R^{n}\setminus\left\{\mathbf{0}\right\}$.
+	\begin{enumerate}
+		\item $\mathbf{a}+\R_{>0}\mathbf{b}$同胚于$\R_{>0}$,从而同胚于$\R$.
+		\item 当$n\geq 2$时,$\mathbf{a}+\R_{>0}\mathbf{b}$不是$\R^{n}$的开集,是$\R^{n}$中包含$\mathbf{a}+\R_{>0}\mathbf{b}$的直线的闭集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{过两点的直线的参数表示}{}
+	设$\mathbf{x},\mathbf{y}\in\R^{n},\mathbf{x}\neq\mathbf{y}$,$D$是$\R^{n}$中过$\mathbf{x}$和$\mathbf{y}$的直线,那么$D=\left\{p\mathbf{x}+q\mathbf{y}\middle|\left(p,q\right)\in\R^{2},p+q=1\right\}$.
+\end{proposition}
+
+\begin{definition}{闭线段}{}
+	设$\mathbf{x},\mathbf{y}\in\R^{n}$.我们称$\left\{u\mathbf{x}+v\mathbf{y}\middle|\left(u,v\right)\in\R_{\geq 0}^{2},u+v=1\right\}$是以$\mathbf{x},\mathbf{y}$为端点的(闭)线段.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$\mathbf{x},\mathbf{y}\in\R^{n}$.
+	\begin{enumerate}
+		\item $\left\{u\mathbf{x}+v\mathbf{y}\middle|\left(u,v\right)\in\R_{\geq 0}^{2},u+v=1\right\}$是$\R^{n}$中的连通紧集.
+		\item 当$\mathbf{x}\neq\mathbf{y}$时,$\left\{u\mathbf{x}+v\mathbf{y}\middle|\left(u,v\right)\in\R_{\geq 0}^{2},u+v=1\right\}$同胚于$\left[0,1\right]$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{开线段,半开线段}{}
+	设$\mathbf{x},\mathbf{y}\in\R^{n},\mathbf{x}\neq\mathbf{y}$.
+	\begin{enumerate}
+		\item 我们称$\left\{u\mathbf{x}+v\mathbf{y}\middle|\left(u,v\right)\in\R_{>0}^{2},u+v=1\right\}$是以$\mathbf{x},\mathbf{y}$为端点的开线段.
+		\item 我们称$\left\{u\mathbf{x}+v\mathbf{y}\middle|\left(u,v\right)\in\R_{>0}^{2},u+v=1\right\}\cup\left\{\mathbf{y}\right\}$是在$\mathbf{x}$处开,在$\mathbf{y}$处闭的(半开)线段.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{}{}
+	设$\mathbf{x},\mathbf{y}\in\R^{n},\mathbf{x}\neq\mathbf{y},I=\left\{u\mathbf{x}+v\mathbf{y}\middle|\left(u,v\right)\in\R_{>0}^{2},u+v=1\right\}$.
+	\begin{enumerate}
+		\item $I$同胚于$\left(0,1\right)$,从而同胚于$\R$.
+		\item $I\cup\left\{\mathbf{y}\right\}$同胚于$\left[0,1\right)$.
+		\item $I\cup\left\{\mathbf{x}\right\}$同胚于$\left(0,1\right]$.
+		\item $I,I\cup\left\{\mathbf{x}\right\},I\cup\left\{\mathbf{y}\right\}$都连通,它们的闭包都是$\left\{u\mathbf{x}+v\mathbf{y}\middle|\left(u,v\right)\in\R_{\geq 0}^{2},u+v=1\right\}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{仿射子空间的补集的拓扑性质}{}
+	设$V$是$\R^{n}$的$p$维仿射子空间.
+	\begin{enumerate}
+		\item 如果$p<n$,那么$\R^{n}\setminus V$是$\R^{n}$的稠密开集.
+		\item 如果$p<n-1$,那么$\R^{n}\setminus V$在$\R^{n}$中连通.
+		\item 如果$p=n-1$,那么$\R^{n}\setminus V$在$\R^{n}$中有且仅有两个连通分支,二者都同胚于$\R^{n}$.
 	\end{enumerate}
 \end{proposition}
 
 \begin{proposition}{}{}
-	设$f:\R^{n}\to\R$是非零多项式函数,则$\R^{n}\setminus f^{-1}\left(\left\{0\right\}\right)$在$\R^{n}$中稠密.
+	设$H$是$\R^{n}$中的仿射超平面,$\R^{n}\setminus H$的连通分支分别是$E_{1}$和$E_{2}$,那么$\closure\left(E_{1}\right)=E_{1}\cup H,\closure\left(E_{2}\right)=E_{2}\cup H$.
 \end{proposition}
 
-\begin{corollary}{}{}
-	设$p\leqslant n-1$,$V$是$\R^{n}$中的$p$维仿射线性簇,则$\R^{n}\setminus V$在$\R^{n}$中稠密.
-\end{corollary}
-
-\begin{proposition}{}{}
-	设$H\subseteq\R^{n}$是超平面,则存在非零多项式函数$L:\R^{n}\to\R$使得$H=L^{-1}\left(\left\{0\right\}\right)$.
-\end{proposition}
-
-\begin{definition}{}{}
-	设$H\subseteq\R^{n}$是超平面,非零多项式函数$L:\R^{n}\to\R$满足$H=L^{-1}\left(\left\{0\right\}\right)$.
-	\begin{itemize}
-		\item $L^{-1}\left(\left(0,+\infty\right)\right)$和$L^{-1}\left(\left(-\infty,0\right)\right)$称为由$H$确定的开半空间.
-		\item $L^{-1}\left(\left[0,+\infty\right)\right)$和$L^{-1}\left(\left(-\infty,0\right]\right)$称为由$H$确定的闭半空间.
-	\end{itemize}
-\end{definition}
-
-\begin{proposition}{}{}
-	设$H\subseteq\R^{n}$是超平面,非零多项式函数$L:\R^{n}\to\R$满足$H=L^{-1}\left(\left\{0\right\}\right)$.
+\begin{definition}{仿射超平面确定的开半空间和闭半空间}{}
+	设$H$是$\R^{n}$中的仿射超平面,$\R^{n}\setminus H$的连通分支分别是$E_{1}$和$E_{2}$.
 	\begin{enumerate}
-		\item $\R^{n}\setminus H$的连通分支有且仅有$L^{-1}\left(\left(0,+\infty\right)\right)$和$L^{-1}\left(\left(-\infty,0\right)\right)$.
-		\item $L^{-1}\left(\left(0,+\infty\right)\right)$和$L^{-1}\left(\left(-\infty,0\right)\right)$在$\R^{n}$中的闭包分别是$L^{-1}\left(\left(0,+\infty\right)\right)\cup H$和$L^{-1}\left(\left(-\infty,0\right)\right)\cup H$.
-		\item $L^{-1}\left(\left(0,+\infty\right)\right)$和$L^{-1}\left(\left(-\infty,0\right)\right)$是$\R^{n}$的开集,二者都与$\R_{>0}$同胚.
-		\item $L^{-1}\left(\left[0,+\infty\right)\right)$和$L^{-1}\left(\left(-\infty,0\right]\right)$是$\R^{n}$的闭集.
+		\item $E_{1},E_{2}$称为由$H$确定的开半空间.
+		\item $E_{1}\cup H,E_{2}\cup H$称为由$H$确定的闭半空间.
 	\end{enumerate}
-\end{proposition}
+\end{definition}
