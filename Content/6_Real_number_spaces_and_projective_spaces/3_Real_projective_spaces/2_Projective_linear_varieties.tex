@@ -2,7 +2,33 @@
 
 记号约定:$m\geq n\geq 0$.
 
-\begin{proposition}{射影线性映射的连续性}{}
-	设$g:$
+\begin{proposition}{射影线性映射都连续}{}
+	设$g:\RP^{n}\to\RP^{m}$是射影线性映射,那么$g$连续.
 \end{proposition}
 
+\begin{corollary}{射影线性变换是同胚}{}
+	如果$g:\RP^{n}\to\RP^{n}$是射影线性变换,那么$g$是同胚.
+\end{corollary}
+
+\begin{proposition}{$\RP^{n}$上的拓扑的良定义性}{}
+	设$E$是$n+1$维$\R$-向量空间,$\mathbf{e}\coloneq\left(\mathbf{e}_{i}\right)_{i=0}^{n}$是$E$的基,$g:\RP^{n}\to\mathbb{P}\left(E\right)$是$\mathbf{e}$诱导的射影线性映射.
+	\begin{enumerate}
+		\item 如果$\mathbf{e}^{\prime}\coloneq\left(\mathbf{e}_{i}^{\prime}\right)_{i=0}^{n}$是$E$的基,$h:\RP^{n}\to\mathbb{P}\left(E\right)$是$\mathbf{e}^{\prime}$诱导的射影线性映射,那么$E$上的典范拓扑在$g$和$h$下的终拓扑相同.
+		\item $E$上的典范拓扑在$g$下的终拓扑和$\mathbb{P}\left(E\right)$上的商拓扑相同.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 对每个$0\leq p\leq n$,$\RP^{n}$中的每个$p$维射影线性子空间都是同胚于$\R^{p}$的闭集.
+		\item 对每个$0\leq p\leq n$,$\RP^{n}$中的每个$p$维射影线性子空间$W$满足$\RP^{n}\setminus W$在$\RP^{n}$中稠密.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	对$\RP^{n}$的每个射影超平面$H$,拓扑空间$\RP^{n}\setminus H$同胚于$\R^{n}$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	$\RP^{n}$中各点都有一个同胚于$\R^{n}$的开邻域,从而$\RP^{n}$局部连通.
+\end{corollary}

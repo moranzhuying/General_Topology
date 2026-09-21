@@ -1,1 +1,39 @@
 \section{实数空间到射影空间的嵌入}
+
+记号约定:$n\geq 0$,$H$是$\RP^{n}$中由方程$x_{0}=0$定义的射影超平面,$U=\RP^{n}\setminus H$.
+
+\begin{proposition}{}{}
+	$\R^{n}\to U,\left(x_{1},\ldots,x_{n}\right)\mapsto\left(1,x_{1},\ldots,x_{n}\right)$是同胚,其逆为$\R^{n}\to U,\left(x_{0},\ldots,x_{n}\right)\mapsto\left(\frac{x_{1}}{x_{0}},\ldots,\frac{x_{n}}{x_{0}}\right)$.
+\end{proposition}
+
+\begin{convention}{}{}
+	我们总是通过这个同胚把$U$等同于$\R^{n}$.
+\end{convention}
+
+\begin{definition}{无穷远超平面,无穷远点}{}
+	在典范等同$U$和$\R^{n}$的意义下,称$H$是$\RP^{n}$中的无穷远超平面,$H$中的元素为$\RP^{n}$中的无穷远点.
+\end{definition}
+
+\begin{proposition}{仿射子空间的射影闭包}{}
+	在典范等同$U$和$\R^{n}$的意义下,我们有如下的双射:
+	\begin{gather*}
+		\left\{W\subseteq\R^{n}\middle|W\text{是}p\text{维仿射子空间}\right\}\xlongrightarrow{1:1}\left\{X\subseteq\RP^{n}\middle|X\text{是}p\text{维射影线性簇},X\nsubseteq H\right\},\\
+		V\longmapsto\closure\left(V\right),\\
+		W\cap\R^{n}\longmapsfrom W.
+	\end{gather*}
+\end{proposition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item $\RP^{1}$同胚于$\R$的单点紧化.
+		\item $\RP^{1}$同胚于$\S_{1}$,从而同胚于$\T$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{alarm}{}{}
+	$\R$的单点紧化和$\overline{\R}$不可混淆,前者的``无穷远点''不带符号,后者有两个``无穷远点'',并且都带符号.
+\end{alarm}
+
+\begin{proposition}{}{}
+	把$\overline{\R}$中两点$+\infty$和$-\infty$等同以后得到的商空间同胚于$\R$的单点紧化.
+\end{proposition}

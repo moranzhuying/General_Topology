@@ -1,1 +1,62 @@
 \section{在实值函数延拓中的应用}
+
+记号约定:$\tilde{\R}$是$\R$的单点紧化.
+
+\begin{convention}{}{}
+	使用本节论述的命题时,默认把$\R$等同为$\tilde{\R}$的子集.
+\end{convention}
+
+\begin{convention}{$\R$-值函数延拓为$\tilde{\R}$-值函数}{}
+	设$E$是集合,那么每个$f\in\Hom_{\mathsf{Set}}\left(E,\R\right)$都能被延拓为$\tilde{f}\in\Hom_{\mathsf{Set}}(E,\tilde{\R})$.
+\end{convention}
+
+\begin{proposition}{拓扑空间上的连续延拓}{}
+	设$F$是拓扑空间,$E$是$F$的拓扑子空间,$f\in\Hom_{\mathsf{Set}}\left(E,\R\right),a\in\closure\left(E\right)$.如果$\limit_{\substack{x\to a\\ x\in E}}\tilde{f}\left(x\right)=\infty$,补充定义$\tilde{f}\left(a\right)=\infty$,那么$\tilde{f}$是$f$在$a$处的连续延拓.
+\end{proposition}
+
+\begin{convention}{}{}
+	对每个$x\in\tilde{\R}$,我们把它等同为$\RP^{1}$中齐次坐标为$\left(1,x\right)$的点,滥用记号把该点记作$\left(1,x\right)$.特别地,把$\infty$等同为$\left(0,1\right)$.
+\end{convention}
+
+\begin{proposition}{一元有理函数的连续延拓}{}
+	设$u,v\in\R[X]$互素,各自诱导多项式函数$u_{0}$和$v_{0}$,$\deg\left(u\right)=m,\deg\left(v\right)=n$.令$R:\R\setminus v_{0}^{-1}\left(\left\{0\right\}\right)\to\R,x\mapsto\frac{u_{0}\left(x\right)}{v_{0}\left(x\right)}$,则$R$可连续延拓为$\tilde{R}:\tilde{\R}\to\tilde{\R}$,其中
+	\begin{enumerate}
+		\item 对每个$x\in\R$有$v_{0}\left(x\right)=0\implies\tilde{R}\left(x\right)=\infty$.
+		\item $\tilde{R}\left(\infty\right)=
+		\begin{cases}
+			0,&m<n\\
+			\infty,&m>n\\
+			\frac{a_{n}}{b_{n}},&m=n,
+		\end{cases}$其中$a_{n}$和$b_{n}$分别是$u$和$v$的$n$次项系数.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	这与我们在\textit{经典代数学}中定义的有理函数的延拓一致.
+\end{remark}
+
+\begin{corollary}{}{}
+	\begin{enumerate}
+		\item 设$f:\R^{\times}\to\R,x\mapsto x^{-1}$,那么$\tilde{f}:\tilde{\R}\to\tilde{\R},x\mapsto
+		\begin{cases}
+			\infty,&x=0\\
+			0,&x=\infty\\
+			f\left(x\right),&x\in\R
+		\end{cases}$是$f$的连续延拓,并且是同胚.
+		\item 设$a,b,c,d\in\R$且$ad-bc\neq 0$,$f:\R\setminus\left\{-c^{-1}d\right\},x\mapsto\dfrac{ax+b}{cx+d}$,则$\tilde{f}:\tilde{\R}\to\tilde{\R},x\mapsto
+		\begin{cases}
+			0,&x=-c^{-1}d\\
+			0,&c=0,x=\infty\\
+			\infty,&c\neq 0,x=\infty
+		\end{cases}$是同胚.
+		\item 对每个$n\geq 1$,映射$f_{n}:\R\to\R,x\mapsto x^{n}$可以连续延拓为$\tilde{f}:\tilde{\R}\to\tilde{\R},x\mapsto
+		\begin{cases}
+			f\left(x\right),&x\in\R\\
+			\infty,&x=\infty
+		\end{cases}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{remark}{}{}
+	一般来说,二元实有理函数既不能连续延拓到$\RP^{1}\times\RP^{1}$,也不能连续延拓到$\RP^{2}$.
+\end{remark}

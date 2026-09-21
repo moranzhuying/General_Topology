@@ -1,1 +1,67 @@
 \section{射影线性簇空间}
+
+记号约定:
+\begin{itemize}
+	\item $K$是除环,$m,n,p\geq 0$.
+	\item $\mathbb{P}_{n,p}\left(K\right)=\left\{W\subseteq\mathbb{P}_{n}\left(K\right)\middle|W\text{是}p\text{维射影线性簇}\right\}$.
+	\item $\S_{p+1}\left(K_{s}^{n+1}\right)=\left\{V\subseteq K_{s}^{n+1}\middle|\dim V=p+1\right\}$.
+	\item $\mathbb{L}_{n+1,p+1}\left(K\right)=\left\{\left(\mathbf{x}_{k}\right)_{k=0}^{p}\in \left(K^{n+1}\right)^{p}\middle|\left(\mathbf{x}_{k}\right)_{k=0}^{p}\text{线性无关}\right\}$.
+	\item $\mathbb{M}_{p+1,n+1}\left(K\right)=\left\{\bm{M}\in\Mat_{p+1,n+1}\left(K\right)\middle|\rank\left(\bm{M}\right)=p+1\right\}$.
+	\item $\Delta_{n,p}\left(K\right)$是$\mathbb{L}_{n+1,p+1}\left(K\right)$上的等价关系,定义为
+	\begin{align*}
+		\forall\left(\mathbf{x}_{k}\right)_{k=0}^{p},\left(\mathbf{y}_{k}\right)_{k=0}^{p}\in\mathbb{L}_{n+1,p+1}\left(K\right)\left(\left(\mathbf{x}_{k}\right)_{k=0}^{p}\Delta_{n,p}\left(K\right)\left(\mathbf{y}_{k}\right)_{k=0}^{p}\iff\langle\mathbf{x}_{0},\ldots,\mathbf{x}_{p}\rangle=\langle\mathbf{y}_{0},\ldots,\mathbf{y}_{k}\rangle\right).
+	\end{align*}
+	\item $\nabla_{n,p}\left(K\right)$是$\mathbb{M}_{p+1,n+1}\left(K\right)$上的等价关系,定义为
+	\begin{align*}
+		\forall\bm{X},\bm{Y}\in\mathbb{M}_{p+1,n+1}\left(K\right)\left(\bm{X}\nabla_{n,p}\left(K\right)\bm{Y}\iff\exists\bm{T}\in\GL_{p+1}\left(K\right)\left(\bm{Y}=\bm{T}\bm{X}\right)\right).
+	\end{align*}
+\end{itemize}
+
+\begin{proposition}{}{}
+	我们有如下典范的双射:
+	\begin{gather*}
+		\mathbb{S}_{p+1}\left(K_{s}^{n+1}\right)\overset{1:1}{\longleftrightarrow}\mathbb{L}_{n+1,p+1}\left(K\right)\overset{1:1}{\longleftrightarrow}\mathbb{M}_{p+1,n+1}\left(K\right),\\
+		\langle\mathbf{x}_{0},\ldots,\mathbf{x}_{p}\rangle\mapsfrom\left(\mathbf{x}_{k}\right)_{k=0}^{p}\mapsto\left[\mathbf{x}_{0}\mid\ldots\mid\mathbf{x}_{p}\right].
+	\end{gather*}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\pi:\K^{n+1}\setminus\left\{\mathbf{0}\right\}\to\mathbb{P}_{n}\left(K\right),\mathbf{x}\mapsto K\mathbf{x}$,那么如下映射都是双射:
+	\begin{gather*}
+		\S_{p+1}\left(K_{s}^{n+1}\right)\to\mathbb{P}_{n,p}\left(K\right),
+		W\mapsto\pi\left(W\setminus\left\{\mathbf{0}\right\}\right),\\
+		\mathbb{L}_{n+1,p+1}\left(K\right)/\Delta_{n,p}\left(K\right)\to\mathbb{P}_{n,p}\left(K\right),
+		\left[\left(\mathbf{x}_{k}\right)_{k=0}^{p}\right]_{\Delta_{n,p}\left(K\right)}
+		\mapsto
+		\pi\left(\langle\mathbf{x}_{0},\ldots,\mathbf{x}_{p}\rangle\setminus\left\{\mathbf{0}\right\}\right),\\
+		\mathbb{M}_{p+1,n+1}\left(K\right)/\nabla_{n,p}\left(K\right)\to\mathbb{L}_{n+1,p+1}\left(K\right)/\Delta_{n,p}\left(K\right),
+		\left[\bm{X}\right]_{\nabla_{n,p}\left(K\right)}
+		\mapsto
+		\left[\left(\col_{i}\left(\bm{X}\right)\right)_{i=0}^{p}\right]_{\Delta_{n,p}\left(K\right)}.
+	\end{gather*}
+\end{proposition}
+
+\begin{definition}{$p$维射影线性簇空间}{}
+	定义$\mathbb{P}_{n,p}\left(\R\right)$上的拓扑为$\Mat_{p+1,n+1}\left(\R\right)$在$\mathbb{M}_{n+1,p+1}\left(\R\right)$上诱导的子空间拓扑在典范双射$\mathbb{M}_{n+1,p+1}\left(\R\right)\to\mathbb{P}_{n,p}\left(\R\right)$下的终拓扑,如此得到的拓扑空间称为$\RP^{n}$中的$p$维射影线性簇空间.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$g:\RP^{n}\to\RP^{m}$是射影线性映射,那么$\mathbb{P}_{n,p}\left(\R\right)\to\mathbb{P}_{m,p}\left(\R\right),V\mapsto g\left(V\right)$是连续映射.
+\end{proposition}
+
+\begin{corollary}{}{}
+	$\GL_{n}\left(\R\right)$可迁地作用于$\mathbb{P}_{n,p}\left(\R\right)$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$V$是$\RP^{n}$中的$n-p-1$维射影线性簇,那么$U_{V}\coloneq\left\{W\in\mathbb{P}_{n,p}\left(\R\right)\middle|W\cap V=\emptyset\right\}$是$\mathbb{P}_{n,p}\left(\R\right)$中同胚于$\R^{\left(p+1\right)\left(n-p\right)}$的稠密开集.
+\end{proposition}
+
+\begin{corollary}{}{}
+	$\mathbb{P}_{n,p}\left(\R\right)$连通且局部连通,其中各点都有一个同胚于$\R^{\left(p+1\right)\left(n-p\right)}$的开邻域.
+\end{corollary}
+
+\begin{proposition}{}{}
+	$\mathbb{P}_{n,p}\left(\R\right)$是紧空间.
+\end{proposition}
+
